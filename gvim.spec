@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 7.4
-Release  : 14
-URL      : ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
-Source0  : ftp://ftp.vim.org/pub/vim/unix/vim-7.4.tar.bz2
+Version  : 7.4.2107
+Release  : 15
+URL      : https://github.com/vim/vim/archive/v7.4.2107.tar.gz
+Source0  : https://github.com/vim/vim/archive/v7.4.2107.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -16,19 +16,29 @@ Requires: gvim-data
 Requires: gvim-doc
 BuildRequires : acl-dev
 BuildRequires : attr-dev
+BuildRequires : desktop-file-utils
+BuildRequires : gmp-dev
 BuildRequires : libXt-dev
+BuildRequires : lua-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(gtk+-2.0)
+BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(ice)
+BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
+BuildRequires : ruby
 
 %description
-This file explains the installation of Vim on VMS systems.
-Most information can be found in the on-line documentation.  Use ":help vms"
-inside Vim.  Or get the runtime files and read runtime/doc/os_vms.txt to find
-out how to install and configure Vim with runtime files etc.
+WHAT IS VIM?
+Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
+features have been added: multi-level undo, syntax highlighting, command line
+history, on-line help, spell checking, filename completion, block operations,
+script language, etc.  There is also a Graphical User Interface (GUI)
+available.  Still, Vi compatibility is maintained, those who have Vi "in the
+fingers" will feel at home.  See "runtime/doc/vi_diff.txt" for differences with
+Vi.
 
 %package bin
 Summary: bin components for the gvim package.
@@ -56,10 +66,11 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim74
+%setup -q -n vim-7.4.2107
 
 %build
-%configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2
+export LANG=C
+%configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
 %install
@@ -287,6 +298,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/autoload/netrw.vim
 %exclude /usr/share/vim/vim74/autoload/netrwFileHandlers.vim
 %exclude /usr/share/vim/vim74/autoload/netrwSettings.vim
+%exclude /usr/share/vim/vim74/autoload/netrw_gitignore.vim
 %exclude /usr/share/vim/vim74/autoload/paste.vim
 %exclude /usr/share/vim/vim74/autoload/phpcomplete.vim
 %exclude /usr/share/vim/vim74/autoload/python3complete.vim
@@ -322,6 +334,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/colors/desert.vim
 %exclude /usr/share/vim/vim74/colors/elflord.vim
 %exclude /usr/share/vim/vim74/colors/evening.vim
+%exclude /usr/share/vim/vim74/colors/industry.vim
 %exclude /usr/share/vim/vim74/colors/koehler.vim
 %exclude /usr/share/vim/vim74/colors/morning.vim
 %exclude /usr/share/vim/vim74/colors/murphy.vim
@@ -353,6 +366,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/compiler/gcc.vim
 %exclude /usr/share/vim/vim74/compiler/gfortran.vim
 %exclude /usr/share/vim/vim74/compiler/gnat.vim
+%exclude /usr/share/vim/vim74/compiler/go.vim
 %exclude /usr/share/vim/vim74/compiler/haml.vim
 %exclude /usr/share/vim/vim74/compiler/hp_acc.vim
 %exclude /usr/share/vim/vim74/compiler/icc.vim
@@ -394,6 +408,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/doc/arabic.txt
 %exclude /usr/share/vim/vim74/doc/autocmd.txt
 %exclude /usr/share/vim/vim74/doc/change.txt
+%exclude /usr/share/vim/vim74/doc/channel.txt
 %exclude /usr/share/vim/vim74/doc/cmdline.txt
 %exclude /usr/share/vim/vim74/doc/debug.txt
 %exclude /usr/share/vim/vim74/doc/debugger.txt
@@ -408,7 +423,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/doc/ft_ada.txt
 %exclude /usr/share/vim/vim74/doc/ft_sql.txt
 %exclude /usr/share/vim/vim74/doc/gui.txt
-%exclude /usr/share/vim/vim74/doc/gui_w16.txt
 %exclude /usr/share/vim/vim74/doc/gui_w32.txt
 %exclude /usr/share/vim/vim74/doc/gui_x11.txt
 %exclude /usr/share/vim/vim74/doc/hangulin.txt
@@ -452,6 +466,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/doc/pattern.txt
 %exclude /usr/share/vim/vim74/doc/pi_getscript.txt
 %exclude /usr/share/vim/vim74/doc/pi_gzip.txt
+%exclude /usr/share/vim/vim74/doc/pi_logipat.txt
 %exclude /usr/share/vim/vim74/doc/pi_netrw.txt
 %exclude /usr/share/vim/vim74/doc/pi_paren.txt
 %exclude /usr/share/vim/vim74/doc/pi_spec.txt
@@ -519,6 +534,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/doc/version5.txt
 %exclude /usr/share/vim/vim74/doc/version6.txt
 %exclude /usr/share/vim/vim74/doc/version7.txt
+%exclude /usr/share/vim/vim74/doc/version8.txt
 %exclude /usr/share/vim/vim74/doc/vi_diff.txt
 %exclude /usr/share/vim/vim74/doc/vim2html.pl
 %exclude /usr/share/vim/vim74/doc/visual.txt
@@ -543,6 +559,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/bdf.vim
 %exclude /usr/share/vim/vim74/ftplugin/bst.vim
 %exclude /usr/share/vim/vim74/ftplugin/btm.vim
+%exclude /usr/share/vim/vim74/ftplugin/bzl.vim
 %exclude /usr/share/vim/vim74/ftplugin/c.vim
 %exclude /usr/share/vim/vim74/ftplugin/calendar.vim
 %exclude /usr/share/vim/vim74/ftplugin/cdrdaoconf.vim
@@ -569,10 +586,12 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/diff.vim
 %exclude /usr/share/vim/vim74/ftplugin/dircolors.vim
 %exclude /usr/share/vim/vim74/ftplugin/docbk.vim
+%exclude /usr/share/vim/vim74/ftplugin/dockerfile.vim
 %exclude /usr/share/vim/vim74/ftplugin/dosbatch.vim
 %exclude /usr/share/vim/vim74/ftplugin/dosini.vim
 %exclude /usr/share/vim/vim74/ftplugin/dtd.vim
 %exclude /usr/share/vim/vim74/ftplugin/dtrace.vim
+%exclude /usr/share/vim/vim74/ftplugin/eiffel.vim
 %exclude /usr/share/vim/vim74/ftplugin/elinks.vim
 %exclude /usr/share/vim/vim74/ftplugin/erlang.vim
 %exclude /usr/share/vim/vim74/ftplugin/eruby.vim
@@ -588,14 +607,18 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/gitconfig.vim
 %exclude /usr/share/vim/vim74/ftplugin/gitrebase.vim
 %exclude /usr/share/vim/vim74/ftplugin/gitsendemail.vim
+%exclude /usr/share/vim/vim74/ftplugin/go.vim
 %exclude /usr/share/vim/vim74/ftplugin/gpg.vim
 %exclude /usr/share/vim/vim74/ftplugin/gprof.vim
+%exclude /usr/share/vim/vim74/ftplugin/groovy.vim
 %exclude /usr/share/vim/vim74/ftplugin/group.vim
 %exclude /usr/share/vim/vim74/ftplugin/grub.vim
 %exclude /usr/share/vim/vim74/ftplugin/haml.vim
 %exclude /usr/share/vim/vim74/ftplugin/hamster.vim
 %exclude /usr/share/vim/vim74/ftplugin/haskell.vim
 %exclude /usr/share/vim/vim74/ftplugin/help.vim
+%exclude /usr/share/vim/vim74/ftplugin/hgcommit.vim
+%exclude /usr/share/vim/vim74/ftplugin/hog.vim
 %exclude /usr/share/vim/vim74/ftplugin/hostconf.vim
 %exclude /usr/share/vim/vim74/ftplugin/hostsaccess.vim
 %exclude /usr/share/vim/vim74/ftplugin/html.vim
@@ -603,12 +626,16 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/indent.vim
 %exclude /usr/share/vim/vim74/ftplugin/initex.vim
 %exclude /usr/share/vim/vim74/ftplugin/ishd.vim
+%exclude /usr/share/vim/vim74/ftplugin/j.vim
 %exclude /usr/share/vim/vim74/ftplugin/java.vim
 %exclude /usr/share/vim/vim74/ftplugin/javascript.vim
+%exclude /usr/share/vim/vim74/ftplugin/jproperties.vim
+%exclude /usr/share/vim/vim74/ftplugin/json.vim
 %exclude /usr/share/vim/vim74/ftplugin/jsp.vim
 %exclude /usr/share/vim/vim74/ftplugin/kconfig.vim
 %exclude /usr/share/vim/vim74/ftplugin/kwt.vim
 %exclude /usr/share/vim/vim74/ftplugin/ld.vim
+%exclude /usr/share/vim/vim74/ftplugin/less.vim
 %exclude /usr/share/vim/vim74/ftplugin/lftp.vim
 %exclude /usr/share/vim/vim74/ftplugin/libao.vim
 %exclude /usr/share/vim/vim74/ftplugin/limits.vim
@@ -660,11 +687,17 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/python.vim
 %exclude /usr/share/vim/vim74/ftplugin/qf.vim
 %exclude /usr/share/vim/vim74/ftplugin/quake.vim
+%exclude /usr/share/vim/vim74/ftplugin/r.vim
 %exclude /usr/share/vim/vim74/ftplugin/racc.vim
 %exclude /usr/share/vim/vim74/ftplugin/readline.vim
+%exclude /usr/share/vim/vim74/ftplugin/registry.vim
 %exclude /usr/share/vim/vim74/ftplugin/reva.vim
+%exclude /usr/share/vim/vim74/ftplugin/rhelp.vim
+%exclude /usr/share/vim/vim74/ftplugin/rmd.vim
 %exclude /usr/share/vim/vim74/ftplugin/rnc.vim
+%exclude /usr/share/vim/vim74/ftplugin/rnoweb.vim
 %exclude /usr/share/vim/vim74/ftplugin/rpl.vim
+%exclude /usr/share/vim/vim74/ftplugin/rrst.vim
 %exclude /usr/share/vim/vim74/ftplugin/rst.vim
 %exclude /usr/share/vim/vim74/ftplugin/ruby.vim
 %exclude /usr/share/vim/vim74/ftplugin/sass.vim
@@ -686,10 +719,13 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/sudoers.vim
 %exclude /usr/share/vim/vim74/ftplugin/svg.vim
 %exclude /usr/share/vim/vim74/ftplugin/sysctl.vim
+%exclude /usr/share/vim/vim74/ftplugin/systemd.vim
+%exclude /usr/share/vim/vim74/ftplugin/systemverilog.vim
 %exclude /usr/share/vim/vim74/ftplugin/tcl.vim
 %exclude /usr/share/vim/vim74/ftplugin/tcsh.vim
 %exclude /usr/share/vim/vim74/ftplugin/terminfo.vim
 %exclude /usr/share/vim/vim74/ftplugin/tex.vim
+%exclude /usr/share/vim/vim74/ftplugin/text.vim
 %exclude /usr/share/vim/vim74/ftplugin/treetop.vim
 %exclude /usr/share/vim/vim74/ftplugin/tt2html.vim
 %exclude /usr/share/vim/vim74/ftplugin/udevconf.vim
@@ -700,6 +736,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/ftplugin/verilog.vim
 %exclude /usr/share/vim/vim74/ftplugin/vhdl.vim
 %exclude /usr/share/vim/vim74/ftplugin/vim.vim
+%exclude /usr/share/vim/vim74/ftplugin/vroom.vim
 %exclude /usr/share/vim/vim74/ftplugin/xdefaults.vim
 %exclude /usr/share/vim/vim74/ftplugin/xf86conf.vim
 %exclude /usr/share/vim/vim74/ftplugin/xhtml.vim
@@ -723,6 +760,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/indent/awk.vim
 %exclude /usr/share/vim/vim74/indent/bib.vim
 %exclude /usr/share/vim/vim74/indent/bst.vim
+%exclude /usr/share/vim/vim74/indent/bzl.vim
 %exclude /usr/share/vim/vim74/indent/c.vim
 %exclude /usr/share/vim/vim74/indent/cdl.vim
 %exclude /usr/share/vim/vim74/indent/ch.vim
@@ -753,16 +791,21 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/indent/framescript.vim
 %exclude /usr/share/vim/vim74/indent/gitconfig.vim
 %exclude /usr/share/vim/vim74/indent/gitolite.vim
+%exclude /usr/share/vim/vim74/indent/go.vim
 %exclude /usr/share/vim/vim74/indent/haml.vim
 %exclude /usr/share/vim/vim74/indent/hamster.vim
+%exclude /usr/share/vim/vim74/indent/hog.vim
 %exclude /usr/share/vim/vim74/indent/html.vim
 %exclude /usr/share/vim/vim74/indent/htmldjango.vim
 %exclude /usr/share/vim/vim74/indent/idlang.vim
 %exclude /usr/share/vim/vim74/indent/ishd.vim
+%exclude /usr/share/vim/vim74/indent/j.vim
 %exclude /usr/share/vim/vim74/indent/java.vim
 %exclude /usr/share/vim/vim74/indent/javascript.vim
+%exclude /usr/share/vim/vim74/indent/json.vim
 %exclude /usr/share/vim/vim74/indent/jsp.vim
 %exclude /usr/share/vim/vim74/indent/ld.vim
+%exclude /usr/share/vim/vim74/indent/less.vim
 %exclude /usr/share/vim/vim74/indent/lifelines.vim
 %exclude /usr/share/vim/vim74/indent/liquid.vim
 %exclude /usr/share/vim/vim74/indent/lisp.vim
@@ -787,7 +830,11 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/indent/python.vim
 %exclude /usr/share/vim/vim74/indent/r.vim
 %exclude /usr/share/vim/vim74/indent/readline.vim
+%exclude /usr/share/vim/vim74/indent/rhelp.vim
+%exclude /usr/share/vim/vim74/indent/rmd.vim
+%exclude /usr/share/vim/vim74/indent/rnoweb.vim
 %exclude /usr/share/vim/vim74/indent/rpl.vim
+%exclude /usr/share/vim/vim74/indent/rrst.vim
 %exclude /usr/share/vim/vim74/indent/rst.vim
 %exclude /usr/share/vim/vim74/indent/ruby.vim
 %exclude /usr/share/vim/vim74/indent/sass.vim
@@ -798,8 +845,11 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/indent/sml.vim
 %exclude /usr/share/vim/vim74/indent/sql.vim
 %exclude /usr/share/vim/vim74/indent/sqlanywhere.vim
+%exclude /usr/share/vim/vim74/indent/systemd.vim
+%exclude /usr/share/vim/vim74/indent/systemverilog.vim
 %exclude /usr/share/vim/vim74/indent/tcl.vim
 %exclude /usr/share/vim/vim74/indent/tcsh.vim
+%exclude /usr/share/vim/vim74/indent/teraterm.vim
 %exclude /usr/share/vim/vim74/indent/tex.vim
 %exclude /usr/share/vim/vim74/indent/tf.vim
 %exclude /usr/share/vim/vim74/indent/tilde.vim
@@ -808,6 +858,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/indent/verilog.vim
 %exclude /usr/share/vim/vim74/indent/vhdl.vim
 %exclude /usr/share/vim/vim74/indent/vim.vim
+%exclude /usr/share/vim/vim74/indent/vroom.vim
 %exclude /usr/share/vim/vim74/indent/xf86conf.vim
 %exclude /usr/share/vim/vim74/indent/xhtml.vim
 %exclude /usr/share/vim/vim74/indent/xinetd.vim
@@ -823,6 +874,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/keymap/accents.vim
 %exclude /usr/share/vim/vim74/keymap/arabic.vim
 %exclude /usr/share/vim/vim74/keymap/arabic_utf-8.vim
+%exclude /usr/share/vim/vim74/keymap/armenian-eastern_utf-8.vim
+%exclude /usr/share/vim/vim74/keymap/armenian-western_utf-8.vim
 %exclude /usr/share/vim/vim74/keymap/belarusian-jcuken.vim
 %exclude /usr/share/vim/vim74/keymap/bulgarian-bds.vim
 %exclude /usr/share/vim/vim74/keymap/bulgarian-phonetic.vim
@@ -864,6 +917,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/keymap/russian-dvorak.vim
 %exclude /usr/share/vim/vim74/keymap/russian-jcuken.vim
 %exclude /usr/share/vim/vim74/keymap/russian-jcukenwin.vim
+%exclude /usr/share/vim/vim74/keymap/russian-jcukenwintype.vim
 %exclude /usr/share/vim/vim74/keymap/russian-yawerty.vim
 %exclude /usr/share/vim/vim74/keymap/serbian-latin.vim
 %exclude /usr/share/vim/vim74/keymap/serbian-latin_utf-8.vim
@@ -884,7 +938,9 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/keymap/thaana.vim
 %exclude /usr/share/vim/vim74/keymap/ukrainian-dvorak.vim
 %exclude /usr/share/vim/vim74/keymap/ukrainian-jcuken.vim
+%exclude /usr/share/vim/vim74/keymap/vietnamese-telex_utf-8.vim
 %exclude /usr/share/vim/vim74/keymap/vietnamese-viqr_utf-8.vim
+%exclude /usr/share/vim/vim74/keymap/vietnamese-vni_utf-8.vim
 %exclude /usr/share/vim/vim74/lang/README.txt
 %exclude /usr/share/vim/vim74/lang/af/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim74/lang/ca/LC_MESSAGES/vim.mo
@@ -1056,7 +1112,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim74/lang/zh_TW/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim74/macros/README.txt
-%exclude /usr/share/vim/vim74/macros/dvorak
 %exclude /usr/share/vim/vim74/macros/editexisting.vim
 %exclude /usr/share/vim/vim74/macros/hanoi/click.me
 %exclude /usr/share/vim/vim74/macros/hanoi/hanoi.vim
@@ -1067,7 +1122,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/macros/less.vim
 %exclude /usr/share/vim/vim74/macros/life/click.me
 %exclude /usr/share/vim/vim74/macros/life/life.vim
-%exclude /usr/share/vim/vim74/macros/matchit.txt
 %exclude /usr/share/vim/vim74/macros/matchit.vim
 %exclude /usr/share/vim/vim74/macros/maze/Makefile
 %exclude /usr/share/vim/vim74/macros/maze/README.txt
@@ -1087,9 +1141,21 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/menu.vim
 %exclude /usr/share/vim/vim74/mswin.vim
 %exclude /usr/share/vim/vim74/optwin.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/dvorak/dvorak/disable.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/dvorak/dvorak/enable.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/dvorak/plugin/dvorak.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/editexisting/plugin/editexisting.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/justify/plugin/justify.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/matchit/doc/matchit.txt
+%exclude /usr/share/vim/vim74/pack/dist/opt/matchit/doc/tags
+%exclude /usr/share/vim/vim74/pack/dist/opt/matchit/plugin/matchit.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/shellmenu/plugin/shellmenu.vim
+%exclude /usr/share/vim/vim74/pack/dist/opt/swapmouse/plugin/swapmouse.vim
 %exclude /usr/share/vim/vim74/plugin/README.txt
 %exclude /usr/share/vim/vim74/plugin/getscriptPlugin.vim
 %exclude /usr/share/vim/vim74/plugin/gzip.vim
+%exclude /usr/share/vim/vim74/plugin/logiPat.vim
+%exclude /usr/share/vim/vim74/plugin/manpager.vim
 %exclude /usr/share/vim/vim74/plugin/matchparen.vim
 %exclude /usr/share/vim/vim74/plugin/netrwPlugin.vim
 %exclude /usr/share/vim/vim74/plugin/rrhelper.vim
@@ -1131,6 +1197,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/print/latin1.ps
 %exclude /usr/share/vim/vim74/print/mac-roman.ps
 %exclude /usr/share/vim/vim74/print/prolog.ps
+%exclude /usr/share/vim/vim74/rgb.txt
 %exclude /usr/share/vim/vim74/scripts.vim
 %exclude /usr/share/vim/vim74/spell/check_locales.vim
 %exclude /usr/share/vim/vim74/spell/cleanadd.vim
@@ -1168,6 +1235,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/apachestyle.vim
 %exclude /usr/share/vim/vim74/syntax/aptconf.vim
 %exclude /usr/share/vim/vim74/syntax/arch.vim
+%exclude /usr/share/vim/vim74/syntax/arduino.vim
 %exclude /usr/share/vim/vim74/syntax/art.vim
 %exclude /usr/share/vim/vim74/syntax/asciidoc.vim
 %exclude /usr/share/vim/vim74/syntax/asm.vim
@@ -1183,6 +1251,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/autoit.vim
 %exclude /usr/share/vim/vim74/syntax/automake.vim
 %exclude /usr/share/vim/vim74/syntax/ave.vim
+%exclude /usr/share/vim/vim74/syntax/avra.vim
 %exclude /usr/share/vim/vim74/syntax/awk.vim
 %exclude /usr/share/vim/vim74/syntax/ayacc.vim
 %exclude /usr/share/vim/vim74/syntax/b.vim
@@ -1195,6 +1264,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/blank.vim
 %exclude /usr/share/vim/vim74/syntax/bst.vim
 %exclude /usr/share/vim/vim74/syntax/btm.vim
+%exclude /usr/share/vim/vim74/syntax/bzl.vim
 %exclude /usr/share/vim/vim74/syntax/bzr.vim
 %exclude /usr/share/vim/vim74/syntax/c.vim
 %exclude /usr/share/vim/vim74/syntax/cabal.vim
@@ -1269,6 +1339,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/docbk.vim
 %exclude /usr/share/vim/vim74/syntax/docbksgml.vim
 %exclude /usr/share/vim/vim74/syntax/docbkxml.vim
+%exclude /usr/share/vim/vim74/syntax/dockerfile.vim
 %exclude /usr/share/vim/vim74/syntax/dosbatch.vim
 %exclude /usr/share/vim/vim74/syntax/dosini.vim
 %exclude /usr/share/vim/vim74/syntax/dot.vim
@@ -1294,6 +1365,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/esqlc.vim
 %exclude /usr/share/vim/vim74/syntax/esterel.vim
 %exclude /usr/share/vim/vim74/syntax/eterm.vim
+%exclude /usr/share/vim/vim74/syntax/euphoria3.vim
+%exclude /usr/share/vim/vim74/syntax/euphoria4.vim
 %exclude /usr/share/vim/vim74/syntax/eviews.vim
 %exclude /usr/share/vim/vim74/syntax/exim.vim
 %exclude /usr/share/vim/vim74/syntax/expect.vim
@@ -1327,6 +1400,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/gkrellmrc.vim
 %exclude /usr/share/vim/vim74/syntax/gnash.vim
 %exclude /usr/share/vim/vim74/syntax/gnuplot.vim
+%exclude /usr/share/vim/vim74/syntax/go.vim
+%exclude /usr/share/vim/vim74/syntax/godoc.vim
 %exclude /usr/share/vim/vim74/syntax/gp.vim
 %exclude /usr/share/vim/vim74/syntax/gpg.vim
 %exclude /usr/share/vim/vim74/syntax/gprof.vim
@@ -1372,6 +1447,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/ishd.vim
 %exclude /usr/share/vim/vim74/syntax/iss.vim
 %exclude /usr/share/vim/vim74/syntax/ist.vim
+%exclude /usr/share/vim/vim74/syntax/j.vim
 %exclude /usr/share/vim/vim74/syntax/jal.vim
 %exclude /usr/share/vim/vim74/syntax/jam.vim
 %exclude /usr/share/vim/vim74/syntax/jargon.vim
@@ -1382,8 +1458,10 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/jgraph.vim
 %exclude /usr/share/vim/vim74/syntax/jovial.vim
 %exclude /usr/share/vim/vim74/syntax/jproperties.vim
+%exclude /usr/share/vim/vim74/syntax/json.vim
 %exclude /usr/share/vim/vim74/syntax/jsp.vim
 %exclude /usr/share/vim/vim74/syntax/kconfig.vim
+%exclude /usr/share/vim/vim74/syntax/kivy.vim
 %exclude /usr/share/vim/vim74/syntax/kix.vim
 %exclude /usr/share/vim/vim74/syntax/kscript.vim
 %exclude /usr/share/vim/vim74/syntax/kwt.vim
@@ -1392,6 +1470,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/ld.vim
 %exclude /usr/share/vim/vim74/syntax/ldapconf.vim
 %exclude /usr/share/vim/vim74/syntax/ldif.vim
+%exclude /usr/share/vim/vim74/syntax/less.vim
 %exclude /usr/share/vim/vim74/syntax/lex.vim
 %exclude /usr/share/vim/vim74/syntax/lftp.vim
 %exclude /usr/share/vim/vim74/syntax/lhaskell.vim
@@ -1437,6 +1516,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/mgl.vim
 %exclude /usr/share/vim/vim74/syntax/mgp.vim
 %exclude /usr/share/vim/vim74/syntax/mib.vim
+%exclude /usr/share/vim/vim74/syntax/mix.vim
 %exclude /usr/share/vim/vim74/syntax/mma.vim
 %exclude /usr/share/vim/vim74/syntax/mmix.vim
 %exclude /usr/share/vim/vim74/syntax/mmp.vim
@@ -1541,12 +1621,14 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/rexx.vim
 %exclude /usr/share/vim/vim74/syntax/rhelp.vim
 %exclude /usr/share/vim/vim74/syntax/rib.vim
+%exclude /usr/share/vim/vim74/syntax/rmd.vim
 %exclude /usr/share/vim/vim74/syntax/rnc.vim
 %exclude /usr/share/vim/vim74/syntax/rng.vim
 %exclude /usr/share/vim/vim74/syntax/rnoweb.vim
 %exclude /usr/share/vim/vim74/syntax/robots.vim
 %exclude /usr/share/vim/vim74/syntax/rpcgen.vim
 %exclude /usr/share/vim/vim74/syntax/rpl.vim
+%exclude /usr/share/vim/vim74/syntax/rrst.vim
 %exclude /usr/share/vim/vim74/syntax/rst.vim
 %exclude /usr/share/vim/vim74/syntax/rtf.vim
 %exclude /usr/share/vim/vim74/syntax/ruby.vim
@@ -1611,6 +1693,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/sqloracle.vim
 %exclude /usr/share/vim/vim74/syntax/sqr.vim
 %exclude /usr/share/vim/vim74/syntax/squid.vim
+%exclude /usr/share/vim/vim74/syntax/srec.vim
 %exclude /usr/share/vim/vim74/syntax/sshconfig.vim
 %exclude /usr/share/vim/vim74/syntax/sshdconfig.vim
 %exclude /usr/share/vim/vim74/syntax/st.vim
@@ -1624,6 +1707,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/synload.vim
 %exclude /usr/share/vim/vim74/syntax/syntax.vim
 %exclude /usr/share/vim/vim74/syntax/sysctl.vim
+%exclude /usr/share/vim/vim74/syntax/systemd.vim
+%exclude /usr/share/vim/vim74/syntax/systemverilog.vim
 %exclude /usr/share/vim/vim74/syntax/tads.vim
 %exclude /usr/share/vim/vim74/syntax/tags.vim
 %exclude /usr/share/vim/vim74/syntax/tak.vim
@@ -1635,6 +1720,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/tasm.vim
 %exclude /usr/share/vim/vim74/syntax/tcl.vim
 %exclude /usr/share/vim/vim74/syntax/tcsh.vim
+%exclude /usr/share/vim/vim74/syntax/teraterm.vim
 %exclude /usr/share/vim/vim74/syntax/terminfo.vim
 %exclude /usr/share/vim/vim74/syntax/tex.vim
 %exclude /usr/share/vim/vim74/syntax/texinfo.vim
@@ -1664,6 +1750,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/upstreamdat.vim
 %exclude /usr/share/vim/vim74/syntax/upstreaminstalllog.vim
 %exclude /usr/share/vim/vim74/syntax/upstreamlog.vim
+%exclude /usr/share/vim/vim74/syntax/upstreamrpt.vim
 %exclude /usr/share/vim/vim74/syntax/usserverlog.vim
 %exclude /usr/share/vim/vim74/syntax/usw2kagtlog.vim
 %exclude /usr/share/vim/vim74/syntax/valgrind.vim
@@ -1679,6 +1766,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/syntax/vmasm.vim
 %exclude /usr/share/vim/vim74/syntax/voscm.vim
 %exclude /usr/share/vim/vim74/syntax/vrml.vim
+%exclude /usr/share/vim/vim74/syntax/vroom.vim
 %exclude /usr/share/vim/vim74/syntax/vsejcl.vim
 %exclude /usr/share/vim/vim74/syntax/wdiff.vim
 %exclude /usr/share/vim/vim74/syntax/web.vim
@@ -1716,6 +1804,9 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/tools/ccfilter.1
 %exclude /usr/share/vim/vim74/tools/ccfilter.c
 %exclude /usr/share/vim/vim74/tools/ccfilter_README.txt
+%exclude /usr/share/vim/vim74/tools/demoserver.py
+%exclude /usr/share/vim/vim74/tools/demoserver.pyc
+%exclude /usr/share/vim/vim74/tools/demoserver.pyo
 %exclude /usr/share/vim/vim74/tools/efm_filter.pl
 %exclude /usr/share/vim/vim74/tools/efm_filter.txt
 %exclude /usr/share/vim/vim74/tools/efm_perl.pl
@@ -1738,6 +1829,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/tutor/tutor
 %exclude /usr/share/vim/vim74/tutor/tutor.bar
 %exclude /usr/share/vim/vim74/tutor/tutor.bar.utf-8
+%exclude /usr/share/vim/vim74/tutor/tutor.bg.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.ca
 %exclude /usr/share/vim/vim74/tutor/tutor.ca.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.cs
@@ -1784,10 +1876,13 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/tutor/tutor.sk
 %exclude /usr/share/vim/vim74/tutor/tutor.sk.cp1250
 %exclude /usr/share/vim/vim74/tutor/tutor.sk.utf-8
+%exclude /usr/share/vim/vim74/tutor/tutor.sr.cp1250
+%exclude /usr/share/vim/vim74/tutor/tutor.sr.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.sv
 %exclude /usr/share/vim/vim74/tutor/tutor.sv.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.tr.iso9
 %exclude /usr/share/vim/vim74/tutor/tutor.tr.utf-8
+%exclude /usr/share/vim/vim74/tutor/tutor.uk.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.vi.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.vim
