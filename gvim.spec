@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 7.4.2107
-Release  : 15
-URL      : https://github.com/vim/vim/archive/v7.4.2107.tar.gz
-Source0  : https://github.com/vim/vim/archive/v7.4.2107.tar.gz
+Version  : 7.4.2136
+Release  : 16
+URL      : https://github.com/vim/vim/archive/v7.4.2136.tar.gz
+Source0  : https://github.com/vim/vim/archive/v7.4.2136.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,7 +66,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-7.4.2107
+%setup -q -n vim-7.4.2136
 
 %build
 export LANG=C
@@ -1892,6 +1892,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/tutor/tutor.zh_cn.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.zh_tw.utf-8
 %exclude /usr/share/vim/vim74/vimrc_example.vim
+/usr/share/vim/vim74/defaults.vim
 
 %files doc
 %defattr(-,root,root,-)
