@@ -1733,6 +1733,7 @@
 /usr/share/vim/vim74/autoload/netrw_gitignore.vim
 /usr/share/vim/vim74/colors/industry.vim
 /usr/share/vim/vim74/compiler/go.vim
+/usr/share/vim/vim74/defaults.vim
 /usr/share/vim/vim74/doc/channel.txt
 /usr/share/vim/vim74/doc/pi_logipat.txt
 /usr/share/vim/vim74/doc/version8.txt
