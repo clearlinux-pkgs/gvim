@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 7.4.2196
-Release  : 19
+Release  : 20
 URL      : https://github.com/vim/vim/archive/v7.4.2196.tar.gz
 Source0  : https://github.com/vim/vim/archive/v7.4.2196.tar.gz
 Summary  : No detailed summary available
@@ -78,6 +78,8 @@ rm -rf %{buildroot}
 %make_install
 ## make_install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
+install -Dm644 runtime/gvim.desktop %{buildroot}/usr/share/applications/gvim.desktop
+install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 ## make_install_append end
 
 %files
@@ -1893,6 +1895,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim74/tutor/tutor.zh_cn.utf-8
 %exclude /usr/share/vim/vim74/tutor/tutor.zh_tw.utf-8
 %exclude /usr/share/vim/vim74/vimrc_example.vim
+/usr/share/applications/gvim.desktop
+/usr/share/pixmaps/gvim.png
 
 %files doc
 %defattr(-,root,root,-)
