@@ -769,6 +769,7 @@
 /usr/share/vim/vim74/keymap/polish-slash_utf-8.vim
 /usr/share/vim/vim74/keymap/russian-dvorak.vim
 /usr/share/vim/vim74/keymap/russian-jcuken.vim
+/usr/share/vim/vim74/keymap/russian-jcukenmac.vim
 /usr/share/vim/vim74/keymap/russian-jcukenwin.vim
 /usr/share/vim/vim74/keymap/russian-yawerty.vim
 /usr/share/vim/vim74/keymap/serbian-latin.vim

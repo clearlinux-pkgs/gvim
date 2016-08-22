@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 7.4.2196
-Release  : 20
-URL      : https://github.com/vim/vim/archive/v7.4.2196.tar.gz
-Source0  : https://github.com/vim/vim/archive/v7.4.2196.tar.gz
+Version  : 7.4.2239
+Release  : 21
+URL      : https://github.com/vim/vim/archive/v7.4.2239.tar.gz
+Source0  : https://github.com/vim/vim/archive/v7.4.2239.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,7 +66,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-7.4.2196
+%setup -q -n vim-7.4.2239
 
 %build
 export LANG=C
@@ -919,6 +919,7 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 %exclude /usr/share/vim/vim74/keymap/polish-slash_utf-8.vim
 %exclude /usr/share/vim/vim74/keymap/russian-dvorak.vim
 %exclude /usr/share/vim/vim74/keymap/russian-jcuken.vim
+%exclude /usr/share/vim/vim74/keymap/russian-jcukenmac.vim
 %exclude /usr/share/vim/vim74/keymap/russian-jcukenwin.vim
 %exclude /usr/share/vim/vim74/keymap/russian-jcukenwintype.vim
 %exclude /usr/share/vim/vim74/keymap/russian-yawerty.vim
