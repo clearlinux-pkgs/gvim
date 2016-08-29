@@ -1,3 +1,4 @@
+/usr/share/applications/vim.desktop
 /usr/share/man/fr.ISO8859-1/man1/eview.1
 /usr/share/man/fr.ISO8859-1/man1/evim.1
 /usr/share/man/fr.ISO8859-1/man1/ex.1
@@ -1755,6 +1756,7 @@
 /usr/share/vim/vim74/ftplugin/rmd.vim
 /usr/share/vim/vim74/ftplugin/rnoweb.vim
 /usr/share/vim/vim74/ftplugin/rrst.vim
+/usr/share/vim/vim74/ftplugin/scala.vim
 /usr/share/vim/vim74/ftplugin/systemd.vim
 /usr/share/vim/vim74/ftplugin/systemverilog.vim
 /usr/share/vim/vim74/ftplugin/text.vim
@@ -1769,6 +1771,7 @@
 /usr/share/vim/vim74/indent/rmd.vim
 /usr/share/vim/vim74/indent/rnoweb.vim
 /usr/share/vim/vim74/indent/rrst.vim
+/usr/share/vim/vim74/indent/scala.vim
 /usr/share/vim/vim74/indent/systemd.vim
 /usr/share/vim/vim74/indent/systemverilog.vim
 /usr/share/vim/vim74/indent/teraterm.vim
@@ -1806,6 +1809,7 @@
 /usr/share/vim/vim74/syntax/mix.vim
 /usr/share/vim/vim74/syntax/rmd.vim
 /usr/share/vim/vim74/syntax/rrst.vim
+/usr/share/vim/vim74/syntax/scala.vim
 /usr/share/vim/vim74/syntax/srec.vim
 /usr/share/vim/vim74/syntax/systemd.vim
 /usr/share/vim/vim74/syntax/systemverilog.vim

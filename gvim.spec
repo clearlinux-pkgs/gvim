@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 7.4.2239
-Release  : 21
-URL      : https://github.com/vim/vim/archive/v7.4.2239.tar.gz
-Source0  : https://github.com/vim/vim/archive/v7.4.2239.tar.gz
+Version  : 7.4.2291
+Release  : 22
+URL      : https://github.com/vim/vim/archive/v7.4.2291.tar.gz
+Source0  : https://github.com/vim/vim/archive/v7.4.2291.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,7 +66,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-7.4.2239
+%setup -q -n vim-7.4.2291
 
 %build
 export LANG=C
@@ -78,8 +78,6 @@ rm -rf %{buildroot}
 %make_install
 ## make_install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
-install -Dm644 runtime/gvim.desktop %{buildroot}/usr/share/applications/gvim.desktop
-install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 ## make_install_append end
 
 %files
@@ -105,6 +103,7 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 
 %files data
 %defattr(-,root,root,-)
+%exclude /usr/share/applications/vim.desktop
 %exclude /usr/share/man/fr.ISO8859-1/man1/eview.1
 %exclude /usr/share/man/fr.ISO8859-1/man1/evim.1
 %exclude /usr/share/man/fr.ISO8859-1/man1/ex.1
@@ -704,6 +703,7 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 %exclude /usr/share/vim/vim74/ftplugin/rst.vim
 %exclude /usr/share/vim/vim74/ftplugin/ruby.vim
 %exclude /usr/share/vim/vim74/ftplugin/sass.vim
+%exclude /usr/share/vim/vim74/ftplugin/scala.vim
 %exclude /usr/share/vim/vim74/ftplugin/scheme.vim
 %exclude /usr/share/vim/vim74/ftplugin/screen.vim
 %exclude /usr/share/vim/vim74/ftplugin/scss.vim
@@ -841,6 +841,7 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 %exclude /usr/share/vim/vim74/indent/rst.vim
 %exclude /usr/share/vim/vim74/indent/ruby.vim
 %exclude /usr/share/vim/vim74/indent/sass.vim
+%exclude /usr/share/vim/vim74/indent/scala.vim
 %exclude /usr/share/vim/vim74/indent/scheme.vim
 %exclude /usr/share/vim/vim74/indent/scss.vim
 %exclude /usr/share/vim/vim74/indent/sdl.vim
@@ -1640,6 +1641,7 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 %exclude /usr/share/vim/vim74/syntax/sas.vim
 %exclude /usr/share/vim/vim74/syntax/sass.vim
 %exclude /usr/share/vim/vim74/syntax/sather.vim
+%exclude /usr/share/vim/vim74/syntax/scala.vim
 %exclude /usr/share/vim/vim74/syntax/scheme.vim
 %exclude /usr/share/vim/vim74/syntax/scilab.vim
 %exclude /usr/share/vim/vim74/syntax/screen.vim
@@ -1897,7 +1899,9 @@ install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
 %exclude /usr/share/vim/vim74/tutor/tutor.zh_tw.utf-8
 %exclude /usr/share/vim/vim74/vimrc_example.vim
 /usr/share/applications/gvim.desktop
-/usr/share/pixmaps/gvim.png
+/usr/share/icons/hicolor/48x48/apps/gvim.png
+/usr/share/icons/locolor/16x16/apps/gvim.png
+/usr/share/icons/locolor/32x32/apps/gvim.png
 
 %files doc
 %defattr(-,root,root,-)

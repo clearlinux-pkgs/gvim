@@ -1,3 +1,1 @@
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
-install -Dm644 runtime/gvim.desktop %{buildroot}/usr/share/applications/gvim.desktop
-install -Dm644 runtime/vim48x48.png %{buildroot}/usr/share/pixmaps/gvim.png
