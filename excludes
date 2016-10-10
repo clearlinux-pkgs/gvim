@@ -1767,6 +1767,7 @@
 /usr/share/vim/vim80/indent/j.vim
 /usr/share/vim/vim80/indent/json.vim
 /usr/share/vim/vim80/indent/less.vim
+/usr/share/vim/vim80/indent/mf.vim
 /usr/share/vim/vim80/indent/rhelp.vim
 /usr/share/vim/vim80/indent/rmd.vim
 /usr/share/vim/vim80/indent/rnoweb.vim
