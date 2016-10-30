@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0046
-Release  : 31
-URL      : https://github.com/vim/vim/archive/v8.0.0046.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0046.tar.gz
+Version  : 8.0.0054
+Release  : 32
+URL      : https://github.com/vim/vim/archive/v8.0.0054.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0054.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,7 +66,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0046
+%setup -q -n vim-8.0.0054
 
 %build
 export LANG=C
@@ -1903,6 +1903,11 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+/usr/share/vim/vim80/autoload/context.vim
+/usr/share/vim/vim80/autoload/contextcomplete.vim
+/usr/share/vim/vim80/compiler/context.vim
+/usr/share/vim/vim80/indent/context.vim
+/usr/share/vim/vim80/keymap/kazakh-jcuken.vim
 
 %files doc
 %defattr(-,root,root,-)
