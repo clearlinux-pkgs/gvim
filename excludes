@@ -1824,3 +1824,8 @@
 /usr/share/vim/vim80/tutor/tutor.sr.cp1250
 /usr/share/vim/vim80/tutor/tutor.sr.utf-8
 /usr/share/vim/vim80/tutor/tutor.uk.utf-8
+/usr/share/vim/vim80/autoload/context.vim
+/usr/share/vim/vim80/autoload/contextcomplete.vim
+/usr/share/vim/vim80/keymap/kazakh-jcuken.vim
+/usr/share/vim/vim80/indent/context.vim
+/usr/share/vim/vim80/compiler/context.vim

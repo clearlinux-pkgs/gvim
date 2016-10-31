@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.0054
-Release  : 32
+Release  : 33
 URL      : https://github.com/vim/vim/archive/v8.0.0054.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.0054.tar.gz
 Summary  : No detailed summary available
@@ -289,6 +289,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/autoload/adacomplete.vim
 %exclude /usr/share/vim/vim80/autoload/ccomplete.vim
 %exclude /usr/share/vim/vim80/autoload/clojurecomplete.vim
+%exclude /usr/share/vim/vim80/autoload/context.vim
+%exclude /usr/share/vim/vim80/autoload/contextcomplete.vim
 %exclude /usr/share/vim/vim80/autoload/csscomplete.vim
 %exclude /usr/share/vim/vim80/autoload/decada.vim
 %exclude /usr/share/vim/vim80/autoload/getscript.vim
@@ -351,6 +353,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/compiler/bcc.vim
 %exclude /usr/share/vim/vim80/compiler/bdf.vim
 %exclude /usr/share/vim/vim80/compiler/checkstyle.vim
+%exclude /usr/share/vim/vim80/compiler/context.vim
 %exclude /usr/share/vim/vim80/compiler/cs.vim
 %exclude /usr/share/vim/vim80/compiler/cucumber.vim
 %exclude /usr/share/vim/vim80/compiler/decada.vim
@@ -773,6 +776,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/indent/cmake.vim
 %exclude /usr/share/vim/vim80/indent/cobol.vim
 %exclude /usr/share/vim/vim80/indent/config.vim
+%exclude /usr/share/vim/vim80/indent/context.vim
 %exclude /usr/share/vim/vim80/indent/cpp.vim
 %exclude /usr/share/vim/vim80/indent/cs.vim
 %exclude /usr/share/vim/vim80/indent/css.vim
@@ -908,6 +912,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/keymap/hebrewp_iso-8859-8.vim
 %exclude /usr/share/vim/vim80/keymap/hebrewp_utf-8.vim
 %exclude /usr/share/vim/vim80/keymap/kana.vim
+%exclude /usr/share/vim/vim80/keymap/kazakh-jcuken.vim
 %exclude /usr/share/vim/vim80/keymap/lithuanian-baltic.vim
 %exclude /usr/share/vim/vim80/keymap/magyar_utf-8.vim
 %exclude /usr/share/vim/vim80/keymap/mongolian_utf-8.vim
@@ -1903,11 +1908,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/autoload/context.vim
-/usr/share/vim/vim80/autoload/contextcomplete.vim
-/usr/share/vim/vim80/compiler/context.vim
-/usr/share/vim/vim80/indent/context.vim
-/usr/share/vim/vim80/keymap/kazakh-jcuken.vim
 
 %files doc
 %defattr(-,root,root,-)
