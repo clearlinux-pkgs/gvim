@@ -245,6 +245,7 @@
 /usr/share/vim/vim80/compiler/bdf.vim
 /usr/share/vim/vim80/compiler/checkstyle.vim
 /usr/share/vim/vim80/compiler/cs.vim
+/usr/share/vim/vim80/compiler/csslint.vim
 /usr/share/vim/vim80/compiler/cucumber.vim
 /usr/share/vim/vim80/compiler/decada.vim
 /usr/share/vim/vim80/compiler/dot.vim
@@ -282,6 +283,7 @@
 /usr/share/vim/vim80/compiler/pbx.vim
 /usr/share/vim/vim80/compiler/perl.vim
 /usr/share/vim/vim80/compiler/php.vim
+/usr/share/vim/vim80/compiler/pylint.vim
 /usr/share/vim/vim80/compiler/pyunit.vim
 /usr/share/vim/vim80/compiler/rake.vim
 /usr/share/vim/vim80/compiler/rspec.vim

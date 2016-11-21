@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.0092
-Release  : 36
+Release  : 37
 URL      : https://github.com/vim/vim/archive/v8.0.0092.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.0092.tar.gz
 Summary  : No detailed summary available
@@ -355,6 +355,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/compiler/checkstyle.vim
 %exclude /usr/share/vim/vim80/compiler/context.vim
 %exclude /usr/share/vim/vim80/compiler/cs.vim
+%exclude /usr/share/vim/vim80/compiler/csslint.vim
 %exclude /usr/share/vim/vim80/compiler/cucumber.vim
 %exclude /usr/share/vim/vim80/compiler/decada.vim
 %exclude /usr/share/vim/vim80/compiler/dot.vim
@@ -393,6 +394,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/compiler/pbx.vim
 %exclude /usr/share/vim/vim80/compiler/perl.vim
 %exclude /usr/share/vim/vim80/compiler/php.vim
+%exclude /usr/share/vim/vim80/compiler/pylint.vim
 %exclude /usr/share/vim/vim80/compiler/pyunit.vim
 %exclude /usr/share/vim/vim80/compiler/rake.vim
 %exclude /usr/share/vim/vim80/compiler/rspec.vim
@@ -1908,8 +1910,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/compiler/csslint.vim
-/usr/share/vim/vim80/compiler/pylint.vim
 
 %files doc
 %defattr(-,root,root,-)
