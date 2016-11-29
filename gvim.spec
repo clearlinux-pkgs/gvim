@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0092
-Release  : 37
-URL      : https://github.com/vim/vim/archive/v8.0.0092.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0092.tar.gz
+Version  : 8.0.0104
+Release  : 38
+URL      : https://github.com/vim/vim/archive/v8.0.0104.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0104.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,7 +66,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0092
+%setup -q -n vim-8.0.0104
 
 %build
 export LANG=C
