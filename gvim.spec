@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.0104
-Release  : 38
+Release  : 39
 URL      : https://github.com/vim/vim/archive/v8.0.0104.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.0104.tar.gz
 Summary  : No detailed summary available
@@ -17,7 +17,6 @@ Requires: gvim-doc
 BuildRequires : acl-dev
 BuildRequires : attr-dev
 BuildRequires : desktop-file-utils
-BuildRequires : gmp-dev
 BuildRequires : libXt-dev
 BuildRequires : lua-dev
 BuildRequires : ncurses-dev
@@ -29,6 +28,7 @@ BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
 BuildRequires : ruby
+Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
 %description
 WHAT IS VIM?
@@ -67,6 +67,7 @@ doc components for the gvim package.
 
 %prep
 %setup -q -n vim-8.0.0104
+%patch1 -p1
 
 %build
 export LANG=C
