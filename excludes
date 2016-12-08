@@ -260,6 +260,7 @@
 /usr/share/vim/vim80/compiler/g95.vim
 /usr/share/vim/vim80/compiler/gcc.vim
 /usr/share/vim/vim80/compiler/gfortran.vim
+/usr/share/vim/vim80/compiler/ghc.vim
 /usr/share/vim/vim80/compiler/gnat.vim
 /usr/share/vim/vim80/compiler/haml.vim
 /usr/share/vim/vim80/compiler/hp_acc.vim
