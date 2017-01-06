@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0134
-Release  : 42
-URL      : https://github.com/vim/vim/archive/v8.0.0134.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0134.tar.gz
+Version  : 8.0.0142
+Release  : 43
+URL      : https://github.com/vim/vim/archive/v8.0.0142.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0142.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -66,11 +66,12 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0134
+%setup -q -n vim-8.0.0142
 %patch1 -p1
 
 %build
 export LANG=C
+export SOURCE_DATE_EPOCH=1483741407
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
