@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0142
-Release  : 43
-URL      : https://github.com/vim/vim/archive/v8.0.0142.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0142.tar.gz
+Version  : 8.0.0206
+Release  : 44
+URL      : https://github.com/vim/vim/archive/v8.0.0206.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0206.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -17,6 +17,7 @@ Requires: gvim-doc
 BuildRequires : acl-dev
 BuildRequires : attr-dev
 BuildRequires : desktop-file-utils
+BuildRequires : elfutils-dev
 BuildRequires : libXt-dev
 BuildRequires : lua-dev
 BuildRequires : ncurses-dev
@@ -66,16 +67,17 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0142
+%setup -q -n vim-8.0.0206
 %patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1483741407
+export SOURCE_DATE_EPOCH=1484838988
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
 %install
+export SOURCE_DATE_EPOCH=1484838988
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
