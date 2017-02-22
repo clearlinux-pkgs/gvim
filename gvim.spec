@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0347
-Release  : 47
-URL      : https://github.com/vim/vim/archive/v8.0.0347.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0347.tar.gz
+Version  : 8.0.0314
+Release  : 48
+URL      : https://github.com/vim/vim/archive/v8.0.0314.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0314.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -67,17 +67,17 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0347
+%setup -q -n vim-8.0.0314
 %patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487781083
+export SOURCE_DATE_EPOCH=1487799523
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1487781083
+export SOURCE_DATE_EPOCH=1487799523
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -1915,7 +1915,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/ftplugin/awk.vim
 
 %files doc
 %defattr(-,root,root,-)
