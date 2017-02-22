@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0314
-Release  : 48
-URL      : https://github.com/vim/vim/archive/v8.0.0314.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0314.tar.gz
+Version  : 8.0.0347
+Release  : 49
+URL      : https://github.com/vim/vim/archive/v8.0.0347.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0347.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -67,17 +67,17 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0314
+%setup -q -n vim-8.0.0347
 %patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1487799523
+export SOURCE_DATE_EPOCH=1487800107
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1487799523
+export SOURCE_DATE_EPOCH=1487800107
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -568,6 +568,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/ftplugin/art.vim
 %exclude /usr/share/vim/vim80/ftplugin/aspvbs.vim
 %exclude /usr/share/vim/vim80/ftplugin/automake.vim
+%exclude /usr/share/vim/vim80/ftplugin/awk.vim
 %exclude /usr/share/vim/vim80/ftplugin/bdf.vim
 %exclude /usr/share/vim/vim80/ftplugin/bst.vim
 %exclude /usr/share/vim/vim80/ftplugin/btm.vim
