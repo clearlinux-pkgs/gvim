@@ -1764,6 +1764,7 @@
 /usr/share/vim/vim80/ftplugin/systemd.vim
 /usr/share/vim/vim80/ftplugin/systemverilog.vim
 /usr/share/vim/vim80/ftplugin/text.vim
+/usr/share/vim/vim80/ftplugin/tmux.vim
 /usr/share/vim/vim80/ftplugin/vroom.vim
 /usr/share/vim/vim80/indent/bzl.vim
 /usr/share/vim/vim80/indent/go.vim
@@ -1819,6 +1820,7 @@
 /usr/share/vim/vim80/syntax/systemd.vim
 /usr/share/vim/vim80/syntax/systemverilog.vim
 /usr/share/vim/vim80/syntax/teraterm.vim
+/usr/share/vim/vim80/syntax/tmux.vim
 /usr/share/vim/vim80/syntax/upstreamrpt.vim
 /usr/share/vim/vim80/syntax/vroom.vim
 /usr/share/vim/vim80/tools/demoserver.py
