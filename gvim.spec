@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0463
-Release  : 54
-URL      : https://github.com/vim/vim/archive/v8.0.0463.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0463.tar.gz
+Version  : 8.0.0514
+Release  : 55
+URL      : https://github.com/vim/vim/archive/v8.0.0514.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0514.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -67,17 +67,17 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0463
+%setup -q -n vim-8.0.0514
 %patch1 -p1
 
 %build
 export LANG=C
-export SOURCE_DATE_EPOCH=1489672609
+export SOURCE_DATE_EPOCH=1490624997
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1489672609
+export SOURCE_DATE_EPOCH=1490624997
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -311,6 +311,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/autoload/python3complete.vim
 %exclude /usr/share/vim/vim80/autoload/pythoncomplete.vim
 %exclude /usr/share/vim/vim80/autoload/rubycomplete.vim
+%exclude /usr/share/vim/vim80/autoload/rust.vim
+%exclude /usr/share/vim/vim80/autoload/rustfmt.vim
 %exclude /usr/share/vim/vim80/autoload/spellfile.vim
 %exclude /usr/share/vim/vim80/autoload/sqlcomplete.vim
 %exclude /usr/share/vim/vim80/autoload/syntaxcomplete.vim
@@ -356,6 +358,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/compiler/ant.vim
 %exclude /usr/share/vim/vim80/compiler/bcc.vim
 %exclude /usr/share/vim/vim80/compiler/bdf.vim
+%exclude /usr/share/vim/vim80/compiler/cargo.vim
 %exclude /usr/share/vim/vim80/compiler/checkstyle.vim
 %exclude /usr/share/vim/vim80/compiler/context.vim
 %exclude /usr/share/vim/vim80/compiler/cs.vim
@@ -406,6 +409,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/compiler/rst.vim
 %exclude /usr/share/vim/vim80/compiler/ruby.vim
 %exclude /usr/share/vim/vim80/compiler/rubyunit.vim
+%exclude /usr/share/vim/vim80/compiler/rustc.vim
 %exclude /usr/share/vim/vim80/compiler/sass.vim
 %exclude /usr/share/vim/vim80/compiler/se.vim
 %exclude /usr/share/vim/vim80/compiler/splint.vim
@@ -433,6 +437,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/doc/filetype.txt
 %exclude /usr/share/vim/vim80/doc/fold.txt
 %exclude /usr/share/vim/vim80/doc/ft_ada.txt
+%exclude /usr/share/vim/vim80/doc/ft_rust.txt
 %exclude /usr/share/vim/vim80/doc/ft_sql.txt
 %exclude /usr/share/vim/vim80/doc/gui.txt
 %exclude /usr/share/vim/vim80/doc/gui_w32.txt
@@ -713,6 +718,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/ftplugin/rrst.vim
 %exclude /usr/share/vim/vim80/ftplugin/rst.vim
 %exclude /usr/share/vim/vim80/ftplugin/ruby.vim
+%exclude /usr/share/vim/vim80/ftplugin/rust.vim
 %exclude /usr/share/vim/vim80/ftplugin/sass.vim
 %exclude /usr/share/vim/vim80/ftplugin/scala.vim
 %exclude /usr/share/vim/vim80/ftplugin/scheme.vim
@@ -854,6 +860,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/indent/rrst.vim
 %exclude /usr/share/vim/vim80/indent/rst.vim
 %exclude /usr/share/vim/vim80/indent/ruby.vim
+%exclude /usr/share/vim/vim80/indent/rust.vim
+%exclude /usr/share/vim/vim80/indent/sas.vim
 %exclude /usr/share/vim/vim80/indent/sass.vim
 %exclude /usr/share/vim/vim80/indent/scala.vim
 %exclude /usr/share/vim/vim80/indent/scheme.vim
@@ -1652,6 +1660,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/rst.vim
 %exclude /usr/share/vim/vim80/syntax/rtf.vim
 %exclude /usr/share/vim/vim80/syntax/ruby.vim
+%exclude /usr/share/vim/vim80/syntax/rust.vim
 %exclude /usr/share/vim/vim80/syntax/samba.vim
 %exclude /usr/share/vim/vim80/syntax/sas.vim
 %exclude /usr/share/vim/vim80/syntax/sass.vim
