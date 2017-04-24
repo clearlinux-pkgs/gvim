@@ -6,3 +6,5 @@ ncurses-dev
 libXt-dev
 attr-dev
 acl-dev
+python-dev
+python3-dev

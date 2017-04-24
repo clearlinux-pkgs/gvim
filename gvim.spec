@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.0586
-Release  : 57
+Release  : 58
 URL      : https://github.com/vim/vim/archive/v8.0.0586.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.0586.tar.gz
 Summary  : No detailed summary available
@@ -28,6 +28,8 @@ BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
+BuildRequires : python-dev
+BuildRequires : python3-dev
 BuildRequires : ruby
 Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
@@ -75,12 +77,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1492998672
-%configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp
+export SOURCE_DATE_EPOCH=1493065112
+%configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk2-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk2 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1492998672
+export SOURCE_DATE_EPOCH=1493065112
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
