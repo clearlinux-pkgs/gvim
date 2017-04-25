@@ -8,3 +8,5 @@ attr-dev
 acl-dev
 python-dev
 python3-dev
+gtk3-dev
+gvfs-dev
