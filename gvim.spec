@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.0600
-Release  : 66
+Release  : 67
 URL      : https://github.com/vim/vim/archive/v8.0.0600.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.0600.tar.gz
 Summary  : No detailed summary available
