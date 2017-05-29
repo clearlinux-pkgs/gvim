@@ -585,6 +585,7 @@
 /usr/share/vim/vim80/ftplugin/ruby.vim
 /usr/share/vim/vim80/ftplugin/rust.vim
 /usr/share/vim/vim80/ftplugin/sass.vim
+/usr/share/vim/vim80/ftplugin/sbt.vim
 /usr/share/vim/vim80/ftplugin/scheme.vim
 /usr/share/vim/vim80/ftplugin/screen.vim
 /usr/share/vim/vim80/ftplugin/scss.vim
@@ -1475,6 +1476,7 @@
 /usr/share/vim/vim80/syntax/sas.vim
 /usr/share/vim/vim80/syntax/sass.vim
 /usr/share/vim/vim80/syntax/sather.vim
+/usr/share/vim/vim80/syntax/sbt.vim
 /usr/share/vim/vim80/syntax/scheme.vim
 /usr/share/vim/vim80/syntax/scilab.vim
 /usr/share/vim/vim80/syntax/screen.vim
