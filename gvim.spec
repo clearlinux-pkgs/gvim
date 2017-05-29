@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0604
-Release  : 70
-URL      : https://github.com/vim/vim/archive/v8.0.0604.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0604.tar.gz
+Version  : 8.0.0606
+Release  : 71
+URL      : https://github.com/vim/vim/archive/v8.0.0606.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0606.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : MIT
@@ -70,7 +70,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0604
+%setup -q -n vim-8.0.0606
 %patch1 -p1
 
 %build
@@ -78,12 +78,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1495644500
+export SOURCE_DATE_EPOCH=1496070279
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1495644500
+export SOURCE_DATE_EPOCH=1496070279
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -726,6 +726,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/ftplugin/ruby.vim
 %exclude /usr/share/vim/vim80/ftplugin/rust.vim
 %exclude /usr/share/vim/vim80/ftplugin/sass.vim
+%exclude /usr/share/vim/vim80/ftplugin/sbt.vim
 %exclude /usr/share/vim/vim80/ftplugin/scala.vim
 %exclude /usr/share/vim/vim80/ftplugin/scheme.vim
 %exclude /usr/share/vim/vim80/ftplugin/screen.vim
@@ -1671,6 +1672,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/sas.vim
 %exclude /usr/share/vim/vim80/syntax/sass.vim
 %exclude /usr/share/vim/vim80/syntax/sather.vim
+%exclude /usr/share/vim/vim80/syntax/sbt.vim
 %exclude /usr/share/vim/vim80/syntax/scala.vim
 %exclude /usr/share/vim/vim80/syntax/scheme.vim
 %exclude /usr/share/vim/vim80/syntax/scilab.vim
