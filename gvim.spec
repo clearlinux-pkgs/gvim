@@ -4,11 +4,11 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0692
-Release  : 89
-URL      : https://github.com/vim/vim/archive/v8.0.0692.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0692.tar.gz
-Summary  : No detailed summary available
+Version  : 8.0.0704
+Release  : 90
+URL      : https://github.com/vim/vim/archive/v8.0.0704.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0704.tar.gz
+Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
 Requires: gvim-bin
@@ -35,14 +35,12 @@ BuildRequires : ruby
 Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
 %description
-WHAT IS VIM?
-Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
-features have been added: multi-level undo, syntax highlighting, command line
-history, on-line help, spell checking, filename completion, block operations,
-script language, etc.  There is also a Graphical User Interface (GUI)
-available.  Still, Vi compatibility is maintained, those who have Vi "in the
-fingers" will feel at home.  See "runtime/doc/vi_diff.txt" for differences with
-Vi.
+This is a MODIFIED version of libvterm.
+The original can be found:
+On the original site (tar archive and Bazaar repository):
+http://www.leonerd.org.uk/code/libvterm/
+Cloned on Github:
+https://github.com/neovim/libvterm
 
 %package bin
 Summary: bin components for the gvim package.
@@ -70,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0692
+%setup -q -n vim-8.0.0704
 %patch1 -p1
 
 %build
@@ -78,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1499271638
+export SOURCE_DATE_EPOCH=1499662589
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1499271638
+export SOURCE_DATE_EPOCH=1499662589
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -1935,6 +1933,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+/usr/share/vim/vim80/doc/terminal.txt
 
 %files doc
 %defattr(-,root,root,-)
