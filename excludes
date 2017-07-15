@@ -1847,3 +1847,4 @@
 /usr/share/vim/vim80/indent/context.vim
 /usr/share/vim/vim80/compiler/context.vim
 /usr/share/vim/vim80/doc/terminal.txt
+/usr/share/vim/vim80/syntax/murphi.vim
