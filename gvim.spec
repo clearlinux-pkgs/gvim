@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0740
-Release  : 103
-URL      : https://github.com/vim/vim/archive/v8.0.0740.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0740.tar.gz
+Version  : 8.0.0765
+Release  : 104
+URL      : https://github.com/vim/vim/archive/v8.0.0765.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.0765.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -37,9 +37,9 @@ Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 %description
 This is a MODIFIED version of libvterm.
 The original can be found:
-On the original site (tar archive and Bazaar repository):
+- on the original site (tar archive and Bazaar repository):
 http://www.leonerd.org.uk/code/libvterm/
-Cloned on Github:
+- cloned on Github:
 https://github.com/neovim/libvterm
 
 %package bin
@@ -68,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0740
+%setup -q -n vim-8.0.0765
 %patch1 -p1
 
 %build
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1500671352
+export SOURCE_DATE_EPOCH=1500846592
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1500671352
+export SOURCE_DATE_EPOCH=1500846592
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
