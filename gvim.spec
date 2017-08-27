@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.0992
-Release  : 136
-URL      : https://github.com/vim/vim/archive/v8.0.0992.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.0992.tar.gz
+Version  : 8.0.1008
+Release  : 137
+URL      : https://github.com/vim/vim/archive/v8.0.1008.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.1008.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -68,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.0992
+%setup -q -n vim-8.0.1008
 %patch1 -p1
 
 %build
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1503529228
+export SOURCE_DATE_EPOCH=1503852734
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1503529228
+export SOURCE_DATE_EPOCH=1503852734
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -1935,6 +1935,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+/usr/share/vim/vim80/pack/dist/opt/termdebug/plugin/termdebug.vim
+/usr/share/vim/vim80/syntax/n1ql.vim
 
 %files doc
 %defattr(-,root,root,-)
