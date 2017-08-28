@@ -1378,6 +1378,7 @@
 /usr/share/vim/vim80/syntax/mush.vim
 /usr/share/vim/vim80/syntax/muttrc.vim
 /usr/share/vim/vim80/syntax/mysql.vim
+/usr/share/vim/vim80/syntax/n1ql.vim
 /usr/share/vim/vim80/syntax/named.vim
 /usr/share/vim/vim80/syntax/nanorc.vim
 /usr/share/vim/vim80/syntax/nasm.vim
@@ -1808,6 +1809,7 @@
 /usr/share/vim/vim80/pack/dist/opt/matchit/plugin/matchit.vim
 /usr/share/vim/vim80/pack/dist/opt/shellmenu/plugin/shellmenu.vim
 /usr/share/vim/vim80/pack/dist/opt/swapmouse/plugin/swapmouse.vim
+/usr/share/vim/vim80/pack/dist/opt/termdebug/plugin/termdebug.vim
 /usr/share/vim/vim80/plugin/logiPat.vim
 /usr/share/vim/vim80/plugin/manpager.vim
 /usr/share/vim/vim80/rgb.txt
