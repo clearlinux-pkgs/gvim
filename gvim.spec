@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.1157
-Release  : 167
-URL      : https://github.com/vim/vim/archive/v8.0.1157.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.1157.tar.gz
+Version  : 8.0.1159
+Release  : 168
+URL      : https://github.com/vim/vim/archive/v8.0.1159.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.1159.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -68,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.1157
+%setup -q -n vim-8.0.1159
 %patch1 -p1
 
 %build
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1506684253
+export SOURCE_DATE_EPOCH=1506684489
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1506684253
+export SOURCE_DATE_EPOCH=1506684489
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -993,6 +993,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/lang/ja/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/ko.UTF-8/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/ko/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim80/lang/lv/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/menu_af.latin1.vim
 %exclude /usr/share/vim/vim80/lang/menu_af.utf-8.vim
 %exclude /usr/share/vim/vim80/lang/menu_af_af.latin1.vim
@@ -1901,6 +1902,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/tutor/tutor.ja.utf-8
 %exclude /usr/share/vim/vim80/tutor/tutor.ko.euc
 %exclude /usr/share/vim/vim80/tutor/tutor.ko.utf-8
+%exclude /usr/share/vim/vim80/tutor/tutor.lv
 %exclude /usr/share/vim/vim80/tutor/tutor.nb
 %exclude /usr/share/vim/vim80/tutor/tutor.nb.utf-8
 %exclude /usr/share/vim/vim80/tutor/tutor.nl
