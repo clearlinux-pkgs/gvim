@@ -499,6 +499,7 @@
 /usr/share/vim/vim80/ftplugin/fortran.vim
 /usr/share/vim/vim80/ftplugin/framescript.vim
 /usr/share/vim/vim80/ftplugin/fvwm.vim
+/usr/share/vim/vim80/ftplugin/gdb.vim
 /usr/share/vim/vim80/ftplugin/git.vim
 /usr/share/vim/vim80/ftplugin/gitcommit.vim
 /usr/share/vim/vim80/ftplugin/gitconfig.vim
@@ -554,6 +555,7 @@
 /usr/share/vim/vim80/ftplugin/msmessages.vim
 /usr/share/vim/vim80/ftplugin/muttrc.vim
 /usr/share/vim/vim80/ftplugin/nanorc.vim
+/usr/share/vim/vim80/ftplugin/neomuttrc.vim
 /usr/share/vim/vim80/ftplugin/netrc.vim
 /usr/share/vim/vim80/ftplugin/nsis.vim
 /usr/share/vim/vim80/ftplugin/objc.vim
@@ -1385,6 +1387,7 @@
 /usr/share/vim/vim80/syntax/nastran.vim
 /usr/share/vim/vim80/syntax/natural.vim
 /usr/share/vim/vim80/syntax/ncf.vim
+/usr/share/vim/vim80/syntax/neomuttrc.vim
 /usr/share/vim/vim80/syntax/netrc.vim
 /usr/share/vim/vim80/syntax/netrw.vim
 /usr/share/vim/vim80/syntax/ninja.vim
