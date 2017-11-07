@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1274
-Release  : 191
+Release  : 192
 URL      : https://github.com/vim/vim/archive/v8.0.1274.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1274.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1510059875
+export SOURCE_DATE_EPOCH=1510081124
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make V=1  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1510059875
+export SOURCE_DATE_EPOCH=1510081124
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -625,6 +625,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/ftplugin/fortran.vim
 %exclude /usr/share/vim/vim80/ftplugin/framescript.vim
 %exclude /usr/share/vim/vim80/ftplugin/fvwm.vim
+%exclude /usr/share/vim/vim80/ftplugin/gdb.vim
 %exclude /usr/share/vim/vim80/ftplugin/git.vim
 %exclude /usr/share/vim/vim80/ftplugin/gitcommit.vim
 %exclude /usr/share/vim/vim80/ftplugin/gitconfig.vim
@@ -688,6 +689,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/ftplugin/msmessages.vim
 %exclude /usr/share/vim/vim80/ftplugin/muttrc.vim
 %exclude /usr/share/vim/vim80/ftplugin/nanorc.vim
+%exclude /usr/share/vim/vim80/ftplugin/neomuttrc.vim
 %exclude /usr/share/vim/vim80/ftplugin/netrc.vim
 %exclude /usr/share/vim/vim80/ftplugin/nsis.vim
 %exclude /usr/share/vim/vim80/ftplugin/objc.vim
@@ -1581,6 +1583,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/nastran.vim
 %exclude /usr/share/vim/vim80/syntax/natural.vim
 %exclude /usr/share/vim/vim80/syntax/ncf.vim
+%exclude /usr/share/vim/vim80/syntax/neomuttrc.vim
 %exclude /usr/share/vim/vim80/syntax/netrc.vim
 %exclude /usr/share/vim/vim80/syntax/netrw.vim
 %exclude /usr/share/vim/vim80/syntax/ninja.vim
@@ -1939,9 +1942,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/ftplugin/gdb.vim
-/usr/share/vim/vim80/ftplugin/neomuttrc.vim
-/usr/share/vim/vim80/syntax/neomuttrc.vim
 
 %files doc
 %defattr(-,root,root,-)
