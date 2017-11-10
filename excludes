@@ -1751,6 +1751,7 @@
 /usr/share/man/man1/vimdiff.1
 /usr/share/man/man1/vimtutor.1
 /usr/share/man/man1/xxd.1
+/usr/share/vim/vim80/autoload/filetype.vim
 /usr/share/vim/vim80/autoload/netrw_gitignore.vim
 /usr/share/vim/vim80/colors/industry.vim
 /usr/share/vim/vim80/compiler/go.vim
