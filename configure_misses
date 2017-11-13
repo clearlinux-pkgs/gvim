@@ -25,6 +25,7 @@ Configure miss: Ruby header files
 Configure miss: --enable-workshop argument
 Configure miss: --disable-netbeans argument
 Configure miss: --disable-channel argument
+Configure miss: --enable-autoservername argument
 Configure miss: --enable-hangulinput argument
 Configure miss: --enable-fontset argument
 Configure miss: _XdmcpAuthDoIt in -lXdmcp
