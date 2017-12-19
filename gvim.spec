@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.1379
-Release  : 213
-URL      : https://github.com/vim/vim/archive/v8.0.1379.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.1379.tar.gz
+Version  : 8.0.1412
+Release  : 214
+URL      : https://github.com/vim/vim/archive/v8.0.1412.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.1412.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -68,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.1379
+%setup -q -n vim-8.0.1412
 %patch1 -p1
 
 %build
@@ -76,7 +76,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512751572
+export SOURCE_DATE_EPOCH=1513691803
 export CFLAGS="$CFLAGS -falign-functions=32 "
 export FCFLAGS="$CFLAGS -falign-functions=32 "
 export FFLAGS="$CFLAGS -falign-functions=32 "
@@ -85,7 +85,7 @@ export CXXFLAGS="$CXXFLAGS -falign-functions=32 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1512751572
+export SOURCE_DATE_EPOCH=1513691803
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
