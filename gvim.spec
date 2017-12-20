@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1412
-Release  : 214
+Release  : 215
 URL      : https://github.com/vim/vim/archive/v8.0.1412.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1412.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -76,16 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1513691803
-export CFLAGS="$CFLAGS -falign-functions=32 "
-export FCFLAGS="$CFLAGS -falign-functions=32 "
-export FFLAGS="$CFLAGS -falign-functions=32 "
-export CXXFLAGS="$CXXFLAGS -falign-functions=32 "
+export SOURCE_DATE_EPOCH=1513810988
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1513691803
+export SOURCE_DATE_EPOCH=1513810988
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
