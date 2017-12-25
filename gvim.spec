@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.0.1422
-Release  : 217
-URL      : https://github.com/vim/vim/archive/v8.0.1422.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.0.1422.tar.gz
+Version  : 8.0.1426
+Release  : 218
+URL      : https://github.com/vim/vim/archive/v8.0.1426.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.0.1426.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -68,7 +68,7 @@ doc components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.0.1422
+%setup -q -n vim-8.0.1426
 %patch1 -p1
 
 %build
@@ -76,16 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1513979331
-export CFLAGS="$CFLAGS -falign-functions=32 "
-export FCFLAGS="$CFLAGS -falign-functions=32 "
-export FFLAGS="$CFLAGS -falign-functions=32 "
-export CXXFLAGS="$CXXFLAGS -falign-functions=32 "
+export SOURCE_DATE_EPOCH=1514238948
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1513979331
+export SOURCE_DATE_EPOCH=1514238948
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -1947,6 +1943,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+/usr/share/vim/vim80/ftplugin/cmake.vim
 
 %files doc
 %defattr(-,root,root,-)
