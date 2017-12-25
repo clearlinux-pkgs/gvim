@@ -1858,3 +1858,4 @@
 /usr/share/vim/vim80/tutor/tutor.lv
 /usr/share/vim/vim80/lang/lv/LC_MESSAGES/vim.mo
 /usr/share/vim/vim80/autoload/dist/ft.vim
+/usr/share/vim/vim80/ftplugin/cmake.vim
