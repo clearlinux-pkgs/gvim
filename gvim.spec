@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1437
-Release  : 231
+Release  : 232
 URL      : https://github.com/vim/vim/archive/v8.0.1437.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1437.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1517180370
+export SOURCE_DATE_EPOCH=1517181193
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1517180370
+export SOURCE_DATE_EPOCH=1517181193
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -849,6 +849,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/indent/mf.vim
 %exclude /usr/share/vim/vim80/indent/mma.vim
 %exclude /usr/share/vim/vim80/indent/mp.vim
+%exclude /usr/share/vim/vim80/indent/nsis.vim
 %exclude /usr/share/vim/vim80/indent/objc.vim
 %exclude /usr/share/vim/vim80/indent/ocaml.vim
 %exclude /usr/share/vim/vim80/indent/occam.vim
@@ -1287,6 +1288,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/asterisk.vim
 %exclude /usr/share/vim/vim80/syntax/asteriskvm.vim
 %exclude /usr/share/vim/vim80/syntax/atlas.vim
+%exclude /usr/share/vim/vim80/syntax/autodoc.vim
 %exclude /usr/share/vim/vim80/syntax/autohotkey.vim
 %exclude /usr/share/vim/vim80/syntax/autoit.vim
 %exclude /usr/share/vim/vim80/syntax/automake.vim
@@ -1328,6 +1330,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/clipper.vim
 %exclude /usr/share/vim/vim80/syntax/clojure.vim
 %exclude /usr/share/vim/vim80/syntax/cmake.vim
+%exclude /usr/share/vim/vim80/syntax/cmod.vim
 %exclude /usr/share/vim/vim80/syntax/cmusrc.vim
 %exclude /usr/share/vim/vim80/syntax/cobol.vim
 %exclude /usr/share/vim/vim80/syntax/coco.vim
@@ -1944,9 +1947,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/indent/nsis.vim
-/usr/share/vim/vim80/syntax/autodoc.vim
-/usr/share/vim/vim80/syntax/cmod.vim
 
 %files doc
 %defattr(-,root,root,-)
