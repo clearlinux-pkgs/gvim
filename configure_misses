@@ -78,3 +78,4 @@ Configure miss: whether X_LOCALE needed
 Configure miss: _xpg4_setrunelocale in -lxpg4
 Configure miss: --disable-nls argument
 Configure miss: dlopen()
+Configure miss: whether we need to force -D_FILE_OFFSET_BITS=64
