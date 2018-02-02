@@ -1862,3 +1862,4 @@
 /usr/share/vim/vim80/indent/nsis.vim
 /usr/share/vim/vim80/syntax/cmod.vim
 /usr/share/vim/vim80/syntax/autodoc.vim
+/usr/share/vim/vim80/tools/__pycache__/demoserver.cpython-36
