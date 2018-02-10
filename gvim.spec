@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1481
-Release  : 260
+Release  : 261
 URL      : https://github.com/vim/vim/archive/v8.0.1481.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1481.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
