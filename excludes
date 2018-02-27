@@ -1865,3 +1865,6 @@
 /usr/share/vim/vim80/tools/__pycache__/demoserver.cpython-36.pyc
 /usr/share/vim/vim80/ftplugin/chicken.vim
 /usr/share/vim/vim80/syntax/chicken.vim
+/usr/share/vim/vim80/keymap/oldturkic-orkhon_utf-8.vim
+/usr/share/vim/vim80/keymap/oldturkic-yenisei_utf-8.vim
+/usr/share/vim/vim80/lang/sr/LC_MESSAGES/vim.mo
