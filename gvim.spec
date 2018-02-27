@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1545
-Release  : 293
+Release  : 294
 URL      : https://github.com/vim/vim/archive/v8.0.1545.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1545.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -31,6 +31,7 @@ BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
 BuildRequires : python-dev
 BuildRequires : python3-dev
+BuildRequires : qtbase-dev
 BuildRequires : ruby
 Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
@@ -76,12 +77,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1519743843
+export SOURCE_DATE_EPOCH=1519750314
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1519743843
+export SOURCE_DATE_EPOCH=1519750314
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -945,6 +946,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/keymap/lithuanian-baltic.vim
 %exclude /usr/share/vim/vim80/keymap/magyar_utf-8.vim
 %exclude /usr/share/vim/vim80/keymap/mongolian_utf-8.vim
+%exclude /usr/share/vim/vim80/keymap/oldturkic-orkhon_utf-8.vim
+%exclude /usr/share/vim/vim80/keymap/oldturkic-yenisei_utf-8.vim
 %exclude /usr/share/vim/vim80/keymap/persian-iranian_utf-8.vim
 %exclude /usr/share/vim/vim80/keymap/persian.vim
 %exclude /usr/share/vim/vim80/keymap/pinyin.vim
@@ -1143,6 +1146,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/lang/ru/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/sk.cp1250/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/sk/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim80/lang/sr/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/sv/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/uk.cp1251/LC_MESSAGES/vim.mo
 %exclude /usr/share/vim/vim80/lang/uk/LC_MESSAGES/vim.mo
@@ -1949,9 +1953,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/keymap/oldturkic-orkhon_utf-8.vim
-/usr/share/vim/vim80/keymap/oldturkic-yenisei_utf-8.vim
-/usr/share/vim/vim80/lang/sr/LC_MESSAGES/vim.mo
 
 %files doc
 %defattr(-,root,root,-)
