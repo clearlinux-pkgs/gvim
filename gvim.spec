@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1800
-Release  : 376
+Release  : 377
 URL      : https://github.com/vim/vim/archive/v8.0.1800.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1800.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -76,12 +76,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1525634651
+export SOURCE_DATE_EPOCH=1525657672
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1525634651
+export SOURCE_DATE_EPOCH=1525657672
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -1371,6 +1371,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/syntax/dcl.vim
 %exclude /usr/share/vim/vim80/syntax/debchangelog.vim
 %exclude /usr/share/vim/vim80/syntax/debcontrol.vim
+%exclude /usr/share/vim/vim80/syntax/debcopyright.vim
 %exclude /usr/share/vim/vim80/syntax/debsources.vim
 %exclude /usr/share/vim/vim80/syntax/def.vim
 %exclude /usr/share/vim/vim80/syntax/denyhosts.vim
@@ -1953,7 +1954,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/syntax/debcopyright.vim
 
 %files doc
 %defattr(-,root,root,-)
