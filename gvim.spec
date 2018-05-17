@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.0.1848
-Release  : 383
+Release  : 384
 URL      : https://github.com/vim/vim/archive/v8.0.1848.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.0.1848.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -77,12 +77,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526525708
+export SOURCE_DATE_EPOCH=1526526125
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1526525708
+export SOURCE_DATE_EPOCH=1526526125
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -159,6 +159,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim80/autoload/xml/xsd.vim
 %exclude /usr/share/vim/vim80/autoload/xml/xsl.vim
 %exclude /usr/share/vim/vim80/autoload/xmlcomplete.vim
+%exclude /usr/share/vim/vim80/autoload/xmlformat.vim
 %exclude /usr/share/vim/vim80/autoload/zip.vim
 %exclude /usr/share/vim/vim80/bugreport.vim
 %exclude /usr/share/vim/vim80/colors/README.txt
@@ -1775,7 +1776,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim80/autoload/xmlformat.vim
 
 %files man
 %defattr(-,root,root,-)

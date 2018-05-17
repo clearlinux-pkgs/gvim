@@ -1870,3 +1870,4 @@
 /usr/share/vim/vim80/lang/sr/LC_MESSAGES/vim.mo
 /usr/share/vim/vim80/colors/tools/check_colors.vim
 /usr/share/vim/vim80/syntax/debcopyright.vim
+/usr/share/vim/vim80/autoload/xmlformat.vim
