@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.0001
-Release  : 386
+Release  : 387
 URL      : https://github.com/vim/vim/archive/v8.1.0001.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.0001.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -77,12 +77,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1526646967
+export SOURCE_DATE_EPOCH=1526647668
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1526646967
+export SOURCE_DATE_EPOCH=1526647668
 rm -rf %{buildroot}
 %make_install
 ## make_install_append content
@@ -113,1669 +113,1669 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %files data
 %defattr(-,root,root,-)
 %exclude /usr/share/applications/vim.desktop
+%exclude /usr/share/vim/vim81/autoload/README.txt
+%exclude /usr/share/vim/vim81/autoload/ada.vim
+%exclude /usr/share/vim/vim81/autoload/adacomplete.vim
+%exclude /usr/share/vim/vim81/autoload/ccomplete.vim
+%exclude /usr/share/vim/vim81/autoload/clojurecomplete.vim
+%exclude /usr/share/vim/vim81/autoload/context.vim
+%exclude /usr/share/vim/vim81/autoload/contextcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/csscomplete.vim
+%exclude /usr/share/vim/vim81/autoload/decada.vim
+%exclude /usr/share/vim/vim81/autoload/dist/ft.vim
+%exclude /usr/share/vim/vim81/autoload/getscript.vim
+%exclude /usr/share/vim/vim81/autoload/gnat.vim
+%exclude /usr/share/vim/vim81/autoload/gzip.vim
+%exclude /usr/share/vim/vim81/autoload/htmlcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/javascriptcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/netrw.vim
+%exclude /usr/share/vim/vim81/autoload/netrwFileHandlers.vim
+%exclude /usr/share/vim/vim81/autoload/netrwSettings.vim
+%exclude /usr/share/vim/vim81/autoload/netrw_gitignore.vim
+%exclude /usr/share/vim/vim81/autoload/paste.vim
+%exclude /usr/share/vim/vim81/autoload/phpcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/python3complete.vim
+%exclude /usr/share/vim/vim81/autoload/pythoncomplete.vim
+%exclude /usr/share/vim/vim81/autoload/rubycomplete.vim
+%exclude /usr/share/vim/vim81/autoload/rust.vim
+%exclude /usr/share/vim/vim81/autoload/rustfmt.vim
+%exclude /usr/share/vim/vim81/autoload/spellfile.vim
+%exclude /usr/share/vim/vim81/autoload/sqlcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/syntaxcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/tar.vim
+%exclude /usr/share/vim/vim81/autoload/tohtml.vim
+%exclude /usr/share/vim/vim81/autoload/vimball.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html32.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html401f.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html401s.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html401t.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html40f.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html40s.vim
+%exclude /usr/share/vim/vim81/autoload/xml/html40t.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xhtml10f.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xhtml10s.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xhtml10t.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xhtml11.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xsd.vim
+%exclude /usr/share/vim/vim81/autoload/xml/xsl.vim
+%exclude /usr/share/vim/vim81/autoload/xmlcomplete.vim
+%exclude /usr/share/vim/vim81/autoload/xmlformat.vim
+%exclude /usr/share/vim/vim81/autoload/zip.vim
+%exclude /usr/share/vim/vim81/bugreport.vim
+%exclude /usr/share/vim/vim81/colors/README.txt
+%exclude /usr/share/vim/vim81/colors/blue.vim
+%exclude /usr/share/vim/vim81/colors/darkblue.vim
+%exclude /usr/share/vim/vim81/colors/default.vim
+%exclude /usr/share/vim/vim81/colors/delek.vim
+%exclude /usr/share/vim/vim81/colors/desert.vim
+%exclude /usr/share/vim/vim81/colors/elflord.vim
+%exclude /usr/share/vim/vim81/colors/evening.vim
+%exclude /usr/share/vim/vim81/colors/industry.vim
+%exclude /usr/share/vim/vim81/colors/koehler.vim
+%exclude /usr/share/vim/vim81/colors/morning.vim
+%exclude /usr/share/vim/vim81/colors/murphy.vim
+%exclude /usr/share/vim/vim81/colors/pablo.vim
+%exclude /usr/share/vim/vim81/colors/peachpuff.vim
+%exclude /usr/share/vim/vim81/colors/ron.vim
+%exclude /usr/share/vim/vim81/colors/shine.vim
+%exclude /usr/share/vim/vim81/colors/slate.vim
+%exclude /usr/share/vim/vim81/colors/tools/check_colors.vim
+%exclude /usr/share/vim/vim81/colors/torte.vim
+%exclude /usr/share/vim/vim81/colors/zellner.vim
+%exclude /usr/share/vim/vim81/compiler/README.txt
+%exclude /usr/share/vim/vim81/compiler/ant.vim
+%exclude /usr/share/vim/vim81/compiler/bcc.vim
+%exclude /usr/share/vim/vim81/compiler/bdf.vim
+%exclude /usr/share/vim/vim81/compiler/cargo.vim
+%exclude /usr/share/vim/vim81/compiler/checkstyle.vim
+%exclude /usr/share/vim/vim81/compiler/context.vim
+%exclude /usr/share/vim/vim81/compiler/cs.vim
+%exclude /usr/share/vim/vim81/compiler/csslint.vim
+%exclude /usr/share/vim/vim81/compiler/cucumber.vim
+%exclude /usr/share/vim/vim81/compiler/decada.vim
+%exclude /usr/share/vim/vim81/compiler/dot.vim
+%exclude /usr/share/vim/vim81/compiler/erlang.vim
+%exclude /usr/share/vim/vim81/compiler/eruby.vim
+%exclude /usr/share/vim/vim81/compiler/fortran_F.vim
+%exclude /usr/share/vim/vim81/compiler/fortran_cv.vim
+%exclude /usr/share/vim/vim81/compiler/fortran_elf90.vim
+%exclude /usr/share/vim/vim81/compiler/fortran_g77.vim
+%exclude /usr/share/vim/vim81/compiler/fortran_lf95.vim
+%exclude /usr/share/vim/vim81/compiler/fpc.vim
+%exclude /usr/share/vim/vim81/compiler/g95.vim
+%exclude /usr/share/vim/vim81/compiler/gcc.vim
+%exclude /usr/share/vim/vim81/compiler/gfortran.vim
+%exclude /usr/share/vim/vim81/compiler/ghc.vim
+%exclude /usr/share/vim/vim81/compiler/gnat.vim
+%exclude /usr/share/vim/vim81/compiler/go.vim
+%exclude /usr/share/vim/vim81/compiler/haml.vim
+%exclude /usr/share/vim/vim81/compiler/hp_acc.vim
+%exclude /usr/share/vim/vim81/compiler/icc.vim
+%exclude /usr/share/vim/vim81/compiler/ifort.vim
+%exclude /usr/share/vim/vim81/compiler/intel.vim
+%exclude /usr/share/vim/vim81/compiler/irix5_c.vim
+%exclude /usr/share/vim/vim81/compiler/irix5_cpp.vim
+%exclude /usr/share/vim/vim81/compiler/javac.vim
+%exclude /usr/share/vim/vim81/compiler/jikes.vim
+%exclude /usr/share/vim/vim81/compiler/mcs.vim
+%exclude /usr/share/vim/vim81/compiler/mips_c.vim
+%exclude /usr/share/vim/vim81/compiler/mipspro_c89.vim
+%exclude /usr/share/vim/vim81/compiler/mipspro_cpp.vim
+%exclude /usr/share/vim/vim81/compiler/modelsim_vcom.vim
+%exclude /usr/share/vim/vim81/compiler/msbuild.vim
+%exclude /usr/share/vim/vim81/compiler/msvc.vim
+%exclude /usr/share/vim/vim81/compiler/neato.vim
+%exclude /usr/share/vim/vim81/compiler/ocaml.vim
+%exclude /usr/share/vim/vim81/compiler/onsgmls.vim
+%exclude /usr/share/vim/vim81/compiler/pbx.vim
+%exclude /usr/share/vim/vim81/compiler/perl.vim
+%exclude /usr/share/vim/vim81/compiler/php.vim
+%exclude /usr/share/vim/vim81/compiler/pylint.vim
+%exclude /usr/share/vim/vim81/compiler/pyunit.vim
+%exclude /usr/share/vim/vim81/compiler/rake.vim
+%exclude /usr/share/vim/vim81/compiler/rspec.vim
+%exclude /usr/share/vim/vim81/compiler/rst.vim
+%exclude /usr/share/vim/vim81/compiler/ruby.vim
+%exclude /usr/share/vim/vim81/compiler/rubyunit.vim
+%exclude /usr/share/vim/vim81/compiler/rustc.vim
+%exclude /usr/share/vim/vim81/compiler/sass.vim
+%exclude /usr/share/vim/vim81/compiler/se.vim
+%exclude /usr/share/vim/vim81/compiler/splint.vim
+%exclude /usr/share/vim/vim81/compiler/tcl.vim
+%exclude /usr/share/vim/vim81/compiler/tex.vim
+%exclude /usr/share/vim/vim81/compiler/tidy.vim
+%exclude /usr/share/vim/vim81/compiler/xbuild.vim
+%exclude /usr/share/vim/vim81/compiler/xmllint.vim
+%exclude /usr/share/vim/vim81/compiler/xmlwf.vim
+%exclude /usr/share/vim/vim81/defaults.vim
+%exclude /usr/share/vim/vim81/delmenu.vim
+%exclude /usr/share/vim/vim81/doc/arabic.txt
+%exclude /usr/share/vim/vim81/doc/autocmd.txt
+%exclude /usr/share/vim/vim81/doc/change.txt
+%exclude /usr/share/vim/vim81/doc/channel.txt
+%exclude /usr/share/vim/vim81/doc/cmdline.txt
+%exclude /usr/share/vim/vim81/doc/debug.txt
+%exclude /usr/share/vim/vim81/doc/debugger.txt
+%exclude /usr/share/vim/vim81/doc/develop.txt
+%exclude /usr/share/vim/vim81/doc/diff.txt
+%exclude /usr/share/vim/vim81/doc/digraph.txt
+%exclude /usr/share/vim/vim81/doc/editing.txt
+%exclude /usr/share/vim/vim81/doc/eval.txt
+%exclude /usr/share/vim/vim81/doc/farsi.txt
+%exclude /usr/share/vim/vim81/doc/filetype.txt
+%exclude /usr/share/vim/vim81/doc/fold.txt
+%exclude /usr/share/vim/vim81/doc/ft_ada.txt
+%exclude /usr/share/vim/vim81/doc/ft_rust.txt
+%exclude /usr/share/vim/vim81/doc/ft_sql.txt
+%exclude /usr/share/vim/vim81/doc/gui.txt
+%exclude /usr/share/vim/vim81/doc/gui_w32.txt
+%exclude /usr/share/vim/vim81/doc/gui_x11.txt
+%exclude /usr/share/vim/vim81/doc/hangulin.txt
+%exclude /usr/share/vim/vim81/doc/hebrew.txt
+%exclude /usr/share/vim/vim81/doc/help.txt
+%exclude /usr/share/vim/vim81/doc/helphelp.txt
+%exclude /usr/share/vim/vim81/doc/howto.txt
+%exclude /usr/share/vim/vim81/doc/if_cscop.txt
+%exclude /usr/share/vim/vim81/doc/if_lua.txt
+%exclude /usr/share/vim/vim81/doc/if_mzsch.txt
+%exclude /usr/share/vim/vim81/doc/if_ole.txt
+%exclude /usr/share/vim/vim81/doc/if_perl.txt
+%exclude /usr/share/vim/vim81/doc/if_pyth.txt
+%exclude /usr/share/vim/vim81/doc/if_ruby.txt
+%exclude /usr/share/vim/vim81/doc/if_sniff.txt
+%exclude /usr/share/vim/vim81/doc/if_tcl.txt
+%exclude /usr/share/vim/vim81/doc/indent.txt
+%exclude /usr/share/vim/vim81/doc/index.txt
+%exclude /usr/share/vim/vim81/doc/insert.txt
+%exclude /usr/share/vim/vim81/doc/intro.txt
+%exclude /usr/share/vim/vim81/doc/map.txt
+%exclude /usr/share/vim/vim81/doc/mbyte.txt
+%exclude /usr/share/vim/vim81/doc/message.txt
+%exclude /usr/share/vim/vim81/doc/mlang.txt
+%exclude /usr/share/vim/vim81/doc/motion.txt
+%exclude /usr/share/vim/vim81/doc/netbeans.txt
+%exclude /usr/share/vim/vim81/doc/options.txt
+%exclude /usr/share/vim/vim81/doc/os_390.txt
+%exclude /usr/share/vim/vim81/doc/os_amiga.txt
+%exclude /usr/share/vim/vim81/doc/os_beos.txt
+%exclude /usr/share/vim/vim81/doc/os_dos.txt
+%exclude /usr/share/vim/vim81/doc/os_mac.txt
+%exclude /usr/share/vim/vim81/doc/os_mint.txt
+%exclude /usr/share/vim/vim81/doc/os_msdos.txt
+%exclude /usr/share/vim/vim81/doc/os_os2.txt
+%exclude /usr/share/vim/vim81/doc/os_qnx.txt
+%exclude /usr/share/vim/vim81/doc/os_risc.txt
+%exclude /usr/share/vim/vim81/doc/os_unix.txt
+%exclude /usr/share/vim/vim81/doc/os_vms.txt
+%exclude /usr/share/vim/vim81/doc/os_win32.txt
+%exclude /usr/share/vim/vim81/doc/pattern.txt
+%exclude /usr/share/vim/vim81/doc/pi_getscript.txt
+%exclude /usr/share/vim/vim81/doc/pi_gzip.txt
+%exclude /usr/share/vim/vim81/doc/pi_logipat.txt
+%exclude /usr/share/vim/vim81/doc/pi_netrw.txt
+%exclude /usr/share/vim/vim81/doc/pi_paren.txt
+%exclude /usr/share/vim/vim81/doc/pi_spec.txt
+%exclude /usr/share/vim/vim81/doc/pi_tar.txt
+%exclude /usr/share/vim/vim81/doc/pi_vimball.txt
+%exclude /usr/share/vim/vim81/doc/pi_zip.txt
+%exclude /usr/share/vim/vim81/doc/print.txt
+%exclude /usr/share/vim/vim81/doc/quickfix.txt
+%exclude /usr/share/vim/vim81/doc/quickref.txt
+%exclude /usr/share/vim/vim81/doc/quotes.txt
+%exclude /usr/share/vim/vim81/doc/recover.txt
+%exclude /usr/share/vim/vim81/doc/remote.txt
+%exclude /usr/share/vim/vim81/doc/repeat.txt
+%exclude /usr/share/vim/vim81/doc/rileft.txt
+%exclude /usr/share/vim/vim81/doc/russian.txt
+%exclude /usr/share/vim/vim81/doc/scroll.txt
+%exclude /usr/share/vim/vim81/doc/sign.txt
+%exclude /usr/share/vim/vim81/doc/spell.txt
+%exclude /usr/share/vim/vim81/doc/sponsor.txt
+%exclude /usr/share/vim/vim81/doc/starting.txt
+%exclude /usr/share/vim/vim81/doc/syntax.txt
+%exclude /usr/share/vim/vim81/doc/tabpage.txt
+%exclude /usr/share/vim/vim81/doc/tags
+%exclude /usr/share/vim/vim81/doc/tagsrch.txt
+%exclude /usr/share/vim/vim81/doc/term.txt
+%exclude /usr/share/vim/vim81/doc/terminal.txt
+%exclude /usr/share/vim/vim81/doc/tips.txt
+%exclude /usr/share/vim/vim81/doc/todo.txt
+%exclude /usr/share/vim/vim81/doc/uganda.txt
+%exclude /usr/share/vim/vim81/doc/undo.txt
+%exclude /usr/share/vim/vim81/doc/usr_01.txt
+%exclude /usr/share/vim/vim81/doc/usr_02.txt
+%exclude /usr/share/vim/vim81/doc/usr_03.txt
+%exclude /usr/share/vim/vim81/doc/usr_04.txt
+%exclude /usr/share/vim/vim81/doc/usr_05.txt
+%exclude /usr/share/vim/vim81/doc/usr_06.txt
+%exclude /usr/share/vim/vim81/doc/usr_07.txt
+%exclude /usr/share/vim/vim81/doc/usr_08.txt
+%exclude /usr/share/vim/vim81/doc/usr_09.txt
+%exclude /usr/share/vim/vim81/doc/usr_10.txt
+%exclude /usr/share/vim/vim81/doc/usr_11.txt
+%exclude /usr/share/vim/vim81/doc/usr_12.txt
+%exclude /usr/share/vim/vim81/doc/usr_20.txt
+%exclude /usr/share/vim/vim81/doc/usr_21.txt
+%exclude /usr/share/vim/vim81/doc/usr_22.txt
+%exclude /usr/share/vim/vim81/doc/usr_23.txt
+%exclude /usr/share/vim/vim81/doc/usr_24.txt
+%exclude /usr/share/vim/vim81/doc/usr_25.txt
+%exclude /usr/share/vim/vim81/doc/usr_26.txt
+%exclude /usr/share/vim/vim81/doc/usr_27.txt
+%exclude /usr/share/vim/vim81/doc/usr_28.txt
+%exclude /usr/share/vim/vim81/doc/usr_29.txt
+%exclude /usr/share/vim/vim81/doc/usr_30.txt
+%exclude /usr/share/vim/vim81/doc/usr_31.txt
+%exclude /usr/share/vim/vim81/doc/usr_32.txt
+%exclude /usr/share/vim/vim81/doc/usr_40.txt
+%exclude /usr/share/vim/vim81/doc/usr_41.txt
+%exclude /usr/share/vim/vim81/doc/usr_42.txt
+%exclude /usr/share/vim/vim81/doc/usr_43.txt
+%exclude /usr/share/vim/vim81/doc/usr_44.txt
+%exclude /usr/share/vim/vim81/doc/usr_45.txt
+%exclude /usr/share/vim/vim81/doc/usr_90.txt
+%exclude /usr/share/vim/vim81/doc/usr_toc.txt
+%exclude /usr/share/vim/vim81/doc/various.txt
+%exclude /usr/share/vim/vim81/doc/version4.txt
+%exclude /usr/share/vim/vim81/doc/version5.txt
+%exclude /usr/share/vim/vim81/doc/version6.txt
+%exclude /usr/share/vim/vim81/doc/version7.txt
+%exclude /usr/share/vim/vim81/doc/version8.txt
+%exclude /usr/share/vim/vim81/doc/vi_diff.txt
+%exclude /usr/share/vim/vim81/doc/vim2html.pl
+%exclude /usr/share/vim/vim81/doc/visual.txt
+%exclude /usr/share/vim/vim81/doc/windows.txt
+%exclude /usr/share/vim/vim81/doc/workshop.txt
+%exclude /usr/share/vim/vim81/evim.vim
+%exclude /usr/share/vim/vim81/filetype.vim
+%exclude /usr/share/vim/vim81/ftoff.vim
+%exclude /usr/share/vim/vim81/ftplugin.vim
+%exclude /usr/share/vim/vim81/ftplugin/README.txt
+%exclude /usr/share/vim/vim81/ftplugin/a2ps.vim
+%exclude /usr/share/vim/vim81/ftplugin/aap.vim
+%exclude /usr/share/vim/vim81/ftplugin/abap.vim
+%exclude /usr/share/vim/vim81/ftplugin/abaqus.vim
+%exclude /usr/share/vim/vim81/ftplugin/ada.vim
+%exclude /usr/share/vim/vim81/ftplugin/alsaconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/ant.vim
+%exclude /usr/share/vim/vim81/ftplugin/arch.vim
+%exclude /usr/share/vim/vim81/ftplugin/art.vim
+%exclude /usr/share/vim/vim81/ftplugin/aspvbs.vim
+%exclude /usr/share/vim/vim81/ftplugin/automake.vim
+%exclude /usr/share/vim/vim81/ftplugin/awk.vim
+%exclude /usr/share/vim/vim81/ftplugin/bdf.vim
+%exclude /usr/share/vim/vim81/ftplugin/bst.vim
+%exclude /usr/share/vim/vim81/ftplugin/btm.vim
+%exclude /usr/share/vim/vim81/ftplugin/bzl.vim
+%exclude /usr/share/vim/vim81/ftplugin/c.vim
+%exclude /usr/share/vim/vim81/ftplugin/calendar.vim
+%exclude /usr/share/vim/vim81/ftplugin/cdrdaoconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/ch.vim
+%exclude /usr/share/vim/vim81/ftplugin/changelog.vim
+%exclude /usr/share/vim/vim81/ftplugin/chicken.vim
+%exclude /usr/share/vim/vim81/ftplugin/clojure.vim
+%exclude /usr/share/vim/vim81/ftplugin/cmake.vim
+%exclude /usr/share/vim/vim81/ftplugin/cobol.vim
+%exclude /usr/share/vim/vim81/ftplugin/conf.vim
+%exclude /usr/share/vim/vim81/ftplugin/config.vim
+%exclude /usr/share/vim/vim81/ftplugin/context.vim
+%exclude /usr/share/vim/vim81/ftplugin/cpp.vim
+%exclude /usr/share/vim/vim81/ftplugin/crm.vim
+%exclude /usr/share/vim/vim81/ftplugin/cs.vim
+%exclude /usr/share/vim/vim81/ftplugin/csc.vim
+%exclude /usr/share/vim/vim81/ftplugin/csh.vim
+%exclude /usr/share/vim/vim81/ftplugin/css.vim
+%exclude /usr/share/vim/vim81/ftplugin/cucumber.vim
+%exclude /usr/share/vim/vim81/ftplugin/cvsrc.vim
+%exclude /usr/share/vim/vim81/ftplugin/debchangelog.vim
+%exclude /usr/share/vim/vim81/ftplugin/debcontrol.vim
+%exclude /usr/share/vim/vim81/ftplugin/denyhosts.vim
+%exclude /usr/share/vim/vim81/ftplugin/dictconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/dictdconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/diff.vim
+%exclude /usr/share/vim/vim81/ftplugin/dircolors.vim
+%exclude /usr/share/vim/vim81/ftplugin/docbk.vim
+%exclude /usr/share/vim/vim81/ftplugin/dockerfile.vim
+%exclude /usr/share/vim/vim81/ftplugin/dosbatch.vim
+%exclude /usr/share/vim/vim81/ftplugin/dosini.vim
+%exclude /usr/share/vim/vim81/ftplugin/dtd.vim
+%exclude /usr/share/vim/vim81/ftplugin/dtrace.vim
+%exclude /usr/share/vim/vim81/ftplugin/eiffel.vim
+%exclude /usr/share/vim/vim81/ftplugin/elinks.vim
+%exclude /usr/share/vim/vim81/ftplugin/erlang.vim
+%exclude /usr/share/vim/vim81/ftplugin/eruby.vim
+%exclude /usr/share/vim/vim81/ftplugin/eterm.vim
+%exclude /usr/share/vim/vim81/ftplugin/falcon.vim
+%exclude /usr/share/vim/vim81/ftplugin/fetchmail.vim
+%exclude /usr/share/vim/vim81/ftplugin/flexwiki.vim
+%exclude /usr/share/vim/vim81/ftplugin/fortran.vim
+%exclude /usr/share/vim/vim81/ftplugin/framescript.vim
+%exclude /usr/share/vim/vim81/ftplugin/fvwm.vim
+%exclude /usr/share/vim/vim81/ftplugin/gdb.vim
+%exclude /usr/share/vim/vim81/ftplugin/git.vim
+%exclude /usr/share/vim/vim81/ftplugin/gitcommit.vim
+%exclude /usr/share/vim/vim81/ftplugin/gitconfig.vim
+%exclude /usr/share/vim/vim81/ftplugin/gitrebase.vim
+%exclude /usr/share/vim/vim81/ftplugin/gitsendemail.vim
+%exclude /usr/share/vim/vim81/ftplugin/go.vim
+%exclude /usr/share/vim/vim81/ftplugin/gpg.vim
+%exclude /usr/share/vim/vim81/ftplugin/gprof.vim
+%exclude /usr/share/vim/vim81/ftplugin/groovy.vim
+%exclude /usr/share/vim/vim81/ftplugin/group.vim
+%exclude /usr/share/vim/vim81/ftplugin/grub.vim
+%exclude /usr/share/vim/vim81/ftplugin/haml.vim
+%exclude /usr/share/vim/vim81/ftplugin/hamster.vim
+%exclude /usr/share/vim/vim81/ftplugin/haskell.vim
+%exclude /usr/share/vim/vim81/ftplugin/help.vim
+%exclude /usr/share/vim/vim81/ftplugin/hgcommit.vim
+%exclude /usr/share/vim/vim81/ftplugin/hog.vim
+%exclude /usr/share/vim/vim81/ftplugin/hostconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/hostsaccess.vim
+%exclude /usr/share/vim/vim81/ftplugin/html.vim
+%exclude /usr/share/vim/vim81/ftplugin/htmldjango.vim
+%exclude /usr/share/vim/vim81/ftplugin/indent.vim
+%exclude /usr/share/vim/vim81/ftplugin/initex.vim
+%exclude /usr/share/vim/vim81/ftplugin/ishd.vim
+%exclude /usr/share/vim/vim81/ftplugin/j.vim
+%exclude /usr/share/vim/vim81/ftplugin/java.vim
+%exclude /usr/share/vim/vim81/ftplugin/javascript.vim
+%exclude /usr/share/vim/vim81/ftplugin/jproperties.vim
+%exclude /usr/share/vim/vim81/ftplugin/json.vim
+%exclude /usr/share/vim/vim81/ftplugin/jsp.vim
+%exclude /usr/share/vim/vim81/ftplugin/kconfig.vim
+%exclude /usr/share/vim/vim81/ftplugin/kwt.vim
+%exclude /usr/share/vim/vim81/ftplugin/ld.vim
+%exclude /usr/share/vim/vim81/ftplugin/less.vim
+%exclude /usr/share/vim/vim81/ftplugin/lftp.vim
+%exclude /usr/share/vim/vim81/ftplugin/libao.vim
+%exclude /usr/share/vim/vim81/ftplugin/limits.vim
+%exclude /usr/share/vim/vim81/ftplugin/liquid.vim
+%exclude /usr/share/vim/vim81/ftplugin/lisp.vim
+%exclude /usr/share/vim/vim81/ftplugin/logcheck.vim
+%exclude /usr/share/vim/vim81/ftplugin/loginaccess.vim
+%exclude /usr/share/vim/vim81/ftplugin/logindefs.vim
+%exclude /usr/share/vim/vim81/ftplugin/logtalk.dict
+%exclude /usr/share/vim/vim81/ftplugin/logtalk.vim
+%exclude /usr/share/vim/vim81/ftplugin/lprolog.vim
+%exclude /usr/share/vim/vim81/ftplugin/lua.vim
+%exclude /usr/share/vim/vim81/ftplugin/m4.vim
+%exclude /usr/share/vim/vim81/ftplugin/mail.vim
+%exclude /usr/share/vim/vim81/ftplugin/mailaliases.vim
+%exclude /usr/share/vim/vim81/ftplugin/mailcap.vim
+%exclude /usr/share/vim/vim81/ftplugin/make.vim
+%exclude /usr/share/vim/vim81/ftplugin/man.vim
+%exclude /usr/share/vim/vim81/ftplugin/manconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/markdown.vim
+%exclude /usr/share/vim/vim81/ftplugin/matlab.vim
+%exclude /usr/share/vim/vim81/ftplugin/mf.vim
+%exclude /usr/share/vim/vim81/ftplugin/modconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/mp.vim
+%exclude /usr/share/vim/vim81/ftplugin/mplayerconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/mrxvtrc.vim
+%exclude /usr/share/vim/vim81/ftplugin/msmessages.vim
+%exclude /usr/share/vim/vim81/ftplugin/muttrc.vim
+%exclude /usr/share/vim/vim81/ftplugin/nanorc.vim
+%exclude /usr/share/vim/vim81/ftplugin/neomuttrc.vim
+%exclude /usr/share/vim/vim81/ftplugin/netrc.vim
+%exclude /usr/share/vim/vim81/ftplugin/nsis.vim
+%exclude /usr/share/vim/vim81/ftplugin/objc.vim
+%exclude /usr/share/vim/vim81/ftplugin/ocaml.vim
+%exclude /usr/share/vim/vim81/ftplugin/occam.vim
+%exclude /usr/share/vim/vim81/ftplugin/pamconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/pascal.vim
+%exclude /usr/share/vim/vim81/ftplugin/passwd.vim
+%exclude /usr/share/vim/vim81/ftplugin/pdf.vim
+%exclude /usr/share/vim/vim81/ftplugin/perl.vim
+%exclude /usr/share/vim/vim81/ftplugin/perl6.vim
+%exclude /usr/share/vim/vim81/ftplugin/php.vim
+%exclude /usr/share/vim/vim81/ftplugin/pinfo.vim
+%exclude /usr/share/vim/vim81/ftplugin/plaintex.vim
+%exclude /usr/share/vim/vim81/ftplugin/postscr.vim
+%exclude /usr/share/vim/vim81/ftplugin/procmail.vim
+%exclude /usr/share/vim/vim81/ftplugin/prolog.vim
+%exclude /usr/share/vim/vim81/ftplugin/protocols.vim
+%exclude /usr/share/vim/vim81/ftplugin/pyrex.vim
+%exclude /usr/share/vim/vim81/ftplugin/python.vim
+%exclude /usr/share/vim/vim81/ftplugin/qf.vim
+%exclude /usr/share/vim/vim81/ftplugin/quake.vim
+%exclude /usr/share/vim/vim81/ftplugin/r.vim
+%exclude /usr/share/vim/vim81/ftplugin/racc.vim
+%exclude /usr/share/vim/vim81/ftplugin/readline.vim
+%exclude /usr/share/vim/vim81/ftplugin/registry.vim
+%exclude /usr/share/vim/vim81/ftplugin/reva.vim
+%exclude /usr/share/vim/vim81/ftplugin/rhelp.vim
+%exclude /usr/share/vim/vim81/ftplugin/rmd.vim
+%exclude /usr/share/vim/vim81/ftplugin/rnc.vim
+%exclude /usr/share/vim/vim81/ftplugin/rnoweb.vim
+%exclude /usr/share/vim/vim81/ftplugin/rpl.vim
+%exclude /usr/share/vim/vim81/ftplugin/rrst.vim
+%exclude /usr/share/vim/vim81/ftplugin/rst.vim
+%exclude /usr/share/vim/vim81/ftplugin/ruby.vim
+%exclude /usr/share/vim/vim81/ftplugin/rust.vim
+%exclude /usr/share/vim/vim81/ftplugin/sass.vim
+%exclude /usr/share/vim/vim81/ftplugin/sbt.vim
+%exclude /usr/share/vim/vim81/ftplugin/scala.vim
+%exclude /usr/share/vim/vim81/ftplugin/scheme.vim
+%exclude /usr/share/vim/vim81/ftplugin/screen.vim
+%exclude /usr/share/vim/vim81/ftplugin/scss.vim
+%exclude /usr/share/vim/vim81/ftplugin/sensors.vim
+%exclude /usr/share/vim/vim81/ftplugin/services.vim
+%exclude /usr/share/vim/vim81/ftplugin/setserial.vim
+%exclude /usr/share/vim/vim81/ftplugin/sgml.vim
+%exclude /usr/share/vim/vim81/ftplugin/sh.vim
+%exclude /usr/share/vim/vim81/ftplugin/sieve.vim
+%exclude /usr/share/vim/vim81/ftplugin/slpconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/slpreg.vim
+%exclude /usr/share/vim/vim81/ftplugin/slpspi.vim
+%exclude /usr/share/vim/vim81/ftplugin/spec.vim
+%exclude /usr/share/vim/vim81/ftplugin/sql.vim
+%exclude /usr/share/vim/vim81/ftplugin/sshconfig.vim
+%exclude /usr/share/vim/vim81/ftplugin/sudoers.vim
+%exclude /usr/share/vim/vim81/ftplugin/svg.vim
+%exclude /usr/share/vim/vim81/ftplugin/sysctl.vim
+%exclude /usr/share/vim/vim81/ftplugin/systemd.vim
+%exclude /usr/share/vim/vim81/ftplugin/systemverilog.vim
+%exclude /usr/share/vim/vim81/ftplugin/tcl.vim
+%exclude /usr/share/vim/vim81/ftplugin/tcsh.vim
+%exclude /usr/share/vim/vim81/ftplugin/terminfo.vim
+%exclude /usr/share/vim/vim81/ftplugin/tex.vim
+%exclude /usr/share/vim/vim81/ftplugin/text.vim
+%exclude /usr/share/vim/vim81/ftplugin/tmux.vim
+%exclude /usr/share/vim/vim81/ftplugin/treetop.vim
+%exclude /usr/share/vim/vim81/ftplugin/tt2html.vim
+%exclude /usr/share/vim/vim81/ftplugin/udevconf.vim
+%exclude /usr/share/vim/vim81/ftplugin/udevperm.vim
+%exclude /usr/share/vim/vim81/ftplugin/udevrules.vim
+%exclude /usr/share/vim/vim81/ftplugin/updatedb.vim
+%exclude /usr/share/vim/vim81/ftplugin/vb.vim
+%exclude /usr/share/vim/vim81/ftplugin/verilog.vim
+%exclude /usr/share/vim/vim81/ftplugin/vhdl.vim
+%exclude /usr/share/vim/vim81/ftplugin/vim.vim
+%exclude /usr/share/vim/vim81/ftplugin/vroom.vim
+%exclude /usr/share/vim/vim81/ftplugin/xdefaults.vim
+%exclude /usr/share/vim/vim81/ftplugin/xf86conf.vim
+%exclude /usr/share/vim/vim81/ftplugin/xhtml.vim
+%exclude /usr/share/vim/vim81/ftplugin/xinetd.vim
+%exclude /usr/share/vim/vim81/ftplugin/xml.vim
+%exclude /usr/share/vim/vim81/ftplugin/xmodmap.vim
+%exclude /usr/share/vim/vim81/ftplugin/xs.vim
+%exclude /usr/share/vim/vim81/ftplugin/xsd.vim
+%exclude /usr/share/vim/vim81/ftplugin/xslt.vim
+%exclude /usr/share/vim/vim81/ftplugin/yaml.vim
+%exclude /usr/share/vim/vim81/ftplugin/zimbu.vim
+%exclude /usr/share/vim/vim81/ftplugin/zsh.vim
+%exclude /usr/share/vim/vim81/ftplugof.vim
+%exclude /usr/share/vim/vim81/gvimrc_example.vim
+%exclude /usr/share/vim/vim81/indent.vim
+%exclude /usr/share/vim/vim81/indent/README.txt
+%exclude /usr/share/vim/vim81/indent/aap.vim
+%exclude /usr/share/vim/vim81/indent/ada.vim
+%exclude /usr/share/vim/vim81/indent/ant.vim
+%exclude /usr/share/vim/vim81/indent/automake.vim
+%exclude /usr/share/vim/vim81/indent/awk.vim
+%exclude /usr/share/vim/vim81/indent/bib.vim
+%exclude /usr/share/vim/vim81/indent/bst.vim
+%exclude /usr/share/vim/vim81/indent/bzl.vim
+%exclude /usr/share/vim/vim81/indent/c.vim
+%exclude /usr/share/vim/vim81/indent/cdl.vim
+%exclude /usr/share/vim/vim81/indent/ch.vim
+%exclude /usr/share/vim/vim81/indent/chaiscript.vim
+%exclude /usr/share/vim/vim81/indent/changelog.vim
+%exclude /usr/share/vim/vim81/indent/clojure.vim
+%exclude /usr/share/vim/vim81/indent/cmake.vim
+%exclude /usr/share/vim/vim81/indent/cobol.vim
+%exclude /usr/share/vim/vim81/indent/config.vim
+%exclude /usr/share/vim/vim81/indent/context.vim
+%exclude /usr/share/vim/vim81/indent/cpp.vim
+%exclude /usr/share/vim/vim81/indent/cs.vim
+%exclude /usr/share/vim/vim81/indent/css.vim
+%exclude /usr/share/vim/vim81/indent/cucumber.vim
+%exclude /usr/share/vim/vim81/indent/cuda.vim
+%exclude /usr/share/vim/vim81/indent/d.vim
+%exclude /usr/share/vim/vim81/indent/dictconf.vim
+%exclude /usr/share/vim/vim81/indent/dictdconf.vim
+%exclude /usr/share/vim/vim81/indent/docbk.vim
+%exclude /usr/share/vim/vim81/indent/dtd.vim
+%exclude /usr/share/vim/vim81/indent/dtrace.vim
+%exclude /usr/share/vim/vim81/indent/dylan.vim
+%exclude /usr/share/vim/vim81/indent/eiffel.vim
+%exclude /usr/share/vim/vim81/indent/erlang.vim
+%exclude /usr/share/vim/vim81/indent/eruby.vim
+%exclude /usr/share/vim/vim81/indent/eterm.vim
+%exclude /usr/share/vim/vim81/indent/falcon.vim
+%exclude /usr/share/vim/vim81/indent/fortran.vim
+%exclude /usr/share/vim/vim81/indent/framescript.vim
+%exclude /usr/share/vim/vim81/indent/gitconfig.vim
+%exclude /usr/share/vim/vim81/indent/gitolite.vim
+%exclude /usr/share/vim/vim81/indent/go.vim
+%exclude /usr/share/vim/vim81/indent/haml.vim
+%exclude /usr/share/vim/vim81/indent/hamster.vim
+%exclude /usr/share/vim/vim81/indent/hog.vim
+%exclude /usr/share/vim/vim81/indent/html.vim
+%exclude /usr/share/vim/vim81/indent/htmldjango.vim
+%exclude /usr/share/vim/vim81/indent/idlang.vim
+%exclude /usr/share/vim/vim81/indent/ishd.vim
+%exclude /usr/share/vim/vim81/indent/j.vim
+%exclude /usr/share/vim/vim81/indent/java.vim
+%exclude /usr/share/vim/vim81/indent/javascript.vim
+%exclude /usr/share/vim/vim81/indent/json.vim
+%exclude /usr/share/vim/vim81/indent/jsp.vim
+%exclude /usr/share/vim/vim81/indent/ld.vim
+%exclude /usr/share/vim/vim81/indent/less.vim
+%exclude /usr/share/vim/vim81/indent/lifelines.vim
+%exclude /usr/share/vim/vim81/indent/liquid.vim
+%exclude /usr/share/vim/vim81/indent/lisp.vim
+%exclude /usr/share/vim/vim81/indent/logtalk.vim
+%exclude /usr/share/vim/vim81/indent/lua.vim
+%exclude /usr/share/vim/vim81/indent/mail.vim
+%exclude /usr/share/vim/vim81/indent/make.vim
+%exclude /usr/share/vim/vim81/indent/matlab.vim
+%exclude /usr/share/vim/vim81/indent/mf.vim
+%exclude /usr/share/vim/vim81/indent/mma.vim
+%exclude /usr/share/vim/vim81/indent/mp.vim
+%exclude /usr/share/vim/vim81/indent/nsis.vim
+%exclude /usr/share/vim/vim81/indent/objc.vim
+%exclude /usr/share/vim/vim81/indent/ocaml.vim
+%exclude /usr/share/vim/vim81/indent/occam.vim
+%exclude /usr/share/vim/vim81/indent/pascal.vim
+%exclude /usr/share/vim/vim81/indent/perl.vim
+%exclude /usr/share/vim/vim81/indent/perl6.vim
+%exclude /usr/share/vim/vim81/indent/php.vim
+%exclude /usr/share/vim/vim81/indent/postscr.vim
+%exclude /usr/share/vim/vim81/indent/pov.vim
+%exclude /usr/share/vim/vim81/indent/prolog.vim
+%exclude /usr/share/vim/vim81/indent/pyrex.vim
+%exclude /usr/share/vim/vim81/indent/python.vim
+%exclude /usr/share/vim/vim81/indent/r.vim
+%exclude /usr/share/vim/vim81/indent/readline.vim
+%exclude /usr/share/vim/vim81/indent/rhelp.vim
+%exclude /usr/share/vim/vim81/indent/rmd.vim
+%exclude /usr/share/vim/vim81/indent/rnoweb.vim
+%exclude /usr/share/vim/vim81/indent/rpl.vim
+%exclude /usr/share/vim/vim81/indent/rrst.vim
+%exclude /usr/share/vim/vim81/indent/rst.vim
+%exclude /usr/share/vim/vim81/indent/ruby.vim
+%exclude /usr/share/vim/vim81/indent/rust.vim
+%exclude /usr/share/vim/vim81/indent/sas.vim
+%exclude /usr/share/vim/vim81/indent/sass.vim
+%exclude /usr/share/vim/vim81/indent/scala.vim
+%exclude /usr/share/vim/vim81/indent/scheme.vim
+%exclude /usr/share/vim/vim81/indent/scss.vim
+%exclude /usr/share/vim/vim81/indent/sdl.vim
+%exclude /usr/share/vim/vim81/indent/sh.vim
+%exclude /usr/share/vim/vim81/indent/sml.vim
+%exclude /usr/share/vim/vim81/indent/sql.vim
+%exclude /usr/share/vim/vim81/indent/sqlanywhere.vim
+%exclude /usr/share/vim/vim81/indent/systemd.vim
+%exclude /usr/share/vim/vim81/indent/systemverilog.vim
+%exclude /usr/share/vim/vim81/indent/tcl.vim
+%exclude /usr/share/vim/vim81/indent/tcsh.vim
+%exclude /usr/share/vim/vim81/indent/teraterm.vim
+%exclude /usr/share/vim/vim81/indent/tex.vim
+%exclude /usr/share/vim/vim81/indent/tf.vim
+%exclude /usr/share/vim/vim81/indent/tilde.vim
+%exclude /usr/share/vim/vim81/indent/treetop.vim
+%exclude /usr/share/vim/vim81/indent/vb.vim
+%exclude /usr/share/vim/vim81/indent/verilog.vim
+%exclude /usr/share/vim/vim81/indent/vhdl.vim
+%exclude /usr/share/vim/vim81/indent/vim.vim
+%exclude /usr/share/vim/vim81/indent/vroom.vim
+%exclude /usr/share/vim/vim81/indent/xf86conf.vim
+%exclude /usr/share/vim/vim81/indent/xhtml.vim
+%exclude /usr/share/vim/vim81/indent/xinetd.vim
+%exclude /usr/share/vim/vim81/indent/xml.vim
+%exclude /usr/share/vim/vim81/indent/xsd.vim
+%exclude /usr/share/vim/vim81/indent/xslt.vim
+%exclude /usr/share/vim/vim81/indent/yacc.vim
+%exclude /usr/share/vim/vim81/indent/yaml.vim
+%exclude /usr/share/vim/vim81/indent/zimbu.vim
+%exclude /usr/share/vim/vim81/indent/zsh.vim
+%exclude /usr/share/vim/vim81/indoff.vim
+%exclude /usr/share/vim/vim81/keymap/README.txt
+%exclude /usr/share/vim/vim81/keymap/accents.vim
+%exclude /usr/share/vim/vim81/keymap/arabic.vim
+%exclude /usr/share/vim/vim81/keymap/arabic_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/armenian-eastern_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/armenian-western_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/belarusian-jcuken.vim
+%exclude /usr/share/vim/vim81/keymap/bulgarian-bds.vim
+%exclude /usr/share/vim/vim81/keymap/bulgarian-phonetic.vim
+%exclude /usr/share/vim/vim81/keymap/canfr-win.vim
+%exclude /usr/share/vim/vim81/keymap/croatian.vim
+%exclude /usr/share/vim/vim81/keymap/croatian_cp1250.vim
+%exclude /usr/share/vim/vim81/keymap/croatian_iso-8859-2.vim
+%exclude /usr/share/vim/vim81/keymap/croatian_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/czech.vim
+%exclude /usr/share/vim/vim81/keymap/czech_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/dvorak.vim
+%exclude /usr/share/vim/vim81/keymap/esperanto.vim
+%exclude /usr/share/vim/vim81/keymap/esperanto_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/greek.vim
+%exclude /usr/share/vim/vim81/keymap/greek_cp1253.vim
+%exclude /usr/share/vim/vim81/keymap/greek_cp737.vim
+%exclude /usr/share/vim/vim81/keymap/greek_iso-8859-7.vim
+%exclude /usr/share/vim/vim81/keymap/greek_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/hebrew.vim
+%exclude /usr/share/vim/vim81/keymap/hebrew_cp1255.vim
+%exclude /usr/share/vim/vim81/keymap/hebrew_iso-8859-8.vim
+%exclude /usr/share/vim/vim81/keymap/hebrew_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/hebrewp.vim
+%exclude /usr/share/vim/vim81/keymap/hebrewp_cp1255.vim
+%exclude /usr/share/vim/vim81/keymap/hebrewp_iso-8859-8.vim
+%exclude /usr/share/vim/vim81/keymap/hebrewp_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/kana.vim
+%exclude /usr/share/vim/vim81/keymap/kazakh-jcuken.vim
+%exclude /usr/share/vim/vim81/keymap/lithuanian-baltic.vim
+%exclude /usr/share/vim/vim81/keymap/magyar_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/mongolian_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/oldturkic-orkhon_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/oldturkic-yenisei_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/persian-iranian_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/persian.vim
+%exclude /usr/share/vim/vim81/keymap/pinyin.vim
+%exclude /usr/share/vim/vim81/keymap/polish-slash.vim
+%exclude /usr/share/vim/vim81/keymap/polish-slash_cp1250.vim
+%exclude /usr/share/vim/vim81/keymap/polish-slash_cp852.vim
+%exclude /usr/share/vim/vim81/keymap/polish-slash_iso-8859-2.vim
+%exclude /usr/share/vim/vim81/keymap/polish-slash_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/russian-dvorak.vim
+%exclude /usr/share/vim/vim81/keymap/russian-jcuken.vim
+%exclude /usr/share/vim/vim81/keymap/russian-jcukenmac.vim
+%exclude /usr/share/vim/vim81/keymap/russian-jcukenwin.vim
+%exclude /usr/share/vim/vim81/keymap/russian-jcukenwintype.vim
+%exclude /usr/share/vim/vim81/keymap/russian-yawerty.vim
+%exclude /usr/share/vim/vim81/keymap/serbian-latin.vim
+%exclude /usr/share/vim/vim81/keymap/serbian-latin_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/serbian.vim
+%exclude /usr/share/vim/vim81/keymap/serbian_cp1250.vim
+%exclude /usr/share/vim/vim81/keymap/serbian_cp1251.vim
+%exclude /usr/share/vim/vim81/keymap/serbian_iso-8859-2.vim
+%exclude /usr/share/vim/vim81/keymap/serbian_iso-8859-5.vim
+%exclude /usr/share/vim/vim81/keymap/serbian_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/sinhala-phonetic_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/sinhala.vim
+%exclude /usr/share/vim/vim81/keymap/slovak.vim
+%exclude /usr/share/vim/vim81/keymap/slovak_cp1250.vim
+%exclude /usr/share/vim/vim81/keymap/slovak_iso-8859-2.vim
+%exclude /usr/share/vim/vim81/keymap/slovak_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/tamil_tscii.vim
+%exclude /usr/share/vim/vim81/keymap/thaana-phonetic_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/thaana.vim
+%exclude /usr/share/vim/vim81/keymap/ukrainian-dvorak.vim
+%exclude /usr/share/vim/vim81/keymap/ukrainian-jcuken.vim
+%exclude /usr/share/vim/vim81/keymap/vietnamese-telex_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/vietnamese-viqr_utf-8.vim
+%exclude /usr/share/vim/vim81/keymap/vietnamese-vni_utf-8.vim
+%exclude /usr/share/vim/vim81/lang/README.txt
+%exclude /usr/share/vim/vim81/lang/af/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ca/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/cs.cp1250/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/cs/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/de/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/en_GB/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/eo/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/es/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/fi/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/fr/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ga/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/it/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ja.euc-jp/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ja.sjis/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ja/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ko.UTF-8/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ko/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/lv/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/menu_af.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_af.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_af_af.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_af_af.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ca.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_ca.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ca_es.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_ca_es.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_chinese(gb)_gb.936.vim
+%exclude /usr/share/vim/vim81/lang/menu_chinese(taiwan)_taiwan.950.vim
+%exclude /usr/share/vim/vim81/lang/menu_chinese_gb.936.vim
+%exclude /usr/share/vim/vim81/lang/menu_chinese_taiwan.950.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs_cz.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs_cz.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs_cz.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_cs_cz.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.ascii.vim
+%exclude /usr/share/vim/vim81/lang/menu_de.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_de.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_de_de.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_de_de.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_en_gb.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_en_gb.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_english_united_kingdom.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_english_united_kingdom.ascii.vim
+%exclude /usr/share/vim/vim81/lang/menu_eo.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_eo_eo.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_eo_xx.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_es.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_es.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_es_es.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_es_es.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_fi.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_fi.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_fi_fi.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_fi_fi.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_finnish_finland.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_fr.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_fr.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_fr_fr.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_fr_fr.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_french_france.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_german_germany.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_hu.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_hu.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_hu_hu.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_hu_hu.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_it.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_it.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_it_it.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_it_it.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_italian_italy.1252.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja.cp932.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja.euc-jp.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja.eucjp.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja.ujis.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja_jp.cp932.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja_jp.euc-jp.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja_jp.eucjp.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja_jp.ujis.vim
+%exclude /usr/share/vim/vim81/lang/menu_ja_jp.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_japanese_japan.932.vim
+%exclude /usr/share/vim/vim81/lang/menu_ko.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ko_kr.euckr.vim
+%exclude /usr/share/vim/vim81/lang/menu_ko_kr.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ko_kr.vim
+%exclude /usr/share/vim/vim81/lang/menu_nl.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_nl.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_nl_nl.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_nl_nl.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_no.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_no.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_no_no.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_no_no.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_pl.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_pl_pl.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_pl_pl.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_pl_pl.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_polish_poland.1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_br.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_br.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_br.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_pt.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_pt.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_pt_pt.vim
+%exclude /usr/share/vim/vim81/lang/menu_ru.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ru_ru.koi8-r.vim
+%exclude /usr/share/vim/vim81/lang/menu_ru_ru.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_ru_ru.vim
+%exclude /usr/share/vim/vim81/lang/menu_sk.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_sk_sk.1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_sk_sk.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_sk_sk.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_sk_sk.vim
+%exclude /usr/share/vim/vim81/lang/menu_sl_si.cp1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_sl_si.latin2.vim
+%exclude /usr/share/vim/vim81/lang/menu_sl_si.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_slovak_slovak_republic.1250.vim
+%exclude /usr/share/vim/vim81/lang/menu_spanish_spain.850.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_rs.ascii.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-5.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_rs.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_yu.ascii.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-2.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-5.vim
+%exclude /usr/share/vim/vim81/lang/menu_sr_yu.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_sv.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_sv.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_sv_se.latin1.vim
+%exclude /usr/share/vim/vim81/lang/menu_sv_se.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_uk_ua.cp1251.vim
+%exclude /usr/share/vim/vim81/lang/menu_uk_ua.koi8-u.vim
+%exclude /usr/share/vim/vim81/lang/menu_vi_vn.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh.big5.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh.cp936.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh.cp950.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh.gb2312.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_cn.18030.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_cn.cp936.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_cn.gb2312.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_cn.gbk.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_cn.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_tw.big5.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_tw.cp950.vim
+%exclude /usr/share/vim/vim81/lang/menu_zh_tw.utf-8.vim
+%exclude /usr/share/vim/vim81/lang/nb/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/nl/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/no/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/pl.UTF-8/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/pl.cp1250/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/pl/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/pt_BR/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ru.cp1251/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/ru/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/sk.cp1250/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/sk/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/sr/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/sv/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/uk.cp1251/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/uk/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/vi/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/zh_CN.UTF-8/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/zh_CN.cp936/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/zh_CN/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/lang/zh_TW/LC_MESSAGES/vim.mo
+%exclude /usr/share/vim/vim81/macros/README.txt
+%exclude /usr/share/vim/vim81/macros/editexisting.vim
+%exclude /usr/share/vim/vim81/macros/hanoi/click.me
+%exclude /usr/share/vim/vim81/macros/hanoi/hanoi.vim
+%exclude /usr/share/vim/vim81/macros/hanoi/poster
+%exclude /usr/share/vim/vim81/macros/justify.vim
+%exclude /usr/share/vim/vim81/macros/less.bat
+%exclude /usr/share/vim/vim81/macros/less.sh
+%exclude /usr/share/vim/vim81/macros/less.vim
+%exclude /usr/share/vim/vim81/macros/life/click.me
+%exclude /usr/share/vim/vim81/macros/life/life.vim
+%exclude /usr/share/vim/vim81/macros/matchit.vim
+%exclude /usr/share/vim/vim81/macros/maze/Makefile
+%exclude /usr/share/vim/vim81/macros/maze/README.txt
+%exclude /usr/share/vim/vim81/macros/maze/main.aap
+%exclude /usr/share/vim/vim81/macros/maze/maze.c
+%exclude /usr/share/vim/vim81/macros/maze/maze_5.78
+%exclude /usr/share/vim/vim81/macros/maze/maze_mac
+%exclude /usr/share/vim/vim81/macros/maze/mazeansi.c
+%exclude /usr/share/vim/vim81/macros/maze/mazeclean.c
+%exclude /usr/share/vim/vim81/macros/maze/poster
+%exclude /usr/share/vim/vim81/macros/shellmenu.vim
+%exclude /usr/share/vim/vim81/macros/swapmous.vim
+%exclude /usr/share/vim/vim81/macros/urm/README.txt
+%exclude /usr/share/vim/vim81/macros/urm/examples
+%exclude /usr/share/vim/vim81/macros/urm/urm
+%exclude /usr/share/vim/vim81/macros/urm/urm.vim
+%exclude /usr/share/vim/vim81/menu.vim
+%exclude /usr/share/vim/vim81/mswin.vim
+%exclude /usr/share/vim/vim81/optwin.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/disable.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/enable.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/dvorak/plugin/dvorak.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/editexisting/plugin/editexisting.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/justify/plugin/justify.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/matchit/doc/matchit.txt
+%exclude /usr/share/vim/vim81/pack/dist/opt/matchit/doc/tags
+%exclude /usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/shellmenu/plugin/shellmenu.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/swapmouse/plugin/swapmouse.vim
+%exclude /usr/share/vim/vim81/pack/dist/opt/termdebug/plugin/termdebug.vim
+%exclude /usr/share/vim/vim81/plugin/README.txt
+%exclude /usr/share/vim/vim81/plugin/getscriptPlugin.vim
+%exclude /usr/share/vim/vim81/plugin/gzip.vim
+%exclude /usr/share/vim/vim81/plugin/logiPat.vim
+%exclude /usr/share/vim/vim81/plugin/manpager.vim
+%exclude /usr/share/vim/vim81/plugin/matchparen.vim
+%exclude /usr/share/vim/vim81/plugin/netrwPlugin.vim
+%exclude /usr/share/vim/vim81/plugin/rrhelper.vim
+%exclude /usr/share/vim/vim81/plugin/spellfile.vim
+%exclude /usr/share/vim/vim81/plugin/tarPlugin.vim
+%exclude /usr/share/vim/vim81/plugin/tohtml.vim
+%exclude /usr/share/vim/vim81/plugin/vimballPlugin.vim
+%exclude /usr/share/vim/vim81/plugin/zipPlugin.vim
+%exclude /usr/share/vim/vim81/print/ascii.ps
+%exclude /usr/share/vim/vim81/print/cidfont.ps
+%exclude /usr/share/vim/vim81/print/cns_roman.ps
+%exclude /usr/share/vim/vim81/print/cp1250.ps
+%exclude /usr/share/vim/vim81/print/cp1251.ps
+%exclude /usr/share/vim/vim81/print/cp1252.ps
+%exclude /usr/share/vim/vim81/print/cp1253.ps
+%exclude /usr/share/vim/vim81/print/cp1254.ps
+%exclude /usr/share/vim/vim81/print/cp1255.ps
+%exclude /usr/share/vim/vim81/print/cp1257.ps
+%exclude /usr/share/vim/vim81/print/dec-mcs.ps
+%exclude /usr/share/vim/vim81/print/ebcdic-uk.ps
+%exclude /usr/share/vim/vim81/print/gb_roman.ps
+%exclude /usr/share/vim/vim81/print/hp-roman8.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-10.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-11.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-13.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-14.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-15.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-2.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-3.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-4.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-5.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-7.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-8.ps
+%exclude /usr/share/vim/vim81/print/iso-8859-9.ps
+%exclude /usr/share/vim/vim81/print/jis_roman.ps
+%exclude /usr/share/vim/vim81/print/koi8-r.ps
+%exclude /usr/share/vim/vim81/print/koi8-u.ps
+%exclude /usr/share/vim/vim81/print/ks_roman.ps
+%exclude /usr/share/vim/vim81/print/latin1.ps
+%exclude /usr/share/vim/vim81/print/mac-roman.ps
+%exclude /usr/share/vim/vim81/print/prolog.ps
+%exclude /usr/share/vim/vim81/rgb.txt
+%exclude /usr/share/vim/vim81/scripts.vim
+%exclude /usr/share/vim/vim81/spell/check_locales.vim
+%exclude /usr/share/vim/vim81/spell/cleanadd.vim
+%exclude /usr/share/vim/vim81/spell/en.ascii.spl
+%exclude /usr/share/vim/vim81/spell/en.ascii.sug
+%exclude /usr/share/vim/vim81/spell/en.latin1.spl
+%exclude /usr/share/vim/vim81/spell/en.latin1.sug
+%exclude /usr/share/vim/vim81/spell/en.utf-8.spl
+%exclude /usr/share/vim/vim81/spell/en.utf-8.sug
+%exclude /usr/share/vim/vim81/spell/fixdup.vim
+%exclude /usr/share/vim/vim81/spell/he.vim
+%exclude /usr/share/vim/vim81/spell/spell.vim
+%exclude /usr/share/vim/vim81/spell/yi.vim
+%exclude /usr/share/vim/vim81/synmenu.vim
+%exclude /usr/share/vim/vim81/syntax/2html.vim
+%exclude /usr/share/vim/vim81/syntax/README.txt
+%exclude /usr/share/vim/vim81/syntax/a2ps.vim
+%exclude /usr/share/vim/vim81/syntax/a65.vim
+%exclude /usr/share/vim/vim81/syntax/aap.vim
+%exclude /usr/share/vim/vim81/syntax/abap.vim
+%exclude /usr/share/vim/vim81/syntax/abaqus.vim
+%exclude /usr/share/vim/vim81/syntax/abc.vim
+%exclude /usr/share/vim/vim81/syntax/abel.vim
+%exclude /usr/share/vim/vim81/syntax/acedb.vim
+%exclude /usr/share/vim/vim81/syntax/ada.vim
+%exclude /usr/share/vim/vim81/syntax/aflex.vim
+%exclude /usr/share/vim/vim81/syntax/ahdl.vim
+%exclude /usr/share/vim/vim81/syntax/alsaconf.vim
+%exclude /usr/share/vim/vim81/syntax/amiga.vim
+%exclude /usr/share/vim/vim81/syntax/aml.vim
+%exclude /usr/share/vim/vim81/syntax/ampl.vim
+%exclude /usr/share/vim/vim81/syntax/ant.vim
+%exclude /usr/share/vim/vim81/syntax/antlr.vim
+%exclude /usr/share/vim/vim81/syntax/apache.vim
+%exclude /usr/share/vim/vim81/syntax/apachestyle.vim
+%exclude /usr/share/vim/vim81/syntax/aptconf.vim
+%exclude /usr/share/vim/vim81/syntax/arch.vim
+%exclude /usr/share/vim/vim81/syntax/arduino.vim
+%exclude /usr/share/vim/vim81/syntax/art.vim
+%exclude /usr/share/vim/vim81/syntax/asciidoc.vim
+%exclude /usr/share/vim/vim81/syntax/asm.vim
+%exclude /usr/share/vim/vim81/syntax/asm68k.vim
+%exclude /usr/share/vim/vim81/syntax/asmh8300.vim
+%exclude /usr/share/vim/vim81/syntax/asn.vim
+%exclude /usr/share/vim/vim81/syntax/aspperl.vim
+%exclude /usr/share/vim/vim81/syntax/aspvbs.vim
+%exclude /usr/share/vim/vim81/syntax/asterisk.vim
+%exclude /usr/share/vim/vim81/syntax/asteriskvm.vim
+%exclude /usr/share/vim/vim81/syntax/atlas.vim
+%exclude /usr/share/vim/vim81/syntax/autodoc.vim
+%exclude /usr/share/vim/vim81/syntax/autohotkey.vim
+%exclude /usr/share/vim/vim81/syntax/autoit.vim
+%exclude /usr/share/vim/vim81/syntax/automake.vim
+%exclude /usr/share/vim/vim81/syntax/ave.vim
+%exclude /usr/share/vim/vim81/syntax/avra.vim
+%exclude /usr/share/vim/vim81/syntax/awk.vim
+%exclude /usr/share/vim/vim81/syntax/ayacc.vim
+%exclude /usr/share/vim/vim81/syntax/b.vim
+%exclude /usr/share/vim/vim81/syntax/baan.vim
+%exclude /usr/share/vim/vim81/syntax/basic.vim
+%exclude /usr/share/vim/vim81/syntax/bc.vim
+%exclude /usr/share/vim/vim81/syntax/bdf.vim
+%exclude /usr/share/vim/vim81/syntax/bib.vim
+%exclude /usr/share/vim/vim81/syntax/bindzone.vim
+%exclude /usr/share/vim/vim81/syntax/blank.vim
+%exclude /usr/share/vim/vim81/syntax/bst.vim
+%exclude /usr/share/vim/vim81/syntax/btm.vim
+%exclude /usr/share/vim/vim81/syntax/bzl.vim
+%exclude /usr/share/vim/vim81/syntax/bzr.vim
+%exclude /usr/share/vim/vim81/syntax/c.vim
+%exclude /usr/share/vim/vim81/syntax/cabal.vim
+%exclude /usr/share/vim/vim81/syntax/calendar.vim
+%exclude /usr/share/vim/vim81/syntax/catalog.vim
+%exclude /usr/share/vim/vim81/syntax/cdl.vim
+%exclude /usr/share/vim/vim81/syntax/cdrdaoconf.vim
+%exclude /usr/share/vim/vim81/syntax/cdrtoc.vim
+%exclude /usr/share/vim/vim81/syntax/cf.vim
+%exclude /usr/share/vim/vim81/syntax/cfg.vim
+%exclude /usr/share/vim/vim81/syntax/ch.vim
+%exclude /usr/share/vim/vim81/syntax/chaiscript.vim
+%exclude /usr/share/vim/vim81/syntax/change.vim
+%exclude /usr/share/vim/vim81/syntax/changelog.vim
+%exclude /usr/share/vim/vim81/syntax/chaskell.vim
+%exclude /usr/share/vim/vim81/syntax/cheetah.vim
+%exclude /usr/share/vim/vim81/syntax/chicken.vim
+%exclude /usr/share/vim/vim81/syntax/chill.vim
+%exclude /usr/share/vim/vim81/syntax/chordpro.vim
+%exclude /usr/share/vim/vim81/syntax/cl.vim
+%exclude /usr/share/vim/vim81/syntax/clean.vim
+%exclude /usr/share/vim/vim81/syntax/clipper.vim
+%exclude /usr/share/vim/vim81/syntax/clojure.vim
+%exclude /usr/share/vim/vim81/syntax/cmake.vim
+%exclude /usr/share/vim/vim81/syntax/cmod.vim
+%exclude /usr/share/vim/vim81/syntax/cmusrc.vim
+%exclude /usr/share/vim/vim81/syntax/cobol.vim
+%exclude /usr/share/vim/vim81/syntax/coco.vim
+%exclude /usr/share/vim/vim81/syntax/colortest.vim
+%exclude /usr/share/vim/vim81/syntax/conaryrecipe.vim
+%exclude /usr/share/vim/vim81/syntax/conf.vim
+%exclude /usr/share/vim/vim81/syntax/config.vim
+%exclude /usr/share/vim/vim81/syntax/context.vim
+%exclude /usr/share/vim/vim81/syntax/cpp.vim
+%exclude /usr/share/vim/vim81/syntax/crm.vim
+%exclude /usr/share/vim/vim81/syntax/crontab.vim
+%exclude /usr/share/vim/vim81/syntax/cs.vim
+%exclude /usr/share/vim/vim81/syntax/csc.vim
+%exclude /usr/share/vim/vim81/syntax/csdl.vim
+%exclude /usr/share/vim/vim81/syntax/csh.vim
+%exclude /usr/share/vim/vim81/syntax/csp.vim
+%exclude /usr/share/vim/vim81/syntax/css.vim
+%exclude /usr/share/vim/vim81/syntax/cterm.vim
+%exclude /usr/share/vim/vim81/syntax/ctrlh.vim
+%exclude /usr/share/vim/vim81/syntax/cucumber.vim
+%exclude /usr/share/vim/vim81/syntax/cuda.vim
+%exclude /usr/share/vim/vim81/syntax/cupl.vim
+%exclude /usr/share/vim/vim81/syntax/cuplsim.vim
+%exclude /usr/share/vim/vim81/syntax/cvs.vim
+%exclude /usr/share/vim/vim81/syntax/cvsrc.vim
+%exclude /usr/share/vim/vim81/syntax/cweb.vim
+%exclude /usr/share/vim/vim81/syntax/cynlib.vim
+%exclude /usr/share/vim/vim81/syntax/cynpp.vim
+%exclude /usr/share/vim/vim81/syntax/d.vim
+%exclude /usr/share/vim/vim81/syntax/datascript.vim
+%exclude /usr/share/vim/vim81/syntax/dcd.vim
+%exclude /usr/share/vim/vim81/syntax/dcl.vim
+%exclude /usr/share/vim/vim81/syntax/debchangelog.vim
+%exclude /usr/share/vim/vim81/syntax/debcontrol.vim
+%exclude /usr/share/vim/vim81/syntax/debcopyright.vim
+%exclude /usr/share/vim/vim81/syntax/debsources.vim
+%exclude /usr/share/vim/vim81/syntax/def.vim
+%exclude /usr/share/vim/vim81/syntax/denyhosts.vim
+%exclude /usr/share/vim/vim81/syntax/desc.vim
+%exclude /usr/share/vim/vim81/syntax/desktop.vim
+%exclude /usr/share/vim/vim81/syntax/dictconf.vim
+%exclude /usr/share/vim/vim81/syntax/dictdconf.vim
+%exclude /usr/share/vim/vim81/syntax/diff.vim
+%exclude /usr/share/vim/vim81/syntax/dircolors.vim
+%exclude /usr/share/vim/vim81/syntax/dirpager.vim
+%exclude /usr/share/vim/vim81/syntax/diva.vim
+%exclude /usr/share/vim/vim81/syntax/django.vim
+%exclude /usr/share/vim/vim81/syntax/dns.vim
+%exclude /usr/share/vim/vim81/syntax/dnsmasq.vim
+%exclude /usr/share/vim/vim81/syntax/docbk.vim
+%exclude /usr/share/vim/vim81/syntax/docbksgml.vim
+%exclude /usr/share/vim/vim81/syntax/docbkxml.vim
+%exclude /usr/share/vim/vim81/syntax/dockerfile.vim
+%exclude /usr/share/vim/vim81/syntax/dosbatch.vim
+%exclude /usr/share/vim/vim81/syntax/dosini.vim
+%exclude /usr/share/vim/vim81/syntax/dot.vim
+%exclude /usr/share/vim/vim81/syntax/doxygen.vim
+%exclude /usr/share/vim/vim81/syntax/dracula.vim
+%exclude /usr/share/vim/vim81/syntax/dsl.vim
+%exclude /usr/share/vim/vim81/syntax/dtd.vim
+%exclude /usr/share/vim/vim81/syntax/dtml.vim
+%exclude /usr/share/vim/vim81/syntax/dtrace.vim
+%exclude /usr/share/vim/vim81/syntax/dts.vim
+%exclude /usr/share/vim/vim81/syntax/dylan.vim
+%exclude /usr/share/vim/vim81/syntax/dylanintr.vim
+%exclude /usr/share/vim/vim81/syntax/dylanlid.vim
+%exclude /usr/share/vim/vim81/syntax/ecd.vim
+%exclude /usr/share/vim/vim81/syntax/edif.vim
+%exclude /usr/share/vim/vim81/syntax/eiffel.vim
+%exclude /usr/share/vim/vim81/syntax/elf.vim
+%exclude /usr/share/vim/vim81/syntax/elinks.vim
+%exclude /usr/share/vim/vim81/syntax/elmfilt.vim
+%exclude /usr/share/vim/vim81/syntax/erlang.vim
+%exclude /usr/share/vim/vim81/syntax/eruby.vim
+%exclude /usr/share/vim/vim81/syntax/esmtprc.vim
+%exclude /usr/share/vim/vim81/syntax/esqlc.vim
+%exclude /usr/share/vim/vim81/syntax/esterel.vim
+%exclude /usr/share/vim/vim81/syntax/eterm.vim
+%exclude /usr/share/vim/vim81/syntax/euphoria3.vim
+%exclude /usr/share/vim/vim81/syntax/euphoria4.vim
+%exclude /usr/share/vim/vim81/syntax/eviews.vim
+%exclude /usr/share/vim/vim81/syntax/exim.vim
+%exclude /usr/share/vim/vim81/syntax/expect.vim
+%exclude /usr/share/vim/vim81/syntax/exports.vim
+%exclude /usr/share/vim/vim81/syntax/falcon.vim
+%exclude /usr/share/vim/vim81/syntax/fan.vim
+%exclude /usr/share/vim/vim81/syntax/fasm.vim
+%exclude /usr/share/vim/vim81/syntax/fdcc.vim
+%exclude /usr/share/vim/vim81/syntax/fetchmail.vim
+%exclude /usr/share/vim/vim81/syntax/fgl.vim
+%exclude /usr/share/vim/vim81/syntax/flexwiki.vim
+%exclude /usr/share/vim/vim81/syntax/focexec.vim
+%exclude /usr/share/vim/vim81/syntax/form.vim
+%exclude /usr/share/vim/vim81/syntax/forth.vim
+%exclude /usr/share/vim/vim81/syntax/fortran.vim
+%exclude /usr/share/vim/vim81/syntax/foxpro.vim
+%exclude /usr/share/vim/vim81/syntax/framescript.vim
+%exclude /usr/share/vim/vim81/syntax/freebasic.vim
+%exclude /usr/share/vim/vim81/syntax/fstab.vim
+%exclude /usr/share/vim/vim81/syntax/fvwm.vim
+%exclude /usr/share/vim/vim81/syntax/fvwm2m4.vim
+%exclude /usr/share/vim/vim81/syntax/gdb.vim
+%exclude /usr/share/vim/vim81/syntax/gdmo.vim
+%exclude /usr/share/vim/vim81/syntax/gedcom.vim
+%exclude /usr/share/vim/vim81/syntax/git.vim
+%exclude /usr/share/vim/vim81/syntax/gitcommit.vim
+%exclude /usr/share/vim/vim81/syntax/gitconfig.vim
+%exclude /usr/share/vim/vim81/syntax/gitolite.vim
+%exclude /usr/share/vim/vim81/syntax/gitrebase.vim
+%exclude /usr/share/vim/vim81/syntax/gitsendemail.vim
+%exclude /usr/share/vim/vim81/syntax/gkrellmrc.vim
+%exclude /usr/share/vim/vim81/syntax/gnash.vim
+%exclude /usr/share/vim/vim81/syntax/gnuplot.vim
+%exclude /usr/share/vim/vim81/syntax/go.vim
+%exclude /usr/share/vim/vim81/syntax/godoc.vim
+%exclude /usr/share/vim/vim81/syntax/gp.vim
+%exclude /usr/share/vim/vim81/syntax/gpg.vim
+%exclude /usr/share/vim/vim81/syntax/gprof.vim
+%exclude /usr/share/vim/vim81/syntax/grads.vim
+%exclude /usr/share/vim/vim81/syntax/gretl.vim
+%exclude /usr/share/vim/vim81/syntax/groff.vim
+%exclude /usr/share/vim/vim81/syntax/groovy.vim
+%exclude /usr/share/vim/vim81/syntax/group.vim
+%exclude /usr/share/vim/vim81/syntax/grub.vim
+%exclude /usr/share/vim/vim81/syntax/gsp.vim
+%exclude /usr/share/vim/vim81/syntax/gtkrc.vim
+%exclude /usr/share/vim/vim81/syntax/haml.vim
+%exclude /usr/share/vim/vim81/syntax/hamster.vim
+%exclude /usr/share/vim/vim81/syntax/haskell.vim
+%exclude /usr/share/vim/vim81/syntax/haste.vim
+%exclude /usr/share/vim/vim81/syntax/hastepreproc.vim
+%exclude /usr/share/vim/vim81/syntax/hb.vim
+%exclude /usr/share/vim/vim81/syntax/help.vim
+%exclude /usr/share/vim/vim81/syntax/hercules.vim
+%exclude /usr/share/vim/vim81/syntax/hex.vim
+%exclude /usr/share/vim/vim81/syntax/hgcommit.vim
+%exclude /usr/share/vim/vim81/syntax/hitest.vim
+%exclude /usr/share/vim/vim81/syntax/hog.vim
+%exclude /usr/share/vim/vim81/syntax/hostconf.vim
+%exclude /usr/share/vim/vim81/syntax/hostsaccess.vim
+%exclude /usr/share/vim/vim81/syntax/html.vim
+%exclude /usr/share/vim/vim81/syntax/htmlcheetah.vim
+%exclude /usr/share/vim/vim81/syntax/htmldjango.vim
+%exclude /usr/share/vim/vim81/syntax/htmlm4.vim
+%exclude /usr/share/vim/vim81/syntax/htmlos.vim
+%exclude /usr/share/vim/vim81/syntax/ia64.vim
+%exclude /usr/share/vim/vim81/syntax/ibasic.vim
+%exclude /usr/share/vim/vim81/syntax/icemenu.vim
+%exclude /usr/share/vim/vim81/syntax/icon.vim
+%exclude /usr/share/vim/vim81/syntax/idl.vim
+%exclude /usr/share/vim/vim81/syntax/idlang.vim
+%exclude /usr/share/vim/vim81/syntax/indent.vim
+%exclude /usr/share/vim/vim81/syntax/inform.vim
+%exclude /usr/share/vim/vim81/syntax/initex.vim
+%exclude /usr/share/vim/vim81/syntax/initng.vim
+%exclude /usr/share/vim/vim81/syntax/inittab.vim
+%exclude /usr/share/vim/vim81/syntax/ipfilter.vim
+%exclude /usr/share/vim/vim81/syntax/ishd.vim
+%exclude /usr/share/vim/vim81/syntax/iss.vim
+%exclude /usr/share/vim/vim81/syntax/ist.vim
+%exclude /usr/share/vim/vim81/syntax/j.vim
+%exclude /usr/share/vim/vim81/syntax/jal.vim
+%exclude /usr/share/vim/vim81/syntax/jam.vim
+%exclude /usr/share/vim/vim81/syntax/jargon.vim
+%exclude /usr/share/vim/vim81/syntax/java.vim
+%exclude /usr/share/vim/vim81/syntax/javacc.vim
+%exclude /usr/share/vim/vim81/syntax/javascript.vim
+%exclude /usr/share/vim/vim81/syntax/jess.vim
+%exclude /usr/share/vim/vim81/syntax/jgraph.vim
+%exclude /usr/share/vim/vim81/syntax/jovial.vim
+%exclude /usr/share/vim/vim81/syntax/jproperties.vim
+%exclude /usr/share/vim/vim81/syntax/json.vim
+%exclude /usr/share/vim/vim81/syntax/jsp.vim
+%exclude /usr/share/vim/vim81/syntax/kconfig.vim
+%exclude /usr/share/vim/vim81/syntax/kivy.vim
+%exclude /usr/share/vim/vim81/syntax/kix.vim
+%exclude /usr/share/vim/vim81/syntax/kscript.vim
+%exclude /usr/share/vim/vim81/syntax/kwt.vim
+%exclude /usr/share/vim/vim81/syntax/lace.vim
+%exclude /usr/share/vim/vim81/syntax/latte.vim
+%exclude /usr/share/vim/vim81/syntax/ld.vim
+%exclude /usr/share/vim/vim81/syntax/ldapconf.vim
+%exclude /usr/share/vim/vim81/syntax/ldif.vim
+%exclude /usr/share/vim/vim81/syntax/less.vim
+%exclude /usr/share/vim/vim81/syntax/lex.vim
+%exclude /usr/share/vim/vim81/syntax/lftp.vim
+%exclude /usr/share/vim/vim81/syntax/lhaskell.vim
+%exclude /usr/share/vim/vim81/syntax/libao.vim
+%exclude /usr/share/vim/vim81/syntax/lifelines.vim
+%exclude /usr/share/vim/vim81/syntax/lilo.vim
+%exclude /usr/share/vim/vim81/syntax/limits.vim
+%exclude /usr/share/vim/vim81/syntax/liquid.vim
+%exclude /usr/share/vim/vim81/syntax/lisp.vim
+%exclude /usr/share/vim/vim81/syntax/lite.vim
+%exclude /usr/share/vim/vim81/syntax/litestep.vim
+%exclude /usr/share/vim/vim81/syntax/loginaccess.vim
+%exclude /usr/share/vim/vim81/syntax/logindefs.vim
+%exclude /usr/share/vim/vim81/syntax/logtalk.vim
+%exclude /usr/share/vim/vim81/syntax/lotos.vim
+%exclude /usr/share/vim/vim81/syntax/lout.vim
+%exclude /usr/share/vim/vim81/syntax/lpc.vim
+%exclude /usr/share/vim/vim81/syntax/lprolog.vim
+%exclude /usr/share/vim/vim81/syntax/lscript.vim
+%exclude /usr/share/vim/vim81/syntax/lsl.vim
+%exclude /usr/share/vim/vim81/syntax/lss.vim
+%exclude /usr/share/vim/vim81/syntax/lua.vim
+%exclude /usr/share/vim/vim81/syntax/lynx.vim
+%exclude /usr/share/vim/vim81/syntax/m4.vim
+%exclude /usr/share/vim/vim81/syntax/mail.vim
+%exclude /usr/share/vim/vim81/syntax/mailaliases.vim
+%exclude /usr/share/vim/vim81/syntax/mailcap.vim
+%exclude /usr/share/vim/vim81/syntax/make.vim
+%exclude /usr/share/vim/vim81/syntax/mallard.vim
+%exclude /usr/share/vim/vim81/syntax/man.vim
+%exclude /usr/share/vim/vim81/syntax/manconf.vim
+%exclude /usr/share/vim/vim81/syntax/manual.vim
+%exclude /usr/share/vim/vim81/syntax/maple.vim
+%exclude /usr/share/vim/vim81/syntax/markdown.vim
+%exclude /usr/share/vim/vim81/syntax/masm.vim
+%exclude /usr/share/vim/vim81/syntax/mason.vim
+%exclude /usr/share/vim/vim81/syntax/master.vim
+%exclude /usr/share/vim/vim81/syntax/matlab.vim
+%exclude /usr/share/vim/vim81/syntax/maxima.vim
+%exclude /usr/share/vim/vim81/syntax/mel.vim
+%exclude /usr/share/vim/vim81/syntax/messages.vim
+%exclude /usr/share/vim/vim81/syntax/mf.vim
+%exclude /usr/share/vim/vim81/syntax/mgl.vim
+%exclude /usr/share/vim/vim81/syntax/mgp.vim
+%exclude /usr/share/vim/vim81/syntax/mib.vim
+%exclude /usr/share/vim/vim81/syntax/mix.vim
+%exclude /usr/share/vim/vim81/syntax/mma.vim
+%exclude /usr/share/vim/vim81/syntax/mmix.vim
+%exclude /usr/share/vim/vim81/syntax/mmp.vim
+%exclude /usr/share/vim/vim81/syntax/modconf.vim
+%exclude /usr/share/vim/vim81/syntax/model.vim
+%exclude /usr/share/vim/vim81/syntax/modsim3.vim
+%exclude /usr/share/vim/vim81/syntax/modula2.vim
+%exclude /usr/share/vim/vim81/syntax/modula3.vim
+%exclude /usr/share/vim/vim81/syntax/monk.vim
+%exclude /usr/share/vim/vim81/syntax/moo.vim
+%exclude /usr/share/vim/vim81/syntax/mp.vim
+%exclude /usr/share/vim/vim81/syntax/mplayerconf.vim
+%exclude /usr/share/vim/vim81/syntax/mrxvtrc.vim
+%exclude /usr/share/vim/vim81/syntax/msidl.vim
+%exclude /usr/share/vim/vim81/syntax/msmessages.vim
+%exclude /usr/share/vim/vim81/syntax/msql.vim
+%exclude /usr/share/vim/vim81/syntax/mupad.vim
+%exclude /usr/share/vim/vim81/syntax/murphi.vim
+%exclude /usr/share/vim/vim81/syntax/mush.vim
+%exclude /usr/share/vim/vim81/syntax/muttrc.vim
+%exclude /usr/share/vim/vim81/syntax/mysql.vim
+%exclude /usr/share/vim/vim81/syntax/n1ql.vim
+%exclude /usr/share/vim/vim81/syntax/named.vim
+%exclude /usr/share/vim/vim81/syntax/nanorc.vim
+%exclude /usr/share/vim/vim81/syntax/nasm.vim
+%exclude /usr/share/vim/vim81/syntax/nastran.vim
+%exclude /usr/share/vim/vim81/syntax/natural.vim
+%exclude /usr/share/vim/vim81/syntax/ncf.vim
+%exclude /usr/share/vim/vim81/syntax/neomuttrc.vim
+%exclude /usr/share/vim/vim81/syntax/netrc.vim
+%exclude /usr/share/vim/vim81/syntax/netrw.vim
+%exclude /usr/share/vim/vim81/syntax/ninja.vim
+%exclude /usr/share/vim/vim81/syntax/nosyntax.vim
+%exclude /usr/share/vim/vim81/syntax/nqc.vim
+%exclude /usr/share/vim/vim81/syntax/nroff.vim
+%exclude /usr/share/vim/vim81/syntax/nsis.vim
+%exclude /usr/share/vim/vim81/syntax/obj.vim
+%exclude /usr/share/vim/vim81/syntax/objc.vim
+%exclude /usr/share/vim/vim81/syntax/objcpp.vim
+%exclude /usr/share/vim/vim81/syntax/ocaml.vim
+%exclude /usr/share/vim/vim81/syntax/occam.vim
+%exclude /usr/share/vim/vim81/syntax/omnimark.vim
+%exclude /usr/share/vim/vim81/syntax/openroad.vim
+%exclude /usr/share/vim/vim81/syntax/opl.vim
+%exclude /usr/share/vim/vim81/syntax/ora.vim
+%exclude /usr/share/vim/vim81/syntax/pamconf.vim
+%exclude /usr/share/vim/vim81/syntax/papp.vim
+%exclude /usr/share/vim/vim81/syntax/pascal.vim
+%exclude /usr/share/vim/vim81/syntax/passwd.vim
+%exclude /usr/share/vim/vim81/syntax/pcap.vim
+%exclude /usr/share/vim/vim81/syntax/pccts.vim
+%exclude /usr/share/vim/vim81/syntax/pdf.vim
+%exclude /usr/share/vim/vim81/syntax/perl.vim
+%exclude /usr/share/vim/vim81/syntax/perl6.vim
+%exclude /usr/share/vim/vim81/syntax/pf.vim
+%exclude /usr/share/vim/vim81/syntax/pfmain.vim
+%exclude /usr/share/vim/vim81/syntax/php.vim
+%exclude /usr/share/vim/vim81/syntax/phtml.vim
+%exclude /usr/share/vim/vim81/syntax/pic.vim
+%exclude /usr/share/vim/vim81/syntax/pike.vim
+%exclude /usr/share/vim/vim81/syntax/pilrc.vim
+%exclude /usr/share/vim/vim81/syntax/pine.vim
+%exclude /usr/share/vim/vim81/syntax/pinfo.vim
+%exclude /usr/share/vim/vim81/syntax/plaintex.vim
+%exclude /usr/share/vim/vim81/syntax/pli.vim
+%exclude /usr/share/vim/vim81/syntax/plm.vim
+%exclude /usr/share/vim/vim81/syntax/plp.vim
+%exclude /usr/share/vim/vim81/syntax/plsql.vim
+%exclude /usr/share/vim/vim81/syntax/po.vim
+%exclude /usr/share/vim/vim81/syntax/pod.vim
+%exclude /usr/share/vim/vim81/syntax/postscr.vim
+%exclude /usr/share/vim/vim81/syntax/pov.vim
+%exclude /usr/share/vim/vim81/syntax/povini.vim
+%exclude /usr/share/vim/vim81/syntax/ppd.vim
+%exclude /usr/share/vim/vim81/syntax/ppwiz.vim
+%exclude /usr/share/vim/vim81/syntax/prescribe.vim
+%exclude /usr/share/vim/vim81/syntax/privoxy.vim
+%exclude /usr/share/vim/vim81/syntax/procmail.vim
+%exclude /usr/share/vim/vim81/syntax/progress.vim
+%exclude /usr/share/vim/vim81/syntax/prolog.vim
+%exclude /usr/share/vim/vim81/syntax/promela.vim
+%exclude /usr/share/vim/vim81/syntax/proto.vim
+%exclude /usr/share/vim/vim81/syntax/protocols.vim
+%exclude /usr/share/vim/vim81/syntax/psf.vim
+%exclude /usr/share/vim/vim81/syntax/ptcap.vim
+%exclude /usr/share/vim/vim81/syntax/purifylog.vim
+%exclude /usr/share/vim/vim81/syntax/pyrex.vim
+%exclude /usr/share/vim/vim81/syntax/python.vim
+%exclude /usr/share/vim/vim81/syntax/qf.vim
+%exclude /usr/share/vim/vim81/syntax/quake.vim
+%exclude /usr/share/vim/vim81/syntax/r.vim
+%exclude /usr/share/vim/vim81/syntax/racc.vim
+%exclude /usr/share/vim/vim81/syntax/radiance.vim
+%exclude /usr/share/vim/vim81/syntax/ratpoison.vim
+%exclude /usr/share/vim/vim81/syntax/rc.vim
+%exclude /usr/share/vim/vim81/syntax/rcs.vim
+%exclude /usr/share/vim/vim81/syntax/rcslog.vim
+%exclude /usr/share/vim/vim81/syntax/readline.vim
+%exclude /usr/share/vim/vim81/syntax/rebol.vim
+%exclude /usr/share/vim/vim81/syntax/redif.vim
+%exclude /usr/share/vim/vim81/syntax/registry.vim
+%exclude /usr/share/vim/vim81/syntax/remind.vim
+%exclude /usr/share/vim/vim81/syntax/resolv.vim
+%exclude /usr/share/vim/vim81/syntax/reva.vim
+%exclude /usr/share/vim/vim81/syntax/rexx.vim
+%exclude /usr/share/vim/vim81/syntax/rhelp.vim
+%exclude /usr/share/vim/vim81/syntax/rib.vim
+%exclude /usr/share/vim/vim81/syntax/rmd.vim
+%exclude /usr/share/vim/vim81/syntax/rnc.vim
+%exclude /usr/share/vim/vim81/syntax/rng.vim
+%exclude /usr/share/vim/vim81/syntax/rnoweb.vim
+%exclude /usr/share/vim/vim81/syntax/robots.vim
+%exclude /usr/share/vim/vim81/syntax/rpcgen.vim
+%exclude /usr/share/vim/vim81/syntax/rpl.vim
+%exclude /usr/share/vim/vim81/syntax/rrst.vim
+%exclude /usr/share/vim/vim81/syntax/rst.vim
+%exclude /usr/share/vim/vim81/syntax/rtf.vim
+%exclude /usr/share/vim/vim81/syntax/ruby.vim
+%exclude /usr/share/vim/vim81/syntax/rust.vim
+%exclude /usr/share/vim/vim81/syntax/samba.vim
+%exclude /usr/share/vim/vim81/syntax/sas.vim
+%exclude /usr/share/vim/vim81/syntax/sass.vim
+%exclude /usr/share/vim/vim81/syntax/sather.vim
+%exclude /usr/share/vim/vim81/syntax/sbt.vim
+%exclude /usr/share/vim/vim81/syntax/scala.vim
+%exclude /usr/share/vim/vim81/syntax/scheme.vim
+%exclude /usr/share/vim/vim81/syntax/scilab.vim
+%exclude /usr/share/vim/vim81/syntax/screen.vim
+%exclude /usr/share/vim/vim81/syntax/scss.vim
+%exclude /usr/share/vim/vim81/syntax/sd.vim
+%exclude /usr/share/vim/vim81/syntax/sdc.vim
+%exclude /usr/share/vim/vim81/syntax/sdl.vim
+%exclude /usr/share/vim/vim81/syntax/sed.vim
+%exclude /usr/share/vim/vim81/syntax/sendpr.vim
+%exclude /usr/share/vim/vim81/syntax/sensors.vim
+%exclude /usr/share/vim/vim81/syntax/services.vim
+%exclude /usr/share/vim/vim81/syntax/setserial.vim
+%exclude /usr/share/vim/vim81/syntax/sgml.vim
+%exclude /usr/share/vim/vim81/syntax/sgmldecl.vim
+%exclude /usr/share/vim/vim81/syntax/sgmllnx.vim
+%exclude /usr/share/vim/vim81/syntax/sh.vim
+%exclude /usr/share/vim/vim81/syntax/sicad.vim
+%exclude /usr/share/vim/vim81/syntax/sieve.vim
+%exclude /usr/share/vim/vim81/syntax/simula.vim
+%exclude /usr/share/vim/vim81/syntax/sinda.vim
+%exclude /usr/share/vim/vim81/syntax/sindacmp.vim
+%exclude /usr/share/vim/vim81/syntax/sindaout.vim
+%exclude /usr/share/vim/vim81/syntax/sisu.vim
+%exclude /usr/share/vim/vim81/syntax/skill.vim
+%exclude /usr/share/vim/vim81/syntax/sl.vim
+%exclude /usr/share/vim/vim81/syntax/slang.vim
+%exclude /usr/share/vim/vim81/syntax/slice.vim
+%exclude /usr/share/vim/vim81/syntax/slpconf.vim
+%exclude /usr/share/vim/vim81/syntax/slpreg.vim
+%exclude /usr/share/vim/vim81/syntax/slpspi.vim
+%exclude /usr/share/vim/vim81/syntax/slrnrc.vim
+%exclude /usr/share/vim/vim81/syntax/slrnsc.vim
+%exclude /usr/share/vim/vim81/syntax/sm.vim
+%exclude /usr/share/vim/vim81/syntax/smarty.vim
+%exclude /usr/share/vim/vim81/syntax/smcl.vim
+%exclude /usr/share/vim/vim81/syntax/smil.vim
+%exclude /usr/share/vim/vim81/syntax/smith.vim
+%exclude /usr/share/vim/vim81/syntax/sml.vim
+%exclude /usr/share/vim/vim81/syntax/snnsnet.vim
+%exclude /usr/share/vim/vim81/syntax/snnspat.vim
+%exclude /usr/share/vim/vim81/syntax/snnsres.vim
+%exclude /usr/share/vim/vim81/syntax/snobol4.vim
+%exclude /usr/share/vim/vim81/syntax/spec.vim
+%exclude /usr/share/vim/vim81/syntax/specman.vim
+%exclude /usr/share/vim/vim81/syntax/spice.vim
+%exclude /usr/share/vim/vim81/syntax/splint.vim
+%exclude /usr/share/vim/vim81/syntax/spup.vim
+%exclude /usr/share/vim/vim81/syntax/spyce.vim
+%exclude /usr/share/vim/vim81/syntax/sql.vim
+%exclude /usr/share/vim/vim81/syntax/sqlanywhere.vim
+%exclude /usr/share/vim/vim81/syntax/sqlforms.vim
+%exclude /usr/share/vim/vim81/syntax/sqlhana.vim
+%exclude /usr/share/vim/vim81/syntax/sqlinformix.vim
+%exclude /usr/share/vim/vim81/syntax/sqlj.vim
+%exclude /usr/share/vim/vim81/syntax/sqloracle.vim
+%exclude /usr/share/vim/vim81/syntax/sqr.vim
+%exclude /usr/share/vim/vim81/syntax/squid.vim
+%exclude /usr/share/vim/vim81/syntax/srec.vim
+%exclude /usr/share/vim/vim81/syntax/sshconfig.vim
+%exclude /usr/share/vim/vim81/syntax/sshdconfig.vim
+%exclude /usr/share/vim/vim81/syntax/st.vim
+%exclude /usr/share/vim/vim81/syntax/stata.vim
+%exclude /usr/share/vim/vim81/syntax/stp.vim
+%exclude /usr/share/vim/vim81/syntax/strace.vim
+%exclude /usr/share/vim/vim81/syntax/sudoers.vim
+%exclude /usr/share/vim/vim81/syntax/svg.vim
+%exclude /usr/share/vim/vim81/syntax/svn.vim
+%exclude /usr/share/vim/vim81/syntax/syncolor.vim
+%exclude /usr/share/vim/vim81/syntax/synload.vim
+%exclude /usr/share/vim/vim81/syntax/syntax.vim
+%exclude /usr/share/vim/vim81/syntax/sysctl.vim
+%exclude /usr/share/vim/vim81/syntax/systemd.vim
+%exclude /usr/share/vim/vim81/syntax/systemverilog.vim
+%exclude /usr/share/vim/vim81/syntax/tads.vim
+%exclude /usr/share/vim/vim81/syntax/tags.vim
+%exclude /usr/share/vim/vim81/syntax/tak.vim
+%exclude /usr/share/vim/vim81/syntax/takcmp.vim
+%exclude /usr/share/vim/vim81/syntax/takout.vim
+%exclude /usr/share/vim/vim81/syntax/tap.vim
+%exclude /usr/share/vim/vim81/syntax/tar.vim
+%exclude /usr/share/vim/vim81/syntax/taskdata.vim
+%exclude /usr/share/vim/vim81/syntax/taskedit.vim
+%exclude /usr/share/vim/vim81/syntax/tasm.vim
+%exclude /usr/share/vim/vim81/syntax/tcl.vim
+%exclude /usr/share/vim/vim81/syntax/tcsh.vim
+%exclude /usr/share/vim/vim81/syntax/teraterm.vim
+%exclude /usr/share/vim/vim81/syntax/terminfo.vim
+%exclude /usr/share/vim/vim81/syntax/tex.vim
+%exclude /usr/share/vim/vim81/syntax/texinfo.vim
+%exclude /usr/share/vim/vim81/syntax/texmf.vim
+%exclude /usr/share/vim/vim81/syntax/tf.vim
+%exclude /usr/share/vim/vim81/syntax/tidy.vim
+%exclude /usr/share/vim/vim81/syntax/tilde.vim
+%exclude /usr/share/vim/vim81/syntax/tli.vim
+%exclude /usr/share/vim/vim81/syntax/tmux.vim
+%exclude /usr/share/vim/vim81/syntax/tpp.vim
+%exclude /usr/share/vim/vim81/syntax/trasys.vim
+%exclude /usr/share/vim/vim81/syntax/treetop.vim
+%exclude /usr/share/vim/vim81/syntax/trustees.vim
+%exclude /usr/share/vim/vim81/syntax/tsalt.vim
+%exclude /usr/share/vim/vim81/syntax/tsscl.vim
+%exclude /usr/share/vim/vim81/syntax/tssgm.vim
+%exclude /usr/share/vim/vim81/syntax/tssop.vim
+%exclude /usr/share/vim/vim81/syntax/tt2.vim
+%exclude /usr/share/vim/vim81/syntax/tt2html.vim
+%exclude /usr/share/vim/vim81/syntax/tt2js.vim
+%exclude /usr/share/vim/vim81/syntax/uc.vim
+%exclude /usr/share/vim/vim81/syntax/udevconf.vim
+%exclude /usr/share/vim/vim81/syntax/udevperm.vim
+%exclude /usr/share/vim/vim81/syntax/udevrules.vim
+%exclude /usr/share/vim/vim81/syntax/uil.vim
+%exclude /usr/share/vim/vim81/syntax/updatedb.vim
+%exclude /usr/share/vim/vim81/syntax/upstart.vim
+%exclude /usr/share/vim/vim81/syntax/upstreamdat.vim
+%exclude /usr/share/vim/vim81/syntax/upstreaminstalllog.vim
+%exclude /usr/share/vim/vim81/syntax/upstreamlog.vim
+%exclude /usr/share/vim/vim81/syntax/upstreamrpt.vim
+%exclude /usr/share/vim/vim81/syntax/usserverlog.vim
+%exclude /usr/share/vim/vim81/syntax/usw2kagtlog.vim
+%exclude /usr/share/vim/vim81/syntax/valgrind.vim
+%exclude /usr/share/vim/vim81/syntax/vb.vim
+%exclude /usr/share/vim/vim81/syntax/vera.vim
+%exclude /usr/share/vim/vim81/syntax/verilog.vim
+%exclude /usr/share/vim/vim81/syntax/verilogams.vim
+%exclude /usr/share/vim/vim81/syntax/vgrindefs.vim
+%exclude /usr/share/vim/vim81/syntax/vhdl.vim
+%exclude /usr/share/vim/vim81/syntax/vim.vim
+%exclude /usr/share/vim/vim81/syntax/viminfo.vim
+%exclude /usr/share/vim/vim81/syntax/virata.vim
+%exclude /usr/share/vim/vim81/syntax/vmasm.vim
+%exclude /usr/share/vim/vim81/syntax/voscm.vim
+%exclude /usr/share/vim/vim81/syntax/vrml.vim
+%exclude /usr/share/vim/vim81/syntax/vroom.vim
+%exclude /usr/share/vim/vim81/syntax/vsejcl.vim
+%exclude /usr/share/vim/vim81/syntax/wdiff.vim
+%exclude /usr/share/vim/vim81/syntax/web.vim
+%exclude /usr/share/vim/vim81/syntax/webmacro.vim
+%exclude /usr/share/vim/vim81/syntax/wget.vim
+%exclude /usr/share/vim/vim81/syntax/whitespace.vim
+%exclude /usr/share/vim/vim81/syntax/winbatch.vim
+%exclude /usr/share/vim/vim81/syntax/wml.vim
+%exclude /usr/share/vim/vim81/syntax/wsh.vim
+%exclude /usr/share/vim/vim81/syntax/wsml.vim
+%exclude /usr/share/vim/vim81/syntax/wvdial.vim
+%exclude /usr/share/vim/vim81/syntax/xbl.vim
+%exclude /usr/share/vim/vim81/syntax/xdefaults.vim
+%exclude /usr/share/vim/vim81/syntax/xf86conf.vim
+%exclude /usr/share/vim/vim81/syntax/xhtml.vim
+%exclude /usr/share/vim/vim81/syntax/xinetd.vim
+%exclude /usr/share/vim/vim81/syntax/xkb.vim
+%exclude /usr/share/vim/vim81/syntax/xmath.vim
+%exclude /usr/share/vim/vim81/syntax/xml.vim
+%exclude /usr/share/vim/vim81/syntax/xmodmap.vim
+%exclude /usr/share/vim/vim81/syntax/xpm.vim
+%exclude /usr/share/vim/vim81/syntax/xpm2.vim
+%exclude /usr/share/vim/vim81/syntax/xquery.vim
+%exclude /usr/share/vim/vim81/syntax/xs.vim
+%exclude /usr/share/vim/vim81/syntax/xsd.vim
+%exclude /usr/share/vim/vim81/syntax/xslt.vim
+%exclude /usr/share/vim/vim81/syntax/xxd.vim
+%exclude /usr/share/vim/vim81/syntax/yacc.vim
+%exclude /usr/share/vim/vim81/syntax/yaml.vim
+%exclude /usr/share/vim/vim81/syntax/z8a.vim
+%exclude /usr/share/vim/vim81/syntax/zimbu.vim
+%exclude /usr/share/vim/vim81/syntax/zsh.vim
+%exclude /usr/share/vim/vim81/tools/README.txt
+%exclude /usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-36.pyc
+%exclude /usr/share/vim/vim81/tools/blink.c
+%exclude /usr/share/vim/vim81/tools/ccfilter.1
+%exclude /usr/share/vim/vim81/tools/ccfilter.c
+%exclude /usr/share/vim/vim81/tools/ccfilter_README.txt
+%exclude /usr/share/vim/vim81/tools/demoserver.py
+%exclude /usr/share/vim/vim81/tools/efm_filter.pl
+%exclude /usr/share/vim/vim81/tools/efm_filter.txt
+%exclude /usr/share/vim/vim81/tools/efm_perl.pl
+%exclude /usr/share/vim/vim81/tools/mve.awk
+%exclude /usr/share/vim/vim81/tools/mve.txt
+%exclude /usr/share/vim/vim81/tools/pltags.pl
+%exclude /usr/share/vim/vim81/tools/ref
+%exclude /usr/share/vim/vim81/tools/shtags.1
+%exclude /usr/share/vim/vim81/tools/shtags.pl
+%exclude /usr/share/vim/vim81/tools/unicode.vim
+%exclude /usr/share/vim/vim81/tools/vim132
+%exclude /usr/share/vim/vim81/tools/vim_vs_net.cmd
+%exclude /usr/share/vim/vim81/tools/vimm
+%exclude /usr/share/vim/vim81/tools/vimspell.sh
+%exclude /usr/share/vim/vim81/tools/vimspell.txt
+%exclude /usr/share/vim/vim81/tools/xcmdsrv_client.c
+%exclude /usr/share/vim/vim81/tutor/README.el.cp737.txt
+%exclude /usr/share/vim/vim81/tutor/README.el.txt
+%exclude /usr/share/vim/vim81/tutor/README.txt
+%exclude /usr/share/vim/vim81/tutor/tutor
+%exclude /usr/share/vim/vim81/tutor/tutor.bar
+%exclude /usr/share/vim/vim81/tutor/tutor.bar.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.bg.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.ca
+%exclude /usr/share/vim/vim81/tutor/tutor.ca.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.cs
+%exclude /usr/share/vim/vim81/tutor/tutor.cs.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.cs.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.de
+%exclude /usr/share/vim/vim81/tutor/tutor.de.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.el
+%exclude /usr/share/vim/vim81/tutor/tutor.el.cp737
+%exclude /usr/share/vim/vim81/tutor/tutor.el.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.eo
+%exclude /usr/share/vim/vim81/tutor/tutor.eo.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.es
+%exclude /usr/share/vim/vim81/tutor/tutor.es.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.fr
+%exclude /usr/share/vim/vim81/tutor/tutor.fr.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.hr
+%exclude /usr/share/vim/vim81/tutor/tutor.hr.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.hr.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.hu
+%exclude /usr/share/vim/vim81/tutor/tutor.hu.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.hu.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.it
+%exclude /usr/share/vim/vim81/tutor/tutor.it.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.ja.euc
+%exclude /usr/share/vim/vim81/tutor/tutor.ja.sjis
+%exclude /usr/share/vim/vim81/tutor/tutor.ja.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.ko.euc
+%exclude /usr/share/vim/vim81/tutor/tutor.ko.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.lv
+%exclude /usr/share/vim/vim81/tutor/tutor.nb
+%exclude /usr/share/vim/vim81/tutor/tutor.nb.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.nl
+%exclude /usr/share/vim/vim81/tutor/tutor.nl.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.no
+%exclude /usr/share/vim/vim81/tutor/tutor.no.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.pl
+%exclude /usr/share/vim/vim81/tutor/tutor.pl.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.pl.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.pt
+%exclude /usr/share/vim/vim81/tutor/tutor.pt.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.ru
+%exclude /usr/share/vim/vim81/tutor/tutor.ru.cp1251
+%exclude /usr/share/vim/vim81/tutor/tutor.ru.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.sk
+%exclude /usr/share/vim/vim81/tutor/tutor.sk.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.sk.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.sr.cp1250
+%exclude /usr/share/vim/vim81/tutor/tutor.sr.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.sv
+%exclude /usr/share/vim/vim81/tutor/tutor.sv.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.tr.iso9
+%exclude /usr/share/vim/vim81/tutor/tutor.tr.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.uk.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.vi.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.vim
+%exclude /usr/share/vim/vim81/tutor/tutor.zh.big5
+%exclude /usr/share/vim/vim81/tutor/tutor.zh.euc
+%exclude /usr/share/vim/vim81/tutor/tutor.zh.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.zh_cn.utf-8
+%exclude /usr/share/vim/vim81/tutor/tutor.zh_tw.utf-8
+%exclude /usr/share/vim/vim81/vimrc_example.vim
 /usr/share/applications/gvim.desktop
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim81/autoload/README.txt
-/usr/share/vim/vim81/autoload/ada.vim
-/usr/share/vim/vim81/autoload/adacomplete.vim
-/usr/share/vim/vim81/autoload/ccomplete.vim
-/usr/share/vim/vim81/autoload/clojurecomplete.vim
-/usr/share/vim/vim81/autoload/context.vim
-/usr/share/vim/vim81/autoload/contextcomplete.vim
-/usr/share/vim/vim81/autoload/csscomplete.vim
-/usr/share/vim/vim81/autoload/decada.vim
-/usr/share/vim/vim81/autoload/dist/ft.vim
-/usr/share/vim/vim81/autoload/getscript.vim
-/usr/share/vim/vim81/autoload/gnat.vim
-/usr/share/vim/vim81/autoload/gzip.vim
-/usr/share/vim/vim81/autoload/htmlcomplete.vim
-/usr/share/vim/vim81/autoload/javascriptcomplete.vim
-/usr/share/vim/vim81/autoload/netrw.vim
-/usr/share/vim/vim81/autoload/netrwFileHandlers.vim
-/usr/share/vim/vim81/autoload/netrwSettings.vim
-/usr/share/vim/vim81/autoload/netrw_gitignore.vim
-/usr/share/vim/vim81/autoload/paste.vim
-/usr/share/vim/vim81/autoload/phpcomplete.vim
-/usr/share/vim/vim81/autoload/python3complete.vim
-/usr/share/vim/vim81/autoload/pythoncomplete.vim
-/usr/share/vim/vim81/autoload/rubycomplete.vim
-/usr/share/vim/vim81/autoload/rust.vim
-/usr/share/vim/vim81/autoload/rustfmt.vim
-/usr/share/vim/vim81/autoload/spellfile.vim
-/usr/share/vim/vim81/autoload/sqlcomplete.vim
-/usr/share/vim/vim81/autoload/syntaxcomplete.vim
-/usr/share/vim/vim81/autoload/tar.vim
-/usr/share/vim/vim81/autoload/tohtml.vim
-/usr/share/vim/vim81/autoload/vimball.vim
-/usr/share/vim/vim81/autoload/xml/html32.vim
-/usr/share/vim/vim81/autoload/xml/html401f.vim
-/usr/share/vim/vim81/autoload/xml/html401s.vim
-/usr/share/vim/vim81/autoload/xml/html401t.vim
-/usr/share/vim/vim81/autoload/xml/html40f.vim
-/usr/share/vim/vim81/autoload/xml/html40s.vim
-/usr/share/vim/vim81/autoload/xml/html40t.vim
-/usr/share/vim/vim81/autoload/xml/xhtml10f.vim
-/usr/share/vim/vim81/autoload/xml/xhtml10s.vim
-/usr/share/vim/vim81/autoload/xml/xhtml10t.vim
-/usr/share/vim/vim81/autoload/xml/xhtml11.vim
-/usr/share/vim/vim81/autoload/xml/xsd.vim
-/usr/share/vim/vim81/autoload/xml/xsl.vim
-/usr/share/vim/vim81/autoload/xmlcomplete.vim
-/usr/share/vim/vim81/autoload/xmlformat.vim
-/usr/share/vim/vim81/autoload/zip.vim
-/usr/share/vim/vim81/bugreport.vim
-/usr/share/vim/vim81/colors/README.txt
-/usr/share/vim/vim81/colors/blue.vim
-/usr/share/vim/vim81/colors/darkblue.vim
-/usr/share/vim/vim81/colors/default.vim
-/usr/share/vim/vim81/colors/delek.vim
-/usr/share/vim/vim81/colors/desert.vim
-/usr/share/vim/vim81/colors/elflord.vim
-/usr/share/vim/vim81/colors/evening.vim
-/usr/share/vim/vim81/colors/industry.vim
-/usr/share/vim/vim81/colors/koehler.vim
-/usr/share/vim/vim81/colors/morning.vim
-/usr/share/vim/vim81/colors/murphy.vim
-/usr/share/vim/vim81/colors/pablo.vim
-/usr/share/vim/vim81/colors/peachpuff.vim
-/usr/share/vim/vim81/colors/ron.vim
-/usr/share/vim/vim81/colors/shine.vim
-/usr/share/vim/vim81/colors/slate.vim
-/usr/share/vim/vim81/colors/tools/check_colors.vim
-/usr/share/vim/vim81/colors/torte.vim
-/usr/share/vim/vim81/colors/zellner.vim
-/usr/share/vim/vim81/compiler/README.txt
-/usr/share/vim/vim81/compiler/ant.vim
-/usr/share/vim/vim81/compiler/bcc.vim
-/usr/share/vim/vim81/compiler/bdf.vim
-/usr/share/vim/vim81/compiler/cargo.vim
-/usr/share/vim/vim81/compiler/checkstyle.vim
-/usr/share/vim/vim81/compiler/context.vim
-/usr/share/vim/vim81/compiler/cs.vim
-/usr/share/vim/vim81/compiler/csslint.vim
-/usr/share/vim/vim81/compiler/cucumber.vim
-/usr/share/vim/vim81/compiler/decada.vim
-/usr/share/vim/vim81/compiler/dot.vim
-/usr/share/vim/vim81/compiler/erlang.vim
-/usr/share/vim/vim81/compiler/eruby.vim
-/usr/share/vim/vim81/compiler/fortran_F.vim
-/usr/share/vim/vim81/compiler/fortran_cv.vim
-/usr/share/vim/vim81/compiler/fortran_elf90.vim
-/usr/share/vim/vim81/compiler/fortran_g77.vim
-/usr/share/vim/vim81/compiler/fortran_lf95.vim
-/usr/share/vim/vim81/compiler/fpc.vim
-/usr/share/vim/vim81/compiler/g95.vim
-/usr/share/vim/vim81/compiler/gcc.vim
-/usr/share/vim/vim81/compiler/gfortran.vim
-/usr/share/vim/vim81/compiler/ghc.vim
-/usr/share/vim/vim81/compiler/gnat.vim
-/usr/share/vim/vim81/compiler/go.vim
-/usr/share/vim/vim81/compiler/haml.vim
-/usr/share/vim/vim81/compiler/hp_acc.vim
-/usr/share/vim/vim81/compiler/icc.vim
-/usr/share/vim/vim81/compiler/ifort.vim
-/usr/share/vim/vim81/compiler/intel.vim
-/usr/share/vim/vim81/compiler/irix5_c.vim
-/usr/share/vim/vim81/compiler/irix5_cpp.vim
-/usr/share/vim/vim81/compiler/javac.vim
-/usr/share/vim/vim81/compiler/jikes.vim
-/usr/share/vim/vim81/compiler/mcs.vim
-/usr/share/vim/vim81/compiler/mips_c.vim
-/usr/share/vim/vim81/compiler/mipspro_c89.vim
-/usr/share/vim/vim81/compiler/mipspro_cpp.vim
-/usr/share/vim/vim81/compiler/modelsim_vcom.vim
-/usr/share/vim/vim81/compiler/msbuild.vim
-/usr/share/vim/vim81/compiler/msvc.vim
-/usr/share/vim/vim81/compiler/neato.vim
-/usr/share/vim/vim81/compiler/ocaml.vim
-/usr/share/vim/vim81/compiler/onsgmls.vim
-/usr/share/vim/vim81/compiler/pbx.vim
-/usr/share/vim/vim81/compiler/perl.vim
-/usr/share/vim/vim81/compiler/php.vim
-/usr/share/vim/vim81/compiler/pylint.vim
-/usr/share/vim/vim81/compiler/pyunit.vim
-/usr/share/vim/vim81/compiler/rake.vim
-/usr/share/vim/vim81/compiler/rspec.vim
-/usr/share/vim/vim81/compiler/rst.vim
-/usr/share/vim/vim81/compiler/ruby.vim
-/usr/share/vim/vim81/compiler/rubyunit.vim
-/usr/share/vim/vim81/compiler/rustc.vim
-/usr/share/vim/vim81/compiler/sass.vim
-/usr/share/vim/vim81/compiler/se.vim
-/usr/share/vim/vim81/compiler/splint.vim
-/usr/share/vim/vim81/compiler/tcl.vim
-/usr/share/vim/vim81/compiler/tex.vim
-/usr/share/vim/vim81/compiler/tidy.vim
-/usr/share/vim/vim81/compiler/xbuild.vim
-/usr/share/vim/vim81/compiler/xmllint.vim
-/usr/share/vim/vim81/compiler/xmlwf.vim
-/usr/share/vim/vim81/defaults.vim
-/usr/share/vim/vim81/delmenu.vim
-/usr/share/vim/vim81/doc/arabic.txt
-/usr/share/vim/vim81/doc/autocmd.txt
-/usr/share/vim/vim81/doc/change.txt
-/usr/share/vim/vim81/doc/channel.txt
-/usr/share/vim/vim81/doc/cmdline.txt
-/usr/share/vim/vim81/doc/debug.txt
-/usr/share/vim/vim81/doc/debugger.txt
-/usr/share/vim/vim81/doc/develop.txt
-/usr/share/vim/vim81/doc/diff.txt
-/usr/share/vim/vim81/doc/digraph.txt
-/usr/share/vim/vim81/doc/editing.txt
-/usr/share/vim/vim81/doc/eval.txt
-/usr/share/vim/vim81/doc/farsi.txt
-/usr/share/vim/vim81/doc/filetype.txt
-/usr/share/vim/vim81/doc/fold.txt
-/usr/share/vim/vim81/doc/ft_ada.txt
-/usr/share/vim/vim81/doc/ft_rust.txt
-/usr/share/vim/vim81/doc/ft_sql.txt
-/usr/share/vim/vim81/doc/gui.txt
-/usr/share/vim/vim81/doc/gui_w32.txt
-/usr/share/vim/vim81/doc/gui_x11.txt
-/usr/share/vim/vim81/doc/hangulin.txt
-/usr/share/vim/vim81/doc/hebrew.txt
-/usr/share/vim/vim81/doc/help.txt
-/usr/share/vim/vim81/doc/helphelp.txt
-/usr/share/vim/vim81/doc/howto.txt
-/usr/share/vim/vim81/doc/if_cscop.txt
-/usr/share/vim/vim81/doc/if_lua.txt
-/usr/share/vim/vim81/doc/if_mzsch.txt
-/usr/share/vim/vim81/doc/if_ole.txt
-/usr/share/vim/vim81/doc/if_perl.txt
-/usr/share/vim/vim81/doc/if_pyth.txt
-/usr/share/vim/vim81/doc/if_ruby.txt
-/usr/share/vim/vim81/doc/if_sniff.txt
-/usr/share/vim/vim81/doc/if_tcl.txt
-/usr/share/vim/vim81/doc/indent.txt
-/usr/share/vim/vim81/doc/index.txt
-/usr/share/vim/vim81/doc/insert.txt
-/usr/share/vim/vim81/doc/intro.txt
-/usr/share/vim/vim81/doc/map.txt
-/usr/share/vim/vim81/doc/mbyte.txt
-/usr/share/vim/vim81/doc/message.txt
-/usr/share/vim/vim81/doc/mlang.txt
-/usr/share/vim/vim81/doc/motion.txt
-/usr/share/vim/vim81/doc/netbeans.txt
-/usr/share/vim/vim81/doc/options.txt
-/usr/share/vim/vim81/doc/os_390.txt
-/usr/share/vim/vim81/doc/os_amiga.txt
-/usr/share/vim/vim81/doc/os_beos.txt
-/usr/share/vim/vim81/doc/os_dos.txt
-/usr/share/vim/vim81/doc/os_mac.txt
-/usr/share/vim/vim81/doc/os_mint.txt
-/usr/share/vim/vim81/doc/os_msdos.txt
-/usr/share/vim/vim81/doc/os_os2.txt
-/usr/share/vim/vim81/doc/os_qnx.txt
-/usr/share/vim/vim81/doc/os_risc.txt
-/usr/share/vim/vim81/doc/os_unix.txt
-/usr/share/vim/vim81/doc/os_vms.txt
-/usr/share/vim/vim81/doc/os_win32.txt
-/usr/share/vim/vim81/doc/pattern.txt
-/usr/share/vim/vim81/doc/pi_getscript.txt
-/usr/share/vim/vim81/doc/pi_gzip.txt
-/usr/share/vim/vim81/doc/pi_logipat.txt
-/usr/share/vim/vim81/doc/pi_netrw.txt
-/usr/share/vim/vim81/doc/pi_paren.txt
-/usr/share/vim/vim81/doc/pi_spec.txt
-/usr/share/vim/vim81/doc/pi_tar.txt
-/usr/share/vim/vim81/doc/pi_vimball.txt
-/usr/share/vim/vim81/doc/pi_zip.txt
-/usr/share/vim/vim81/doc/print.txt
-/usr/share/vim/vim81/doc/quickfix.txt
-/usr/share/vim/vim81/doc/quickref.txt
-/usr/share/vim/vim81/doc/quotes.txt
-/usr/share/vim/vim81/doc/recover.txt
-/usr/share/vim/vim81/doc/remote.txt
-/usr/share/vim/vim81/doc/repeat.txt
-/usr/share/vim/vim81/doc/rileft.txt
-/usr/share/vim/vim81/doc/russian.txt
-/usr/share/vim/vim81/doc/scroll.txt
-/usr/share/vim/vim81/doc/sign.txt
-/usr/share/vim/vim81/doc/spell.txt
-/usr/share/vim/vim81/doc/sponsor.txt
-/usr/share/vim/vim81/doc/starting.txt
-/usr/share/vim/vim81/doc/syntax.txt
-/usr/share/vim/vim81/doc/tabpage.txt
-/usr/share/vim/vim81/doc/tags
-/usr/share/vim/vim81/doc/tagsrch.txt
-/usr/share/vim/vim81/doc/term.txt
-/usr/share/vim/vim81/doc/terminal.txt
-/usr/share/vim/vim81/doc/tips.txt
-/usr/share/vim/vim81/doc/todo.txt
-/usr/share/vim/vim81/doc/uganda.txt
-/usr/share/vim/vim81/doc/undo.txt
-/usr/share/vim/vim81/doc/usr_01.txt
-/usr/share/vim/vim81/doc/usr_02.txt
-/usr/share/vim/vim81/doc/usr_03.txt
-/usr/share/vim/vim81/doc/usr_04.txt
-/usr/share/vim/vim81/doc/usr_05.txt
-/usr/share/vim/vim81/doc/usr_06.txt
-/usr/share/vim/vim81/doc/usr_07.txt
-/usr/share/vim/vim81/doc/usr_08.txt
-/usr/share/vim/vim81/doc/usr_09.txt
-/usr/share/vim/vim81/doc/usr_10.txt
-/usr/share/vim/vim81/doc/usr_11.txt
-/usr/share/vim/vim81/doc/usr_12.txt
-/usr/share/vim/vim81/doc/usr_20.txt
-/usr/share/vim/vim81/doc/usr_21.txt
-/usr/share/vim/vim81/doc/usr_22.txt
-/usr/share/vim/vim81/doc/usr_23.txt
-/usr/share/vim/vim81/doc/usr_24.txt
-/usr/share/vim/vim81/doc/usr_25.txt
-/usr/share/vim/vim81/doc/usr_26.txt
-/usr/share/vim/vim81/doc/usr_27.txt
-/usr/share/vim/vim81/doc/usr_28.txt
-/usr/share/vim/vim81/doc/usr_29.txt
-/usr/share/vim/vim81/doc/usr_30.txt
-/usr/share/vim/vim81/doc/usr_31.txt
-/usr/share/vim/vim81/doc/usr_32.txt
-/usr/share/vim/vim81/doc/usr_40.txt
-/usr/share/vim/vim81/doc/usr_41.txt
-/usr/share/vim/vim81/doc/usr_42.txt
-/usr/share/vim/vim81/doc/usr_43.txt
-/usr/share/vim/vim81/doc/usr_44.txt
-/usr/share/vim/vim81/doc/usr_45.txt
-/usr/share/vim/vim81/doc/usr_90.txt
-/usr/share/vim/vim81/doc/usr_toc.txt
-/usr/share/vim/vim81/doc/various.txt
-/usr/share/vim/vim81/doc/version4.txt
-/usr/share/vim/vim81/doc/version5.txt
-/usr/share/vim/vim81/doc/version6.txt
-/usr/share/vim/vim81/doc/version7.txt
-/usr/share/vim/vim81/doc/version8.txt
-/usr/share/vim/vim81/doc/vi_diff.txt
-/usr/share/vim/vim81/doc/vim2html.pl
-/usr/share/vim/vim81/doc/visual.txt
-/usr/share/vim/vim81/doc/windows.txt
-/usr/share/vim/vim81/doc/workshop.txt
-/usr/share/vim/vim81/evim.vim
-/usr/share/vim/vim81/filetype.vim
-/usr/share/vim/vim81/ftoff.vim
-/usr/share/vim/vim81/ftplugin.vim
-/usr/share/vim/vim81/ftplugin/README.txt
-/usr/share/vim/vim81/ftplugin/a2ps.vim
-/usr/share/vim/vim81/ftplugin/aap.vim
-/usr/share/vim/vim81/ftplugin/abap.vim
-/usr/share/vim/vim81/ftplugin/abaqus.vim
-/usr/share/vim/vim81/ftplugin/ada.vim
-/usr/share/vim/vim81/ftplugin/alsaconf.vim
-/usr/share/vim/vim81/ftplugin/ant.vim
-/usr/share/vim/vim81/ftplugin/arch.vim
-/usr/share/vim/vim81/ftplugin/art.vim
-/usr/share/vim/vim81/ftplugin/aspvbs.vim
-/usr/share/vim/vim81/ftplugin/automake.vim
-/usr/share/vim/vim81/ftplugin/awk.vim
-/usr/share/vim/vim81/ftplugin/bdf.vim
-/usr/share/vim/vim81/ftplugin/bst.vim
-/usr/share/vim/vim81/ftplugin/btm.vim
-/usr/share/vim/vim81/ftplugin/bzl.vim
-/usr/share/vim/vim81/ftplugin/c.vim
-/usr/share/vim/vim81/ftplugin/calendar.vim
-/usr/share/vim/vim81/ftplugin/cdrdaoconf.vim
-/usr/share/vim/vim81/ftplugin/ch.vim
-/usr/share/vim/vim81/ftplugin/changelog.vim
-/usr/share/vim/vim81/ftplugin/chicken.vim
-/usr/share/vim/vim81/ftplugin/clojure.vim
-/usr/share/vim/vim81/ftplugin/cmake.vim
-/usr/share/vim/vim81/ftplugin/cobol.vim
-/usr/share/vim/vim81/ftplugin/conf.vim
-/usr/share/vim/vim81/ftplugin/config.vim
-/usr/share/vim/vim81/ftplugin/context.vim
-/usr/share/vim/vim81/ftplugin/cpp.vim
-/usr/share/vim/vim81/ftplugin/crm.vim
-/usr/share/vim/vim81/ftplugin/cs.vim
-/usr/share/vim/vim81/ftplugin/csc.vim
-/usr/share/vim/vim81/ftplugin/csh.vim
-/usr/share/vim/vim81/ftplugin/css.vim
-/usr/share/vim/vim81/ftplugin/cucumber.vim
-/usr/share/vim/vim81/ftplugin/cvsrc.vim
-/usr/share/vim/vim81/ftplugin/debchangelog.vim
-/usr/share/vim/vim81/ftplugin/debcontrol.vim
-/usr/share/vim/vim81/ftplugin/denyhosts.vim
-/usr/share/vim/vim81/ftplugin/dictconf.vim
-/usr/share/vim/vim81/ftplugin/dictdconf.vim
-/usr/share/vim/vim81/ftplugin/diff.vim
-/usr/share/vim/vim81/ftplugin/dircolors.vim
-/usr/share/vim/vim81/ftplugin/docbk.vim
-/usr/share/vim/vim81/ftplugin/dockerfile.vim
-/usr/share/vim/vim81/ftplugin/dosbatch.vim
-/usr/share/vim/vim81/ftplugin/dosini.vim
-/usr/share/vim/vim81/ftplugin/dtd.vim
-/usr/share/vim/vim81/ftplugin/dtrace.vim
-/usr/share/vim/vim81/ftplugin/eiffel.vim
-/usr/share/vim/vim81/ftplugin/elinks.vim
-/usr/share/vim/vim81/ftplugin/erlang.vim
-/usr/share/vim/vim81/ftplugin/eruby.vim
-/usr/share/vim/vim81/ftplugin/eterm.vim
-/usr/share/vim/vim81/ftplugin/falcon.vim
-/usr/share/vim/vim81/ftplugin/fetchmail.vim
-/usr/share/vim/vim81/ftplugin/flexwiki.vim
-/usr/share/vim/vim81/ftplugin/fortran.vim
-/usr/share/vim/vim81/ftplugin/framescript.vim
-/usr/share/vim/vim81/ftplugin/fvwm.vim
-/usr/share/vim/vim81/ftplugin/gdb.vim
-/usr/share/vim/vim81/ftplugin/git.vim
-/usr/share/vim/vim81/ftplugin/gitcommit.vim
-/usr/share/vim/vim81/ftplugin/gitconfig.vim
-/usr/share/vim/vim81/ftplugin/gitrebase.vim
-/usr/share/vim/vim81/ftplugin/gitsendemail.vim
-/usr/share/vim/vim81/ftplugin/go.vim
-/usr/share/vim/vim81/ftplugin/gpg.vim
-/usr/share/vim/vim81/ftplugin/gprof.vim
-/usr/share/vim/vim81/ftplugin/groovy.vim
-/usr/share/vim/vim81/ftplugin/group.vim
-/usr/share/vim/vim81/ftplugin/grub.vim
-/usr/share/vim/vim81/ftplugin/haml.vim
-/usr/share/vim/vim81/ftplugin/hamster.vim
-/usr/share/vim/vim81/ftplugin/haskell.vim
-/usr/share/vim/vim81/ftplugin/help.vim
-/usr/share/vim/vim81/ftplugin/hgcommit.vim
-/usr/share/vim/vim81/ftplugin/hog.vim
-/usr/share/vim/vim81/ftplugin/hostconf.vim
-/usr/share/vim/vim81/ftplugin/hostsaccess.vim
-/usr/share/vim/vim81/ftplugin/html.vim
-/usr/share/vim/vim81/ftplugin/htmldjango.vim
-/usr/share/vim/vim81/ftplugin/indent.vim
-/usr/share/vim/vim81/ftplugin/initex.vim
-/usr/share/vim/vim81/ftplugin/ishd.vim
-/usr/share/vim/vim81/ftplugin/j.vim
-/usr/share/vim/vim81/ftplugin/java.vim
-/usr/share/vim/vim81/ftplugin/javascript.vim
-/usr/share/vim/vim81/ftplugin/jproperties.vim
-/usr/share/vim/vim81/ftplugin/json.vim
-/usr/share/vim/vim81/ftplugin/jsp.vim
-/usr/share/vim/vim81/ftplugin/kconfig.vim
-/usr/share/vim/vim81/ftplugin/kwt.vim
-/usr/share/vim/vim81/ftplugin/ld.vim
-/usr/share/vim/vim81/ftplugin/less.vim
-/usr/share/vim/vim81/ftplugin/lftp.vim
-/usr/share/vim/vim81/ftplugin/libao.vim
-/usr/share/vim/vim81/ftplugin/limits.vim
-/usr/share/vim/vim81/ftplugin/liquid.vim
-/usr/share/vim/vim81/ftplugin/lisp.vim
-/usr/share/vim/vim81/ftplugin/logcheck.vim
-/usr/share/vim/vim81/ftplugin/loginaccess.vim
-/usr/share/vim/vim81/ftplugin/logindefs.vim
-/usr/share/vim/vim81/ftplugin/logtalk.dict
-/usr/share/vim/vim81/ftplugin/logtalk.vim
-/usr/share/vim/vim81/ftplugin/lprolog.vim
-/usr/share/vim/vim81/ftplugin/lua.vim
-/usr/share/vim/vim81/ftplugin/m4.vim
-/usr/share/vim/vim81/ftplugin/mail.vim
-/usr/share/vim/vim81/ftplugin/mailaliases.vim
-/usr/share/vim/vim81/ftplugin/mailcap.vim
-/usr/share/vim/vim81/ftplugin/make.vim
-/usr/share/vim/vim81/ftplugin/man.vim
-/usr/share/vim/vim81/ftplugin/manconf.vim
-/usr/share/vim/vim81/ftplugin/markdown.vim
-/usr/share/vim/vim81/ftplugin/matlab.vim
-/usr/share/vim/vim81/ftplugin/mf.vim
-/usr/share/vim/vim81/ftplugin/modconf.vim
-/usr/share/vim/vim81/ftplugin/mp.vim
-/usr/share/vim/vim81/ftplugin/mplayerconf.vim
-/usr/share/vim/vim81/ftplugin/mrxvtrc.vim
-/usr/share/vim/vim81/ftplugin/msmessages.vim
-/usr/share/vim/vim81/ftplugin/muttrc.vim
-/usr/share/vim/vim81/ftplugin/nanorc.vim
-/usr/share/vim/vim81/ftplugin/neomuttrc.vim
-/usr/share/vim/vim81/ftplugin/netrc.vim
-/usr/share/vim/vim81/ftplugin/nsis.vim
-/usr/share/vim/vim81/ftplugin/objc.vim
-/usr/share/vim/vim81/ftplugin/ocaml.vim
-/usr/share/vim/vim81/ftplugin/occam.vim
-/usr/share/vim/vim81/ftplugin/pamconf.vim
-/usr/share/vim/vim81/ftplugin/pascal.vim
-/usr/share/vim/vim81/ftplugin/passwd.vim
-/usr/share/vim/vim81/ftplugin/pdf.vim
-/usr/share/vim/vim81/ftplugin/perl.vim
-/usr/share/vim/vim81/ftplugin/perl6.vim
-/usr/share/vim/vim81/ftplugin/php.vim
-/usr/share/vim/vim81/ftplugin/pinfo.vim
-/usr/share/vim/vim81/ftplugin/plaintex.vim
-/usr/share/vim/vim81/ftplugin/postscr.vim
-/usr/share/vim/vim81/ftplugin/procmail.vim
-/usr/share/vim/vim81/ftplugin/prolog.vim
-/usr/share/vim/vim81/ftplugin/protocols.vim
-/usr/share/vim/vim81/ftplugin/pyrex.vim
-/usr/share/vim/vim81/ftplugin/python.vim
-/usr/share/vim/vim81/ftplugin/qf.vim
-/usr/share/vim/vim81/ftplugin/quake.vim
-/usr/share/vim/vim81/ftplugin/r.vim
-/usr/share/vim/vim81/ftplugin/racc.vim
-/usr/share/vim/vim81/ftplugin/readline.vim
-/usr/share/vim/vim81/ftplugin/registry.vim
-/usr/share/vim/vim81/ftplugin/reva.vim
-/usr/share/vim/vim81/ftplugin/rhelp.vim
-/usr/share/vim/vim81/ftplugin/rmd.vim
-/usr/share/vim/vim81/ftplugin/rnc.vim
-/usr/share/vim/vim81/ftplugin/rnoweb.vim
-/usr/share/vim/vim81/ftplugin/rpl.vim
-/usr/share/vim/vim81/ftplugin/rrst.vim
-/usr/share/vim/vim81/ftplugin/rst.vim
-/usr/share/vim/vim81/ftplugin/ruby.vim
-/usr/share/vim/vim81/ftplugin/rust.vim
-/usr/share/vim/vim81/ftplugin/sass.vim
-/usr/share/vim/vim81/ftplugin/sbt.vim
-/usr/share/vim/vim81/ftplugin/scala.vim
-/usr/share/vim/vim81/ftplugin/scheme.vim
-/usr/share/vim/vim81/ftplugin/screen.vim
-/usr/share/vim/vim81/ftplugin/scss.vim
-/usr/share/vim/vim81/ftplugin/sensors.vim
-/usr/share/vim/vim81/ftplugin/services.vim
-/usr/share/vim/vim81/ftplugin/setserial.vim
-/usr/share/vim/vim81/ftplugin/sgml.vim
-/usr/share/vim/vim81/ftplugin/sh.vim
-/usr/share/vim/vim81/ftplugin/sieve.vim
-/usr/share/vim/vim81/ftplugin/slpconf.vim
-/usr/share/vim/vim81/ftplugin/slpreg.vim
-/usr/share/vim/vim81/ftplugin/slpspi.vim
-/usr/share/vim/vim81/ftplugin/spec.vim
-/usr/share/vim/vim81/ftplugin/sql.vim
-/usr/share/vim/vim81/ftplugin/sshconfig.vim
-/usr/share/vim/vim81/ftplugin/sudoers.vim
-/usr/share/vim/vim81/ftplugin/svg.vim
-/usr/share/vim/vim81/ftplugin/sysctl.vim
-/usr/share/vim/vim81/ftplugin/systemd.vim
-/usr/share/vim/vim81/ftplugin/systemverilog.vim
-/usr/share/vim/vim81/ftplugin/tcl.vim
-/usr/share/vim/vim81/ftplugin/tcsh.vim
-/usr/share/vim/vim81/ftplugin/terminfo.vim
-/usr/share/vim/vim81/ftplugin/tex.vim
-/usr/share/vim/vim81/ftplugin/text.vim
-/usr/share/vim/vim81/ftplugin/tmux.vim
-/usr/share/vim/vim81/ftplugin/treetop.vim
-/usr/share/vim/vim81/ftplugin/tt2html.vim
-/usr/share/vim/vim81/ftplugin/udevconf.vim
-/usr/share/vim/vim81/ftplugin/udevperm.vim
-/usr/share/vim/vim81/ftplugin/udevrules.vim
-/usr/share/vim/vim81/ftplugin/updatedb.vim
-/usr/share/vim/vim81/ftplugin/vb.vim
-/usr/share/vim/vim81/ftplugin/verilog.vim
-/usr/share/vim/vim81/ftplugin/vhdl.vim
-/usr/share/vim/vim81/ftplugin/vim.vim
-/usr/share/vim/vim81/ftplugin/vroom.vim
-/usr/share/vim/vim81/ftplugin/xdefaults.vim
-/usr/share/vim/vim81/ftplugin/xf86conf.vim
-/usr/share/vim/vim81/ftplugin/xhtml.vim
-/usr/share/vim/vim81/ftplugin/xinetd.vim
-/usr/share/vim/vim81/ftplugin/xml.vim
-/usr/share/vim/vim81/ftplugin/xmodmap.vim
-/usr/share/vim/vim81/ftplugin/xs.vim
-/usr/share/vim/vim81/ftplugin/xsd.vim
-/usr/share/vim/vim81/ftplugin/xslt.vim
-/usr/share/vim/vim81/ftplugin/yaml.vim
-/usr/share/vim/vim81/ftplugin/zimbu.vim
-/usr/share/vim/vim81/ftplugin/zsh.vim
-/usr/share/vim/vim81/ftplugof.vim
-/usr/share/vim/vim81/gvimrc_example.vim
-/usr/share/vim/vim81/indent.vim
-/usr/share/vim/vim81/indent/README.txt
-/usr/share/vim/vim81/indent/aap.vim
-/usr/share/vim/vim81/indent/ada.vim
-/usr/share/vim/vim81/indent/ant.vim
-/usr/share/vim/vim81/indent/automake.vim
-/usr/share/vim/vim81/indent/awk.vim
-/usr/share/vim/vim81/indent/bib.vim
-/usr/share/vim/vim81/indent/bst.vim
-/usr/share/vim/vim81/indent/bzl.vim
-/usr/share/vim/vim81/indent/c.vim
-/usr/share/vim/vim81/indent/cdl.vim
-/usr/share/vim/vim81/indent/ch.vim
-/usr/share/vim/vim81/indent/chaiscript.vim
-/usr/share/vim/vim81/indent/changelog.vim
-/usr/share/vim/vim81/indent/clojure.vim
-/usr/share/vim/vim81/indent/cmake.vim
-/usr/share/vim/vim81/indent/cobol.vim
-/usr/share/vim/vim81/indent/config.vim
-/usr/share/vim/vim81/indent/context.vim
-/usr/share/vim/vim81/indent/cpp.vim
-/usr/share/vim/vim81/indent/cs.vim
-/usr/share/vim/vim81/indent/css.vim
-/usr/share/vim/vim81/indent/cucumber.vim
-/usr/share/vim/vim81/indent/cuda.vim
-/usr/share/vim/vim81/indent/d.vim
-/usr/share/vim/vim81/indent/dictconf.vim
-/usr/share/vim/vim81/indent/dictdconf.vim
-/usr/share/vim/vim81/indent/docbk.vim
-/usr/share/vim/vim81/indent/dtd.vim
-/usr/share/vim/vim81/indent/dtrace.vim
-/usr/share/vim/vim81/indent/dylan.vim
-/usr/share/vim/vim81/indent/eiffel.vim
-/usr/share/vim/vim81/indent/erlang.vim
-/usr/share/vim/vim81/indent/eruby.vim
-/usr/share/vim/vim81/indent/eterm.vim
-/usr/share/vim/vim81/indent/falcon.vim
-/usr/share/vim/vim81/indent/fortran.vim
-/usr/share/vim/vim81/indent/framescript.vim
-/usr/share/vim/vim81/indent/gitconfig.vim
-/usr/share/vim/vim81/indent/gitolite.vim
-/usr/share/vim/vim81/indent/go.vim
-/usr/share/vim/vim81/indent/haml.vim
-/usr/share/vim/vim81/indent/hamster.vim
-/usr/share/vim/vim81/indent/hog.vim
-/usr/share/vim/vim81/indent/html.vim
-/usr/share/vim/vim81/indent/htmldjango.vim
-/usr/share/vim/vim81/indent/idlang.vim
-/usr/share/vim/vim81/indent/ishd.vim
-/usr/share/vim/vim81/indent/j.vim
-/usr/share/vim/vim81/indent/java.vim
-/usr/share/vim/vim81/indent/javascript.vim
-/usr/share/vim/vim81/indent/json.vim
-/usr/share/vim/vim81/indent/jsp.vim
-/usr/share/vim/vim81/indent/ld.vim
-/usr/share/vim/vim81/indent/less.vim
-/usr/share/vim/vim81/indent/lifelines.vim
-/usr/share/vim/vim81/indent/liquid.vim
-/usr/share/vim/vim81/indent/lisp.vim
-/usr/share/vim/vim81/indent/logtalk.vim
-/usr/share/vim/vim81/indent/lua.vim
-/usr/share/vim/vim81/indent/mail.vim
-/usr/share/vim/vim81/indent/make.vim
-/usr/share/vim/vim81/indent/matlab.vim
-/usr/share/vim/vim81/indent/mf.vim
-/usr/share/vim/vim81/indent/mma.vim
-/usr/share/vim/vim81/indent/mp.vim
-/usr/share/vim/vim81/indent/nsis.vim
-/usr/share/vim/vim81/indent/objc.vim
-/usr/share/vim/vim81/indent/ocaml.vim
-/usr/share/vim/vim81/indent/occam.vim
-/usr/share/vim/vim81/indent/pascal.vim
-/usr/share/vim/vim81/indent/perl.vim
-/usr/share/vim/vim81/indent/perl6.vim
-/usr/share/vim/vim81/indent/php.vim
-/usr/share/vim/vim81/indent/postscr.vim
-/usr/share/vim/vim81/indent/pov.vim
-/usr/share/vim/vim81/indent/prolog.vim
-/usr/share/vim/vim81/indent/pyrex.vim
-/usr/share/vim/vim81/indent/python.vim
-/usr/share/vim/vim81/indent/r.vim
-/usr/share/vim/vim81/indent/readline.vim
-/usr/share/vim/vim81/indent/rhelp.vim
-/usr/share/vim/vim81/indent/rmd.vim
-/usr/share/vim/vim81/indent/rnoweb.vim
-/usr/share/vim/vim81/indent/rpl.vim
-/usr/share/vim/vim81/indent/rrst.vim
-/usr/share/vim/vim81/indent/rst.vim
-/usr/share/vim/vim81/indent/ruby.vim
-/usr/share/vim/vim81/indent/rust.vim
-/usr/share/vim/vim81/indent/sas.vim
-/usr/share/vim/vim81/indent/sass.vim
-/usr/share/vim/vim81/indent/scala.vim
-/usr/share/vim/vim81/indent/scheme.vim
-/usr/share/vim/vim81/indent/scss.vim
-/usr/share/vim/vim81/indent/sdl.vim
-/usr/share/vim/vim81/indent/sh.vim
-/usr/share/vim/vim81/indent/sml.vim
-/usr/share/vim/vim81/indent/sql.vim
-/usr/share/vim/vim81/indent/sqlanywhere.vim
-/usr/share/vim/vim81/indent/systemd.vim
-/usr/share/vim/vim81/indent/systemverilog.vim
-/usr/share/vim/vim81/indent/tcl.vim
-/usr/share/vim/vim81/indent/tcsh.vim
-/usr/share/vim/vim81/indent/teraterm.vim
-/usr/share/vim/vim81/indent/tex.vim
-/usr/share/vim/vim81/indent/tf.vim
-/usr/share/vim/vim81/indent/tilde.vim
-/usr/share/vim/vim81/indent/treetop.vim
-/usr/share/vim/vim81/indent/vb.vim
-/usr/share/vim/vim81/indent/verilog.vim
-/usr/share/vim/vim81/indent/vhdl.vim
-/usr/share/vim/vim81/indent/vim.vim
-/usr/share/vim/vim81/indent/vroom.vim
-/usr/share/vim/vim81/indent/xf86conf.vim
-/usr/share/vim/vim81/indent/xhtml.vim
-/usr/share/vim/vim81/indent/xinetd.vim
-/usr/share/vim/vim81/indent/xml.vim
-/usr/share/vim/vim81/indent/xsd.vim
-/usr/share/vim/vim81/indent/xslt.vim
-/usr/share/vim/vim81/indent/yacc.vim
-/usr/share/vim/vim81/indent/yaml.vim
-/usr/share/vim/vim81/indent/zimbu.vim
-/usr/share/vim/vim81/indent/zsh.vim
-/usr/share/vim/vim81/indoff.vim
-/usr/share/vim/vim81/keymap/README.txt
-/usr/share/vim/vim81/keymap/accents.vim
-/usr/share/vim/vim81/keymap/arabic.vim
-/usr/share/vim/vim81/keymap/arabic_utf-8.vim
-/usr/share/vim/vim81/keymap/armenian-eastern_utf-8.vim
-/usr/share/vim/vim81/keymap/armenian-western_utf-8.vim
-/usr/share/vim/vim81/keymap/belarusian-jcuken.vim
-/usr/share/vim/vim81/keymap/bulgarian-bds.vim
-/usr/share/vim/vim81/keymap/bulgarian-phonetic.vim
-/usr/share/vim/vim81/keymap/canfr-win.vim
-/usr/share/vim/vim81/keymap/croatian.vim
-/usr/share/vim/vim81/keymap/croatian_cp1250.vim
-/usr/share/vim/vim81/keymap/croatian_iso-8859-2.vim
-/usr/share/vim/vim81/keymap/croatian_utf-8.vim
-/usr/share/vim/vim81/keymap/czech.vim
-/usr/share/vim/vim81/keymap/czech_utf-8.vim
-/usr/share/vim/vim81/keymap/dvorak.vim
-/usr/share/vim/vim81/keymap/esperanto.vim
-/usr/share/vim/vim81/keymap/esperanto_utf-8.vim
-/usr/share/vim/vim81/keymap/greek.vim
-/usr/share/vim/vim81/keymap/greek_cp1253.vim
-/usr/share/vim/vim81/keymap/greek_cp737.vim
-/usr/share/vim/vim81/keymap/greek_iso-8859-7.vim
-/usr/share/vim/vim81/keymap/greek_utf-8.vim
-/usr/share/vim/vim81/keymap/hebrew.vim
-/usr/share/vim/vim81/keymap/hebrew_cp1255.vim
-/usr/share/vim/vim81/keymap/hebrew_iso-8859-8.vim
-/usr/share/vim/vim81/keymap/hebrew_utf-8.vim
-/usr/share/vim/vim81/keymap/hebrewp.vim
-/usr/share/vim/vim81/keymap/hebrewp_cp1255.vim
-/usr/share/vim/vim81/keymap/hebrewp_iso-8859-8.vim
-/usr/share/vim/vim81/keymap/hebrewp_utf-8.vim
-/usr/share/vim/vim81/keymap/kana.vim
-/usr/share/vim/vim81/keymap/kazakh-jcuken.vim
-/usr/share/vim/vim81/keymap/lithuanian-baltic.vim
-/usr/share/vim/vim81/keymap/magyar_utf-8.vim
-/usr/share/vim/vim81/keymap/mongolian_utf-8.vim
-/usr/share/vim/vim81/keymap/oldturkic-orkhon_utf-8.vim
-/usr/share/vim/vim81/keymap/oldturkic-yenisei_utf-8.vim
-/usr/share/vim/vim81/keymap/persian-iranian_utf-8.vim
-/usr/share/vim/vim81/keymap/persian.vim
-/usr/share/vim/vim81/keymap/pinyin.vim
-/usr/share/vim/vim81/keymap/polish-slash.vim
-/usr/share/vim/vim81/keymap/polish-slash_cp1250.vim
-/usr/share/vim/vim81/keymap/polish-slash_cp852.vim
-/usr/share/vim/vim81/keymap/polish-slash_iso-8859-2.vim
-/usr/share/vim/vim81/keymap/polish-slash_utf-8.vim
-/usr/share/vim/vim81/keymap/russian-dvorak.vim
-/usr/share/vim/vim81/keymap/russian-jcuken.vim
-/usr/share/vim/vim81/keymap/russian-jcukenmac.vim
-/usr/share/vim/vim81/keymap/russian-jcukenwin.vim
-/usr/share/vim/vim81/keymap/russian-jcukenwintype.vim
-/usr/share/vim/vim81/keymap/russian-yawerty.vim
-/usr/share/vim/vim81/keymap/serbian-latin.vim
-/usr/share/vim/vim81/keymap/serbian-latin_utf-8.vim
-/usr/share/vim/vim81/keymap/serbian.vim
-/usr/share/vim/vim81/keymap/serbian_cp1250.vim
-/usr/share/vim/vim81/keymap/serbian_cp1251.vim
-/usr/share/vim/vim81/keymap/serbian_iso-8859-2.vim
-/usr/share/vim/vim81/keymap/serbian_iso-8859-5.vim
-/usr/share/vim/vim81/keymap/serbian_utf-8.vim
-/usr/share/vim/vim81/keymap/sinhala-phonetic_utf-8.vim
-/usr/share/vim/vim81/keymap/sinhala.vim
-/usr/share/vim/vim81/keymap/slovak.vim
-/usr/share/vim/vim81/keymap/slovak_cp1250.vim
-/usr/share/vim/vim81/keymap/slovak_iso-8859-2.vim
-/usr/share/vim/vim81/keymap/slovak_utf-8.vim
-/usr/share/vim/vim81/keymap/tamil_tscii.vim
-/usr/share/vim/vim81/keymap/thaana-phonetic_utf-8.vim
-/usr/share/vim/vim81/keymap/thaana.vim
-/usr/share/vim/vim81/keymap/ukrainian-dvorak.vim
-/usr/share/vim/vim81/keymap/ukrainian-jcuken.vim
-/usr/share/vim/vim81/keymap/vietnamese-telex_utf-8.vim
-/usr/share/vim/vim81/keymap/vietnamese-viqr_utf-8.vim
-/usr/share/vim/vim81/keymap/vietnamese-vni_utf-8.vim
-/usr/share/vim/vim81/lang/README.txt
-/usr/share/vim/vim81/lang/af/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ca/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/cs.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/cs/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/de/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/en_GB/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/eo/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/es/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/fi/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/fr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ga/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/it/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ja.euc-jp/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ja.sjis/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ja/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ko.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ko/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/lv/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/menu_af.latin1.vim
-/usr/share/vim/vim81/lang/menu_af.utf-8.vim
-/usr/share/vim/vim81/lang/menu_af_af.latin1.vim
-/usr/share/vim/vim81/lang/menu_af_af.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ca.latin1.vim
-/usr/share/vim/vim81/lang/menu_ca.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ca_es.latin1.vim
-/usr/share/vim/vim81/lang/menu_ca_es.utf-8.vim
-/usr/share/vim/vim81/lang/menu_chinese(gb)_gb.936.vim
-/usr/share/vim/vim81/lang/menu_chinese(taiwan)_taiwan.950.vim
-/usr/share/vim/vim81/lang/menu_chinese_gb.936.vim
-/usr/share/vim/vim81/lang/menu_chinese_taiwan.950.vim
-/usr/share/vim/vim81/lang/menu_cs.cp1250.vim
-/usr/share/vim/vim81/lang/menu_cs.latin1.vim
-/usr/share/vim/vim81/lang/menu_cs_cz.cp1250.vim
-/usr/share/vim/vim81/lang/menu_cs_cz.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_cs_cz.latin1.vim
-/usr/share/vim/vim81/lang/menu_cs_cz.utf-8.vim
-/usr/share/vim/vim81/lang/menu_czech_czech_republic.1250.vim
-/usr/share/vim/vim81/lang/menu_czech_czech_republic.1252.vim
-/usr/share/vim/vim81/lang/menu_czech_czech_republic.ascii.vim
-/usr/share/vim/vim81/lang/menu_de.latin1.vim
-/usr/share/vim/vim81/lang/menu_de.utf-8.vim
-/usr/share/vim/vim81/lang/menu_de_de.latin1.vim
-/usr/share/vim/vim81/lang/menu_de_de.utf-8.vim
-/usr/share/vim/vim81/lang/menu_en_gb.latin1.vim
-/usr/share/vim/vim81/lang/menu_en_gb.utf-8.vim
-/usr/share/vim/vim81/lang/menu_english_united_kingdom.1252.vim
-/usr/share/vim/vim81/lang/menu_english_united_kingdom.ascii.vim
-/usr/share/vim/vim81/lang/menu_eo.utf-8.vim
-/usr/share/vim/vim81/lang/menu_eo_eo.utf-8.vim
-/usr/share/vim/vim81/lang/menu_eo_xx.utf-8.vim
-/usr/share/vim/vim81/lang/menu_es.latin1.vim
-/usr/share/vim/vim81/lang/menu_es.utf-8.vim
-/usr/share/vim/vim81/lang/menu_es_es.latin1.vim
-/usr/share/vim/vim81/lang/menu_es_es.utf-8.vim
-/usr/share/vim/vim81/lang/menu_fi.latin1.vim
-/usr/share/vim/vim81/lang/menu_fi.utf-8.vim
-/usr/share/vim/vim81/lang/menu_fi_fi.latin1.vim
-/usr/share/vim/vim81/lang/menu_fi_fi.utf-8.vim
-/usr/share/vim/vim81/lang/menu_finnish_finland.1252.vim
-/usr/share/vim/vim81/lang/menu_fr.latin1.vim
-/usr/share/vim/vim81/lang/menu_fr.utf-8.vim
-/usr/share/vim/vim81/lang/menu_fr_fr.latin1.vim
-/usr/share/vim/vim81/lang/menu_fr_fr.utf-8.vim
-/usr/share/vim/vim81/lang/menu_french_france.1252.vim
-/usr/share/vim/vim81/lang/menu_german_germany.1252.vim
-/usr/share/vim/vim81/lang/menu_hu.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_hu.utf-8.vim
-/usr/share/vim/vim81/lang/menu_hu_hu.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_hu_hu.utf-8.vim
-/usr/share/vim/vim81/lang/menu_it.latin1.vim
-/usr/share/vim/vim81/lang/menu_it.utf-8.vim
-/usr/share/vim/vim81/lang/menu_it_it.latin1.vim
-/usr/share/vim/vim81/lang/menu_it_it.utf-8.vim
-/usr/share/vim/vim81/lang/menu_italian_italy.1252.vim
-/usr/share/vim/vim81/lang/menu_ja.cp932.vim
-/usr/share/vim/vim81/lang/menu_ja.euc-jp.vim
-/usr/share/vim/vim81/lang/menu_ja.eucjp.vim
-/usr/share/vim/vim81/lang/menu_ja.ujis.vim
-/usr/share/vim/vim81/lang/menu_ja.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ja_jp.cp932.vim
-/usr/share/vim/vim81/lang/menu_ja_jp.euc-jp.vim
-/usr/share/vim/vim81/lang/menu_ja_jp.eucjp.vim
-/usr/share/vim/vim81/lang/menu_ja_jp.ujis.vim
-/usr/share/vim/vim81/lang/menu_ja_jp.utf-8.vim
-/usr/share/vim/vim81/lang/menu_japanese_japan.932.vim
-/usr/share/vim/vim81/lang/menu_ko.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ko_kr.euckr.vim
-/usr/share/vim/vim81/lang/menu_ko_kr.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ko_kr.vim
-/usr/share/vim/vim81/lang/menu_nl.latin1.vim
-/usr/share/vim/vim81/lang/menu_nl.utf-8.vim
-/usr/share/vim/vim81/lang/menu_nl_nl.latin1.vim
-/usr/share/vim/vim81/lang/menu_nl_nl.utf-8.vim
-/usr/share/vim/vim81/lang/menu_no.latin1.vim
-/usr/share/vim/vim81/lang/menu_no.utf-8.vim
-/usr/share/vim/vim81/lang/menu_no_no.latin1.vim
-/usr/share/vim/vim81/lang/menu_no_no.utf-8.vim
-/usr/share/vim/vim81/lang/menu_pl.cp1250.vim
-/usr/share/vim/vim81/lang/menu_pl_pl.cp1250.vim
-/usr/share/vim/vim81/lang/menu_pl_pl.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_pl_pl.utf-8.vim
-/usr/share/vim/vim81/lang/menu_polish_poland.1250.vim
-/usr/share/vim/vim81/lang/menu_pt_br.latin1.vim
-/usr/share/vim/vim81/lang/menu_pt_br.utf-8.vim
-/usr/share/vim/vim81/lang/menu_pt_br.vim
-/usr/share/vim/vim81/lang/menu_pt_pt.latin1.vim
-/usr/share/vim/vim81/lang/menu_pt_pt.utf-8.vim
-/usr/share/vim/vim81/lang/menu_pt_pt.vim
-/usr/share/vim/vim81/lang/menu_ru.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ru_ru.koi8-r.vim
-/usr/share/vim/vim81/lang/menu_ru_ru.utf-8.vim
-/usr/share/vim/vim81/lang/menu_ru_ru.vim
-/usr/share/vim/vim81/lang/menu_sk.cp1250.vim
-/usr/share/vim/vim81/lang/menu_sk_sk.1250.vim
-/usr/share/vim/vim81/lang/menu_sk_sk.cp1250.vim
-/usr/share/vim/vim81/lang/menu_sk_sk.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_sk_sk.vim
-/usr/share/vim/vim81/lang/menu_sl_si.cp1250.vim
-/usr/share/vim/vim81/lang/menu_sl_si.latin2.vim
-/usr/share/vim/vim81/lang/menu_sl_si.utf-8.vim
-/usr/share/vim/vim81/lang/menu_slovak_slovak_republic.1250.vim
-/usr/share/vim/vim81/lang/menu_spanish_spain.850.vim
-/usr/share/vim/vim81/lang/menu_sr.utf-8.vim
-/usr/share/vim/vim81/lang/menu_sr_rs.ascii.vim
-/usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-5.vim
-/usr/share/vim/vim81/lang/menu_sr_rs.utf-8.vim
-/usr/share/vim/vim81/lang/menu_sr_yu.ascii.vim
-/usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-2.vim
-/usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-5.vim
-/usr/share/vim/vim81/lang/menu_sr_yu.utf-8.vim
-/usr/share/vim/vim81/lang/menu_sv.latin1.vim
-/usr/share/vim/vim81/lang/menu_sv.utf-8.vim
-/usr/share/vim/vim81/lang/menu_sv_se.latin1.vim
-/usr/share/vim/vim81/lang/menu_sv_se.utf-8.vim
-/usr/share/vim/vim81/lang/menu_uk_ua.cp1251.vim
-/usr/share/vim/vim81/lang/menu_uk_ua.koi8-u.vim
-/usr/share/vim/vim81/lang/menu_vi_vn.vim
-/usr/share/vim/vim81/lang/menu_zh.big5.vim
-/usr/share/vim/vim81/lang/menu_zh.cp936.vim
-/usr/share/vim/vim81/lang/menu_zh.cp950.vim
-/usr/share/vim/vim81/lang/menu_zh.gb2312.vim
-/usr/share/vim/vim81/lang/menu_zh_cn.18030.vim
-/usr/share/vim/vim81/lang/menu_zh_cn.cp936.vim
-/usr/share/vim/vim81/lang/menu_zh_cn.gb2312.vim
-/usr/share/vim/vim81/lang/menu_zh_cn.gbk.vim
-/usr/share/vim/vim81/lang/menu_zh_cn.utf-8.vim
-/usr/share/vim/vim81/lang/menu_zh_tw.big5.vim
-/usr/share/vim/vim81/lang/menu_zh_tw.cp950.vim
-/usr/share/vim/vim81/lang/menu_zh_tw.utf-8.vim
-/usr/share/vim/vim81/lang/nb/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/nl/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/no/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/pl.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/pl.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/pl/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/pt_BR/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ru.cp1251/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/ru/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/sk.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/sk/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/sr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/sv/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/uk.cp1251/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/uk/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/vi/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/zh_CN.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/zh_CN.cp936/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/zh_CN/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/lang/zh_TW/LC_MESSAGES/vim.mo
-/usr/share/vim/vim81/macros/README.txt
-/usr/share/vim/vim81/macros/editexisting.vim
-/usr/share/vim/vim81/macros/hanoi/click.me
-/usr/share/vim/vim81/macros/hanoi/hanoi.vim
-/usr/share/vim/vim81/macros/hanoi/poster
-/usr/share/vim/vim81/macros/justify.vim
-/usr/share/vim/vim81/macros/less.bat
-/usr/share/vim/vim81/macros/less.sh
-/usr/share/vim/vim81/macros/less.vim
-/usr/share/vim/vim81/macros/life/click.me
-/usr/share/vim/vim81/macros/life/life.vim
-/usr/share/vim/vim81/macros/matchit.vim
-/usr/share/vim/vim81/macros/maze/Makefile
-/usr/share/vim/vim81/macros/maze/README.txt
-/usr/share/vim/vim81/macros/maze/main.aap
-/usr/share/vim/vim81/macros/maze/maze.c
-/usr/share/vim/vim81/macros/maze/maze_5.78
-/usr/share/vim/vim81/macros/maze/maze_mac
-/usr/share/vim/vim81/macros/maze/mazeansi.c
-/usr/share/vim/vim81/macros/maze/mazeclean.c
-/usr/share/vim/vim81/macros/maze/poster
-/usr/share/vim/vim81/macros/shellmenu.vim
-/usr/share/vim/vim81/macros/swapmous.vim
-/usr/share/vim/vim81/macros/urm/README.txt
-/usr/share/vim/vim81/macros/urm/examples
-/usr/share/vim/vim81/macros/urm/urm
-/usr/share/vim/vim81/macros/urm/urm.vim
-/usr/share/vim/vim81/menu.vim
-/usr/share/vim/vim81/mswin.vim
-/usr/share/vim/vim81/optwin.vim
-/usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/disable.vim
-/usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/enable.vim
-/usr/share/vim/vim81/pack/dist/opt/dvorak/plugin/dvorak.vim
-/usr/share/vim/vim81/pack/dist/opt/editexisting/plugin/editexisting.vim
-/usr/share/vim/vim81/pack/dist/opt/justify/plugin/justify.vim
-/usr/share/vim/vim81/pack/dist/opt/matchit/doc/matchit.txt
-/usr/share/vim/vim81/pack/dist/opt/matchit/doc/tags
-/usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim
-/usr/share/vim/vim81/pack/dist/opt/shellmenu/plugin/shellmenu.vim
-/usr/share/vim/vim81/pack/dist/opt/swapmouse/plugin/swapmouse.vim
-/usr/share/vim/vim81/pack/dist/opt/termdebug/plugin/termdebug.vim
-/usr/share/vim/vim81/plugin/README.txt
-/usr/share/vim/vim81/plugin/getscriptPlugin.vim
-/usr/share/vim/vim81/plugin/gzip.vim
-/usr/share/vim/vim81/plugin/logiPat.vim
-/usr/share/vim/vim81/plugin/manpager.vim
-/usr/share/vim/vim81/plugin/matchparen.vim
-/usr/share/vim/vim81/plugin/netrwPlugin.vim
-/usr/share/vim/vim81/plugin/rrhelper.vim
-/usr/share/vim/vim81/plugin/spellfile.vim
-/usr/share/vim/vim81/plugin/tarPlugin.vim
-/usr/share/vim/vim81/plugin/tohtml.vim
-/usr/share/vim/vim81/plugin/vimballPlugin.vim
-/usr/share/vim/vim81/plugin/zipPlugin.vim
-/usr/share/vim/vim81/print/ascii.ps
-/usr/share/vim/vim81/print/cidfont.ps
-/usr/share/vim/vim81/print/cns_roman.ps
-/usr/share/vim/vim81/print/cp1250.ps
-/usr/share/vim/vim81/print/cp1251.ps
-/usr/share/vim/vim81/print/cp1252.ps
-/usr/share/vim/vim81/print/cp1253.ps
-/usr/share/vim/vim81/print/cp1254.ps
-/usr/share/vim/vim81/print/cp1255.ps
-/usr/share/vim/vim81/print/cp1257.ps
-/usr/share/vim/vim81/print/dec-mcs.ps
-/usr/share/vim/vim81/print/ebcdic-uk.ps
-/usr/share/vim/vim81/print/gb_roman.ps
-/usr/share/vim/vim81/print/hp-roman8.ps
-/usr/share/vim/vim81/print/iso-8859-10.ps
-/usr/share/vim/vim81/print/iso-8859-11.ps
-/usr/share/vim/vim81/print/iso-8859-13.ps
-/usr/share/vim/vim81/print/iso-8859-14.ps
-/usr/share/vim/vim81/print/iso-8859-15.ps
-/usr/share/vim/vim81/print/iso-8859-2.ps
-/usr/share/vim/vim81/print/iso-8859-3.ps
-/usr/share/vim/vim81/print/iso-8859-4.ps
-/usr/share/vim/vim81/print/iso-8859-5.ps
-/usr/share/vim/vim81/print/iso-8859-7.ps
-/usr/share/vim/vim81/print/iso-8859-8.ps
-/usr/share/vim/vim81/print/iso-8859-9.ps
-/usr/share/vim/vim81/print/jis_roman.ps
-/usr/share/vim/vim81/print/koi8-r.ps
-/usr/share/vim/vim81/print/koi8-u.ps
-/usr/share/vim/vim81/print/ks_roman.ps
-/usr/share/vim/vim81/print/latin1.ps
-/usr/share/vim/vim81/print/mac-roman.ps
-/usr/share/vim/vim81/print/prolog.ps
-/usr/share/vim/vim81/rgb.txt
-/usr/share/vim/vim81/scripts.vim
-/usr/share/vim/vim81/spell/check_locales.vim
-/usr/share/vim/vim81/spell/cleanadd.vim
-/usr/share/vim/vim81/spell/en.ascii.spl
-/usr/share/vim/vim81/spell/en.ascii.sug
-/usr/share/vim/vim81/spell/en.latin1.spl
-/usr/share/vim/vim81/spell/en.latin1.sug
-/usr/share/vim/vim81/spell/en.utf-8.spl
-/usr/share/vim/vim81/spell/en.utf-8.sug
-/usr/share/vim/vim81/spell/fixdup.vim
-/usr/share/vim/vim81/spell/he.vim
-/usr/share/vim/vim81/spell/spell.vim
-/usr/share/vim/vim81/spell/yi.vim
-/usr/share/vim/vim81/synmenu.vim
-/usr/share/vim/vim81/syntax/2html.vim
-/usr/share/vim/vim81/syntax/README.txt
-/usr/share/vim/vim81/syntax/a2ps.vim
-/usr/share/vim/vim81/syntax/a65.vim
-/usr/share/vim/vim81/syntax/aap.vim
-/usr/share/vim/vim81/syntax/abap.vim
-/usr/share/vim/vim81/syntax/abaqus.vim
-/usr/share/vim/vim81/syntax/abc.vim
-/usr/share/vim/vim81/syntax/abel.vim
-/usr/share/vim/vim81/syntax/acedb.vim
-/usr/share/vim/vim81/syntax/ada.vim
-/usr/share/vim/vim81/syntax/aflex.vim
-/usr/share/vim/vim81/syntax/ahdl.vim
-/usr/share/vim/vim81/syntax/alsaconf.vim
-/usr/share/vim/vim81/syntax/amiga.vim
-/usr/share/vim/vim81/syntax/aml.vim
-/usr/share/vim/vim81/syntax/ampl.vim
-/usr/share/vim/vim81/syntax/ant.vim
-/usr/share/vim/vim81/syntax/antlr.vim
-/usr/share/vim/vim81/syntax/apache.vim
-/usr/share/vim/vim81/syntax/apachestyle.vim
-/usr/share/vim/vim81/syntax/aptconf.vim
-/usr/share/vim/vim81/syntax/arch.vim
-/usr/share/vim/vim81/syntax/arduino.vim
-/usr/share/vim/vim81/syntax/art.vim
-/usr/share/vim/vim81/syntax/asciidoc.vim
-/usr/share/vim/vim81/syntax/asm.vim
-/usr/share/vim/vim81/syntax/asm68k.vim
-/usr/share/vim/vim81/syntax/asmh8300.vim
-/usr/share/vim/vim81/syntax/asn.vim
-/usr/share/vim/vim81/syntax/aspperl.vim
-/usr/share/vim/vim81/syntax/aspvbs.vim
-/usr/share/vim/vim81/syntax/asterisk.vim
-/usr/share/vim/vim81/syntax/asteriskvm.vim
-/usr/share/vim/vim81/syntax/atlas.vim
-/usr/share/vim/vim81/syntax/autodoc.vim
-/usr/share/vim/vim81/syntax/autohotkey.vim
-/usr/share/vim/vim81/syntax/autoit.vim
-/usr/share/vim/vim81/syntax/automake.vim
-/usr/share/vim/vim81/syntax/ave.vim
-/usr/share/vim/vim81/syntax/avra.vim
-/usr/share/vim/vim81/syntax/awk.vim
-/usr/share/vim/vim81/syntax/ayacc.vim
-/usr/share/vim/vim81/syntax/b.vim
-/usr/share/vim/vim81/syntax/baan.vim
-/usr/share/vim/vim81/syntax/basic.vim
-/usr/share/vim/vim81/syntax/bc.vim
-/usr/share/vim/vim81/syntax/bdf.vim
-/usr/share/vim/vim81/syntax/bib.vim
-/usr/share/vim/vim81/syntax/bindzone.vim
-/usr/share/vim/vim81/syntax/blank.vim
-/usr/share/vim/vim81/syntax/bst.vim
-/usr/share/vim/vim81/syntax/btm.vim
-/usr/share/vim/vim81/syntax/bzl.vim
-/usr/share/vim/vim81/syntax/bzr.vim
-/usr/share/vim/vim81/syntax/c.vim
-/usr/share/vim/vim81/syntax/cabal.vim
-/usr/share/vim/vim81/syntax/calendar.vim
-/usr/share/vim/vim81/syntax/catalog.vim
-/usr/share/vim/vim81/syntax/cdl.vim
-/usr/share/vim/vim81/syntax/cdrdaoconf.vim
-/usr/share/vim/vim81/syntax/cdrtoc.vim
-/usr/share/vim/vim81/syntax/cf.vim
-/usr/share/vim/vim81/syntax/cfg.vim
-/usr/share/vim/vim81/syntax/ch.vim
-/usr/share/vim/vim81/syntax/chaiscript.vim
-/usr/share/vim/vim81/syntax/change.vim
-/usr/share/vim/vim81/syntax/changelog.vim
-/usr/share/vim/vim81/syntax/chaskell.vim
-/usr/share/vim/vim81/syntax/cheetah.vim
-/usr/share/vim/vim81/syntax/chicken.vim
-/usr/share/vim/vim81/syntax/chill.vim
-/usr/share/vim/vim81/syntax/chordpro.vim
-/usr/share/vim/vim81/syntax/cl.vim
-/usr/share/vim/vim81/syntax/clean.vim
-/usr/share/vim/vim81/syntax/clipper.vim
-/usr/share/vim/vim81/syntax/clojure.vim
-/usr/share/vim/vim81/syntax/cmake.vim
-/usr/share/vim/vim81/syntax/cmod.vim
-/usr/share/vim/vim81/syntax/cmusrc.vim
-/usr/share/vim/vim81/syntax/cobol.vim
-/usr/share/vim/vim81/syntax/coco.vim
-/usr/share/vim/vim81/syntax/colortest.vim
-/usr/share/vim/vim81/syntax/conaryrecipe.vim
-/usr/share/vim/vim81/syntax/conf.vim
-/usr/share/vim/vim81/syntax/config.vim
-/usr/share/vim/vim81/syntax/context.vim
-/usr/share/vim/vim81/syntax/cpp.vim
-/usr/share/vim/vim81/syntax/crm.vim
-/usr/share/vim/vim81/syntax/crontab.vim
-/usr/share/vim/vim81/syntax/cs.vim
-/usr/share/vim/vim81/syntax/csc.vim
-/usr/share/vim/vim81/syntax/csdl.vim
-/usr/share/vim/vim81/syntax/csh.vim
-/usr/share/vim/vim81/syntax/csp.vim
-/usr/share/vim/vim81/syntax/css.vim
-/usr/share/vim/vim81/syntax/cterm.vim
-/usr/share/vim/vim81/syntax/ctrlh.vim
-/usr/share/vim/vim81/syntax/cucumber.vim
-/usr/share/vim/vim81/syntax/cuda.vim
-/usr/share/vim/vim81/syntax/cupl.vim
-/usr/share/vim/vim81/syntax/cuplsim.vim
-/usr/share/vim/vim81/syntax/cvs.vim
-/usr/share/vim/vim81/syntax/cvsrc.vim
-/usr/share/vim/vim81/syntax/cweb.vim
-/usr/share/vim/vim81/syntax/cynlib.vim
-/usr/share/vim/vim81/syntax/cynpp.vim
-/usr/share/vim/vim81/syntax/d.vim
-/usr/share/vim/vim81/syntax/datascript.vim
-/usr/share/vim/vim81/syntax/dcd.vim
-/usr/share/vim/vim81/syntax/dcl.vim
-/usr/share/vim/vim81/syntax/debchangelog.vim
-/usr/share/vim/vim81/syntax/debcontrol.vim
-/usr/share/vim/vim81/syntax/debcopyright.vim
-/usr/share/vim/vim81/syntax/debsources.vim
-/usr/share/vim/vim81/syntax/def.vim
-/usr/share/vim/vim81/syntax/denyhosts.vim
-/usr/share/vim/vim81/syntax/desc.vim
-/usr/share/vim/vim81/syntax/desktop.vim
-/usr/share/vim/vim81/syntax/dictconf.vim
-/usr/share/vim/vim81/syntax/dictdconf.vim
-/usr/share/vim/vim81/syntax/diff.vim
-/usr/share/vim/vim81/syntax/dircolors.vim
-/usr/share/vim/vim81/syntax/dirpager.vim
-/usr/share/vim/vim81/syntax/diva.vim
-/usr/share/vim/vim81/syntax/django.vim
-/usr/share/vim/vim81/syntax/dns.vim
-/usr/share/vim/vim81/syntax/dnsmasq.vim
-/usr/share/vim/vim81/syntax/docbk.vim
-/usr/share/vim/vim81/syntax/docbksgml.vim
-/usr/share/vim/vim81/syntax/docbkxml.vim
-/usr/share/vim/vim81/syntax/dockerfile.vim
-/usr/share/vim/vim81/syntax/dosbatch.vim
-/usr/share/vim/vim81/syntax/dosini.vim
-/usr/share/vim/vim81/syntax/dot.vim
-/usr/share/vim/vim81/syntax/doxygen.vim
-/usr/share/vim/vim81/syntax/dracula.vim
-/usr/share/vim/vim81/syntax/dsl.vim
-/usr/share/vim/vim81/syntax/dtd.vim
-/usr/share/vim/vim81/syntax/dtml.vim
-/usr/share/vim/vim81/syntax/dtrace.vim
-/usr/share/vim/vim81/syntax/dts.vim
-/usr/share/vim/vim81/syntax/dylan.vim
-/usr/share/vim/vim81/syntax/dylanintr.vim
-/usr/share/vim/vim81/syntax/dylanlid.vim
-/usr/share/vim/vim81/syntax/ecd.vim
-/usr/share/vim/vim81/syntax/edif.vim
-/usr/share/vim/vim81/syntax/eiffel.vim
-/usr/share/vim/vim81/syntax/elf.vim
-/usr/share/vim/vim81/syntax/elinks.vim
-/usr/share/vim/vim81/syntax/elmfilt.vim
-/usr/share/vim/vim81/syntax/erlang.vim
-/usr/share/vim/vim81/syntax/eruby.vim
-/usr/share/vim/vim81/syntax/esmtprc.vim
-/usr/share/vim/vim81/syntax/esqlc.vim
-/usr/share/vim/vim81/syntax/esterel.vim
-/usr/share/vim/vim81/syntax/eterm.vim
-/usr/share/vim/vim81/syntax/euphoria3.vim
-/usr/share/vim/vim81/syntax/euphoria4.vim
-/usr/share/vim/vim81/syntax/eviews.vim
-/usr/share/vim/vim81/syntax/exim.vim
-/usr/share/vim/vim81/syntax/expect.vim
-/usr/share/vim/vim81/syntax/exports.vim
-/usr/share/vim/vim81/syntax/falcon.vim
-/usr/share/vim/vim81/syntax/fan.vim
-/usr/share/vim/vim81/syntax/fasm.vim
-/usr/share/vim/vim81/syntax/fdcc.vim
-/usr/share/vim/vim81/syntax/fetchmail.vim
-/usr/share/vim/vim81/syntax/fgl.vim
-/usr/share/vim/vim81/syntax/flexwiki.vim
-/usr/share/vim/vim81/syntax/focexec.vim
-/usr/share/vim/vim81/syntax/form.vim
-/usr/share/vim/vim81/syntax/forth.vim
-/usr/share/vim/vim81/syntax/fortran.vim
-/usr/share/vim/vim81/syntax/foxpro.vim
-/usr/share/vim/vim81/syntax/framescript.vim
-/usr/share/vim/vim81/syntax/freebasic.vim
-/usr/share/vim/vim81/syntax/fstab.vim
-/usr/share/vim/vim81/syntax/fvwm.vim
-/usr/share/vim/vim81/syntax/fvwm2m4.vim
-/usr/share/vim/vim81/syntax/gdb.vim
-/usr/share/vim/vim81/syntax/gdmo.vim
-/usr/share/vim/vim81/syntax/gedcom.vim
-/usr/share/vim/vim81/syntax/git.vim
-/usr/share/vim/vim81/syntax/gitcommit.vim
-/usr/share/vim/vim81/syntax/gitconfig.vim
-/usr/share/vim/vim81/syntax/gitolite.vim
-/usr/share/vim/vim81/syntax/gitrebase.vim
-/usr/share/vim/vim81/syntax/gitsendemail.vim
-/usr/share/vim/vim81/syntax/gkrellmrc.vim
-/usr/share/vim/vim81/syntax/gnash.vim
-/usr/share/vim/vim81/syntax/gnuplot.vim
-/usr/share/vim/vim81/syntax/go.vim
-/usr/share/vim/vim81/syntax/godoc.vim
-/usr/share/vim/vim81/syntax/gp.vim
-/usr/share/vim/vim81/syntax/gpg.vim
-/usr/share/vim/vim81/syntax/gprof.vim
-/usr/share/vim/vim81/syntax/grads.vim
-/usr/share/vim/vim81/syntax/gretl.vim
-/usr/share/vim/vim81/syntax/groff.vim
-/usr/share/vim/vim81/syntax/groovy.vim
-/usr/share/vim/vim81/syntax/group.vim
-/usr/share/vim/vim81/syntax/grub.vim
-/usr/share/vim/vim81/syntax/gsp.vim
-/usr/share/vim/vim81/syntax/gtkrc.vim
-/usr/share/vim/vim81/syntax/haml.vim
-/usr/share/vim/vim81/syntax/hamster.vim
-/usr/share/vim/vim81/syntax/haskell.vim
-/usr/share/vim/vim81/syntax/haste.vim
-/usr/share/vim/vim81/syntax/hastepreproc.vim
-/usr/share/vim/vim81/syntax/hb.vim
-/usr/share/vim/vim81/syntax/help.vim
-/usr/share/vim/vim81/syntax/hercules.vim
-/usr/share/vim/vim81/syntax/hex.vim
-/usr/share/vim/vim81/syntax/hgcommit.vim
-/usr/share/vim/vim81/syntax/hitest.vim
-/usr/share/vim/vim81/syntax/hog.vim
-/usr/share/vim/vim81/syntax/hostconf.vim
-/usr/share/vim/vim81/syntax/hostsaccess.vim
-/usr/share/vim/vim81/syntax/html.vim
-/usr/share/vim/vim81/syntax/htmlcheetah.vim
-/usr/share/vim/vim81/syntax/htmldjango.vim
-/usr/share/vim/vim81/syntax/htmlm4.vim
-/usr/share/vim/vim81/syntax/htmlos.vim
-/usr/share/vim/vim81/syntax/ia64.vim
-/usr/share/vim/vim81/syntax/ibasic.vim
-/usr/share/vim/vim81/syntax/icemenu.vim
-/usr/share/vim/vim81/syntax/icon.vim
-/usr/share/vim/vim81/syntax/idl.vim
-/usr/share/vim/vim81/syntax/idlang.vim
-/usr/share/vim/vim81/syntax/indent.vim
-/usr/share/vim/vim81/syntax/inform.vim
-/usr/share/vim/vim81/syntax/initex.vim
-/usr/share/vim/vim81/syntax/initng.vim
-/usr/share/vim/vim81/syntax/inittab.vim
-/usr/share/vim/vim81/syntax/ipfilter.vim
-/usr/share/vim/vim81/syntax/ishd.vim
-/usr/share/vim/vim81/syntax/iss.vim
-/usr/share/vim/vim81/syntax/ist.vim
-/usr/share/vim/vim81/syntax/j.vim
-/usr/share/vim/vim81/syntax/jal.vim
-/usr/share/vim/vim81/syntax/jam.vim
-/usr/share/vim/vim81/syntax/jargon.vim
-/usr/share/vim/vim81/syntax/java.vim
-/usr/share/vim/vim81/syntax/javacc.vim
-/usr/share/vim/vim81/syntax/javascript.vim
-/usr/share/vim/vim81/syntax/jess.vim
-/usr/share/vim/vim81/syntax/jgraph.vim
-/usr/share/vim/vim81/syntax/jovial.vim
-/usr/share/vim/vim81/syntax/jproperties.vim
-/usr/share/vim/vim81/syntax/json.vim
-/usr/share/vim/vim81/syntax/jsp.vim
-/usr/share/vim/vim81/syntax/kconfig.vim
-/usr/share/vim/vim81/syntax/kivy.vim
-/usr/share/vim/vim81/syntax/kix.vim
-/usr/share/vim/vim81/syntax/kscript.vim
-/usr/share/vim/vim81/syntax/kwt.vim
-/usr/share/vim/vim81/syntax/lace.vim
-/usr/share/vim/vim81/syntax/latte.vim
-/usr/share/vim/vim81/syntax/ld.vim
-/usr/share/vim/vim81/syntax/ldapconf.vim
-/usr/share/vim/vim81/syntax/ldif.vim
-/usr/share/vim/vim81/syntax/less.vim
-/usr/share/vim/vim81/syntax/lex.vim
-/usr/share/vim/vim81/syntax/lftp.vim
-/usr/share/vim/vim81/syntax/lhaskell.vim
-/usr/share/vim/vim81/syntax/libao.vim
-/usr/share/vim/vim81/syntax/lifelines.vim
-/usr/share/vim/vim81/syntax/lilo.vim
-/usr/share/vim/vim81/syntax/limits.vim
-/usr/share/vim/vim81/syntax/liquid.vim
-/usr/share/vim/vim81/syntax/lisp.vim
-/usr/share/vim/vim81/syntax/lite.vim
-/usr/share/vim/vim81/syntax/litestep.vim
-/usr/share/vim/vim81/syntax/loginaccess.vim
-/usr/share/vim/vim81/syntax/logindefs.vim
-/usr/share/vim/vim81/syntax/logtalk.vim
-/usr/share/vim/vim81/syntax/lotos.vim
-/usr/share/vim/vim81/syntax/lout.vim
-/usr/share/vim/vim81/syntax/lpc.vim
-/usr/share/vim/vim81/syntax/lprolog.vim
-/usr/share/vim/vim81/syntax/lscript.vim
-/usr/share/vim/vim81/syntax/lsl.vim
-/usr/share/vim/vim81/syntax/lss.vim
-/usr/share/vim/vim81/syntax/lua.vim
-/usr/share/vim/vim81/syntax/lynx.vim
-/usr/share/vim/vim81/syntax/m4.vim
-/usr/share/vim/vim81/syntax/mail.vim
-/usr/share/vim/vim81/syntax/mailaliases.vim
-/usr/share/vim/vim81/syntax/mailcap.vim
-/usr/share/vim/vim81/syntax/make.vim
-/usr/share/vim/vim81/syntax/mallard.vim
-/usr/share/vim/vim81/syntax/man.vim
-/usr/share/vim/vim81/syntax/manconf.vim
-/usr/share/vim/vim81/syntax/manual.vim
-/usr/share/vim/vim81/syntax/maple.vim
-/usr/share/vim/vim81/syntax/markdown.vim
-/usr/share/vim/vim81/syntax/masm.vim
-/usr/share/vim/vim81/syntax/mason.vim
-/usr/share/vim/vim81/syntax/master.vim
-/usr/share/vim/vim81/syntax/matlab.vim
-/usr/share/vim/vim81/syntax/maxima.vim
-/usr/share/vim/vim81/syntax/mel.vim
-/usr/share/vim/vim81/syntax/messages.vim
-/usr/share/vim/vim81/syntax/mf.vim
-/usr/share/vim/vim81/syntax/mgl.vim
-/usr/share/vim/vim81/syntax/mgp.vim
-/usr/share/vim/vim81/syntax/mib.vim
-/usr/share/vim/vim81/syntax/mix.vim
-/usr/share/vim/vim81/syntax/mma.vim
-/usr/share/vim/vim81/syntax/mmix.vim
-/usr/share/vim/vim81/syntax/mmp.vim
-/usr/share/vim/vim81/syntax/modconf.vim
-/usr/share/vim/vim81/syntax/model.vim
-/usr/share/vim/vim81/syntax/modsim3.vim
-/usr/share/vim/vim81/syntax/modula2.vim
-/usr/share/vim/vim81/syntax/modula3.vim
-/usr/share/vim/vim81/syntax/monk.vim
-/usr/share/vim/vim81/syntax/moo.vim
-/usr/share/vim/vim81/syntax/mp.vim
-/usr/share/vim/vim81/syntax/mplayerconf.vim
-/usr/share/vim/vim81/syntax/mrxvtrc.vim
-/usr/share/vim/vim81/syntax/msidl.vim
-/usr/share/vim/vim81/syntax/msmessages.vim
-/usr/share/vim/vim81/syntax/msql.vim
-/usr/share/vim/vim81/syntax/mupad.vim
-/usr/share/vim/vim81/syntax/murphi.vim
-/usr/share/vim/vim81/syntax/mush.vim
-/usr/share/vim/vim81/syntax/muttrc.vim
-/usr/share/vim/vim81/syntax/mysql.vim
-/usr/share/vim/vim81/syntax/n1ql.vim
-/usr/share/vim/vim81/syntax/named.vim
-/usr/share/vim/vim81/syntax/nanorc.vim
-/usr/share/vim/vim81/syntax/nasm.vim
-/usr/share/vim/vim81/syntax/nastran.vim
-/usr/share/vim/vim81/syntax/natural.vim
-/usr/share/vim/vim81/syntax/ncf.vim
-/usr/share/vim/vim81/syntax/neomuttrc.vim
-/usr/share/vim/vim81/syntax/netrc.vim
-/usr/share/vim/vim81/syntax/netrw.vim
-/usr/share/vim/vim81/syntax/ninja.vim
-/usr/share/vim/vim81/syntax/nosyntax.vim
-/usr/share/vim/vim81/syntax/nqc.vim
-/usr/share/vim/vim81/syntax/nroff.vim
-/usr/share/vim/vim81/syntax/nsis.vim
-/usr/share/vim/vim81/syntax/obj.vim
-/usr/share/vim/vim81/syntax/objc.vim
-/usr/share/vim/vim81/syntax/objcpp.vim
-/usr/share/vim/vim81/syntax/ocaml.vim
-/usr/share/vim/vim81/syntax/occam.vim
-/usr/share/vim/vim81/syntax/omnimark.vim
-/usr/share/vim/vim81/syntax/openroad.vim
-/usr/share/vim/vim81/syntax/opl.vim
-/usr/share/vim/vim81/syntax/ora.vim
-/usr/share/vim/vim81/syntax/pamconf.vim
-/usr/share/vim/vim81/syntax/papp.vim
-/usr/share/vim/vim81/syntax/pascal.vim
-/usr/share/vim/vim81/syntax/passwd.vim
-/usr/share/vim/vim81/syntax/pcap.vim
-/usr/share/vim/vim81/syntax/pccts.vim
-/usr/share/vim/vim81/syntax/pdf.vim
-/usr/share/vim/vim81/syntax/perl.vim
-/usr/share/vim/vim81/syntax/perl6.vim
-/usr/share/vim/vim81/syntax/pf.vim
-/usr/share/vim/vim81/syntax/pfmain.vim
-/usr/share/vim/vim81/syntax/php.vim
-/usr/share/vim/vim81/syntax/phtml.vim
-/usr/share/vim/vim81/syntax/pic.vim
-/usr/share/vim/vim81/syntax/pike.vim
-/usr/share/vim/vim81/syntax/pilrc.vim
-/usr/share/vim/vim81/syntax/pine.vim
-/usr/share/vim/vim81/syntax/pinfo.vim
-/usr/share/vim/vim81/syntax/plaintex.vim
-/usr/share/vim/vim81/syntax/pli.vim
-/usr/share/vim/vim81/syntax/plm.vim
-/usr/share/vim/vim81/syntax/plp.vim
-/usr/share/vim/vim81/syntax/plsql.vim
-/usr/share/vim/vim81/syntax/po.vim
-/usr/share/vim/vim81/syntax/pod.vim
-/usr/share/vim/vim81/syntax/postscr.vim
-/usr/share/vim/vim81/syntax/pov.vim
-/usr/share/vim/vim81/syntax/povini.vim
-/usr/share/vim/vim81/syntax/ppd.vim
-/usr/share/vim/vim81/syntax/ppwiz.vim
-/usr/share/vim/vim81/syntax/prescribe.vim
-/usr/share/vim/vim81/syntax/privoxy.vim
-/usr/share/vim/vim81/syntax/procmail.vim
-/usr/share/vim/vim81/syntax/progress.vim
-/usr/share/vim/vim81/syntax/prolog.vim
-/usr/share/vim/vim81/syntax/promela.vim
-/usr/share/vim/vim81/syntax/proto.vim
-/usr/share/vim/vim81/syntax/protocols.vim
-/usr/share/vim/vim81/syntax/psf.vim
-/usr/share/vim/vim81/syntax/ptcap.vim
-/usr/share/vim/vim81/syntax/purifylog.vim
-/usr/share/vim/vim81/syntax/pyrex.vim
-/usr/share/vim/vim81/syntax/python.vim
-/usr/share/vim/vim81/syntax/qf.vim
-/usr/share/vim/vim81/syntax/quake.vim
-/usr/share/vim/vim81/syntax/r.vim
-/usr/share/vim/vim81/syntax/racc.vim
-/usr/share/vim/vim81/syntax/radiance.vim
-/usr/share/vim/vim81/syntax/ratpoison.vim
-/usr/share/vim/vim81/syntax/rc.vim
-/usr/share/vim/vim81/syntax/rcs.vim
-/usr/share/vim/vim81/syntax/rcslog.vim
-/usr/share/vim/vim81/syntax/readline.vim
-/usr/share/vim/vim81/syntax/rebol.vim
-/usr/share/vim/vim81/syntax/redif.vim
-/usr/share/vim/vim81/syntax/registry.vim
-/usr/share/vim/vim81/syntax/remind.vim
-/usr/share/vim/vim81/syntax/resolv.vim
-/usr/share/vim/vim81/syntax/reva.vim
-/usr/share/vim/vim81/syntax/rexx.vim
-/usr/share/vim/vim81/syntax/rhelp.vim
-/usr/share/vim/vim81/syntax/rib.vim
-/usr/share/vim/vim81/syntax/rmd.vim
-/usr/share/vim/vim81/syntax/rnc.vim
-/usr/share/vim/vim81/syntax/rng.vim
-/usr/share/vim/vim81/syntax/rnoweb.vim
-/usr/share/vim/vim81/syntax/robots.vim
-/usr/share/vim/vim81/syntax/rpcgen.vim
-/usr/share/vim/vim81/syntax/rpl.vim
-/usr/share/vim/vim81/syntax/rrst.vim
-/usr/share/vim/vim81/syntax/rst.vim
-/usr/share/vim/vim81/syntax/rtf.vim
-/usr/share/vim/vim81/syntax/ruby.vim
-/usr/share/vim/vim81/syntax/rust.vim
-/usr/share/vim/vim81/syntax/samba.vim
-/usr/share/vim/vim81/syntax/sas.vim
-/usr/share/vim/vim81/syntax/sass.vim
-/usr/share/vim/vim81/syntax/sather.vim
-/usr/share/vim/vim81/syntax/sbt.vim
-/usr/share/vim/vim81/syntax/scala.vim
-/usr/share/vim/vim81/syntax/scheme.vim
-/usr/share/vim/vim81/syntax/scilab.vim
-/usr/share/vim/vim81/syntax/screen.vim
-/usr/share/vim/vim81/syntax/scss.vim
-/usr/share/vim/vim81/syntax/sd.vim
-/usr/share/vim/vim81/syntax/sdc.vim
-/usr/share/vim/vim81/syntax/sdl.vim
-/usr/share/vim/vim81/syntax/sed.vim
-/usr/share/vim/vim81/syntax/sendpr.vim
-/usr/share/vim/vim81/syntax/sensors.vim
-/usr/share/vim/vim81/syntax/services.vim
-/usr/share/vim/vim81/syntax/setserial.vim
-/usr/share/vim/vim81/syntax/sgml.vim
-/usr/share/vim/vim81/syntax/sgmldecl.vim
-/usr/share/vim/vim81/syntax/sgmllnx.vim
-/usr/share/vim/vim81/syntax/sh.vim
-/usr/share/vim/vim81/syntax/sicad.vim
-/usr/share/vim/vim81/syntax/sieve.vim
-/usr/share/vim/vim81/syntax/simula.vim
-/usr/share/vim/vim81/syntax/sinda.vim
-/usr/share/vim/vim81/syntax/sindacmp.vim
-/usr/share/vim/vim81/syntax/sindaout.vim
-/usr/share/vim/vim81/syntax/sisu.vim
-/usr/share/vim/vim81/syntax/skill.vim
-/usr/share/vim/vim81/syntax/sl.vim
-/usr/share/vim/vim81/syntax/slang.vim
-/usr/share/vim/vim81/syntax/slice.vim
-/usr/share/vim/vim81/syntax/slpconf.vim
-/usr/share/vim/vim81/syntax/slpreg.vim
-/usr/share/vim/vim81/syntax/slpspi.vim
-/usr/share/vim/vim81/syntax/slrnrc.vim
-/usr/share/vim/vim81/syntax/slrnsc.vim
-/usr/share/vim/vim81/syntax/sm.vim
-/usr/share/vim/vim81/syntax/smarty.vim
-/usr/share/vim/vim81/syntax/smcl.vim
-/usr/share/vim/vim81/syntax/smil.vim
-/usr/share/vim/vim81/syntax/smith.vim
-/usr/share/vim/vim81/syntax/sml.vim
-/usr/share/vim/vim81/syntax/snnsnet.vim
-/usr/share/vim/vim81/syntax/snnspat.vim
-/usr/share/vim/vim81/syntax/snnsres.vim
-/usr/share/vim/vim81/syntax/snobol4.vim
-/usr/share/vim/vim81/syntax/spec.vim
-/usr/share/vim/vim81/syntax/specman.vim
-/usr/share/vim/vim81/syntax/spice.vim
-/usr/share/vim/vim81/syntax/splint.vim
-/usr/share/vim/vim81/syntax/spup.vim
-/usr/share/vim/vim81/syntax/spyce.vim
-/usr/share/vim/vim81/syntax/sql.vim
-/usr/share/vim/vim81/syntax/sqlanywhere.vim
-/usr/share/vim/vim81/syntax/sqlforms.vim
-/usr/share/vim/vim81/syntax/sqlhana.vim
-/usr/share/vim/vim81/syntax/sqlinformix.vim
-/usr/share/vim/vim81/syntax/sqlj.vim
-/usr/share/vim/vim81/syntax/sqloracle.vim
-/usr/share/vim/vim81/syntax/sqr.vim
-/usr/share/vim/vim81/syntax/squid.vim
-/usr/share/vim/vim81/syntax/srec.vim
-/usr/share/vim/vim81/syntax/sshconfig.vim
-/usr/share/vim/vim81/syntax/sshdconfig.vim
-/usr/share/vim/vim81/syntax/st.vim
-/usr/share/vim/vim81/syntax/stata.vim
-/usr/share/vim/vim81/syntax/stp.vim
-/usr/share/vim/vim81/syntax/strace.vim
-/usr/share/vim/vim81/syntax/sudoers.vim
-/usr/share/vim/vim81/syntax/svg.vim
-/usr/share/vim/vim81/syntax/svn.vim
-/usr/share/vim/vim81/syntax/syncolor.vim
-/usr/share/vim/vim81/syntax/synload.vim
-/usr/share/vim/vim81/syntax/syntax.vim
-/usr/share/vim/vim81/syntax/sysctl.vim
-/usr/share/vim/vim81/syntax/systemd.vim
-/usr/share/vim/vim81/syntax/systemverilog.vim
-/usr/share/vim/vim81/syntax/tads.vim
-/usr/share/vim/vim81/syntax/tags.vim
-/usr/share/vim/vim81/syntax/tak.vim
-/usr/share/vim/vim81/syntax/takcmp.vim
-/usr/share/vim/vim81/syntax/takout.vim
-/usr/share/vim/vim81/syntax/tap.vim
-/usr/share/vim/vim81/syntax/tar.vim
-/usr/share/vim/vim81/syntax/taskdata.vim
-/usr/share/vim/vim81/syntax/taskedit.vim
-/usr/share/vim/vim81/syntax/tasm.vim
-/usr/share/vim/vim81/syntax/tcl.vim
-/usr/share/vim/vim81/syntax/tcsh.vim
-/usr/share/vim/vim81/syntax/teraterm.vim
-/usr/share/vim/vim81/syntax/terminfo.vim
-/usr/share/vim/vim81/syntax/tex.vim
-/usr/share/vim/vim81/syntax/texinfo.vim
-/usr/share/vim/vim81/syntax/texmf.vim
-/usr/share/vim/vim81/syntax/tf.vim
-/usr/share/vim/vim81/syntax/tidy.vim
-/usr/share/vim/vim81/syntax/tilde.vim
-/usr/share/vim/vim81/syntax/tli.vim
-/usr/share/vim/vim81/syntax/tmux.vim
-/usr/share/vim/vim81/syntax/tpp.vim
-/usr/share/vim/vim81/syntax/trasys.vim
-/usr/share/vim/vim81/syntax/treetop.vim
-/usr/share/vim/vim81/syntax/trustees.vim
-/usr/share/vim/vim81/syntax/tsalt.vim
-/usr/share/vim/vim81/syntax/tsscl.vim
-/usr/share/vim/vim81/syntax/tssgm.vim
-/usr/share/vim/vim81/syntax/tssop.vim
-/usr/share/vim/vim81/syntax/tt2.vim
-/usr/share/vim/vim81/syntax/tt2html.vim
-/usr/share/vim/vim81/syntax/tt2js.vim
-/usr/share/vim/vim81/syntax/uc.vim
-/usr/share/vim/vim81/syntax/udevconf.vim
-/usr/share/vim/vim81/syntax/udevperm.vim
-/usr/share/vim/vim81/syntax/udevrules.vim
-/usr/share/vim/vim81/syntax/uil.vim
-/usr/share/vim/vim81/syntax/updatedb.vim
-/usr/share/vim/vim81/syntax/upstart.vim
-/usr/share/vim/vim81/syntax/upstreamdat.vim
-/usr/share/vim/vim81/syntax/upstreaminstalllog.vim
-/usr/share/vim/vim81/syntax/upstreamlog.vim
-/usr/share/vim/vim81/syntax/upstreamrpt.vim
-/usr/share/vim/vim81/syntax/usserverlog.vim
-/usr/share/vim/vim81/syntax/usw2kagtlog.vim
-/usr/share/vim/vim81/syntax/valgrind.vim
-/usr/share/vim/vim81/syntax/vb.vim
-/usr/share/vim/vim81/syntax/vera.vim
-/usr/share/vim/vim81/syntax/verilog.vim
-/usr/share/vim/vim81/syntax/verilogams.vim
-/usr/share/vim/vim81/syntax/vgrindefs.vim
-/usr/share/vim/vim81/syntax/vhdl.vim
-/usr/share/vim/vim81/syntax/vim.vim
-/usr/share/vim/vim81/syntax/viminfo.vim
-/usr/share/vim/vim81/syntax/virata.vim
-/usr/share/vim/vim81/syntax/vmasm.vim
-/usr/share/vim/vim81/syntax/voscm.vim
-/usr/share/vim/vim81/syntax/vrml.vim
-/usr/share/vim/vim81/syntax/vroom.vim
-/usr/share/vim/vim81/syntax/vsejcl.vim
-/usr/share/vim/vim81/syntax/wdiff.vim
-/usr/share/vim/vim81/syntax/web.vim
-/usr/share/vim/vim81/syntax/webmacro.vim
-/usr/share/vim/vim81/syntax/wget.vim
-/usr/share/vim/vim81/syntax/whitespace.vim
-/usr/share/vim/vim81/syntax/winbatch.vim
-/usr/share/vim/vim81/syntax/wml.vim
-/usr/share/vim/vim81/syntax/wsh.vim
-/usr/share/vim/vim81/syntax/wsml.vim
-/usr/share/vim/vim81/syntax/wvdial.vim
-/usr/share/vim/vim81/syntax/xbl.vim
-/usr/share/vim/vim81/syntax/xdefaults.vim
-/usr/share/vim/vim81/syntax/xf86conf.vim
-/usr/share/vim/vim81/syntax/xhtml.vim
-/usr/share/vim/vim81/syntax/xinetd.vim
-/usr/share/vim/vim81/syntax/xkb.vim
-/usr/share/vim/vim81/syntax/xmath.vim
-/usr/share/vim/vim81/syntax/xml.vim
-/usr/share/vim/vim81/syntax/xmodmap.vim
-/usr/share/vim/vim81/syntax/xpm.vim
-/usr/share/vim/vim81/syntax/xpm2.vim
-/usr/share/vim/vim81/syntax/xquery.vim
-/usr/share/vim/vim81/syntax/xs.vim
-/usr/share/vim/vim81/syntax/xsd.vim
-/usr/share/vim/vim81/syntax/xslt.vim
-/usr/share/vim/vim81/syntax/xxd.vim
-/usr/share/vim/vim81/syntax/yacc.vim
-/usr/share/vim/vim81/syntax/yaml.vim
-/usr/share/vim/vim81/syntax/z8a.vim
-/usr/share/vim/vim81/syntax/zimbu.vim
-/usr/share/vim/vim81/syntax/zsh.vim
-/usr/share/vim/vim81/tools/README.txt
-/usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-36.pyc
-/usr/share/vim/vim81/tools/blink.c
-/usr/share/vim/vim81/tools/ccfilter.1
-/usr/share/vim/vim81/tools/ccfilter.c
-/usr/share/vim/vim81/tools/ccfilter_README.txt
-/usr/share/vim/vim81/tools/demoserver.py
-/usr/share/vim/vim81/tools/efm_filter.pl
-/usr/share/vim/vim81/tools/efm_filter.txt
-/usr/share/vim/vim81/tools/efm_perl.pl
-/usr/share/vim/vim81/tools/mve.awk
-/usr/share/vim/vim81/tools/mve.txt
-/usr/share/vim/vim81/tools/pltags.pl
-/usr/share/vim/vim81/tools/ref
-/usr/share/vim/vim81/tools/shtags.1
-/usr/share/vim/vim81/tools/shtags.pl
-/usr/share/vim/vim81/tools/unicode.vim
-/usr/share/vim/vim81/tools/vim132
-/usr/share/vim/vim81/tools/vim_vs_net.cmd
-/usr/share/vim/vim81/tools/vimm
-/usr/share/vim/vim81/tools/vimspell.sh
-/usr/share/vim/vim81/tools/vimspell.txt
-/usr/share/vim/vim81/tools/xcmdsrv_client.c
-/usr/share/vim/vim81/tutor/README.el.cp737.txt
-/usr/share/vim/vim81/tutor/README.el.txt
-/usr/share/vim/vim81/tutor/README.txt
-/usr/share/vim/vim81/tutor/tutor
-/usr/share/vim/vim81/tutor/tutor.bar
-/usr/share/vim/vim81/tutor/tutor.bar.utf-8
-/usr/share/vim/vim81/tutor/tutor.bg.utf-8
-/usr/share/vim/vim81/tutor/tutor.ca
-/usr/share/vim/vim81/tutor/tutor.ca.utf-8
-/usr/share/vim/vim81/tutor/tutor.cs
-/usr/share/vim/vim81/tutor/tutor.cs.cp1250
-/usr/share/vim/vim81/tutor/tutor.cs.utf-8
-/usr/share/vim/vim81/tutor/tutor.de
-/usr/share/vim/vim81/tutor/tutor.de.utf-8
-/usr/share/vim/vim81/tutor/tutor.el
-/usr/share/vim/vim81/tutor/tutor.el.cp737
-/usr/share/vim/vim81/tutor/tutor.el.utf-8
-/usr/share/vim/vim81/tutor/tutor.eo
-/usr/share/vim/vim81/tutor/tutor.eo.utf-8
-/usr/share/vim/vim81/tutor/tutor.es
-/usr/share/vim/vim81/tutor/tutor.es.utf-8
-/usr/share/vim/vim81/tutor/tutor.fr
-/usr/share/vim/vim81/tutor/tutor.fr.utf-8
-/usr/share/vim/vim81/tutor/tutor.hr
-/usr/share/vim/vim81/tutor/tutor.hr.cp1250
-/usr/share/vim/vim81/tutor/tutor.hr.utf-8
-/usr/share/vim/vim81/tutor/tutor.hu
-/usr/share/vim/vim81/tutor/tutor.hu.cp1250
-/usr/share/vim/vim81/tutor/tutor.hu.utf-8
-/usr/share/vim/vim81/tutor/tutor.it
-/usr/share/vim/vim81/tutor/tutor.it.utf-8
-/usr/share/vim/vim81/tutor/tutor.ja.euc
-/usr/share/vim/vim81/tutor/tutor.ja.sjis
-/usr/share/vim/vim81/tutor/tutor.ja.utf-8
-/usr/share/vim/vim81/tutor/tutor.ko.euc
-/usr/share/vim/vim81/tutor/tutor.ko.utf-8
-/usr/share/vim/vim81/tutor/tutor.lv
-/usr/share/vim/vim81/tutor/tutor.nb
-/usr/share/vim/vim81/tutor/tutor.nb.utf-8
-/usr/share/vim/vim81/tutor/tutor.nl
-/usr/share/vim/vim81/tutor/tutor.nl.utf-8
-/usr/share/vim/vim81/tutor/tutor.no
-/usr/share/vim/vim81/tutor/tutor.no.utf-8
-/usr/share/vim/vim81/tutor/tutor.pl
-/usr/share/vim/vim81/tutor/tutor.pl.cp1250
-/usr/share/vim/vim81/tutor/tutor.pl.utf-8
-/usr/share/vim/vim81/tutor/tutor.pt
-/usr/share/vim/vim81/tutor/tutor.pt.utf-8
-/usr/share/vim/vim81/tutor/tutor.ru
-/usr/share/vim/vim81/tutor/tutor.ru.cp1251
-/usr/share/vim/vim81/tutor/tutor.ru.utf-8
-/usr/share/vim/vim81/tutor/tutor.sk
-/usr/share/vim/vim81/tutor/tutor.sk.cp1250
-/usr/share/vim/vim81/tutor/tutor.sk.utf-8
-/usr/share/vim/vim81/tutor/tutor.sr.cp1250
-/usr/share/vim/vim81/tutor/tutor.sr.utf-8
-/usr/share/vim/vim81/tutor/tutor.sv
-/usr/share/vim/vim81/tutor/tutor.sv.utf-8
-/usr/share/vim/vim81/tutor/tutor.tr.iso9
-/usr/share/vim/vim81/tutor/tutor.tr.utf-8
-/usr/share/vim/vim81/tutor/tutor.uk.utf-8
-/usr/share/vim/vim81/tutor/tutor.utf-8
-/usr/share/vim/vim81/tutor/tutor.vi.utf-8
-/usr/share/vim/vim81/tutor/tutor.vim
-/usr/share/vim/vim81/tutor/tutor.zh.big5
-/usr/share/vim/vim81/tutor/tutor.zh.euc
-/usr/share/vim/vim81/tutor/tutor.zh.utf-8
-/usr/share/vim/vim81/tutor/tutor.zh_cn.utf-8
-/usr/share/vim/vim81/tutor/tutor.zh_tw.utf-8
-/usr/share/vim/vim81/vimrc_example.vim
 
 %files man
 %defattr(-,root,root,-)
