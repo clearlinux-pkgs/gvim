@@ -4,15 +4,16 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0045
-Release  : 406
-URL      : https://github.com/vim/vim/archive/v8.1.0045.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0045.tar.gz
+Version  : 8.1.0052
+Release  : 407
+URL      : https://github.com/vim/vim/archive/v8.1.0052.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0052.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
 Requires: gvim-bin
 Requires: gvim-data
+Requires: gvim-license
 Requires: gvim-man
 BuildRequires : acl-dev
 BuildRequires : attr-dev
@@ -47,6 +48,7 @@ https://github.com/neovim/libvterm
 Summary: bin components for the gvim package.
 Group: Binaries
 Requires: gvim-data
+Requires: gvim-license
 Requires: gvim-man
 
 %description bin
@@ -61,6 +63,23 @@ Group: Data
 data components for the gvim package.
 
 
+%package doc
+Summary: doc components for the gvim package.
+Group: Documentation
+Requires: gvim-man
+
+%description doc
+doc components for the gvim package.
+
+
+%package license
+Summary: license components for the gvim package.
+Group: Default
+
+%description license
+license components for the gvim package.
+
+
 %package man
 Summary: man components for the gvim package.
 Group: Default
@@ -70,7 +89,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0045
+%setup -q -n vim-8.1.0052
 %patch1 -p1
 
 %build
@@ -78,13 +97,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1528816641
+export SOURCE_DATE_EPOCH=1528835351
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1528816641
+export SOURCE_DATE_EPOCH=1528835351
 rm -rf %{buildroot}
+mkdir -p %{buildroot}/usr/share/doc/gvim
+cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
+cp src/libvterm/LICENSE %{buildroot}/usr/share/doc/gvim/src_libvterm_LICENSE
 %make_install
 ## make_install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
@@ -1777,6 +1799,14 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+
+%files doc
+%defattr(0644,root,root,0755)
+%doc /usr/share/doc/gvim/*
+
+%files license
+%defattr(-,root,root,-)
+/usr/share/doc/gvim/src_libvterm_LICENSE
 
 %files man
 %defattr(-,root,root,-)
