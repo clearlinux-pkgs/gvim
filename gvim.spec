@@ -30,7 +30,7 @@ BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : qtbase-extras
 BuildRequires : ruby
