@@ -1871,3 +1871,5 @@
 /usr/share/vim/vim81/colors/tools/check_colors.vim
 /usr/share/vim/vim81/syntax/debcopyright.vim
 /usr/share/vim/vim81/autoload/xmlformat.vim
+/usr/share/vim/vim81/lang/da/LC_MESSAGES/vim.mo
+/usr/share/vim/vim81/lang/menu_da.utf-8.vim
