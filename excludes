@@ -1873,3 +1873,4 @@
 /usr/share/vim/vim81/autoload/xmlformat.vim
 /usr/share/vim/vim81/lang/da/LC_MESSAGES/vim.mo
 /usr/share/vim/vim81/lang/menu_da.utf-8.vim
+/usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-37.pyc

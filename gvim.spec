@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.0130
-Release  : 431
+Release  : 432
 URL      : https://github.com/vim/vim/archive/v8.1.0130.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.0130.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -87,12 +87,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530382993
+export SOURCE_DATE_EPOCH=1530384554
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530382993
+export SOURCE_DATE_EPOCH=1530384554
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
@@ -1695,6 +1695,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/syntax/zimbu.vim
 %exclude /usr/share/vim/vim81/syntax/zsh.vim
 %exclude /usr/share/vim/vim81/tools/README.txt
+%exclude /usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-37.pyc
 %exclude /usr/share/vim/vim81/tools/blink.c
 %exclude /usr/share/vim/vim81/tools/ccfilter.1
 %exclude /usr/share/vim/vim81/tools/ccfilter.c
@@ -1790,7 +1791,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-37.pyc
 
 %files license
 %defattr(-,root,root,-)
