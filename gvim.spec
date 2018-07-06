@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.0155
-Release  : 434
+Release  : 435
 URL      : https://github.com/vim/vim/archive/v8.1.0155.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.0155.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -88,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530883678
+export SOURCE_DATE_EPOCH=1530884788
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530883678
+export SOURCE_DATE_EPOCH=1530884788
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
@@ -861,6 +861,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.1250.vim
 %exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.1252.vim
 %exclude /usr/share/vim/vim81/lang/menu_czech_czech_republic.ascii.vim
+%exclude /usr/share/vim/vim81/lang/menu_da.latin1.vim
 %exclude /usr/share/vim/vim81/lang/menu_da.utf-8.vim
 %exclude /usr/share/vim/vim81/lang/menu_de.latin1.vim
 %exclude /usr/share/vim/vim81/lang/menu_de.utf-8.vim
@@ -1791,7 +1792,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim81/lang/menu_da.latin1.vim
 
 %files license
 %defattr(-,root,root,-)
