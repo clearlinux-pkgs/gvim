@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0146
-Release  : 433
-URL      : https://github.com/vim/vim/archive/v8.1.0146.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0146.tar.gz
+Version  : 8.1.0155
+Release  : 434
+URL      : https://github.com/vim/vim/archive/v8.1.0155.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0155.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -21,6 +21,7 @@ BuildRequires : desktop-file-utils
 BuildRequires : elfutils-dev
 BuildRequires : gtk3-dev
 BuildRequires : gvfs-dev
+BuildRequires : libXdmcp-dev
 BuildRequires : libXt-dev
 BuildRequires : lua-dev
 BuildRequires : ncurses-dev
@@ -79,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0146
+%setup -q -n vim-8.1.0155
 %patch1 -p1
 
 %build
@@ -87,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530657113
+export SOURCE_DATE_EPOCH=1530883678
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530657113
+export SOURCE_DATE_EPOCH=1530883678
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
