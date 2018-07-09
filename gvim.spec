@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0157
-Release  : 437
-URL      : https://github.com/vim/vim/archive/v8.1.0157.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0157.tar.gz
+Version  : 8.1.0172
+Release  : 438
+URL      : https://github.com/vim/vim/archive/v8.1.0172.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0172.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -80,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0157
+%setup -q -n vim-8.1.0172
 %patch1 -p1
 
 %build
@@ -88,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1530930752
+export SOURCE_DATE_EPOCH=1531107828
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1530930752
+export SOURCE_DATE_EPOCH=1531107828
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
@@ -1792,6 +1792,8 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
+/usr/share/vim/vim81/tutor/tutor.da
+/usr/share/vim/vim81/tutor/tutor.da.utf-8
 
 %files license
 %defattr(-,root,root,-)
@@ -1995,3 +1997,81 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/man/ru.UTF-8/man1/vimdiff.1
 %exclude /usr/share/man/ru.UTF-8/man1/vimtutor.1
 %exclude /usr/share/man/ru.UTF-8/man1/xxd.1
+/usr/share/man/da.ISO8859-1/man1/eview.1
+/usr/share/man/da.ISO8859-1/man1/evim.1
+/usr/share/man/da.ISO8859-1/man1/ex.1
+/usr/share/man/da.ISO8859-1/man1/gview.1
+/usr/share/man/da.ISO8859-1/man1/gvim.1
+/usr/share/man/da.ISO8859-1/man1/gvimdiff.1
+/usr/share/man/da.ISO8859-1/man1/rgview.1
+/usr/share/man/da.ISO8859-1/man1/rgvim.1
+/usr/share/man/da.ISO8859-1/man1/rview.1
+/usr/share/man/da.ISO8859-1/man1/rvim.1
+/usr/share/man/da.ISO8859-1/man1/view.1
+/usr/share/man/da.ISO8859-1/man1/vim.1
+/usr/share/man/da.ISO8859-1/man1/vimdiff.1
+/usr/share/man/da.ISO8859-1/man1/vimtutor.1
+/usr/share/man/da.UTF-8/man1/eview.1
+/usr/share/man/da.UTF-8/man1/evim.1
+/usr/share/man/da.UTF-8/man1/ex.1
+/usr/share/man/da.UTF-8/man1/gview.1
+/usr/share/man/da.UTF-8/man1/gvim.1
+/usr/share/man/da.UTF-8/man1/gvimdiff.1
+/usr/share/man/da.UTF-8/man1/rgview.1
+/usr/share/man/da.UTF-8/man1/rgvim.1
+/usr/share/man/da.UTF-8/man1/rview.1
+/usr/share/man/da.UTF-8/man1/rvim.1
+/usr/share/man/da.UTF-8/man1/view.1
+/usr/share/man/da.UTF-8/man1/vim.1
+/usr/share/man/da.UTF-8/man1/vimdiff.1
+/usr/share/man/da.UTF-8/man1/vimtutor.1
+/usr/share/man/da/man1/eview.1
+/usr/share/man/da/man1/evim.1
+/usr/share/man/da/man1/ex.1
+/usr/share/man/da/man1/gview.1
+/usr/share/man/da/man1/gvim.1
+/usr/share/man/da/man1/gvimdiff.1
+/usr/share/man/da/man1/rgview.1
+/usr/share/man/da/man1/rgvim.1
+/usr/share/man/da/man1/rview.1
+/usr/share/man/da/man1/rvim.1
+/usr/share/man/da/man1/view.1
+/usr/share/man/da/man1/vim.1
+/usr/share/man/da/man1/vimdiff.1
+/usr/share/man/da/man1/vimtutor.1
+/usr/share/man/de.ISO8859-1/man1/eview.1
+/usr/share/man/de.ISO8859-1/man1/evim.1
+/usr/share/man/de.ISO8859-1/man1/ex.1
+/usr/share/man/de.ISO8859-1/man1/gview.1
+/usr/share/man/de.ISO8859-1/man1/gvim.1
+/usr/share/man/de.ISO8859-1/man1/rgview.1
+/usr/share/man/de.ISO8859-1/man1/rgvim.1
+/usr/share/man/de.ISO8859-1/man1/rview.1
+/usr/share/man/de.ISO8859-1/man1/rvim.1
+/usr/share/man/de.ISO8859-1/man1/view.1
+/usr/share/man/de.ISO8859-1/man1/vim.1
+/usr/share/man/de.ISO8859-1/man1/vimtutor.1
+/usr/share/man/de.UTF-8/man1/eview.1
+/usr/share/man/de.UTF-8/man1/evim.1
+/usr/share/man/de.UTF-8/man1/ex.1
+/usr/share/man/de.UTF-8/man1/gview.1
+/usr/share/man/de.UTF-8/man1/gvim.1
+/usr/share/man/de.UTF-8/man1/rgview.1
+/usr/share/man/de.UTF-8/man1/rgvim.1
+/usr/share/man/de.UTF-8/man1/rview.1
+/usr/share/man/de.UTF-8/man1/rvim.1
+/usr/share/man/de.UTF-8/man1/view.1
+/usr/share/man/de.UTF-8/man1/vim.1
+/usr/share/man/de.UTF-8/man1/vimtutor.1
+/usr/share/man/de/man1/eview.1
+/usr/share/man/de/man1/evim.1
+/usr/share/man/de/man1/ex.1
+/usr/share/man/de/man1/gview.1
+/usr/share/man/de/man1/gvim.1
+/usr/share/man/de/man1/rgview.1
+/usr/share/man/de/man1/rgvim.1
+/usr/share/man/de/man1/rview.1
+/usr/share/man/de/man1/rvim.1
+/usr/share/man/de/man1/view.1
+/usr/share/man/de/man1/vim.1
+/usr/share/man/de/man1/vimtutor.1
