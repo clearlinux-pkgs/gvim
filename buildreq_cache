@@ -1,0 +1,8 @@
+8.1.0189
+lua-dev
+elfutils-dev
+pkgconfig(xpm)
+desktop-file-utils
+pkgconfig(libxml-2.0)
+ruby
+libXdmcp-dev
