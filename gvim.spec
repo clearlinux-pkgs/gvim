@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0197
-Release  : 454
-URL      : https://github.com/vim/vim/archive/v8.1.0197.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0197.tar.gz
+Version  : 8.1.0200
+Release  : 455
+URL      : https://github.com/vim/vim/archive/v8.1.0200.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0200.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -80,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0197
+%setup -q -n vim-8.1.0200
 %patch1 -p1
 
 %build
@@ -88,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532100286
+export SOURCE_DATE_EPOCH=1532183906
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1532100286
+export SOURCE_DATE_EPOCH=1532183906
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT

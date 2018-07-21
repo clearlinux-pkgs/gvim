@@ -1,8 +1,8 @@
-8.1.0197
+8.1.0200
 pkgconfig(libxml-2.0)
 lua-dev
 elfutils-dev
 pkgconfig(xpm)
-libXdmcp-dev
 ruby
 desktop-file-utils
+libXdmcp-dev
