@@ -1956,3 +1956,6 @@
 /usr/share/man/de/man1/vimtutor.1
 /usr/share/vim/vim81/tutor/tutor.lv.utf-8
 /usr/share/vim/vim81/autoload/RstFold.vim
+/usr/share/vim/vim81/indent/wast.vim
+/usr/share/vim/vim81/syntax/wast.vim
+/usr/share/vim/vim81/ftplugin/wast.vim
