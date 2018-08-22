@@ -1959,3 +1959,4 @@
 /usr/share/vim/vim81/indent/wast.vim
 /usr/share/vim/vim81/syntax/wast.vim
 /usr/share/vim/vim81/ftplugin/wast.vim
+/usr/share/vim/vim81/pack/dist/opt/cfilter/plugin/cfilter.vim
