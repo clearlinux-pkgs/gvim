@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0342
-Release  : 506
-URL      : https://github.com/vim/vim/archive/v8.1.0342.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0342.tar.gz
+Version  : 8.1.0346
+Release  : 507
+URL      : https://github.com/vim/vim/archive/v8.1.0346.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0346.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : MIT
@@ -29,7 +29,6 @@ BuildRequires : lua-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(ice)
-BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
@@ -81,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0342
+%setup -q -n vim-8.1.0346
 %patch1 -p1
 
 %build
@@ -89,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1535814456
+export SOURCE_DATE_EPOCH=1535931946
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1535814456
+export SOURCE_DATE_EPOCH=1535931946
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/doc/gvim/src_libvterm_LICENSE
@@ -1014,7 +1013,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/macros/matchit.vim
 %exclude /usr/share/vim/vim81/macros/maze/Makefile
 %exclude /usr/share/vim/vim81/macros/maze/README.txt
-%exclude /usr/share/vim/vim81/macros/maze/main.aap
 %exclude /usr/share/vim/vim81/macros/maze/maze.c
 %exclude /usr/share/vim/vim81/macros/maze/maze_5.78
 %exclude /usr/share/vim/vim81/macros/maze/maze_mac
