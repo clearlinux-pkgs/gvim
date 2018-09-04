@@ -661,6 +661,7 @@
 /usr/share/vim/vim81/indent/dictconf.vim
 /usr/share/vim/vim81/indent/dictdconf.vim
 /usr/share/vim/vim81/indent/docbk.vim
+/usr/share/vim/vim81/indent/dosbatch.vim
 /usr/share/vim/vim81/indent/dtd.vim
 /usr/share/vim/vim81/indent/dtrace.vim
 /usr/share/vim/vim81/indent/dylan.vim
@@ -1755,6 +1756,7 @@
 /usr/share/vim/vim81/autoload/netrw_gitignore.vim
 /usr/share/vim/vim81/colors/industry.vim
 /usr/share/vim/vim81/compiler/go.vim
+/usr/share/vim/vim81/compiler/stack.vim
 /usr/share/vim/vim81/defaults.vim
 /usr/share/vim/vim81/doc/channel.txt
 /usr/share/vim/vim81/doc/pi_logipat.txt

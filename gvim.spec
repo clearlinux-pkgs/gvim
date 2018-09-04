@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.0347
-Release  : 509
+Release  : 510
 URL      : https://github.com/vim/vim/archive/v8.1.0347.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.0347.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -89,12 +89,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536090722
+export SOURCE_DATE_EPOCH=1536097641
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1536090722
+export SOURCE_DATE_EPOCH=1536097641
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/doc/gvim/src_libvterm_LICENSE
@@ -258,6 +258,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/compiler/sass.vim
 %exclude /usr/share/vim/vim81/compiler/se.vim
 %exclude /usr/share/vim/vim81/compiler/splint.vim
+%exclude /usr/share/vim/vim81/compiler/stack.vim
 %exclude /usr/share/vim/vim81/compiler/tcl.vim
 %exclude /usr/share/vim/vim81/compiler/tex.vim
 %exclude /usr/share/vim/vim81/compiler/tidy.vim
@@ -653,6 +654,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/indent/dictconf.vim
 %exclude /usr/share/vim/vim81/indent/dictdconf.vim
 %exclude /usr/share/vim/vim81/indent/docbk.vim
+%exclude /usr/share/vim/vim81/indent/dosbatch.vim
 %exclude /usr/share/vim/vim81/indent/dtd.vim
 %exclude /usr/share/vim/vim81/indent/dtrace.vim
 %exclude /usr/share/vim/vim81/indent/dylan.vim
@@ -1800,8 +1802,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim81/compiler/stack.vim
-/usr/share/vim/vim81/indent/dosbatch.vim
 
 %files license
 %defattr(-,root,root,-)
