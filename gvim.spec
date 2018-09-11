@@ -4,13 +4,13 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0366
-Release  : 516
-URL      : https://github.com/vim/vim/archive/v8.1.0366.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0366.tar.gz
+Version  : 8.1.0369
+Release  : 517
+URL      : https://github.com/vim/vim/archive/v8.1.0369.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0369.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
-License  : MIT
+License  : LGPL-2.1 MIT
 Requires: gvim-bin
 Requires: gvim-data
 Requires: gvim-license
@@ -80,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0366
+%setup -q -n vim-8.1.0369
 %patch1 -p1
 
 %build
@@ -88,15 +88,16 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1536632813
+export SOURCE_DATE_EPOCH=1536709157
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1536632813
+export SOURCE_DATE_EPOCH=1536709157
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/doc/gvim/src_libvterm_LICENSE
+cp src/xdiff/COPYING %{buildroot}/usr/share/doc/gvim/src_xdiff_COPYING
 cp src/xpm/COPYRIGHT %{buildroot}/usr/share/doc/gvim/src_xpm_COPYRIGHT
 %make_install
 ## install_append content
@@ -1805,6 +1806,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %files license
 %defattr(-,root,root,-)
 /usr/share/doc/gvim/src_libvterm_LICENSE
+/usr/share/doc/gvim/src_xdiff_COPYING
 /usr/share/doc/gvim/src_xpm_COPYRIGHT
 
 %files man
