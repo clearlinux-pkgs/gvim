@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0401
-Release  : 524
-URL      : https://github.com/vim/vim/archive/v8.1.0401.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0401.tar.gz
+Version  : 8.1.0408
+Release  : 525
+URL      : https://github.com/vim/vim/archive/v8.1.0408.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0408.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
@@ -47,9 +47,9 @@ https://github.com/neovim/libvterm
 %package bin
 Summary: bin components for the gvim package.
 Group: Binaries
-Requires: gvim-data
-Requires: gvim-license
-Requires: gvim-man
+Requires: gvim-data = %{version}-%{release}
+Requires: gvim-license = %{version}-%{release}
+Requires: gvim-man = %{version}-%{release}
 
 %description bin
 bin components for the gvim package.
@@ -80,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0401
+%setup -q -n vim-8.1.0408
 %patch1 -p1
 
 %build
@@ -88,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1537200876
+export SOURCE_DATE_EPOCH=1537329346
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1537200876
+export SOURCE_DATE_EPOCH=1537329346
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/doc/gvim/src_libvterm_LICENSE
