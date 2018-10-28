@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0497
-Release  : 560
-URL      : https://github.com/vim/vim/archive/v8.1.0497.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0497.tar.gz
+Version  : 8.1.0499
+Release  : 561
+URL      : https://github.com/vim/vim/archive/v8.1.0499.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0499.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
@@ -80,7 +80,7 @@ man components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0497
+%setup -q -n vim-8.1.0499
 %patch1 -p1
 
 %build
@@ -88,12 +88,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1540493106
+export SOURCE_DATE_EPOCH=1540735504
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1540493106
+export SOURCE_DATE_EPOCH=1540735504
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
