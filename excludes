@@ -1963,3 +1963,5 @@
 /usr/share/vim/vim81/ftplugin/wast.vim
 /usr/share/vim/vim81/pack/dist/opt/cfilter/plugin/cfilter.vim
 /usr/share/vim/vim81/autoload/haskellcomplete.vim
+/usr/share/vim/vim81/indent/raml.vim
+/usr/share/vim/vim81/syntax/raml.vim
