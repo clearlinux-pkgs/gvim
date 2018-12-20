@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.0610
-Release  : 611
+Release  : 612
 URL      : https://github.com/vim/vim/archive/v8.1.0610.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.0610.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
@@ -29,6 +29,7 @@ BuildRequires : lua-dev
 BuildRequires : ncurses-dev
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(ice)
+BuildRequires : pkgconfig(libxml-2.0)
 BuildRequires : pkgconfig(sm)
 BuildRequires : pkgconfig(xpm)
 BuildRequires : pkgconfig(xt)
@@ -88,12 +89,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545257912
+export SOURCE_DATE_EPOCH=1545267761
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1545257912
+export SOURCE_DATE_EPOCH=1545267761
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
@@ -356,6 +357,7 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 %exclude /usr/share/vim/vim81/doc/tagsrch.txt
 %exclude /usr/share/vim/vim81/doc/term.txt
 %exclude /usr/share/vim/vim81/doc/terminal.txt
+%exclude /usr/share/vim/vim81/doc/textprop.txt
 %exclude /usr/share/vim/vim81/doc/tips.txt
 %exclude /usr/share/vim/vim81/doc/todo.txt
 %exclude /usr/share/vim/vim81/doc/uganda.txt
@@ -1804,7 +1806,6 @@ mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 /usr/share/icons/hicolor/48x48/apps/gvim.png
 /usr/share/icons/locolor/16x16/apps/gvim.png
 /usr/share/icons/locolor/32x32/apps/gvim.png
-/usr/share/vim/vim81/doc/textprop.txt
 
 %files license
 %defattr(0644,root,root,0755)
