@@ -4,11 +4,11 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.0895
-Release  : 677
-URL      : https://github.com/vim/vim/archive/v8.1.0895.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.0895.tar.gz
-Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
+Version  : 8.1.0907
+Release  : 678
+URL      : https://github.com/vim/vim/archive/v8.1.0907.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.0907.tar.gz
+Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
 Requires: gvim-bin = %{version}-%{release}
@@ -22,7 +22,6 @@ BuildRequires : elfutils-dev
 BuildRequires : gtk3-dev
 BuildRequires : gvfs-dev
 BuildRequires : libXdmcp-dev
-BuildRequires : libXpm-dev
 BuildRequires : libXt-dev
 BuildRequires : lua-dev
 BuildRequires : ncurses-dev
@@ -36,12 +35,14 @@ BuildRequires : ruby
 Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
 %description
-This is a MODIFIED version of libvterm.
-The original can be found:
-- on the original site (tar archive and Bazaar repository):
-http://www.leonerd.org.uk/code/libvterm/
-- cloned on Github:
-https://github.com/neovim/libvterm
+WHAT IS VIM?
+Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
+features have been added: multi-level undo, syntax highlighting, command line
+history, on-line help, spell checking, filename completion, block operations,
+script language, etc.  There is also a Graphical User Interface (GUI)
+available.  Still, Vi compatibility is maintained, those who have Vi "in the
+fingers" will feel at home.  See "runtime/doc/vi_diff.txt" for differences with
+Vi.
 
 %package bin
 Summary: bin components for the gvim package.
@@ -70,7 +71,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.0895
+%setup -q -n vim-8.1.0907
 %patch1 -p1
 
 %build
@@ -78,12 +79,12 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1549884253
+export SOURCE_DATE_EPOCH=1550019477
 %configure  --with-features=huge  --with-tlib=ncurses  --enable-gtk3-check --enable-cscope --enable-multibyte --enable-gui --enable-gui=gtk3 --enable-luainterp --enable-pythoninterp -enable-rubyinterp --enable-python3interp
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1549884253
+export SOURCE_DATE_EPOCH=1550019477
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
