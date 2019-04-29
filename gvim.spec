@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.1237
-Release  : 749
+Release  : 750
 URL      : https://github.com/vim/vim/archive/v8.1.1237/vim-8.1.1237.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.1237/vim-8.1.1237.tar.gz
 Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
@@ -80,7 +80,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1556569257
+export SOURCE_DATE_EPOCH=1556569777
 %configure  --with-features=huge \
 --with-tlib=ncurses \
 --enable-gtk3-check \
@@ -95,7 +95,7 @@ export SOURCE_DATE_EPOCH=1556569257
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1556569257
+export SOURCE_DATE_EPOCH=1556569777
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
