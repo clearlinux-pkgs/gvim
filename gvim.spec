@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.1329
-Release  : 774
-URL      : https://github.com/vim/vim/archive/v8.1.1329/vim-8.1.1329.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.1329/vim-8.1.1329.tar.gz
+Version  : 8.1.1332
+Release  : 775
+URL      : https://github.com/vim/vim/archive/v8.1.1332/vim-8.1.1332.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.1332/vim-8.1.1332.tar.gz
 Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
@@ -19,6 +19,7 @@ BuildRequires : attr-dev
 BuildRequires : buildreq-qmake
 BuildRequires : desktop-file-utils
 BuildRequires : elfutils-dev
+BuildRequires : gpm-dev
 BuildRequires : gtk3-dev
 BuildRequires : gvfs-dev
 BuildRequires : libXdmcp-dev
@@ -72,7 +73,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.1329
+%setup -q -n vim-8.1.1332
 %patch1 -p1
 
 %build
@@ -80,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1557754995
+export SOURCE_DATE_EPOCH=1557930390
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
@@ -102,7 +103,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1557754995
+export SOURCE_DATE_EPOCH=1557930390
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE

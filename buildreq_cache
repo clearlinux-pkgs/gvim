@@ -1,6 +1,7 @@
-8.1.1329
+8.1.1332
 desktop-file-utils
 elfutils-dev
+gpm-dev
 libXdmcp-dev
 libXpm-dev
 lua-dev
