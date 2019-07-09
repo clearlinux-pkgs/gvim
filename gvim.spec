@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.1649
-Release  : 846
-URL      : https://github.com/vim/vim/archive/v8.1.1649/vim-8.1.1649.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.1649/vim-8.1.1649.tar.gz
+Version  : 8.1.1655
+Release  : 847
+URL      : https://github.com/vim/vim/archive/v8.1.1655/vim-8.1.1655.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.1655/vim-8.1.1655.tar.gz
 Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
@@ -73,7 +73,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.1649
+%setup -q -n vim-8.1.1655
 %patch1 -p1
 
 %build
@@ -81,7 +81,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562538049
+export SOURCE_DATE_EPOCH=1562636700
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -104,7 +104,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1562538049
+export SOURCE_DATE_EPOCH=1562636700
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
