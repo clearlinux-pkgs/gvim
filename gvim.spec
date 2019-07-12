@@ -4,11 +4,11 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.1667
-Release  : 851
-URL      : https://github.com/vim/vim/archive/v8.1.1667/vim-8.1.1667.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.1667/vim-8.1.1667.tar.gz
-Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
+Version  : 8.1.1673
+Release  : 852
+URL      : https://github.com/vim/vim/archive/v8.1.1673/vim-8.1.1673.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.1673/vim-8.1.1673.tar.gz
+Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
 Requires: gvim-bin = %{version}-%{release}
@@ -37,14 +37,12 @@ BuildRequires : ruby
 Patch1: 0001-fix-symlink-from-gvimdiff-and-gview.patch
 
 %description
-WHAT IS VIM?
-Vim is a greatly improved version of the good old UNIX editor Vi.  Many new
-features have been added: multi-level undo, syntax highlighting, command line
-history, on-line help, spell checking, filename completion, block operations,
-script language, etc.  There is also a Graphical User Interface (GUI)
-available.  Still, Vi compatibility is maintained, those who have Vi "in the
-fingers" will feel at home.  See "runtime/doc/vi_diff.txt" for differences with
-Vi.
+This is a MODIFIED version of libvterm.
+The original can be found:
+- on the original site (tar archive and Bazaar repository):
+http://www.leonerd.org.uk/code/libvterm/
+- cloned on Github:
+https://github.com/neovim/libvterm
 
 %package bin
 Summary: bin components for the gvim package.
@@ -73,7 +71,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.1667
+%setup -q -n vim-8.1.1673
 %patch1 -p1
 
 %build
@@ -81,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562949468
+export SOURCE_DATE_EPOCH=1562965947
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -104,7 +102,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1562949468
+export SOURCE_DATE_EPOCH=1562965947
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
