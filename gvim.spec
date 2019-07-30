@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.1773
-Release  : 872
+Release  : 873
 URL      : https://github.com/vim/vim/archive/v8.1.1773/vim-8.1.1773.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.1773/vim-8.1.1773.tar.gz
 Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
