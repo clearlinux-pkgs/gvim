@@ -835,8 +835,8 @@
 /usr/share/vim/vim81/lang/menu_ca.utf-8.vim
 /usr/share/vim/vim81/lang/menu_ca_es.latin1.vim
 /usr/share/vim/vim81/lang/menu_ca_es.utf-8.vim
-/usr/share/vim/vim81/lang/menu_chinese(gb)_gb.936.vim
-/usr/share/vim/vim81/lang/menu_chinese(taiwan)_taiwan.950.vim
+/usr/share/vim/vim81/lang/menu_chinese"(gb)"_gb.936.vim
+/usr/share/vim/vim81/lang/menu_chinese"(taiwan)"_taiwan.950.vim
 /usr/share/vim/vim81/lang/menu_chinese_gb.936.vim
 /usr/share/vim/vim81/lang/menu_chinese_taiwan.950.vim
 /usr/share/vim/vim81/lang/menu_cs.cp1250.vim
@@ -1733,7 +1733,6 @@
 /usr/bin/rview
 /usr/bin/rvim
 /usr/bin/view
-/usr/bin/vim
 /usr/bin/vimdiff
 /usr/bin/vimtutor
 /usr/bin/xxd
