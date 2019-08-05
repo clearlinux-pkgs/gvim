@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.1815
-Release  : 880
-URL      : https://github.com/vim/vim/archive/v8.1.1815/vim-8.1.1815.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.1815/vim-8.1.1815.tar.gz
+Version  : 8.1.1817
+Release  : 881
+URL      : https://github.com/vim/vim/archive/v8.1.1817/vim-8.1.1817.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.1817/vim-8.1.1817.tar.gz
 Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
@@ -16,7 +16,6 @@ Requires: gvim-data = %{version}-%{release}
 Requires: gvim-license = %{version}-%{release}
 BuildRequires : acl-dev
 BuildRequires : attr-dev
-BuildRequires : buildreq-qmake
 BuildRequires : desktop-file-utils
 BuildRequires : elfutils-dev
 BuildRequires : gpm-dev
@@ -70,7 +69,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.1815
+%setup -q -n vim-8.1.1817
 %patch1 -p1
 
 %build
@@ -78,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1564954864
+export SOURCE_DATE_EPOCH=1564971790
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -101,7 +100,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1564954864
+export SOURCE_DATE_EPOCH=1564971790
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
