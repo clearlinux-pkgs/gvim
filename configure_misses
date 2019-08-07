@@ -41,6 +41,9 @@ Configure miss: --disable-icon-cache-update argument
 Configure miss: --disable-desktop-database-update argument
 Configure miss: CYGWIN or MSYS environment
 Configure miss: whether toupper is broken
+Configure miss: stropts.h usability
+Configure miss: stropts.h presence
+Configure miss: stropts.h
 Configure miss: sys/stream.h usability
 Configure miss: sys/stream.h presence
 Configure miss: sys/stream.h
