@@ -4,11 +4,11 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.1.1830
-Release  : 885
-URL      : https://github.com/vim/vim/archive/v8.1.1830/vim-8.1.1830.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.1.1830/vim-8.1.1830.tar.gz
-Summary  : Vi Improved, a highly configurable, improved version of the vi text editor (with advanced features, such as a GUI)
+Version  : 8.1.1832
+Release  : 886
+URL      : https://github.com/vim/vim/archive/v8.1.1832/vim-8.1.1832.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.1.1832/vim-8.1.1832.tar.gz
+Summary  : Abstract VT220/Xterm/ECMA-48 emulation library
 Group    : Development/Tools
 License  : LGPL-2.1 MIT
 Requires: gvim-bin = %{version}-%{release}
@@ -69,7 +69,7 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.1.1830
+%setup -q -n vim-8.1.1832
 %patch1 -p1
 
 %build
@@ -77,8 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1565320317
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1565367060
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -101,7 +100,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1565320317
+export SOURCE_DATE_EPOCH=1565367060
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/src_libvterm_LICENSE
