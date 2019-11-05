@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.1.2256
-Release  : 1001
+Release  : 1002
 URL      : https://github.com/vim/vim/archive/v8.1.2256/vim-8.1.2256.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.1.2256/vim-8.1.2256.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -71,6 +71,7 @@ license components for the gvim package.
 
 %prep
 %setup -q -n vim-8.1.2256
+cd %{_builddir}/vim-8.1.2256
 %patch1 -p1
 
 %build
@@ -78,8 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1572969983
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1572987533
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,7 +102,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1572969983
+export SOURCE_DATE_EPOCH=1572987533
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.1.2256/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
@@ -2083,6 +2083,8 @@ rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mma.vim
 rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/meson.vim
 rm -f %{buildroot}/usr/share/vim/vim81/indent/meson.vim
 rm -f %{buildroot}/usr/share/vim/vim81/syntax/meson.vim
+rm -f %{buildroot}/usr/share/icons/locolor/16x16/apps/gvim.png
+rm -f %{buildroot}/usr/share/icons/locolor/32x32/apps/gvim.png
 ## install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 rm -rf %{buildroot}/usr/share/vim/vim81
@@ -2103,8 +2105,6 @@ rm -rf %{buildroot}/usr/share/man
 %defattr(-,root,root,-)
 /usr/share/applications/gvim.desktop
 /usr/share/icons/hicolor/48x48/apps/gvim.png
-/usr/share/icons/locolor/16x16/apps/gvim.png
-/usr/share/icons/locolor/32x32/apps/gvim.png
 
 %files license
 %defattr(0644,root,root,0755)
