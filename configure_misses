@@ -33,8 +33,6 @@ Configure miss: --disable-rightleft argument
 Configure miss: --disable-arabic argument
 Configure miss: --enable-hangulinput argument
 Configure miss: --enable-fontset argument
-Configure miss: _XdmcpAuthDoIt in -lXdmcp
-Configure miss: IceOpenConnection in -lICE
 Configure miss: if X11 header files implicitly declare return values
 Configure miss: size of wchar_t is 2 bytes
 Configure miss: --disable-icon-cache-update argument
