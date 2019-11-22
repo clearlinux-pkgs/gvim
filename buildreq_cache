@@ -1,10 +1,8 @@
-8.1.2325
+8.1.2333
 desktop-file-utils
 elfutils-dev
 gpm-dev
-libXdmcp-dev
 libXpm-dev
 lua-dev
 pkgconfig(xpm)
 ruby
-util-linux
