@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.0012
-Release  : 1040
+Release  : 1041
 URL      : https://github.com/vim/vim/archive/v8.2.0012/vim-8.2.0012.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.0012/vim-8.2.0012.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576512466
+export SOURCE_DATE_EPOCH=1576514041
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -101,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1576512466
+export SOURCE_DATE_EPOCH=1576514041
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.0012/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
@@ -2084,6 +2084,40 @@ rm -f %{buildroot}/usr/share/vim/vim82/indent/meson.vim
 rm -f %{buildroot}/usr/share/vim/vim82/syntax/meson.vim
 rm -f %{buildroot}/usr/share/icons/locolor/16x16/apps/gvim.png
 rm -f %{buildroot}/usr/share/icons/locolor/32x32/apps/gvim.png
+rm -f %{buildroot}/usr/share/icons/hicolor/48x48/apps/gvim.png
+rm -f %{buildroot}/usr/share/vim/vim82/doc/popup.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/testing.txt
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/8th.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dune.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/javascriptreact.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/nroff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/bash.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/javascriptreact.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/typescript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_is.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_is.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_is_is.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_is_is.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr.cp1254.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr.iso_8859-9.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr_tr.cp1254.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr_tr.iso_8859-9.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_tr_tr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/tr/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/matchit/autoload/matchit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/8th.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bash.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dart.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dune.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hollywood.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/javascriptreact.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/template.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/typescript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/typescriptcommon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/typescriptreact.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vue.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ko
 ## install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 rm -rf %{buildroot}/usr/share/vim/vim81
@@ -2103,40 +2137,6 @@ rm -rf %{buildroot}/usr/share/man
 %files data
 %defattr(-,root,root,-)
 /usr/share/applications/gvim.desktop
-/usr/share/icons/hicolor/48x48/apps/gvim.png
-/usr/share/vim/vim82/doc/popup.txt
-/usr/share/vim/vim82/doc/testing.txt
-/usr/share/vim/vim82/ftplugin/8th.vim
-/usr/share/vim/vim82/ftplugin/dune.vim
-/usr/share/vim/vim82/ftplugin/javascriptreact.vim
-/usr/share/vim/vim82/ftplugin/nroff.vim
-/usr/share/vim/vim82/indent/bash.vim
-/usr/share/vim/vim82/indent/javascriptreact.vim
-/usr/share/vim/vim82/indent/typescript.vim
-/usr/share/vim/vim82/lang/menu_is.latin1.vim
-/usr/share/vim/vim82/lang/menu_is.utf-8.vim
-/usr/share/vim/vim82/lang/menu_is_is.latin1.vim
-/usr/share/vim/vim82/lang/menu_is_is.utf-8.vim
-/usr/share/vim/vim82/lang/menu_tr.cp1254.vim
-/usr/share/vim/vim82/lang/menu_tr.iso_8859-9.vim
-/usr/share/vim/vim82/lang/menu_tr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_tr_tr.cp1254.vim
-/usr/share/vim/vim82/lang/menu_tr_tr.iso_8859-9.vim
-/usr/share/vim/vim82/lang/menu_tr_tr.utf-8.vim
-/usr/share/vim/vim82/lang/tr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/pack/dist/opt/matchit/autoload/matchit.vim
-/usr/share/vim/vim82/syntax/8th.vim
-/usr/share/vim/vim82/syntax/bash.vim
-/usr/share/vim/vim82/syntax/dart.vim
-/usr/share/vim/vim82/syntax/dune.vim
-/usr/share/vim/vim82/syntax/hollywood.vim
-/usr/share/vim/vim82/syntax/javascriptreact.vim
-/usr/share/vim/vim82/syntax/template.vim
-/usr/share/vim/vim82/syntax/typescript.vim
-/usr/share/vim/vim82/syntax/typescriptcommon.vim
-/usr/share/vim/vim82/syntax/typescriptreact.vim
-/usr/share/vim/vim82/syntax/vue.vim
-/usr/share/vim/vim82/tutor/tutor.ko
 
 %files license
 %defattr(0644,root,root,0755)
