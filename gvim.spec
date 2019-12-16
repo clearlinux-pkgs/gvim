@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.0012
-Release  : 1039
+Release  : 1040
 URL      : https://github.com/vim/vim/archive/v8.2.0012/vim-8.2.0012.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.0012/vim-8.2.0012.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1576508308
+export SOURCE_DATE_EPOCH=1576512466
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -101,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1576508308
+export SOURCE_DATE_EPOCH=1576512466
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.0012/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
@@ -290,1552 +290,1552 @@ rm -f %{buildroot}/usr/share/man/ru.UTF-8/man1/vim.1
 rm -f %{buildroot}/usr/share/man/ru.UTF-8/man1/vimdiff.1
 rm -f %{buildroot}/usr/share/man/ru.UTF-8/man1/vimtutor.1
 rm -f %{buildroot}/usr/share/man/ru.UTF-8/man1/xxd.1
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/ada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/adacomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/ccomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/clojurecomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/csscomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/decada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/getscript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/gnat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/gzip.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/htmlcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/javascriptcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/netrw.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/netrwFileHandlers.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/netrwSettings.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/paste.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/phpcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/python3complete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/pythoncomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/rubycomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/rust.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/rustfmt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/spellfile.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/sqlcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/syntaxcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/tar.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/tohtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/vimball.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html32.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html401f.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html401s.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html401t.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html40f.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html40s.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/html40t.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xhtml10f.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xhtml10s.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xhtml10t.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xhtml11.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xsd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xml/xsl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xmlcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/zip.vim
-rm -f %{buildroot}/usr/share/vim/vim81/bugreport.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/colors/blue.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/darkblue.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/default.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/delek.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/desert.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/elflord.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/evening.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/koehler.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/morning.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/murphy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/pablo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/peachpuff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/ron.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/shine.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/slate.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/torte.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/zellner.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/ant.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/bcc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/bdf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/cargo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/checkstyle.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/cs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/csslint.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/cucumber.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/decada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/dot.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/erlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/eruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fortran_F.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fortran_cv.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fortran_elf90.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fortran_g77.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fortran_lf95.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/fpc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/g95.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/gcc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/gfortran.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/ghc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/gnat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/haml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/hp_acc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/icc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/ifort.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/intel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/irix5_c.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/irix5_cpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/javac.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/jikes.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/mcs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/mips_c.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/mipspro_c89.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/mipspro_cpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/modelsim_vcom.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/msbuild.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/msvc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/neato.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/ocaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/onsgmls.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/pbx.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/perl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/php.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/pylint.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/pyunit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/rake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/rspec.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/rst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/ruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/rubyunit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/rustc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/sass.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/se.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/splint.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/tcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/tex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/tidy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/xbuild.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/xmllint.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/xmlwf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/delmenu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/doc/arabic.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/autocmd.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/change.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/cmdline.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/debug.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/debugger.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/develop.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/diff.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/digraph.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/editing.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/eval.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/farsi.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/filetype.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/fold.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/ft_ada.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/ft_rust.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/ft_sql.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/gui.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/gui_w16.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/gui_w32.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/gui_x11.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/hangulin.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/hebrew.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/help.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/helphelp.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/howto.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_cscop.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_lua.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_mzsch.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_ole.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_perl.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_pyth.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_ruby.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_sniff.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/if_tcl.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/indent.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/index.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/insert.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/intro.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/map.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/mbyte.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/message.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/mlang.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/motion.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/netbeans.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/options.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_390.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_amiga.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_beos.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_dos.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_mac.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_mint.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_msdos.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_os2.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_qnx.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_risc.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_unix.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_vms.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/os_win32.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pattern.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_getscript.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_gzip.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_netrw.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_paren.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_spec.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_tar.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_vimball.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_zip.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/print.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/quickfix.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/quickref.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/quotes.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/recover.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/remote.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/repeat.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/rileft.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/russian.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/scroll.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/sign.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/spell.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/sponsor.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/starting.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/syntax.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/tabpage.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/tags
-rm -f %{buildroot}/usr/share/vim/vim81/doc/tagsrch.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/term.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/tips.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/todo.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/uganda.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/undo.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_01.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_02.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_03.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_04.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_05.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_06.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_07.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_08.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_09.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_10.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_11.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_12.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_20.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_21.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_22.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_23.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_24.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_25.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_26.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_27.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_28.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_29.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_30.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_31.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_32.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_40.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_41.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_42.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_43.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_44.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_45.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_90.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/usr_toc.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/various.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/version4.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/version5.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/version6.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/version7.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/vi_diff.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/vim2html.pl
-rm -f %{buildroot}/usr/share/vim/vim81/doc/visual.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/windows.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/workshop.txt
-rm -f %{buildroot}/usr/share/vim/vim81/evim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/filetype.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftoff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/a2ps.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/aap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/abap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/abaqus.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/alsaconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ant.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/arch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/art.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/aspvbs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/automake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/awk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/bdf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/bst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/btm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/c.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/calendar.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cdrdaoconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/changelog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/clojure.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cobol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/conf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/config.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/context.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/crm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/csc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/csh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/css.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cucumber.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cvsrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/debchangelog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/debcontrol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/denyhosts.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dictconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dictdconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/diff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dircolors.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/docbk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dosbatch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dosini.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dtd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dtrace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/elinks.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/erlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/eruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/eterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/falcon.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/fetchmail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/flexwiki.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/fortran.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/framescript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/fvwm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gdb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/git.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gitcommit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gitconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gitrebase.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gitsendemail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gpg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/gprof.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/group.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/grub.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/haml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/hamster.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/haskell.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/help.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/hostconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/hostsaccess.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/htmldjango.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/indent.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/initex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ishd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/java.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/javascript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/jsp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/kconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/kwt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ld.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/lftp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/libao.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/limits.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/liquid.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/lisp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/logcheck.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/loginaccess.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/logindefs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/logtalk.dict
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/logtalk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/lprolog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/lua.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/m4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mailaliases.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mailcap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/make.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/man.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/manconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/markdown.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/matlab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/modconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mplayerconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mrxvtrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/msmessages.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/muttrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/nanorc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/neomuttrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/netrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/nsis.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/objc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ocaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/occam.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/pamconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/pascal.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/passwd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/pdf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/perl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/perl6.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/php.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/pinfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/plaintex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/postscr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/procmail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/prolog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/protocols.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/pyrex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/python.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/qf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/quake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/racc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/readline.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/reva.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rnc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rpl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/ruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rust.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sass.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sbt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/scheme.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/screen.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/scss.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sensors.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/services.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/setserial.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sgml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sieve.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/slpconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/slpreg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/slpspi.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/spec.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sshconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sudoers.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/svg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/sysctl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/tcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/tcsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/terminfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/tex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/treetop.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/tt2html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/udevconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/udevperm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/udevrules.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/updatedb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/vb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/verilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/vhdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/vim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xdefaults.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xf86conf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xhtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xinetd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xmodmap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xsd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/xslt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/yaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/zimbu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/zsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugof.vim
-rm -f %{buildroot}/usr/share/vim/vim81/gvimrc_example.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/indent/aap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ant.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/automake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/awk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/bib.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/bst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/c.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/chaiscript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/changelog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/clojure.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cmake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cobol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/config.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/css.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cucumber.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/cuda.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/d.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dictconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dictdconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/docbk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dosbatch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dtd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dtrace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/dylan.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/eiffel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/erlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/eruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/eterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/falcon.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/fortran.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/framescript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/gitconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/gitolite.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/haml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/hamster.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/htmldjango.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/idlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ishd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/java.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/javascript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/jsp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ld.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/lifelines.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/liquid.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/lisp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/logtalk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/lua.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/mail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/make.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/matlab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/mma.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/mp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/objc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ocaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/occam.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/pascal.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/perl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/perl6.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/php.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/postscr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/pov.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/prolog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/pyrex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/python.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/r.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/readline.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rpl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/ruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rust.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sas.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sass.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/scheme.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/scss.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/sqlanywhere.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/tcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/tcsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/tex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/tf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/tilde.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/treetop.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/vb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/verilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/vhdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/vim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xf86conf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xhtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xinetd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xsd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/xslt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/yacc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/yaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/zimbu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/zsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indoff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/accents.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/arabic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/arabic_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/belarusian-jcuken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/bulgarian-bds.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/bulgarian-phonetic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/canfr-win.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/croatian.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/croatian_cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/croatian_iso-8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/croatian_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/czech.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/czech_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/dvorak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/esperanto.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/esperanto_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/greek.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/greek_cp1253.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/greek_cp737.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/greek_iso-8859-7.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/greek_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrew.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrew_cp1255.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrew_iso-8859-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrew_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrewp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrewp_cp1255.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrewp_iso-8859-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/hebrewp_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/kana.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/lithuanian-baltic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/magyar_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/mongolian_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/persian-iranian_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/persian.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/pinyin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/polish-slash.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/polish-slash_cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/polish-slash_cp852.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/polish-slash_iso-8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/polish-slash_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-dvorak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-jcuken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-jcukenmac.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-jcukenwin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-yawerty.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian-latin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian-latin_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian_cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian_cp1251.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian_iso-8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian_iso-8859-5.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/serbian_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/sinhala-phonetic_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/sinhala.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/slovak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/slovak_cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/slovak_iso-8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/slovak_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/tamil_tscii.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/thaana-phonetic_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/thaana.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/ukrainian-dvorak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/ukrainian-jcuken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/vietnamese-viqr_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/lang/af/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ca/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/cs.cp1250/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/cs/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/de/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/en_GB/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/eo/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/es/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/fi/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/fr/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ga/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/it/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ja.euc-jp/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ja.sjis/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ja/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ko.UTF-8/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ko/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_af.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_af.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_af_af.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_af_af.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ca.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ca.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ca_es.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ca_es.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_chinese"(gb)"_gb.936.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_chinese"(taiwan)"_taiwan.950.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_chinese_gb.936.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_chinese_taiwan.950.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs_cz.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs_cz.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs_cz.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_cs_cz.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_czech_czech_republic.1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_czech_czech_republic.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_czech_czech_republic.ascii.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_de.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_de.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_de_de.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_de_de.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_en_gb.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_en_gb.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_english_united_kingdom.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_english_united_kingdom.ascii.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_eo.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_eo_eo.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_eo_xx.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_es.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_es.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_es_es.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_es_es.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fi.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fi.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fi_fi.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fi_fi.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_finnish_finland.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fr.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fr.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fr_fr.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_fr_fr.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_french_france.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_german_germany.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_hu.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_hu.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_hu_hu.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_hu_hu.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_it.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_it.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_it_it.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_it_it.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_italian_italy.1252.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja.cp932.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja.euc-jp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja.eucjp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja.ujis.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja_jp.cp932.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja_jp.euc-jp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja_jp.eucjp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja_jp.ujis.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ja_jp.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_japanese_japan.932.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ko.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ko_kr.euckr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ko_kr.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ko_kr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_nl.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_nl.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_nl_nl.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_nl_nl.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_no.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_no.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_no_no.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_no_no.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pl.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pl_pl.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pl_pl.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pl_pl.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_polish_poland.1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_br.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_br.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_br.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_pt.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_pt.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_pt_pt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ru.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ru_ru.koi8-r.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ru_ru.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_ru_ru.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sk.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sk_sk.1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sk_sk.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sk_sk.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sk_sk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sl_si.cp1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sl_si.latin2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sl_si.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_slovak_slovak_republic.1250.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_spanish_spain.850.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_rs.ascii.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_rs.iso_8859-5.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_rs.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_yu.ascii.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_yu.iso_8859-5.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sr_yu.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sv.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sv.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sv_se.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_sv_se.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_uk_ua.cp1251.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_uk_ua.koi8-u.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_vi_vn.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh.big5.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh.cp936.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh.cp950.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh.gb2312.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_cn.18030.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_cn.cp936.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_cn.gb2312.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_cn.gbk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_cn.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_tw.big5.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_tw.cp950.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_zh_tw.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/nb/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/nl/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/no/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/pl.UTF-8/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/pl.cp1250/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/pl/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/pt_BR/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ru.cp1251/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/ru/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/sk.cp1250/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/sk/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/sv/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/uk.cp1251/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/uk/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/vi/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/zh_CN.UTF-8/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/zh_CN.cp936/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/zh_CN/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/zh_TW/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/macros/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/macros/dvorak
-rm -f %{buildroot}/usr/share/vim/vim81/macros/editexisting.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/hanoi/click.me
-rm -f %{buildroot}/usr/share/vim/vim81/macros/hanoi/hanoi.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/hanoi/poster
-rm -f %{buildroot}/usr/share/vim/vim81/macros/justify.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/less.bat
-rm -f %{buildroot}/usr/share/vim/vim81/macros/less.sh
-rm -f %{buildroot}/usr/share/vim/vim81/macros/less.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/life/click.me
-rm -f %{buildroot}/usr/share/vim/vim81/macros/life/life.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/matchit.txt
-rm -f %{buildroot}/usr/share/vim/vim81/macros/matchit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/Makefile
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/main.aap
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/maze.c
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/maze_5.78
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/maze_mac
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/mazeansi.c
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/mazeclean.c
-rm -f %{buildroot}/usr/share/vim/vim81/macros/maze/poster
-rm -f %{buildroot}/usr/share/vim/vim81/macros/shellmenu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/swapmous.vim
-rm -f %{buildroot}/usr/share/vim/vim81/macros/urm/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/macros/urm/examples
-rm -f %{buildroot}/usr/share/vim/vim81/macros/urm/urm
-rm -f %{buildroot}/usr/share/vim/vim81/macros/urm/urm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/menu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/mswin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/optwin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/getscriptPlugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/gzip.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/matchparen.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/netrwPlugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/rrhelper.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/spellfile.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/tarPlugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/tohtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/vimballPlugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/zipPlugin.vim
-rm -f %{buildroot}/usr/share/vim/vim81/print/ascii.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cidfont.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cns_roman.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1250.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1251.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1252.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1253.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1254.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1255.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/cp1257.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/dec-mcs.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/ebcdic-uk.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/gb_roman.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/hp-roman8.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-10.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-11.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-13.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-14.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-15.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-2.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-3.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-4.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-5.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-7.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-8.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/iso-8859-9.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/jis_roman.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/koi8-r.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/koi8-u.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/ks_roman.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/latin1.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/mac-roman.ps
-rm -f %{buildroot}/usr/share/vim/vim81/print/prolog.ps
-rm -f %{buildroot}/usr/share/vim/vim81/scripts.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/check_locales.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/cleanadd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.ascii.spl
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.ascii.sug
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.latin1.spl
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.latin1.sug
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.utf-8.spl
-rm -f %{buildroot}/usr/share/vim/vim81/spell/en.utf-8.sug
-rm -f %{buildroot}/usr/share/vim/vim81/spell/fixdup.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/he.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/spell.vim
-rm -f %{buildroot}/usr/share/vim/vim81/spell/yi.vim
-rm -f %{buildroot}/usr/share/vim/vim81/synmenu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/2html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/a2ps.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/a65.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/abap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/abaqus.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/abc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/abel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/acedb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ada.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aflex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ahdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/alsaconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/amiga.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ampl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ant.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/antlr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/apache.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/apachestyle.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aptconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/arch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/art.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asciidoc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asm68k.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asmh8300.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asn.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aspperl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/aspvbs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asterisk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/asteriskvm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/atlas.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/autohotkey.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/autoit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/automake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ave.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/awk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ayacc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/b.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/baan.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/basic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bdf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bib.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bindzone.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/blank.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/btm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bzr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/c.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cabal.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/calendar.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/catalog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cdrdaoconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cdrtoc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cfg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/chaiscript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/change.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/changelog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/chaskell.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cheetah.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/chill.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/chordpro.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/clean.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/clipper.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/clojure.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cmake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cmusrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cobol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/coco.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/colortest.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/conaryrecipe.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/conf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/config.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/context.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/crm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/crontab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/csc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/csdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/csh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/csp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/css.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ctrlh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cucumber.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cuda.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cupl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cuplsim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cvs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cvsrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cweb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cynlib.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cynpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/d.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/datascript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dcd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/debchangelog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/debcontrol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/debsources.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/def.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/denyhosts.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/desc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/desktop.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dictconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dictdconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/diff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dircolors.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dirpager.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/diva.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/django.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dns.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dnsmasq.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/docbk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/docbksgml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/docbkxml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dosbatch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dosini.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dot.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/doxygen.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dracula.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dsl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dtd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dtrace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dts.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dylan.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dylanintr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dylanlid.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ecd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/edif.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/eiffel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/elf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/elinks.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/elmfilt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/erlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/eruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/esmtprc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/esqlc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/esterel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/eterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/eviews.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/exim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/expect.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/exports.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/falcon.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fan.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fasm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fdcc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fetchmail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fgl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/flexwiki.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/focexec.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/form.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/forth.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fortran.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/foxpro.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/framescript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/freebasic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fstab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fvwm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/fvwm2m4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gdb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gdmo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gedcom.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/git.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gitcommit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gitconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gitolite.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gitrebase.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gitsendemail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gkrellmrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gnash.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gnuplot.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gpg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gprof.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/grads.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gretl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/groff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/groovy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/group.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/grub.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gsp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/gtkrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/haml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hamster.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/haskell.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/haste.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hastepreproc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/help.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hercules.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hgcommit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hitest.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hostconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/hostsaccess.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/htmlcheetah.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/htmldjango.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/htmlm4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/htmlos.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ia64.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ibasic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/icemenu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/icon.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/idl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/idlang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/indent.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/inform.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/initex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/initng.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/inittab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ipfilter.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ishd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/iss.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ist.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jal.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jam.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jargon.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/java.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/javacc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/javascript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jess.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jgraph.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jovial.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jproperties.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/jsp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/kconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/kix.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/kscript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/kwt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/latte.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ld.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ldapconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ldif.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lftp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lhaskell.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/libao.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lifelines.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lilo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/limits.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/liquid.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lisp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lite.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/litestep.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/loginaccess.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/logindefs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/logtalk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lotos.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lout.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lpc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lprolog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lscript.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lsl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lss.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lua.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/lynx.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/m4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mailaliases.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mailcap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/make.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mallard.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/man.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/manconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/manual.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/maple.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/markdown.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/masm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mason.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/master.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/matlab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/maxima.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/messages.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mgl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mgp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mib.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mma.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mmix.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mmp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/modconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/model.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/modsim3.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/modula2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/modula3.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/monk.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/moo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mplayerconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mrxvtrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/msidl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/msmessages.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/msql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mupad.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mush.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/muttrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mysql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/n1ql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/named.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nanorc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nasm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nastran.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/natural.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ncf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/neomuttrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/netrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/netrw.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ninja.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nosyntax.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nqc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nroff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/nsis.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/obj.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/objc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/objcpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ocaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/occam.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/omnimark.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/openroad.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/opl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ora.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pamconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/papp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pascal.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/passwd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pcap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pccts.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pdf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/perl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/perl6.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pfmain.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/php.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/phtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pic.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pike.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pilrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pine.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pinfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/plaintex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pli.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/plm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/plp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/plsql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/po.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pod.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/postscr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pov.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/povini.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ppd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ppwiz.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/prescribe.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/privoxy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/procmail.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/progress.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/prolog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/promela.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/proto.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/protocols.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/psf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ptcap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/purifylog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/pyrex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/python.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/qf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/quake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/r.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/racc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/radiance.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ratpoison.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rcs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rcslog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/readline.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rebol.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/redif.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/registry.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/remind.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/resolv.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/reva.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rexx.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rhelp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rib.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rnc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rng.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rnoweb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/robots.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rpcgen.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rpl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rtf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/ruby.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rust.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/samba.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sas.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sass.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sather.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sbt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/scheme.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/scilab.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/screen.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/scss.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sdc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sed.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sendpr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sensors.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/services.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/setserial.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sgml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sgmldecl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sgmllnx.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sicad.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sieve.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/simula.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sinda.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sindacmp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sindaout.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sisu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/skill.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slang.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slice.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slpconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slpreg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slpspi.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slrnrc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/slrnsc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/smarty.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/smcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/smil.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/smith.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/snnsnet.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/snnspat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/snnsres.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/snobol4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/spec.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/specman.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/spice.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/splint.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/spup.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/spyce.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sql.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqlanywhere.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqlforms.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqlhana.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqlinformix.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqlj.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqloracle.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sqr.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/squid.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sshconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sshdconfig.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/st.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/stata.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/stp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/strace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sudoers.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/svg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/svn.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/syncolor.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/synload.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/syntax.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/sysctl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tads.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tags.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/takcmp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/takout.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tar.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/taskdata.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/taskedit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tasm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tcsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/terminfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tex.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/texinfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/texmf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tidy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tilde.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tli.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tpp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/trasys.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/treetop.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/trustees.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tsalt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tsscl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tssgm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tssop.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tt2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tt2html.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tt2js.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/uc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/udevconf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/udevperm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/udevrules.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/uil.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/updatedb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/upstart.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/upstreamdat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/upstreaminstalllog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/upstreamlog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/usserverlog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/usw2kagtlog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/valgrind.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vera.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/verilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/verilogams.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vgrindefs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vhdl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vim.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/viminfo.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/virata.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vmasm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/voscm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vrml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vsejcl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wdiff.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/web.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/webmacro.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wget.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/whitespace.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/winbatch.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wsml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wvdial.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xbl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xdefaults.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xf86conf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xhtml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xinetd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xkb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xmath.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xmodmap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xpm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xpm2.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xquery.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xs.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xsd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xslt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/xxd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/yacc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/yaml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/z8a.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/zimbu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/zsh.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tools/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tools/blink.c
-rm -f %{buildroot}/usr/share/vim/vim81/tools/ccfilter.1
-rm -f %{buildroot}/usr/share/vim/vim81/tools/ccfilter.c
-rm -f %{buildroot}/usr/share/vim/vim81/tools/ccfilter_README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tools/efm_filter.pl
-rm -f %{buildroot}/usr/share/vim/vim81/tools/efm_filter.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tools/efm_perl.pl
-rm -f %{buildroot}/usr/share/vim/vim81/tools/mve.awk
-rm -f %{buildroot}/usr/share/vim/vim81/tools/mve.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tools/pltags.pl
-rm -f %{buildroot}/usr/share/vim/vim81/tools/ref
-rm -f %{buildroot}/usr/share/vim/vim81/tools/shtags.1
-rm -f %{buildroot}/usr/share/vim/vim81/tools/shtags.pl
-rm -f %{buildroot}/usr/share/vim/vim81/tools/unicode.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tools/vim132
-rm -f %{buildroot}/usr/share/vim/vim81/tools/vim_vs_net.cmd
-rm -f %{buildroot}/usr/share/vim/vim81/tools/vimm
-rm -f %{buildroot}/usr/share/vim/vim81/tools/vimspell.sh
-rm -f %{buildroot}/usr/share/vim/vim81/tools/vimspell.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tools/xcmdsrv_client.c
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/README.el.cp737.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/README.el.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/README.txt
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.bar
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.bar.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ca
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ca.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.cs
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.cs.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.cs.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.de
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.de.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.el
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.el.cp737
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.el.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.eo
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.eo.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.es
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.es.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.fr
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.fr.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hr
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hr.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hr.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hu
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hu.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.hu.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.it
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.it.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ja.euc
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ja.sjis
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ja.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ko.euc
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ko.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.nb
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.nb.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.nl
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.nl.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.no
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.no.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.pl
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.pl.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.pl.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.pt
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.pt.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ru
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ru.cp1251
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.ru.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sk
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sk.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sk.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sv
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sv.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.tr.iso9
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.tr.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.vi.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.zh.big5
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.zh.euc
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.zh.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.zh_cn.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.zh_tw.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/vimrc_example.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/ada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/adacomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/ccomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/clojurecomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/csscomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/decada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/getscript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/gnat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/gzip.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/htmlcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/javascriptcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/netrw.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/netrwFileHandlers.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/netrwSettings.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/paste.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/phpcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/python3complete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/pythoncomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/rubycomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/rust.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/rustfmt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/spellfile.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/sqlcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/syntaxcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/tar.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/tohtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/vimball.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html32.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html401f.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html401s.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html401t.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html40f.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html40s.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/html40t.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xhtml10f.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xhtml10s.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xhtml10t.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xhtml11.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xsd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xml/xsl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xmlcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/zip.vim
+rm -f %{buildroot}/usr/share/vim/vim82/bugreport.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/colors/blue.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/darkblue.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/default.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/delek.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/desert.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/elflord.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/evening.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/koehler.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/morning.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/murphy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/pablo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/peachpuff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/ron.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/shine.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/slate.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/torte.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/zellner.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/ant.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/bcc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/bdf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/cargo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/checkstyle.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/cs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/csslint.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/cucumber.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/decada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/dot.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/erlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/eruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fortran_F.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fortran_cv.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fortran_elf90.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fortran_g77.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fortran_lf95.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/fpc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/g95.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/gcc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/gfortran.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/ghc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/gnat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/haml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/hp_acc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/icc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/ifort.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/intel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/irix5_c.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/irix5_cpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/javac.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/jikes.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/mcs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/mips_c.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/mipspro_c89.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/mipspro_cpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/modelsim_vcom.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/msbuild.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/msvc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/neato.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/ocaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/onsgmls.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/pbx.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/perl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/php.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/pylint.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/pyunit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/rake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/rspec.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/rst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/ruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/rubyunit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/rustc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/sass.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/se.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/splint.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/tcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/tex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/tidy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/xbuild.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/xmllint.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/xmlwf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/delmenu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/doc/arabic.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/autocmd.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/change.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/cmdline.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/debug.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/debugger.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/develop.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/diff.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/digraph.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/editing.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/eval.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/farsi.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/filetype.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/fold.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/ft_ada.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/ft_rust.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/ft_sql.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/gui.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/gui_w16.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/gui_w32.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/gui_x11.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/hangulin.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/hebrew.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/help.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/helphelp.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/howto.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_cscop.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_lua.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_mzsch.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_ole.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_perl.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_pyth.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_ruby.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_sniff.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/if_tcl.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/indent.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/index.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/insert.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/intro.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/map.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/mbyte.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/message.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/mlang.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/motion.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/netbeans.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/options.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_390.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_amiga.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_beos.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_dos.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_mac.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_mint.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_msdos.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_os2.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_qnx.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_risc.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_unix.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_vms.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/os_win32.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pattern.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_getscript.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_gzip.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_netrw.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_paren.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_spec.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_tar.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_vimball.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_zip.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/print.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/quickfix.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/quickref.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/quotes.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/recover.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/remote.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/repeat.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/rileft.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/russian.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/scroll.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/sign.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/spell.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/sponsor.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/starting.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/syntax.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/tabpage.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/tags
+rm -f %{buildroot}/usr/share/vim/vim82/doc/tagsrch.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/term.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/tips.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/todo.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/uganda.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/undo.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_01.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_02.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_03.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_04.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_05.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_06.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_07.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_08.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_09.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_10.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_11.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_12.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_20.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_21.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_22.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_23.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_24.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_25.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_26.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_27.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_28.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_29.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_30.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_31.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_32.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_40.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_41.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_42.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_43.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_44.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_45.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_90.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/usr_toc.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/various.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/version4.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/version5.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/version6.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/version7.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/vi_diff.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/vim2html.pl
+rm -f %{buildroot}/usr/share/vim/vim82/doc/visual.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/windows.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/workshop.txt
+rm -f %{buildroot}/usr/share/vim/vim82/evim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/filetype.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftoff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/a2ps.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/aap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/abap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/abaqus.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/alsaconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ant.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/arch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/art.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/aspvbs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/automake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/awk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/bdf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/bst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/btm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/c.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/calendar.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cdrdaoconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/changelog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/clojure.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cobol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/conf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/config.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/context.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/crm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/csc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/csh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/css.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cucumber.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cvsrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/debchangelog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/debcontrol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/denyhosts.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dictconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dictdconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/diff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dircolors.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/docbk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dosbatch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dosini.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dtd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dtrace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/elinks.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/erlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/eruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/eterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/falcon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/fetchmail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/flexwiki.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/fortran.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/framescript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/fvwm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gdb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/git.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gitcommit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gitconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gitrebase.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gitsendemail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gpg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/gprof.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/group.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/grub.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/haml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/hamster.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/haskell.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/help.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/hostconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/hostsaccess.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/htmldjango.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/indent.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/initex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ishd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/java.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/javascript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/jsp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/kconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/kwt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ld.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/lftp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/libao.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/limits.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/liquid.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/lisp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/logcheck.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/loginaccess.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/logindefs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/logtalk.dict
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/logtalk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/lprolog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/lua.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/m4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mailaliases.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mailcap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/make.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/man.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/manconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/markdown.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/matlab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/modconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mplayerconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mrxvtrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/msmessages.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/muttrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/nanorc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/neomuttrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/netrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/nsis.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/objc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ocaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/occam.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/pamconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/pascal.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/passwd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/pdf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/perl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/perl6.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/php.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/pinfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/plaintex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/postscr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/procmail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/prolog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/protocols.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/pyrex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/python.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/qf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/quake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/racc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/readline.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/reva.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rnc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rpl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/ruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rust.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sass.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sbt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/scheme.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/screen.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/scss.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sensors.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/services.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/setserial.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sgml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sieve.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/slpconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/slpreg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/slpspi.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/spec.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sshconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sudoers.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/svg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/sysctl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/tcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/tcsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/terminfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/tex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/treetop.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/tt2html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/udevconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/udevperm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/udevrules.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/updatedb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/vb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/verilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/vhdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/vim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xdefaults.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xf86conf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xhtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xinetd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xmodmap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xsd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/xslt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/yaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/zimbu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/zsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugof.vim
+rm -f %{buildroot}/usr/share/vim/vim82/gvimrc_example.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/indent/aap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ant.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/automake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/awk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/bib.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/bst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/c.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/chaiscript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/changelog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/clojure.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cmake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cobol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/config.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/css.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cucumber.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/cuda.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/d.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dictconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dictdconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/docbk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dosbatch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dtd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dtrace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/dylan.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/eiffel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/erlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/eruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/eterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/falcon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/fortran.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/framescript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/gitconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/gitolite.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/haml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/hamster.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/htmldjango.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/idlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ishd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/java.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/javascript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/jsp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ld.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/lifelines.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/liquid.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/lisp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/logtalk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/lua.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/mail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/make.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/matlab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/mma.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/mp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/objc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ocaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/occam.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/pascal.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/perl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/perl6.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/php.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/postscr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/pov.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/prolog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/pyrex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/python.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/r.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/readline.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rpl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/ruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rust.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sas.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sass.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/scheme.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/scss.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/sqlanywhere.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/tcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/tcsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/tex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/tf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/tilde.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/treetop.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/vb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/verilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/vhdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/vim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xf86conf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xhtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xinetd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xsd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/xslt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/yacc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/yaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/zimbu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/zsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indoff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/accents.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/arabic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/arabic_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/belarusian-jcuken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/bulgarian-bds.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/bulgarian-phonetic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/canfr-win.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/croatian.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/croatian_cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/croatian_iso-8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/croatian_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/czech.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/czech_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/dvorak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/esperanto.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/esperanto_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/greek.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/greek_cp1253.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/greek_cp737.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/greek_iso-8859-7.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/greek_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrew.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrew_cp1255.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrew_iso-8859-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrew_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrewp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrewp_cp1255.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrewp_iso-8859-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/hebrewp_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/kana.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/lithuanian-baltic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/magyar_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/mongolian_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/persian-iranian_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/persian.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/pinyin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/polish-slash.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/polish-slash_cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/polish-slash_cp852.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/polish-slash_iso-8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/polish-slash_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-dvorak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-jcuken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-jcukenmac.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-jcukenwin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-yawerty.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian-latin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian-latin_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian_cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian_cp1251.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian_iso-8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian_iso-8859-5.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/serbian_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/sinhala-phonetic_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/sinhala.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/slovak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/slovak_cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/slovak_iso-8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/slovak_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/tamil_tscii.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/thaana-phonetic_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/thaana.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/ukrainian-dvorak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/ukrainian-jcuken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/vietnamese-viqr_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/lang/af/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ca/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/cs.cp1250/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/cs/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/de/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/en_GB/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/eo/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/es/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/fi/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/fr/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ga/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/it/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ja.euc-jp/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ja.sjis/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ja/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ko.UTF-8/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ko/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_af.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_af.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_af_af.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_af_af.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ca.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ca.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ca_es.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ca_es.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_chinese"(gb)"_gb.936.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_chinese"(taiwan)"_taiwan.950.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_chinese_gb.936.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_chinese_taiwan.950.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs_cz.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs_cz.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs_cz.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_cs_cz.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_czech_czech_republic.1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_czech_czech_republic.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_czech_czech_republic.ascii.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_de.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_de.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_de_de.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_de_de.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_en_gb.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_en_gb.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_english_united_kingdom.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_english_united_kingdom.ascii.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_eo.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_eo_eo.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_eo_xx.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_es.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_es.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_es_es.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_es_es.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fi.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fi.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fi_fi.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fi_fi.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_finnish_finland.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fr.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fr_fr.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_fr_fr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_french_france.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_german_germany.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_hu.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_hu.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_hu_hu.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_hu_hu.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_it.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_it.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_it_it.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_it_it.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_italian_italy.1252.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja.cp932.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja.euc-jp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja.eucjp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja.ujis.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja_jp.cp932.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja_jp.euc-jp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja_jp.eucjp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja_jp.ujis.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ja_jp.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_japanese_japan.932.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ko.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ko_kr.euckr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ko_kr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ko_kr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_nl.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_nl.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_nl_nl.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_nl_nl.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_no.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_no.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_no_no.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_no_no.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pl.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pl_pl.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pl_pl.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pl_pl.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_polish_poland.1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_br.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_br.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_br.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_pt.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_pt.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_pt_pt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ru.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ru_ru.koi8-r.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ru_ru.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_ru_ru.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sk.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sk_sk.1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sk_sk.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sk_sk.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sk_sk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sl_si.cp1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sl_si.latin2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sl_si.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_slovak_slovak_republic.1250.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_spanish_spain.850.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_rs.ascii.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_rs.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_rs.iso_8859-5.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_rs.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_yu.ascii.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_yu.iso_8859-2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_yu.iso_8859-5.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sr_yu.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sv.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sv.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sv_se.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_sv_se.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_uk_ua.cp1251.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_uk_ua.koi8-u.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_vi_vn.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh.big5.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh.cp936.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh.cp950.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh.gb2312.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_cn.18030.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_cn.cp936.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_cn.gb2312.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_cn.gbk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_cn.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_tw.big5.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_tw.cp950.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_zh_tw.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/nb/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/nl/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/no/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/pl.UTF-8/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/pl.cp1250/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/pl/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/pt_BR/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ru.cp1251/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/ru/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/sk.cp1250/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/sk/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/sv/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/uk.cp1251/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/uk/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/vi/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/zh_CN.UTF-8/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/zh_CN.cp936/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/zh_CN/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/zh_TW/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/macros/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/macros/dvorak
+rm -f %{buildroot}/usr/share/vim/vim82/macros/editexisting.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/hanoi/click.me
+rm -f %{buildroot}/usr/share/vim/vim82/macros/hanoi/hanoi.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/hanoi/poster
+rm -f %{buildroot}/usr/share/vim/vim82/macros/justify.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/less.bat
+rm -f %{buildroot}/usr/share/vim/vim82/macros/less.sh
+rm -f %{buildroot}/usr/share/vim/vim82/macros/less.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/life/click.me
+rm -f %{buildroot}/usr/share/vim/vim82/macros/life/life.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/matchit.txt
+rm -f %{buildroot}/usr/share/vim/vim82/macros/matchit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/Makefile
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/main.aap
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/maze.c
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/maze_5.78
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/maze_mac
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/mazeansi.c
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/mazeclean.c
+rm -f %{buildroot}/usr/share/vim/vim82/macros/maze/poster
+rm -f %{buildroot}/usr/share/vim/vim82/macros/shellmenu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/swapmous.vim
+rm -f %{buildroot}/usr/share/vim/vim82/macros/urm/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/macros/urm/examples
+rm -f %{buildroot}/usr/share/vim/vim82/macros/urm/urm
+rm -f %{buildroot}/usr/share/vim/vim82/macros/urm/urm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/menu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/mswin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/optwin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/getscriptPlugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/gzip.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/matchparen.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/netrwPlugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/rrhelper.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/spellfile.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/tarPlugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/tohtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/vimballPlugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/zipPlugin.vim
+rm -f %{buildroot}/usr/share/vim/vim82/print/ascii.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cidfont.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cns_roman.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1250.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1251.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1252.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1253.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1254.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1255.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/cp1257.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/dec-mcs.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/ebcdic-uk.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/gb_roman.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/hp-roman8.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-10.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-11.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-13.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-14.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-15.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-2.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-3.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-4.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-5.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-7.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-8.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/iso-8859-9.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/jis_roman.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/koi8-r.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/koi8-u.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/ks_roman.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/latin1.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/mac-roman.ps
+rm -f %{buildroot}/usr/share/vim/vim82/print/prolog.ps
+rm -f %{buildroot}/usr/share/vim/vim82/scripts.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/check_locales.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/cleanadd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.ascii.spl
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.ascii.sug
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.latin1.spl
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.latin1.sug
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.utf-8.spl
+rm -f %{buildroot}/usr/share/vim/vim82/spell/en.utf-8.sug
+rm -f %{buildroot}/usr/share/vim/vim82/spell/fixdup.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/he.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/spell.vim
+rm -f %{buildroot}/usr/share/vim/vim82/spell/yi.vim
+rm -f %{buildroot}/usr/share/vim/vim82/synmenu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/2html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/a2ps.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/a65.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/abap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/abaqus.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/abc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/abel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/acedb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ada.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aflex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ahdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/alsaconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/amiga.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ampl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ant.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/antlr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/apache.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/apachestyle.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aptconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/arch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/art.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asciidoc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asm68k.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asmh8300.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asn.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aspperl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/aspvbs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asterisk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/asteriskvm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/atlas.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/autohotkey.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/autoit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/automake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ave.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/awk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ayacc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/b.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/baan.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/basic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bdf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bib.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bindzone.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/blank.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/btm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bzr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/c.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cabal.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/calendar.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/catalog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cdrdaoconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cdrtoc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cfg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/chaiscript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/change.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/changelog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/chaskell.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cheetah.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/chill.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/chordpro.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/clean.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/clipper.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/clojure.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cmake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cmusrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cobol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/coco.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/colortest.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/conaryrecipe.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/conf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/config.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/context.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/crm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/crontab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/csc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/csdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/csh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/csp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/css.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ctrlh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cucumber.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cuda.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cupl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cuplsim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cvs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cvsrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cweb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cynlib.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cynpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/d.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/datascript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dcd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/debchangelog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/debcontrol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/debsources.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/def.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/denyhosts.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/desc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/desktop.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dictconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dictdconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/diff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dircolors.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dirpager.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/diva.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/django.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dns.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dnsmasq.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/docbk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/docbksgml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/docbkxml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dosbatch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dosini.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dot.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/doxygen.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dracula.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dsl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dtd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dtrace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dts.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dylan.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dylanintr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dylanlid.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ecd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/edif.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/eiffel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/elf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/elinks.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/elmfilt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/erlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/eruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/esmtprc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/esqlc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/esterel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/eterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/eviews.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/exim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/expect.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/exports.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/falcon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fan.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fasm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fdcc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fetchmail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fgl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/flexwiki.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/focexec.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/form.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/forth.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fortran.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/foxpro.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/framescript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/freebasic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fstab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fvwm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/fvwm2m4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gdb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gdmo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gedcom.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/git.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gitcommit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gitconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gitolite.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gitrebase.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gitsendemail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gkrellmrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gnash.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gnuplot.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gpg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gprof.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/grads.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gretl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/groff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/groovy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/group.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/grub.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gsp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/gtkrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/haml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hamster.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/haskell.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/haste.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hastepreproc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/help.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hercules.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hgcommit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hitest.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hostconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/hostsaccess.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/htmlcheetah.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/htmldjango.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/htmlm4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/htmlos.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ia64.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ibasic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/icemenu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/icon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/idl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/idlang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/indent.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/inform.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/initex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/initng.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/inittab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ipfilter.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ishd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/iss.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ist.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jal.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jam.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jargon.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/java.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/javacc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/javascript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jess.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jgraph.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jovial.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jproperties.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/jsp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/kconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/kix.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/kscript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/kwt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/latte.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ld.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ldapconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ldif.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lftp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lhaskell.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/libao.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lifelines.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lilo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/limits.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/liquid.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lisp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lite.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/litestep.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/loginaccess.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/logindefs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/logtalk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lotos.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lout.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lpc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lprolog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lscript.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lsl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lss.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lua.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/lynx.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/m4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mailaliases.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mailcap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/make.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mallard.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/man.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/manconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/manual.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/maple.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/markdown.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/masm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mason.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/master.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/matlab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/maxima.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/messages.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mgl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mgp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mib.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mma.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mmix.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mmp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/modconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/model.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/modsim3.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/modula2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/modula3.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/monk.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/moo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mplayerconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mrxvtrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/msidl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/msmessages.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/msql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mupad.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mush.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/muttrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mysql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/n1ql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/named.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nanorc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nasm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nastran.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/natural.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ncf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/neomuttrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/netrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/netrw.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ninja.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nosyntax.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nqc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nroff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/nsis.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/obj.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/objc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/objcpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ocaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/occam.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/omnimark.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/openroad.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/opl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ora.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pamconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/papp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pascal.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/passwd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pcap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pccts.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pdf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/perl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/perl6.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pfmain.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/php.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/phtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pic.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pike.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pilrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pine.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pinfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/plaintex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pli.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/plm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/plp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/plsql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/po.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pod.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/postscr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pov.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/povini.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ppd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ppwiz.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/prescribe.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/privoxy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/procmail.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/progress.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/prolog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/promela.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/proto.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/protocols.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/psf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ptcap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/purifylog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/pyrex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/python.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/qf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/quake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/r.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/racc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/radiance.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ratpoison.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rcs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rcslog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/readline.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rebol.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/redif.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/registry.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/remind.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/resolv.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/reva.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rexx.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rhelp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rib.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rnc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rng.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rnoweb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/robots.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rpcgen.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rpl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rtf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/ruby.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rust.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/samba.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sas.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sass.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sather.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sbt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/scheme.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/scilab.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/screen.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/scss.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sdc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sed.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sendpr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sensors.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/services.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/setserial.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sgml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sgmldecl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sgmllnx.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sicad.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sieve.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/simula.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sinda.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sindacmp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sindaout.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sisu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/skill.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slang.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slice.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slpconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slpreg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slpspi.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slrnrc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/slrnsc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/smarty.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/smcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/smil.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/smith.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/snnsnet.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/snnspat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/snnsres.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/snobol4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/spec.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/specman.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/spice.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/splint.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/spup.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/spyce.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sql.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqlanywhere.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqlforms.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqlhana.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqlinformix.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqlj.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqloracle.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sqr.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/squid.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sshconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sshdconfig.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/st.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/stata.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/stp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/strace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sudoers.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/svg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/svn.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/syncolor.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/synload.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/syntax.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/sysctl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tads.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tags.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/takcmp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/takout.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tar.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/taskdata.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/taskedit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tasm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tcsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/terminfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tex.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/texinfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/texmf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tidy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tilde.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tli.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tpp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/trasys.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/treetop.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/trustees.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tsalt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tsscl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tssgm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tssop.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tt2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tt2html.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tt2js.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/uc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/udevconf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/udevperm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/udevrules.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/uil.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/updatedb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/upstart.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/upstreamdat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/upstreaminstalllog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/upstreamlog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/usserverlog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/usw2kagtlog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/valgrind.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vera.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/verilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/verilogams.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vgrindefs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vhdl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vim.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/viminfo.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/virata.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vmasm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/voscm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vrml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vsejcl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wdiff.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/web.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/webmacro.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wget.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/whitespace.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/winbatch.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wsml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wvdial.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xbl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xdefaults.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xf86conf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xhtml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xinetd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xkb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xmath.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xmodmap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xpm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xpm2.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xquery.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xs.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xsd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xslt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/xxd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/yacc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/yaml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/z8a.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/zimbu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/zsh.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tools/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tools/blink.c
+rm -f %{buildroot}/usr/share/vim/vim82/tools/ccfilter.1
+rm -f %{buildroot}/usr/share/vim/vim82/tools/ccfilter.c
+rm -f %{buildroot}/usr/share/vim/vim82/tools/ccfilter_README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tools/efm_filter.pl
+rm -f %{buildroot}/usr/share/vim/vim82/tools/efm_filter.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tools/efm_perl.pl
+rm -f %{buildroot}/usr/share/vim/vim82/tools/mve.awk
+rm -f %{buildroot}/usr/share/vim/vim82/tools/mve.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tools/pltags.pl
+rm -f %{buildroot}/usr/share/vim/vim82/tools/ref
+rm -f %{buildroot}/usr/share/vim/vim82/tools/shtags.1
+rm -f %{buildroot}/usr/share/vim/vim82/tools/shtags.pl
+rm -f %{buildroot}/usr/share/vim/vim82/tools/unicode.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tools/vim132
+rm -f %{buildroot}/usr/share/vim/vim82/tools/vim_vs_net.cmd
+rm -f %{buildroot}/usr/share/vim/vim82/tools/vimm
+rm -f %{buildroot}/usr/share/vim/vim82/tools/vimspell.sh
+rm -f %{buildroot}/usr/share/vim/vim82/tools/vimspell.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tools/xcmdsrv_client.c
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/README.el.cp737.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/README.el.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/README.txt
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.bar
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.bar.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ca
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ca.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.cs
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.cs.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.cs.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.de
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.de.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.el
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.el.cp737
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.el.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.eo
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.eo.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.es
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.es.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.fr
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.fr.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hr
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hr.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hr.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hu
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hu.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.hu.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.it
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.it.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ja.euc
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ja.sjis
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ja.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ko.euc
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ko.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.nb
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.nb.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.nl
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.nl.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.no
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.no.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.pl
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.pl.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.pl.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.pt
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.pt.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ru
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ru.cp1251
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.ru.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sk
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sk.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sk.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sv
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sv.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.tr.iso9
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.tr.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.vi.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.zh.big5
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.zh.euc
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.zh.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.zh_cn.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.zh_tw.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/vimrc_example.vim
 rm -f %{buildroot}/usr/bin/eview
 rm -f %{buildroot}/usr/bin/evim
 rm -f %{buildroot}/usr/bin/ex
@@ -1862,132 +1862,132 @@ rm -f %{buildroot}/usr/share/man/man1/vim.1
 rm -f %{buildroot}/usr/share/man/man1/vimdiff.1
 rm -f %{buildroot}/usr/share/man/man1/vimtutor.1
 rm -f %{buildroot}/usr/share/man/man1/xxd.1
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/filetype.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/netrw_gitignore.vim
-rm -f %{buildroot}/usr/share/vim/vim81/colors/industry.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/go.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/stack.vim
-rm -f %{buildroot}/usr/share/vim/vim81/defaults.vim
-rm -f %{buildroot}/usr/share/vim/vim81/doc/channel.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/pi_logipat.txt
-rm -f %{buildroot}/usr/share/vim/vim81/doc/version8.txt
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/bzl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/dockerfile.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/eiffel.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/go.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/groovy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/hgcommit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/hog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/j.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/jproperties.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/json.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/less.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/r.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/registry.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rhelp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rmd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rnoweb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/rrst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/scala.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/systemd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/systemverilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/text.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/tmux.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/vroom.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/bzl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/go.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/hog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/j.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/json.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/less.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/mf.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rhelp.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rmd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rnoweb.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/rrst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/scala.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/systemd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/systemverilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/teraterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/vroom.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/armenian-eastern_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/armenian-western_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/russian-jcukenwintype.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/vietnamese-telex_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/vietnamese-vni_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/disable.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/dvorak/dvorak/enable.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/dvorak/plugin/dvorak.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/editexisting/plugin/editexisting.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/justify/plugin/justify.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/matchit/doc/matchit.txt
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/matchit/doc/tags
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/matchit/plugin/matchit.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/shellmenu/plugin/shellmenu.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/swapmouse/plugin/swapmouse.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/termdebug/plugin/termdebug.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/logiPat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/plugin/manpager.vim
-rm -f %{buildroot}/usr/share/vim/vim81/rgb.txt
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/arduino.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/avra.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/bzl.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/dockerfile.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/euphoria3.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/euphoria4.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/go.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/godoc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/j.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/json.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/kivy.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/less.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/mix.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rmd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/rrst.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/scala.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/srec.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/systemd.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/systemverilog.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/teraterm.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tmux.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/upstreamrpt.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/vroom.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tools/demoserver.py
-rm -f %{buildroot}/usr/share/vim/vim81/tools/demoserver.pyc
-rm -f %{buildroot}/usr/share/vim/vim81/tools/demoserver.pyo
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.bg.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sr.cp1250
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.sr.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.uk.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/context.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/contextcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/kazakh-jcuken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/context.vim
-rm -f %{buildroot}/usr/share/vim/vim81/compiler/context.vim
-rm -f %{buildroot}/usr/share/vim/vim81/doc/terminal.txt
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/murphi.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/tap.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.lv
-rm -f %{buildroot}/usr/share/vim/vim81/lang/lv/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/dist/ft.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cmake.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/nsis.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/cmod.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/autodoc.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/chicken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/chicken.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/oldturkic-orkhon_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/keymap/oldturkic-yenisei_utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/sr/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/colors/tools/check_colors.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/debcopyright.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/xmlformat.vim
-rm -f %{buildroot}/usr/share/vim/vim81/lang/da/LC_MESSAGES/vim.mo
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_da.utf-8.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tools/__pycache__/demoserver.cpython-37.pyc
-rm -f %{buildroot}/usr/share/vim/vim81/lang/menu_da.latin1.vim
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.da
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.da.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/filetype.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/netrw_gitignore.vim
+rm -f %{buildroot}/usr/share/vim/vim82/colors/industry.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/go.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/stack.vim
+rm -f %{buildroot}/usr/share/vim/vim82/defaults.vim
+rm -f %{buildroot}/usr/share/vim/vim82/doc/channel.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/pi_logipat.txt
+rm -f %{buildroot}/usr/share/vim/vim82/doc/version8.txt
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/bzl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/dockerfile.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/eiffel.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/go.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/groovy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/hgcommit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/hog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/j.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/jproperties.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/json.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/less.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/r.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/registry.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rhelp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rmd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rnoweb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/rrst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/scala.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/systemd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/systemverilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/text.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/tmux.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/vroom.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/bzl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/go.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/hog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/j.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/json.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/less.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/mf.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rhelp.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rmd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rnoweb.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/rrst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/scala.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/systemd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/systemverilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/teraterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/vroom.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/armenian-eastern_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/armenian-western_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/russian-jcukenwintype.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/vietnamese-telex_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/vietnamese-vni_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/dvorak/dvorak/disable.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/dvorak/dvorak/enable.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/dvorak/plugin/dvorak.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/editexisting/plugin/editexisting.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/justify/plugin/justify.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/matchit/doc/matchit.txt
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/matchit/doc/tags
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/matchit/plugin/matchit.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/shellmenu/plugin/shellmenu.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/swapmouse/plugin/swapmouse.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/termdebug/plugin/termdebug.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/logiPat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/plugin/manpager.vim
+rm -f %{buildroot}/usr/share/vim/vim82/rgb.txt
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/arduino.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/avra.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/bzl.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/dockerfile.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/euphoria3.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/euphoria4.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/go.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/godoc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/j.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/json.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/kivy.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/less.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/mix.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rmd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/rrst.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/scala.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/srec.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/systemd.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/systemverilog.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/teraterm.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tmux.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/upstreamrpt.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/vroom.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tools/demoserver.py
+rm -f %{buildroot}/usr/share/vim/vim82/tools/demoserver.pyc
+rm -f %{buildroot}/usr/share/vim/vim82/tools/demoserver.pyo
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.bg.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sr.cp1250
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.sr.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.uk.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/context.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/contextcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/kazakh-jcuken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/context.vim
+rm -f %{buildroot}/usr/share/vim/vim82/compiler/context.vim
+rm -f %{buildroot}/usr/share/vim/vim82/doc/terminal.txt
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/murphi.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/tap.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.lv
+rm -f %{buildroot}/usr/share/vim/vim82/lang/lv/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/dist/ft.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cmake.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/nsis.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/cmod.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/autodoc.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/chicken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/chicken.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/oldturkic-orkhon_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/keymap/oldturkic-yenisei_utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/sr/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/colors/tools/check_colors.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/debcopyright.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/xmlformat.vim
+rm -f %{buildroot}/usr/share/vim/vim82/lang/da/LC_MESSAGES/vim.mo
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_da.utf-8.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tools/__pycache__/demoserver.cpython-37.pyc
+rm -f %{buildroot}/usr/share/vim/vim82/lang/menu_da.latin1.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.da
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.da.utf-8
 rm -f %{buildroot}/usr/share/man/da.ISO8859-1/man1/eview.1
 rm -f %{buildroot}/usr/share/man/da.ISO8859-1/man1/evim.1
 rm -f %{buildroot}/usr/share/man/da.ISO8859-1/man1/ex.1
@@ -2066,22 +2066,22 @@ rm -f %{buildroot}/usr/share/man/de/man1/rvim.1
 rm -f %{buildroot}/usr/share/man/de/man1/view.1
 rm -f %{buildroot}/usr/share/man/de/man1/vim.1
 rm -f %{buildroot}/usr/share/man/de/man1/vimtutor.1
-rm -f %{buildroot}/usr/share/vim/vim81/tutor/tutor.lv.utf-8
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/RstFold.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/wast.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/wast.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/wast.vim
-rm -f %{buildroot}/usr/share/vim/vim81/pack/dist/opt/cfilter/plugin/cfilter.vim
-rm -f %{buildroot}/usr/share/vim/vim81/autoload/haskellcomplete.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/raml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/raml.vim
-rm -f %{buildroot}/usr/share/vim/vim81/doc/textprop.txt
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/cfg.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/bash.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/mma.vim
-rm -f %{buildroot}/usr/share/vim/vim81/ftplugin/meson.vim
-rm -f %{buildroot}/usr/share/vim/vim81/indent/meson.vim
-rm -f %{buildroot}/usr/share/vim/vim81/syntax/meson.vim
+rm -f %{buildroot}/usr/share/vim/vim82/tutor/tutor.lv.utf-8
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/RstFold.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/wast.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/wast.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/wast.vim
+rm -f %{buildroot}/usr/share/vim/vim82/pack/dist/opt/cfilter/plugin/cfilter.vim
+rm -f %{buildroot}/usr/share/vim/vim82/autoload/haskellcomplete.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/raml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/raml.vim
+rm -f %{buildroot}/usr/share/vim/vim82/doc/textprop.txt
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/cfg.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/bash.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/mma.vim
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/meson.vim
+rm -f %{buildroot}/usr/share/vim/vim82/indent/meson.vim
+rm -f %{buildroot}/usr/share/vim/vim82/syntax/meson.vim
 rm -f %{buildroot}/usr/share/icons/locolor/16x16/apps/gvim.png
 rm -f %{buildroot}/usr/share/icons/locolor/32x32/apps/gvim.png
 ## install_append content
@@ -2104,1718 +2104,39 @@ rm -rf %{buildroot}/usr/share/man
 %defattr(-,root,root,-)
 /usr/share/applications/gvim.desktop
 /usr/share/icons/hicolor/48x48/apps/gvim.png
-/usr/share/vim/vim82/autoload/README.txt
-/usr/share/vim/vim82/autoload/RstFold.vim
-/usr/share/vim/vim82/autoload/ada.vim
-/usr/share/vim/vim82/autoload/adacomplete.vim
-/usr/share/vim/vim82/autoload/ccomplete.vim
-/usr/share/vim/vim82/autoload/clojurecomplete.vim
-/usr/share/vim/vim82/autoload/context.vim
-/usr/share/vim/vim82/autoload/contextcomplete.vim
-/usr/share/vim/vim82/autoload/csscomplete.vim
-/usr/share/vim/vim82/autoload/decada.vim
-/usr/share/vim/vim82/autoload/dist/ft.vim
-/usr/share/vim/vim82/autoload/getscript.vim
-/usr/share/vim/vim82/autoload/gnat.vim
-/usr/share/vim/vim82/autoload/gzip.vim
-/usr/share/vim/vim82/autoload/haskellcomplete.vim
-/usr/share/vim/vim82/autoload/htmlcomplete.vim
-/usr/share/vim/vim82/autoload/javascriptcomplete.vim
-/usr/share/vim/vim82/autoload/netrw.vim
-/usr/share/vim/vim82/autoload/netrwFileHandlers.vim
-/usr/share/vim/vim82/autoload/netrwSettings.vim
-/usr/share/vim/vim82/autoload/netrw_gitignore.vim
-/usr/share/vim/vim82/autoload/paste.vim
-/usr/share/vim/vim82/autoload/phpcomplete.vim
-/usr/share/vim/vim82/autoload/python3complete.vim
-/usr/share/vim/vim82/autoload/pythoncomplete.vim
-/usr/share/vim/vim82/autoload/rubycomplete.vim
-/usr/share/vim/vim82/autoload/rust.vim
-/usr/share/vim/vim82/autoload/rustfmt.vim
-/usr/share/vim/vim82/autoload/spellfile.vim
-/usr/share/vim/vim82/autoload/sqlcomplete.vim
-/usr/share/vim/vim82/autoload/syntaxcomplete.vim
-/usr/share/vim/vim82/autoload/tar.vim
-/usr/share/vim/vim82/autoload/tohtml.vim
-/usr/share/vim/vim82/autoload/vimball.vim
-/usr/share/vim/vim82/autoload/xml/html32.vim
-/usr/share/vim/vim82/autoload/xml/html401f.vim
-/usr/share/vim/vim82/autoload/xml/html401s.vim
-/usr/share/vim/vim82/autoload/xml/html401t.vim
-/usr/share/vim/vim82/autoload/xml/html40f.vim
-/usr/share/vim/vim82/autoload/xml/html40s.vim
-/usr/share/vim/vim82/autoload/xml/html40t.vim
-/usr/share/vim/vim82/autoload/xml/xhtml10f.vim
-/usr/share/vim/vim82/autoload/xml/xhtml10s.vim
-/usr/share/vim/vim82/autoload/xml/xhtml10t.vim
-/usr/share/vim/vim82/autoload/xml/xhtml11.vim
-/usr/share/vim/vim82/autoload/xml/xsd.vim
-/usr/share/vim/vim82/autoload/xml/xsl.vim
-/usr/share/vim/vim82/autoload/xmlcomplete.vim
-/usr/share/vim/vim82/autoload/xmlformat.vim
-/usr/share/vim/vim82/autoload/zip.vim
-/usr/share/vim/vim82/bugreport.vim
-/usr/share/vim/vim82/colors/README.txt
-/usr/share/vim/vim82/colors/blue.vim
-/usr/share/vim/vim82/colors/darkblue.vim
-/usr/share/vim/vim82/colors/default.vim
-/usr/share/vim/vim82/colors/delek.vim
-/usr/share/vim/vim82/colors/desert.vim
-/usr/share/vim/vim82/colors/elflord.vim
-/usr/share/vim/vim82/colors/evening.vim
-/usr/share/vim/vim82/colors/industry.vim
-/usr/share/vim/vim82/colors/koehler.vim
-/usr/share/vim/vim82/colors/morning.vim
-/usr/share/vim/vim82/colors/murphy.vim
-/usr/share/vim/vim82/colors/pablo.vim
-/usr/share/vim/vim82/colors/peachpuff.vim
-/usr/share/vim/vim82/colors/ron.vim
-/usr/share/vim/vim82/colors/shine.vim
-/usr/share/vim/vim82/colors/slate.vim
-/usr/share/vim/vim82/colors/tools/check_colors.vim
-/usr/share/vim/vim82/colors/torte.vim
-/usr/share/vim/vim82/colors/zellner.vim
-/usr/share/vim/vim82/compiler/README.txt
-/usr/share/vim/vim82/compiler/ant.vim
-/usr/share/vim/vim82/compiler/bcc.vim
-/usr/share/vim/vim82/compiler/bdf.vim
-/usr/share/vim/vim82/compiler/cargo.vim
-/usr/share/vim/vim82/compiler/checkstyle.vim
-/usr/share/vim/vim82/compiler/context.vim
-/usr/share/vim/vim82/compiler/cs.vim
-/usr/share/vim/vim82/compiler/csslint.vim
-/usr/share/vim/vim82/compiler/cucumber.vim
-/usr/share/vim/vim82/compiler/decada.vim
-/usr/share/vim/vim82/compiler/dot.vim
-/usr/share/vim/vim82/compiler/erlang.vim
-/usr/share/vim/vim82/compiler/eruby.vim
-/usr/share/vim/vim82/compiler/fortran_F.vim
-/usr/share/vim/vim82/compiler/fortran_cv.vim
-/usr/share/vim/vim82/compiler/fortran_elf90.vim
-/usr/share/vim/vim82/compiler/fortran_g77.vim
-/usr/share/vim/vim82/compiler/fortran_lf95.vim
-/usr/share/vim/vim82/compiler/fpc.vim
-/usr/share/vim/vim82/compiler/g95.vim
-/usr/share/vim/vim82/compiler/gcc.vim
-/usr/share/vim/vim82/compiler/gfortran.vim
-/usr/share/vim/vim82/compiler/ghc.vim
-/usr/share/vim/vim82/compiler/gnat.vim
-/usr/share/vim/vim82/compiler/go.vim
-/usr/share/vim/vim82/compiler/haml.vim
-/usr/share/vim/vim82/compiler/hp_acc.vim
-/usr/share/vim/vim82/compiler/icc.vim
-/usr/share/vim/vim82/compiler/ifort.vim
-/usr/share/vim/vim82/compiler/intel.vim
-/usr/share/vim/vim82/compiler/irix5_c.vim
-/usr/share/vim/vim82/compiler/irix5_cpp.vim
-/usr/share/vim/vim82/compiler/javac.vim
-/usr/share/vim/vim82/compiler/jikes.vim
-/usr/share/vim/vim82/compiler/mcs.vim
-/usr/share/vim/vim82/compiler/mips_c.vim
-/usr/share/vim/vim82/compiler/mipspro_c89.vim
-/usr/share/vim/vim82/compiler/mipspro_cpp.vim
-/usr/share/vim/vim82/compiler/modelsim_vcom.vim
-/usr/share/vim/vim82/compiler/msbuild.vim
-/usr/share/vim/vim82/compiler/msvc.vim
-/usr/share/vim/vim82/compiler/neato.vim
-/usr/share/vim/vim82/compiler/ocaml.vim
-/usr/share/vim/vim82/compiler/onsgmls.vim
-/usr/share/vim/vim82/compiler/pbx.vim
-/usr/share/vim/vim82/compiler/perl.vim
-/usr/share/vim/vim82/compiler/php.vim
-/usr/share/vim/vim82/compiler/pylint.vim
-/usr/share/vim/vim82/compiler/pyunit.vim
-/usr/share/vim/vim82/compiler/rake.vim
-/usr/share/vim/vim82/compiler/rspec.vim
-/usr/share/vim/vim82/compiler/rst.vim
-/usr/share/vim/vim82/compiler/ruby.vim
-/usr/share/vim/vim82/compiler/rubyunit.vim
-/usr/share/vim/vim82/compiler/rustc.vim
-/usr/share/vim/vim82/compiler/sass.vim
-/usr/share/vim/vim82/compiler/se.vim
-/usr/share/vim/vim82/compiler/splint.vim
-/usr/share/vim/vim82/compiler/stack.vim
-/usr/share/vim/vim82/compiler/tcl.vim
-/usr/share/vim/vim82/compiler/tex.vim
-/usr/share/vim/vim82/compiler/tidy.vim
-/usr/share/vim/vim82/compiler/xbuild.vim
-/usr/share/vim/vim82/compiler/xmllint.vim
-/usr/share/vim/vim82/compiler/xmlwf.vim
-/usr/share/vim/vim82/defaults.vim
-/usr/share/vim/vim82/delmenu.vim
-/usr/share/vim/vim82/doc/arabic.txt
-/usr/share/vim/vim82/doc/autocmd.txt
-/usr/share/vim/vim82/doc/change.txt
-/usr/share/vim/vim82/doc/channel.txt
-/usr/share/vim/vim82/doc/cmdline.txt
-/usr/share/vim/vim82/doc/debug.txt
-/usr/share/vim/vim82/doc/debugger.txt
-/usr/share/vim/vim82/doc/develop.txt
-/usr/share/vim/vim82/doc/diff.txt
-/usr/share/vim/vim82/doc/digraph.txt
-/usr/share/vim/vim82/doc/editing.txt
-/usr/share/vim/vim82/doc/eval.txt
-/usr/share/vim/vim82/doc/farsi.txt
-/usr/share/vim/vim82/doc/filetype.txt
-/usr/share/vim/vim82/doc/fold.txt
-/usr/share/vim/vim82/doc/ft_ada.txt
-/usr/share/vim/vim82/doc/ft_rust.txt
-/usr/share/vim/vim82/doc/ft_sql.txt
-/usr/share/vim/vim82/doc/gui.txt
-/usr/share/vim/vim82/doc/gui_w32.txt
-/usr/share/vim/vim82/doc/gui_x11.txt
-/usr/share/vim/vim82/doc/hangulin.txt
-/usr/share/vim/vim82/doc/hebrew.txt
-/usr/share/vim/vim82/doc/help.txt
-/usr/share/vim/vim82/doc/helphelp.txt
-/usr/share/vim/vim82/doc/howto.txt
-/usr/share/vim/vim82/doc/if_cscop.txt
-/usr/share/vim/vim82/doc/if_lua.txt
-/usr/share/vim/vim82/doc/if_mzsch.txt
-/usr/share/vim/vim82/doc/if_ole.txt
-/usr/share/vim/vim82/doc/if_perl.txt
-/usr/share/vim/vim82/doc/if_pyth.txt
-/usr/share/vim/vim82/doc/if_ruby.txt
-/usr/share/vim/vim82/doc/if_sniff.txt
-/usr/share/vim/vim82/doc/if_tcl.txt
-/usr/share/vim/vim82/doc/indent.txt
-/usr/share/vim/vim82/doc/index.txt
-/usr/share/vim/vim82/doc/insert.txt
-/usr/share/vim/vim82/doc/intro.txt
-/usr/share/vim/vim82/doc/map.txt
-/usr/share/vim/vim82/doc/mbyte.txt
-/usr/share/vim/vim82/doc/message.txt
-/usr/share/vim/vim82/doc/mlang.txt
-/usr/share/vim/vim82/doc/motion.txt
-/usr/share/vim/vim82/doc/netbeans.txt
-/usr/share/vim/vim82/doc/options.txt
-/usr/share/vim/vim82/doc/os_390.txt
-/usr/share/vim/vim82/doc/os_amiga.txt
-/usr/share/vim/vim82/doc/os_beos.txt
-/usr/share/vim/vim82/doc/os_dos.txt
-/usr/share/vim/vim82/doc/os_mac.txt
-/usr/share/vim/vim82/doc/os_mint.txt
-/usr/share/vim/vim82/doc/os_msdos.txt
-/usr/share/vim/vim82/doc/os_os2.txt
-/usr/share/vim/vim82/doc/os_qnx.txt
-/usr/share/vim/vim82/doc/os_risc.txt
-/usr/share/vim/vim82/doc/os_unix.txt
-/usr/share/vim/vim82/doc/os_vms.txt
-/usr/share/vim/vim82/doc/os_win32.txt
-/usr/share/vim/vim82/doc/pattern.txt
-/usr/share/vim/vim82/doc/pi_getscript.txt
-/usr/share/vim/vim82/doc/pi_gzip.txt
-/usr/share/vim/vim82/doc/pi_logipat.txt
-/usr/share/vim/vim82/doc/pi_netrw.txt
-/usr/share/vim/vim82/doc/pi_paren.txt
-/usr/share/vim/vim82/doc/pi_spec.txt
-/usr/share/vim/vim82/doc/pi_tar.txt
-/usr/share/vim/vim82/doc/pi_vimball.txt
-/usr/share/vim/vim82/doc/pi_zip.txt
 /usr/share/vim/vim82/doc/popup.txt
-/usr/share/vim/vim82/doc/print.txt
-/usr/share/vim/vim82/doc/quickfix.txt
-/usr/share/vim/vim82/doc/quickref.txt
-/usr/share/vim/vim82/doc/quotes.txt
-/usr/share/vim/vim82/doc/recover.txt
-/usr/share/vim/vim82/doc/remote.txt
-/usr/share/vim/vim82/doc/repeat.txt
-/usr/share/vim/vim82/doc/rileft.txt
-/usr/share/vim/vim82/doc/russian.txt
-/usr/share/vim/vim82/doc/scroll.txt
-/usr/share/vim/vim82/doc/sign.txt
-/usr/share/vim/vim82/doc/spell.txt
-/usr/share/vim/vim82/doc/sponsor.txt
-/usr/share/vim/vim82/doc/starting.txt
-/usr/share/vim/vim82/doc/syntax.txt
-/usr/share/vim/vim82/doc/tabpage.txt
-/usr/share/vim/vim82/doc/tags
-/usr/share/vim/vim82/doc/tagsrch.txt
-/usr/share/vim/vim82/doc/term.txt
-/usr/share/vim/vim82/doc/terminal.txt
 /usr/share/vim/vim82/doc/testing.txt
-/usr/share/vim/vim82/doc/textprop.txt
-/usr/share/vim/vim82/doc/tips.txt
-/usr/share/vim/vim82/doc/todo.txt
-/usr/share/vim/vim82/doc/uganda.txt
-/usr/share/vim/vim82/doc/undo.txt
-/usr/share/vim/vim82/doc/usr_01.txt
-/usr/share/vim/vim82/doc/usr_02.txt
-/usr/share/vim/vim82/doc/usr_03.txt
-/usr/share/vim/vim82/doc/usr_04.txt
-/usr/share/vim/vim82/doc/usr_05.txt
-/usr/share/vim/vim82/doc/usr_06.txt
-/usr/share/vim/vim82/doc/usr_07.txt
-/usr/share/vim/vim82/doc/usr_08.txt
-/usr/share/vim/vim82/doc/usr_09.txt
-/usr/share/vim/vim82/doc/usr_10.txt
-/usr/share/vim/vim82/doc/usr_11.txt
-/usr/share/vim/vim82/doc/usr_12.txt
-/usr/share/vim/vim82/doc/usr_20.txt
-/usr/share/vim/vim82/doc/usr_21.txt
-/usr/share/vim/vim82/doc/usr_22.txt
-/usr/share/vim/vim82/doc/usr_23.txt
-/usr/share/vim/vim82/doc/usr_24.txt
-/usr/share/vim/vim82/doc/usr_25.txt
-/usr/share/vim/vim82/doc/usr_26.txt
-/usr/share/vim/vim82/doc/usr_27.txt
-/usr/share/vim/vim82/doc/usr_28.txt
-/usr/share/vim/vim82/doc/usr_29.txt
-/usr/share/vim/vim82/doc/usr_30.txt
-/usr/share/vim/vim82/doc/usr_31.txt
-/usr/share/vim/vim82/doc/usr_32.txt
-/usr/share/vim/vim82/doc/usr_40.txt
-/usr/share/vim/vim82/doc/usr_41.txt
-/usr/share/vim/vim82/doc/usr_42.txt
-/usr/share/vim/vim82/doc/usr_43.txt
-/usr/share/vim/vim82/doc/usr_44.txt
-/usr/share/vim/vim82/doc/usr_45.txt
-/usr/share/vim/vim82/doc/usr_90.txt
-/usr/share/vim/vim82/doc/usr_toc.txt
-/usr/share/vim/vim82/doc/various.txt
-/usr/share/vim/vim82/doc/version4.txt
-/usr/share/vim/vim82/doc/version5.txt
-/usr/share/vim/vim82/doc/version6.txt
-/usr/share/vim/vim82/doc/version7.txt
-/usr/share/vim/vim82/doc/version8.txt
-/usr/share/vim/vim82/doc/vi_diff.txt
-/usr/share/vim/vim82/doc/vim2html.pl
-/usr/share/vim/vim82/doc/visual.txt
-/usr/share/vim/vim82/doc/windows.txt
-/usr/share/vim/vim82/doc/workshop.txt
-/usr/share/vim/vim82/evim.vim
-/usr/share/vim/vim82/filetype.vim
-/usr/share/vim/vim82/ftoff.vim
-/usr/share/vim/vim82/ftplugin.vim
 /usr/share/vim/vim82/ftplugin/8th.vim
-/usr/share/vim/vim82/ftplugin/README.txt
-/usr/share/vim/vim82/ftplugin/a2ps.vim
-/usr/share/vim/vim82/ftplugin/aap.vim
-/usr/share/vim/vim82/ftplugin/abap.vim
-/usr/share/vim/vim82/ftplugin/abaqus.vim
-/usr/share/vim/vim82/ftplugin/ada.vim
-/usr/share/vim/vim82/ftplugin/alsaconf.vim
-/usr/share/vim/vim82/ftplugin/ant.vim
-/usr/share/vim/vim82/ftplugin/arch.vim
-/usr/share/vim/vim82/ftplugin/art.vim
-/usr/share/vim/vim82/ftplugin/aspvbs.vim
-/usr/share/vim/vim82/ftplugin/automake.vim
-/usr/share/vim/vim82/ftplugin/awk.vim
-/usr/share/vim/vim82/ftplugin/bash.vim
-/usr/share/vim/vim82/ftplugin/bdf.vim
-/usr/share/vim/vim82/ftplugin/bst.vim
-/usr/share/vim/vim82/ftplugin/btm.vim
-/usr/share/vim/vim82/ftplugin/bzl.vim
-/usr/share/vim/vim82/ftplugin/c.vim
-/usr/share/vim/vim82/ftplugin/calendar.vim
-/usr/share/vim/vim82/ftplugin/cdrdaoconf.vim
-/usr/share/vim/vim82/ftplugin/cfg.vim
-/usr/share/vim/vim82/ftplugin/ch.vim
-/usr/share/vim/vim82/ftplugin/changelog.vim
-/usr/share/vim/vim82/ftplugin/chicken.vim
-/usr/share/vim/vim82/ftplugin/clojure.vim
-/usr/share/vim/vim82/ftplugin/cmake.vim
-/usr/share/vim/vim82/ftplugin/cobol.vim
-/usr/share/vim/vim82/ftplugin/conf.vim
-/usr/share/vim/vim82/ftplugin/config.vim
-/usr/share/vim/vim82/ftplugin/context.vim
-/usr/share/vim/vim82/ftplugin/cpp.vim
-/usr/share/vim/vim82/ftplugin/crm.vim
-/usr/share/vim/vim82/ftplugin/cs.vim
-/usr/share/vim/vim82/ftplugin/csc.vim
-/usr/share/vim/vim82/ftplugin/csh.vim
-/usr/share/vim/vim82/ftplugin/css.vim
-/usr/share/vim/vim82/ftplugin/cucumber.vim
-/usr/share/vim/vim82/ftplugin/cvsrc.vim
-/usr/share/vim/vim82/ftplugin/debchangelog.vim
-/usr/share/vim/vim82/ftplugin/debcontrol.vim
-/usr/share/vim/vim82/ftplugin/denyhosts.vim
-/usr/share/vim/vim82/ftplugin/dictconf.vim
-/usr/share/vim/vim82/ftplugin/dictdconf.vim
-/usr/share/vim/vim82/ftplugin/diff.vim
-/usr/share/vim/vim82/ftplugin/dircolors.vim
-/usr/share/vim/vim82/ftplugin/docbk.vim
-/usr/share/vim/vim82/ftplugin/dockerfile.vim
-/usr/share/vim/vim82/ftplugin/dosbatch.vim
-/usr/share/vim/vim82/ftplugin/dosini.vim
-/usr/share/vim/vim82/ftplugin/dtd.vim
-/usr/share/vim/vim82/ftplugin/dtrace.vim
 /usr/share/vim/vim82/ftplugin/dune.vim
-/usr/share/vim/vim82/ftplugin/eiffel.vim
-/usr/share/vim/vim82/ftplugin/elinks.vim
-/usr/share/vim/vim82/ftplugin/erlang.vim
-/usr/share/vim/vim82/ftplugin/eruby.vim
-/usr/share/vim/vim82/ftplugin/eterm.vim
-/usr/share/vim/vim82/ftplugin/falcon.vim
-/usr/share/vim/vim82/ftplugin/fetchmail.vim
-/usr/share/vim/vim82/ftplugin/flexwiki.vim
-/usr/share/vim/vim82/ftplugin/fortran.vim
-/usr/share/vim/vim82/ftplugin/framescript.vim
-/usr/share/vim/vim82/ftplugin/fvwm.vim
-/usr/share/vim/vim82/ftplugin/gdb.vim
-/usr/share/vim/vim82/ftplugin/git.vim
-/usr/share/vim/vim82/ftplugin/gitcommit.vim
-/usr/share/vim/vim82/ftplugin/gitconfig.vim
-/usr/share/vim/vim82/ftplugin/gitrebase.vim
-/usr/share/vim/vim82/ftplugin/gitsendemail.vim
-/usr/share/vim/vim82/ftplugin/go.vim
-/usr/share/vim/vim82/ftplugin/gpg.vim
-/usr/share/vim/vim82/ftplugin/gprof.vim
-/usr/share/vim/vim82/ftplugin/groovy.vim
-/usr/share/vim/vim82/ftplugin/group.vim
-/usr/share/vim/vim82/ftplugin/grub.vim
-/usr/share/vim/vim82/ftplugin/haml.vim
-/usr/share/vim/vim82/ftplugin/hamster.vim
-/usr/share/vim/vim82/ftplugin/haskell.vim
-/usr/share/vim/vim82/ftplugin/help.vim
-/usr/share/vim/vim82/ftplugin/hgcommit.vim
-/usr/share/vim/vim82/ftplugin/hog.vim
-/usr/share/vim/vim82/ftplugin/hostconf.vim
-/usr/share/vim/vim82/ftplugin/hostsaccess.vim
-/usr/share/vim/vim82/ftplugin/html.vim
-/usr/share/vim/vim82/ftplugin/htmldjango.vim
-/usr/share/vim/vim82/ftplugin/indent.vim
-/usr/share/vim/vim82/ftplugin/initex.vim
-/usr/share/vim/vim82/ftplugin/ishd.vim
-/usr/share/vim/vim82/ftplugin/j.vim
-/usr/share/vim/vim82/ftplugin/java.vim
-/usr/share/vim/vim82/ftplugin/javascript.vim
 /usr/share/vim/vim82/ftplugin/javascriptreact.vim
-/usr/share/vim/vim82/ftplugin/jproperties.vim
-/usr/share/vim/vim82/ftplugin/json.vim
-/usr/share/vim/vim82/ftplugin/jsp.vim
-/usr/share/vim/vim82/ftplugin/kconfig.vim
-/usr/share/vim/vim82/ftplugin/kwt.vim
-/usr/share/vim/vim82/ftplugin/ld.vim
-/usr/share/vim/vim82/ftplugin/less.vim
-/usr/share/vim/vim82/ftplugin/lftp.vim
-/usr/share/vim/vim82/ftplugin/libao.vim
-/usr/share/vim/vim82/ftplugin/limits.vim
-/usr/share/vim/vim82/ftplugin/liquid.vim
-/usr/share/vim/vim82/ftplugin/lisp.vim
-/usr/share/vim/vim82/ftplugin/logcheck.vim
-/usr/share/vim/vim82/ftplugin/loginaccess.vim
-/usr/share/vim/vim82/ftplugin/logindefs.vim
-/usr/share/vim/vim82/ftplugin/logtalk.dict
-/usr/share/vim/vim82/ftplugin/logtalk.vim
-/usr/share/vim/vim82/ftplugin/lprolog.vim
-/usr/share/vim/vim82/ftplugin/lua.vim
-/usr/share/vim/vim82/ftplugin/m4.vim
-/usr/share/vim/vim82/ftplugin/mail.vim
-/usr/share/vim/vim82/ftplugin/mailaliases.vim
-/usr/share/vim/vim82/ftplugin/mailcap.vim
-/usr/share/vim/vim82/ftplugin/make.vim
-/usr/share/vim/vim82/ftplugin/man.vim
-/usr/share/vim/vim82/ftplugin/manconf.vim
-/usr/share/vim/vim82/ftplugin/markdown.vim
-/usr/share/vim/vim82/ftplugin/matlab.vim
-/usr/share/vim/vim82/ftplugin/meson.vim
-/usr/share/vim/vim82/ftplugin/mf.vim
-/usr/share/vim/vim82/ftplugin/mma.vim
-/usr/share/vim/vim82/ftplugin/modconf.vim
-/usr/share/vim/vim82/ftplugin/mp.vim
-/usr/share/vim/vim82/ftplugin/mplayerconf.vim
-/usr/share/vim/vim82/ftplugin/mrxvtrc.vim
-/usr/share/vim/vim82/ftplugin/msmessages.vim
-/usr/share/vim/vim82/ftplugin/muttrc.vim
-/usr/share/vim/vim82/ftplugin/nanorc.vim
-/usr/share/vim/vim82/ftplugin/neomuttrc.vim
-/usr/share/vim/vim82/ftplugin/netrc.vim
 /usr/share/vim/vim82/ftplugin/nroff.vim
-/usr/share/vim/vim82/ftplugin/nsis.vim
-/usr/share/vim/vim82/ftplugin/objc.vim
-/usr/share/vim/vim82/ftplugin/ocaml.vim
-/usr/share/vim/vim82/ftplugin/occam.vim
-/usr/share/vim/vim82/ftplugin/pamconf.vim
-/usr/share/vim/vim82/ftplugin/pascal.vim
-/usr/share/vim/vim82/ftplugin/passwd.vim
-/usr/share/vim/vim82/ftplugin/pdf.vim
-/usr/share/vim/vim82/ftplugin/perl.vim
-/usr/share/vim/vim82/ftplugin/perl6.vim
-/usr/share/vim/vim82/ftplugin/php.vim
-/usr/share/vim/vim82/ftplugin/pinfo.vim
-/usr/share/vim/vim82/ftplugin/plaintex.vim
-/usr/share/vim/vim82/ftplugin/postscr.vim
-/usr/share/vim/vim82/ftplugin/procmail.vim
-/usr/share/vim/vim82/ftplugin/prolog.vim
-/usr/share/vim/vim82/ftplugin/protocols.vim
-/usr/share/vim/vim82/ftplugin/pyrex.vim
-/usr/share/vim/vim82/ftplugin/python.vim
-/usr/share/vim/vim82/ftplugin/qf.vim
-/usr/share/vim/vim82/ftplugin/quake.vim
-/usr/share/vim/vim82/ftplugin/r.vim
-/usr/share/vim/vim82/ftplugin/racc.vim
-/usr/share/vim/vim82/ftplugin/readline.vim
-/usr/share/vim/vim82/ftplugin/registry.vim
-/usr/share/vim/vim82/ftplugin/reva.vim
-/usr/share/vim/vim82/ftplugin/rhelp.vim
-/usr/share/vim/vim82/ftplugin/rmd.vim
-/usr/share/vim/vim82/ftplugin/rnc.vim
-/usr/share/vim/vim82/ftplugin/rnoweb.vim
-/usr/share/vim/vim82/ftplugin/rpl.vim
-/usr/share/vim/vim82/ftplugin/rrst.vim
-/usr/share/vim/vim82/ftplugin/rst.vim
-/usr/share/vim/vim82/ftplugin/ruby.vim
-/usr/share/vim/vim82/ftplugin/rust.vim
-/usr/share/vim/vim82/ftplugin/sass.vim
-/usr/share/vim/vim82/ftplugin/sbt.vim
-/usr/share/vim/vim82/ftplugin/scala.vim
-/usr/share/vim/vim82/ftplugin/scheme.vim
-/usr/share/vim/vim82/ftplugin/screen.vim
-/usr/share/vim/vim82/ftplugin/scss.vim
-/usr/share/vim/vim82/ftplugin/sensors.vim
-/usr/share/vim/vim82/ftplugin/services.vim
-/usr/share/vim/vim82/ftplugin/setserial.vim
-/usr/share/vim/vim82/ftplugin/sgml.vim
-/usr/share/vim/vim82/ftplugin/sh.vim
-/usr/share/vim/vim82/ftplugin/sieve.vim
-/usr/share/vim/vim82/ftplugin/slpconf.vim
-/usr/share/vim/vim82/ftplugin/slpreg.vim
-/usr/share/vim/vim82/ftplugin/slpspi.vim
-/usr/share/vim/vim82/ftplugin/spec.vim
-/usr/share/vim/vim82/ftplugin/sql.vim
-/usr/share/vim/vim82/ftplugin/sshconfig.vim
-/usr/share/vim/vim82/ftplugin/sudoers.vim
-/usr/share/vim/vim82/ftplugin/svg.vim
-/usr/share/vim/vim82/ftplugin/sysctl.vim
-/usr/share/vim/vim82/ftplugin/systemd.vim
-/usr/share/vim/vim82/ftplugin/systemverilog.vim
-/usr/share/vim/vim82/ftplugin/tcl.vim
-/usr/share/vim/vim82/ftplugin/tcsh.vim
-/usr/share/vim/vim82/ftplugin/terminfo.vim
-/usr/share/vim/vim82/ftplugin/tex.vim
-/usr/share/vim/vim82/ftplugin/text.vim
-/usr/share/vim/vim82/ftplugin/tmux.vim
-/usr/share/vim/vim82/ftplugin/treetop.vim
-/usr/share/vim/vim82/ftplugin/tt2html.vim
-/usr/share/vim/vim82/ftplugin/udevconf.vim
-/usr/share/vim/vim82/ftplugin/udevperm.vim
-/usr/share/vim/vim82/ftplugin/udevrules.vim
-/usr/share/vim/vim82/ftplugin/updatedb.vim
-/usr/share/vim/vim82/ftplugin/vb.vim
-/usr/share/vim/vim82/ftplugin/verilog.vim
-/usr/share/vim/vim82/ftplugin/vhdl.vim
-/usr/share/vim/vim82/ftplugin/vim.vim
-/usr/share/vim/vim82/ftplugin/vroom.vim
-/usr/share/vim/vim82/ftplugin/wast.vim
-/usr/share/vim/vim82/ftplugin/xdefaults.vim
-/usr/share/vim/vim82/ftplugin/xf86conf.vim
-/usr/share/vim/vim82/ftplugin/xhtml.vim
-/usr/share/vim/vim82/ftplugin/xinetd.vim
-/usr/share/vim/vim82/ftplugin/xml.vim
-/usr/share/vim/vim82/ftplugin/xmodmap.vim
-/usr/share/vim/vim82/ftplugin/xs.vim
-/usr/share/vim/vim82/ftplugin/xsd.vim
-/usr/share/vim/vim82/ftplugin/xslt.vim
-/usr/share/vim/vim82/ftplugin/yaml.vim
-/usr/share/vim/vim82/ftplugin/zimbu.vim
-/usr/share/vim/vim82/ftplugin/zsh.vim
-/usr/share/vim/vim82/ftplugof.vim
-/usr/share/vim/vim82/gvimrc_example.vim
-/usr/share/vim/vim82/indent.vim
-/usr/share/vim/vim82/indent/README.txt
-/usr/share/vim/vim82/indent/aap.vim
-/usr/share/vim/vim82/indent/ada.vim
-/usr/share/vim/vim82/indent/ant.vim
-/usr/share/vim/vim82/indent/automake.vim
-/usr/share/vim/vim82/indent/awk.vim
 /usr/share/vim/vim82/indent/bash.vim
-/usr/share/vim/vim82/indent/bib.vim
-/usr/share/vim/vim82/indent/bst.vim
-/usr/share/vim/vim82/indent/bzl.vim
-/usr/share/vim/vim82/indent/c.vim
-/usr/share/vim/vim82/indent/cdl.vim
-/usr/share/vim/vim82/indent/ch.vim
-/usr/share/vim/vim82/indent/chaiscript.vim
-/usr/share/vim/vim82/indent/changelog.vim
-/usr/share/vim/vim82/indent/clojure.vim
-/usr/share/vim/vim82/indent/cmake.vim
-/usr/share/vim/vim82/indent/cobol.vim
-/usr/share/vim/vim82/indent/config.vim
-/usr/share/vim/vim82/indent/context.vim
-/usr/share/vim/vim82/indent/cpp.vim
-/usr/share/vim/vim82/indent/cs.vim
-/usr/share/vim/vim82/indent/css.vim
-/usr/share/vim/vim82/indent/cucumber.vim
-/usr/share/vim/vim82/indent/cuda.vim
-/usr/share/vim/vim82/indent/d.vim
-/usr/share/vim/vim82/indent/dictconf.vim
-/usr/share/vim/vim82/indent/dictdconf.vim
-/usr/share/vim/vim82/indent/docbk.vim
-/usr/share/vim/vim82/indent/dosbatch.vim
-/usr/share/vim/vim82/indent/dtd.vim
-/usr/share/vim/vim82/indent/dtrace.vim
-/usr/share/vim/vim82/indent/dylan.vim
-/usr/share/vim/vim82/indent/eiffel.vim
-/usr/share/vim/vim82/indent/erlang.vim
-/usr/share/vim/vim82/indent/eruby.vim
-/usr/share/vim/vim82/indent/eterm.vim
-/usr/share/vim/vim82/indent/falcon.vim
-/usr/share/vim/vim82/indent/fortran.vim
-/usr/share/vim/vim82/indent/framescript.vim
-/usr/share/vim/vim82/indent/gitconfig.vim
-/usr/share/vim/vim82/indent/gitolite.vim
-/usr/share/vim/vim82/indent/go.vim
-/usr/share/vim/vim82/indent/haml.vim
-/usr/share/vim/vim82/indent/hamster.vim
-/usr/share/vim/vim82/indent/hog.vim
-/usr/share/vim/vim82/indent/html.vim
-/usr/share/vim/vim82/indent/htmldjango.vim
-/usr/share/vim/vim82/indent/idlang.vim
-/usr/share/vim/vim82/indent/ishd.vim
-/usr/share/vim/vim82/indent/j.vim
-/usr/share/vim/vim82/indent/java.vim
-/usr/share/vim/vim82/indent/javascript.vim
 /usr/share/vim/vim82/indent/javascriptreact.vim
-/usr/share/vim/vim82/indent/json.vim
-/usr/share/vim/vim82/indent/jsp.vim
-/usr/share/vim/vim82/indent/ld.vim
-/usr/share/vim/vim82/indent/less.vim
-/usr/share/vim/vim82/indent/lifelines.vim
-/usr/share/vim/vim82/indent/liquid.vim
-/usr/share/vim/vim82/indent/lisp.vim
-/usr/share/vim/vim82/indent/logtalk.vim
-/usr/share/vim/vim82/indent/lua.vim
-/usr/share/vim/vim82/indent/mail.vim
-/usr/share/vim/vim82/indent/make.vim
-/usr/share/vim/vim82/indent/matlab.vim
-/usr/share/vim/vim82/indent/meson.vim
-/usr/share/vim/vim82/indent/mf.vim
-/usr/share/vim/vim82/indent/mma.vim
-/usr/share/vim/vim82/indent/mp.vim
-/usr/share/vim/vim82/indent/nsis.vim
-/usr/share/vim/vim82/indent/objc.vim
-/usr/share/vim/vim82/indent/ocaml.vim
-/usr/share/vim/vim82/indent/occam.vim
-/usr/share/vim/vim82/indent/pascal.vim
-/usr/share/vim/vim82/indent/perl.vim
-/usr/share/vim/vim82/indent/perl6.vim
-/usr/share/vim/vim82/indent/php.vim
-/usr/share/vim/vim82/indent/postscr.vim
-/usr/share/vim/vim82/indent/pov.vim
-/usr/share/vim/vim82/indent/prolog.vim
-/usr/share/vim/vim82/indent/pyrex.vim
-/usr/share/vim/vim82/indent/python.vim
-/usr/share/vim/vim82/indent/r.vim
-/usr/share/vim/vim82/indent/raml.vim
-/usr/share/vim/vim82/indent/readline.vim
-/usr/share/vim/vim82/indent/rhelp.vim
-/usr/share/vim/vim82/indent/rmd.vim
-/usr/share/vim/vim82/indent/rnoweb.vim
-/usr/share/vim/vim82/indent/rpl.vim
-/usr/share/vim/vim82/indent/rrst.vim
-/usr/share/vim/vim82/indent/rst.vim
-/usr/share/vim/vim82/indent/ruby.vim
-/usr/share/vim/vim82/indent/rust.vim
-/usr/share/vim/vim82/indent/sas.vim
-/usr/share/vim/vim82/indent/sass.vim
-/usr/share/vim/vim82/indent/scala.vim
-/usr/share/vim/vim82/indent/scheme.vim
-/usr/share/vim/vim82/indent/scss.vim
-/usr/share/vim/vim82/indent/sdl.vim
-/usr/share/vim/vim82/indent/sh.vim
-/usr/share/vim/vim82/indent/sml.vim
-/usr/share/vim/vim82/indent/sql.vim
-/usr/share/vim/vim82/indent/sqlanywhere.vim
-/usr/share/vim/vim82/indent/systemd.vim
-/usr/share/vim/vim82/indent/systemverilog.vim
-/usr/share/vim/vim82/indent/tcl.vim
-/usr/share/vim/vim82/indent/tcsh.vim
-/usr/share/vim/vim82/indent/teraterm.vim
-/usr/share/vim/vim82/indent/tex.vim
-/usr/share/vim/vim82/indent/tf.vim
-/usr/share/vim/vim82/indent/tilde.vim
-/usr/share/vim/vim82/indent/treetop.vim
 /usr/share/vim/vim82/indent/typescript.vim
-/usr/share/vim/vim82/indent/vb.vim
-/usr/share/vim/vim82/indent/verilog.vim
-/usr/share/vim/vim82/indent/vhdl.vim
-/usr/share/vim/vim82/indent/vim.vim
-/usr/share/vim/vim82/indent/vroom.vim
-/usr/share/vim/vim82/indent/wast.vim
-/usr/share/vim/vim82/indent/xf86conf.vim
-/usr/share/vim/vim82/indent/xhtml.vim
-/usr/share/vim/vim82/indent/xinetd.vim
-/usr/share/vim/vim82/indent/xml.vim
-/usr/share/vim/vim82/indent/xsd.vim
-/usr/share/vim/vim82/indent/xslt.vim
-/usr/share/vim/vim82/indent/yacc.vim
-/usr/share/vim/vim82/indent/yaml.vim
-/usr/share/vim/vim82/indent/zimbu.vim
-/usr/share/vim/vim82/indent/zsh.vim
-/usr/share/vim/vim82/indoff.vim
-/usr/share/vim/vim82/keymap/README.txt
-/usr/share/vim/vim82/keymap/accents.vim
-/usr/share/vim/vim82/keymap/arabic.vim
-/usr/share/vim/vim82/keymap/arabic_utf-8.vim
-/usr/share/vim/vim82/keymap/armenian-eastern_utf-8.vim
-/usr/share/vim/vim82/keymap/armenian-western_utf-8.vim
-/usr/share/vim/vim82/keymap/belarusian-jcuken.vim
-/usr/share/vim/vim82/keymap/bulgarian-bds.vim
-/usr/share/vim/vim82/keymap/bulgarian-phonetic.vim
-/usr/share/vim/vim82/keymap/canfr-win.vim
-/usr/share/vim/vim82/keymap/croatian.vim
-/usr/share/vim/vim82/keymap/croatian_cp1250.vim
-/usr/share/vim/vim82/keymap/croatian_iso-8859-2.vim
-/usr/share/vim/vim82/keymap/croatian_utf-8.vim
-/usr/share/vim/vim82/keymap/czech.vim
-/usr/share/vim/vim82/keymap/czech_utf-8.vim
-/usr/share/vim/vim82/keymap/dvorak.vim
-/usr/share/vim/vim82/keymap/esperanto.vim
-/usr/share/vim/vim82/keymap/esperanto_utf-8.vim
-/usr/share/vim/vim82/keymap/greek.vim
-/usr/share/vim/vim82/keymap/greek_cp1253.vim
-/usr/share/vim/vim82/keymap/greek_cp737.vim
-/usr/share/vim/vim82/keymap/greek_iso-8859-7.vim
-/usr/share/vim/vim82/keymap/greek_utf-8.vim
-/usr/share/vim/vim82/keymap/hebrew.vim
-/usr/share/vim/vim82/keymap/hebrew_cp1255.vim
-/usr/share/vim/vim82/keymap/hebrew_iso-8859-8.vim
-/usr/share/vim/vim82/keymap/hebrew_utf-8.vim
-/usr/share/vim/vim82/keymap/hebrewp.vim
-/usr/share/vim/vim82/keymap/hebrewp_cp1255.vim
-/usr/share/vim/vim82/keymap/hebrewp_iso-8859-8.vim
-/usr/share/vim/vim82/keymap/hebrewp_utf-8.vim
-/usr/share/vim/vim82/keymap/kana.vim
-/usr/share/vim/vim82/keymap/kazakh-jcuken.vim
-/usr/share/vim/vim82/keymap/lithuanian-baltic.vim
-/usr/share/vim/vim82/keymap/magyar_utf-8.vim
-/usr/share/vim/vim82/keymap/mongolian_utf-8.vim
-/usr/share/vim/vim82/keymap/oldturkic-orkhon_utf-8.vim
-/usr/share/vim/vim82/keymap/oldturkic-yenisei_utf-8.vim
-/usr/share/vim/vim82/keymap/persian-iranian_utf-8.vim
-/usr/share/vim/vim82/keymap/persian.vim
-/usr/share/vim/vim82/keymap/pinyin.vim
-/usr/share/vim/vim82/keymap/polish-slash.vim
-/usr/share/vim/vim82/keymap/polish-slash_cp1250.vim
-/usr/share/vim/vim82/keymap/polish-slash_cp852.vim
-/usr/share/vim/vim82/keymap/polish-slash_iso-8859-2.vim
-/usr/share/vim/vim82/keymap/polish-slash_utf-8.vim
-/usr/share/vim/vim82/keymap/russian-dvorak.vim
-/usr/share/vim/vim82/keymap/russian-jcuken.vim
-/usr/share/vim/vim82/keymap/russian-jcukenmac.vim
-/usr/share/vim/vim82/keymap/russian-jcukenwin.vim
-/usr/share/vim/vim82/keymap/russian-jcukenwintype.vim
-/usr/share/vim/vim82/keymap/russian-yawerty.vim
-/usr/share/vim/vim82/keymap/serbian-latin.vim
-/usr/share/vim/vim82/keymap/serbian-latin_utf-8.vim
-/usr/share/vim/vim82/keymap/serbian.vim
-/usr/share/vim/vim82/keymap/serbian_cp1250.vim
-/usr/share/vim/vim82/keymap/serbian_cp1251.vim
-/usr/share/vim/vim82/keymap/serbian_iso-8859-2.vim
-/usr/share/vim/vim82/keymap/serbian_iso-8859-5.vim
-/usr/share/vim/vim82/keymap/serbian_utf-8.vim
-/usr/share/vim/vim82/keymap/sinhala-phonetic_utf-8.vim
-/usr/share/vim/vim82/keymap/sinhala.vim
-/usr/share/vim/vim82/keymap/slovak.vim
-/usr/share/vim/vim82/keymap/slovak_cp1250.vim
-/usr/share/vim/vim82/keymap/slovak_iso-8859-2.vim
-/usr/share/vim/vim82/keymap/slovak_utf-8.vim
-/usr/share/vim/vim82/keymap/tamil_tscii.vim
-/usr/share/vim/vim82/keymap/thaana-phonetic_utf-8.vim
-/usr/share/vim/vim82/keymap/thaana.vim
-/usr/share/vim/vim82/keymap/ukrainian-dvorak.vim
-/usr/share/vim/vim82/keymap/ukrainian-jcuken.vim
-/usr/share/vim/vim82/keymap/vietnamese-telex_utf-8.vim
-/usr/share/vim/vim82/keymap/vietnamese-viqr_utf-8.vim
-/usr/share/vim/vim82/keymap/vietnamese-vni_utf-8.vim
-/usr/share/vim/vim82/lang/README.txt
-/usr/share/vim/vim82/lang/af/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ca/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/cs.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/cs/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/da/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/de/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/en_GB/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/eo/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/es/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/fi/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/fr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ga/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/it/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ja.euc-jp/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ja.sjis/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ja/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ko.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ko/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/lv/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/menu_af.latin1.vim
-/usr/share/vim/vim82/lang/menu_af.utf-8.vim
-/usr/share/vim/vim82/lang/menu_af_af.latin1.vim
-/usr/share/vim/vim82/lang/menu_af_af.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ca.latin1.vim
-/usr/share/vim/vim82/lang/menu_ca.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ca_es.latin1.vim
-/usr/share/vim/vim82/lang/menu_ca_es.utf-8.vim
-/usr/share/vim/vim82/lang/menu_chinese(gb)_gb.936.vim
-/usr/share/vim/vim82/lang/menu_chinese(taiwan)_taiwan.950.vim
-/usr/share/vim/vim82/lang/menu_chinese_gb.936.vim
-/usr/share/vim/vim82/lang/menu_chinese_taiwan.950.vim
-/usr/share/vim/vim82/lang/menu_cs.cp1250.vim
-/usr/share/vim/vim82/lang/menu_cs.latin1.vim
-/usr/share/vim/vim82/lang/menu_cs_cz.cp1250.vim
-/usr/share/vim/vim82/lang/menu_cs_cz.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_cs_cz.latin1.vim
-/usr/share/vim/vim82/lang/menu_cs_cz.utf-8.vim
-/usr/share/vim/vim82/lang/menu_czech_czech_republic.1250.vim
-/usr/share/vim/vim82/lang/menu_czech_czech_republic.1252.vim
-/usr/share/vim/vim82/lang/menu_czech_czech_republic.ascii.vim
-/usr/share/vim/vim82/lang/menu_da.latin1.vim
-/usr/share/vim/vim82/lang/menu_da.utf-8.vim
-/usr/share/vim/vim82/lang/menu_de.latin1.vim
-/usr/share/vim/vim82/lang/menu_de.utf-8.vim
-/usr/share/vim/vim82/lang/menu_de_de.latin1.vim
-/usr/share/vim/vim82/lang/menu_de_de.utf-8.vim
-/usr/share/vim/vim82/lang/menu_en_gb.latin1.vim
-/usr/share/vim/vim82/lang/menu_en_gb.utf-8.vim
-/usr/share/vim/vim82/lang/menu_english_united_kingdom.1252.vim
-/usr/share/vim/vim82/lang/menu_english_united_kingdom.ascii.vim
-/usr/share/vim/vim82/lang/menu_eo.utf-8.vim
-/usr/share/vim/vim82/lang/menu_eo_eo.utf-8.vim
-/usr/share/vim/vim82/lang/menu_eo_xx.utf-8.vim
-/usr/share/vim/vim82/lang/menu_es.latin1.vim
-/usr/share/vim/vim82/lang/menu_es.utf-8.vim
-/usr/share/vim/vim82/lang/menu_es_es.latin1.vim
-/usr/share/vim/vim82/lang/menu_es_es.utf-8.vim
-/usr/share/vim/vim82/lang/menu_fi.latin1.vim
-/usr/share/vim/vim82/lang/menu_fi.utf-8.vim
-/usr/share/vim/vim82/lang/menu_fi_fi.latin1.vim
-/usr/share/vim/vim82/lang/menu_fi_fi.utf-8.vim
-/usr/share/vim/vim82/lang/menu_finnish_finland.1252.vim
-/usr/share/vim/vim82/lang/menu_fr.latin1.vim
-/usr/share/vim/vim82/lang/menu_fr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_fr_fr.latin1.vim
-/usr/share/vim/vim82/lang/menu_fr_fr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_french_france.1252.vim
-/usr/share/vim/vim82/lang/menu_german_germany.1252.vim
-/usr/share/vim/vim82/lang/menu_hu.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_hu.utf-8.vim
-/usr/share/vim/vim82/lang/menu_hu_hu.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_hu_hu.utf-8.vim
 /usr/share/vim/vim82/lang/menu_is.latin1.vim
 /usr/share/vim/vim82/lang/menu_is.utf-8.vim
 /usr/share/vim/vim82/lang/menu_is_is.latin1.vim
 /usr/share/vim/vim82/lang/menu_is_is.utf-8.vim
-/usr/share/vim/vim82/lang/menu_it.latin1.vim
-/usr/share/vim/vim82/lang/menu_it.utf-8.vim
-/usr/share/vim/vim82/lang/menu_it_it.latin1.vim
-/usr/share/vim/vim82/lang/menu_it_it.utf-8.vim
-/usr/share/vim/vim82/lang/menu_italian_italy.1252.vim
-/usr/share/vim/vim82/lang/menu_ja.cp932.vim
-/usr/share/vim/vim82/lang/menu_ja.euc-jp.vim
-/usr/share/vim/vim82/lang/menu_ja.eucjp.vim
-/usr/share/vim/vim82/lang/menu_ja.ujis.vim
-/usr/share/vim/vim82/lang/menu_ja.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ja_jp.cp932.vim
-/usr/share/vim/vim82/lang/menu_ja_jp.euc-jp.vim
-/usr/share/vim/vim82/lang/menu_ja_jp.eucjp.vim
-/usr/share/vim/vim82/lang/menu_ja_jp.ujis.vim
-/usr/share/vim/vim82/lang/menu_ja_jp.utf-8.vim
-/usr/share/vim/vim82/lang/menu_japanese_japan.932.vim
-/usr/share/vim/vim82/lang/menu_ko.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ko_kr.euckr.vim
-/usr/share/vim/vim82/lang/menu_ko_kr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ko_kr.vim
-/usr/share/vim/vim82/lang/menu_nl.latin1.vim
-/usr/share/vim/vim82/lang/menu_nl.utf-8.vim
-/usr/share/vim/vim82/lang/menu_nl_nl.latin1.vim
-/usr/share/vim/vim82/lang/menu_nl_nl.utf-8.vim
-/usr/share/vim/vim82/lang/menu_no.latin1.vim
-/usr/share/vim/vim82/lang/menu_no.utf-8.vim
-/usr/share/vim/vim82/lang/menu_no_no.latin1.vim
-/usr/share/vim/vim82/lang/menu_no_no.utf-8.vim
-/usr/share/vim/vim82/lang/menu_pl.cp1250.vim
-/usr/share/vim/vim82/lang/menu_pl_pl.cp1250.vim
-/usr/share/vim/vim82/lang/menu_pl_pl.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_pl_pl.utf-8.vim
-/usr/share/vim/vim82/lang/menu_polish_poland.1250.vim
-/usr/share/vim/vim82/lang/menu_pt_br.latin1.vim
-/usr/share/vim/vim82/lang/menu_pt_br.utf-8.vim
-/usr/share/vim/vim82/lang/menu_pt_br.vim
-/usr/share/vim/vim82/lang/menu_pt_pt.latin1.vim
-/usr/share/vim/vim82/lang/menu_pt_pt.utf-8.vim
-/usr/share/vim/vim82/lang/menu_pt_pt.vim
-/usr/share/vim/vim82/lang/menu_ru.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ru_ru.koi8-r.vim
-/usr/share/vim/vim82/lang/menu_ru_ru.utf-8.vim
-/usr/share/vim/vim82/lang/menu_ru_ru.vim
-/usr/share/vim/vim82/lang/menu_sk.cp1250.vim
-/usr/share/vim/vim82/lang/menu_sk_sk.1250.vim
-/usr/share/vim/vim82/lang/menu_sk_sk.cp1250.vim
-/usr/share/vim/vim82/lang/menu_sk_sk.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_sk_sk.vim
-/usr/share/vim/vim82/lang/menu_sl_si.cp1250.vim
-/usr/share/vim/vim82/lang/menu_sl_si.latin2.vim
-/usr/share/vim/vim82/lang/menu_sl_si.utf-8.vim
-/usr/share/vim/vim82/lang/menu_slovak_slovak_republic.1250.vim
-/usr/share/vim/vim82/lang/menu_spanish_spain.850.vim
-/usr/share/vim/vim82/lang/menu_sr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_sr_rs.ascii.vim
-/usr/share/vim/vim82/lang/menu_sr_rs.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_sr_rs.iso_8859-5.vim
-/usr/share/vim/vim82/lang/menu_sr_rs.utf-8.vim
-/usr/share/vim/vim82/lang/menu_sr_yu.ascii.vim
-/usr/share/vim/vim82/lang/menu_sr_yu.iso_8859-2.vim
-/usr/share/vim/vim82/lang/menu_sr_yu.iso_8859-5.vim
-/usr/share/vim/vim82/lang/menu_sr_yu.utf-8.vim
-/usr/share/vim/vim82/lang/menu_sv.latin1.vim
-/usr/share/vim/vim82/lang/menu_sv.utf-8.vim
-/usr/share/vim/vim82/lang/menu_sv_se.latin1.vim
-/usr/share/vim/vim82/lang/menu_sv_se.utf-8.vim
 /usr/share/vim/vim82/lang/menu_tr.cp1254.vim
 /usr/share/vim/vim82/lang/menu_tr.iso_8859-9.vim
 /usr/share/vim/vim82/lang/menu_tr.utf-8.vim
 /usr/share/vim/vim82/lang/menu_tr_tr.cp1254.vim
 /usr/share/vim/vim82/lang/menu_tr_tr.iso_8859-9.vim
 /usr/share/vim/vim82/lang/menu_tr_tr.utf-8.vim
-/usr/share/vim/vim82/lang/menu_uk_ua.cp1251.vim
-/usr/share/vim/vim82/lang/menu_uk_ua.koi8-u.vim
-/usr/share/vim/vim82/lang/menu_vi_vn.vim
-/usr/share/vim/vim82/lang/menu_zh.big5.vim
-/usr/share/vim/vim82/lang/menu_zh.cp936.vim
-/usr/share/vim/vim82/lang/menu_zh.cp950.vim
-/usr/share/vim/vim82/lang/menu_zh.gb2312.vim
-/usr/share/vim/vim82/lang/menu_zh_cn.18030.vim
-/usr/share/vim/vim82/lang/menu_zh_cn.cp936.vim
-/usr/share/vim/vim82/lang/menu_zh_cn.gb2312.vim
-/usr/share/vim/vim82/lang/menu_zh_cn.gbk.vim
-/usr/share/vim/vim82/lang/menu_zh_cn.utf-8.vim
-/usr/share/vim/vim82/lang/menu_zh_tw.big5.vim
-/usr/share/vim/vim82/lang/menu_zh_tw.cp950.vim
-/usr/share/vim/vim82/lang/menu_zh_tw.utf-8.vim
-/usr/share/vim/vim82/lang/nb/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/nl/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/no/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/pl.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/pl.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/pl/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/pt_BR/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ru.cp1251/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/ru/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/sk.cp1250/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/sk/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/sr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/sv/LC_MESSAGES/vim.mo
 /usr/share/vim/vim82/lang/tr/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/uk.cp1251/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/uk/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/vi/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/zh_CN.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/zh_CN.cp936/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/zh_CN/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/zh_TW.UTF-8/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/lang/zh_TW/LC_MESSAGES/vim.mo
-/usr/share/vim/vim82/macros/README.txt
-/usr/share/vim/vim82/macros/editexisting.vim
-/usr/share/vim/vim82/macros/hanoi/click.me
-/usr/share/vim/vim82/macros/hanoi/hanoi.vim
-/usr/share/vim/vim82/macros/hanoi/poster
-/usr/share/vim/vim82/macros/justify.vim
-/usr/share/vim/vim82/macros/less.bat
-/usr/share/vim/vim82/macros/less.sh
-/usr/share/vim/vim82/macros/less.vim
-/usr/share/vim/vim82/macros/life/click.me
-/usr/share/vim/vim82/macros/life/life.vim
-/usr/share/vim/vim82/macros/matchit.vim
-/usr/share/vim/vim82/macros/maze/Makefile
-/usr/share/vim/vim82/macros/maze/README.txt
-/usr/share/vim/vim82/macros/maze/maze.c
-/usr/share/vim/vim82/macros/maze/maze_5.78
-/usr/share/vim/vim82/macros/maze/maze_mac
-/usr/share/vim/vim82/macros/maze/mazeansi.c
-/usr/share/vim/vim82/macros/maze/mazeclean.c
-/usr/share/vim/vim82/macros/maze/poster
-/usr/share/vim/vim82/macros/shellmenu.vim
-/usr/share/vim/vim82/macros/swapmous.vim
-/usr/share/vim/vim82/macros/urm/README.txt
-/usr/share/vim/vim82/macros/urm/examples
-/usr/share/vim/vim82/macros/urm/urm
-/usr/share/vim/vim82/macros/urm/urm.vim
-/usr/share/vim/vim82/menu.vim
-/usr/share/vim/vim82/mswin.vim
-/usr/share/vim/vim82/optwin.vim
-/usr/share/vim/vim82/pack/dist/opt/cfilter/plugin/cfilter.vim
-/usr/share/vim/vim82/pack/dist/opt/dvorak/dvorak/disable.vim
-/usr/share/vim/vim82/pack/dist/opt/dvorak/dvorak/enable.vim
-/usr/share/vim/vim82/pack/dist/opt/dvorak/plugin/dvorak.vim
-/usr/share/vim/vim82/pack/dist/opt/editexisting/plugin/editexisting.vim
-/usr/share/vim/vim82/pack/dist/opt/justify/plugin/justify.vim
 /usr/share/vim/vim82/pack/dist/opt/matchit/autoload/matchit.vim
-/usr/share/vim/vim82/pack/dist/opt/matchit/doc/matchit.txt
-/usr/share/vim/vim82/pack/dist/opt/matchit/doc/tags
-/usr/share/vim/vim82/pack/dist/opt/matchit/plugin/matchit.vim
-/usr/share/vim/vim82/pack/dist/opt/shellmenu/plugin/shellmenu.vim
-/usr/share/vim/vim82/pack/dist/opt/swapmouse/plugin/swapmouse.vim
-/usr/share/vim/vim82/pack/dist/opt/termdebug/plugin/termdebug.vim
-/usr/share/vim/vim82/plugin/README.txt
-/usr/share/vim/vim82/plugin/getscriptPlugin.vim
-/usr/share/vim/vim82/plugin/gzip.vim
-/usr/share/vim/vim82/plugin/logiPat.vim
-/usr/share/vim/vim82/plugin/manpager.vim
-/usr/share/vim/vim82/plugin/matchparen.vim
-/usr/share/vim/vim82/plugin/netrwPlugin.vim
-/usr/share/vim/vim82/plugin/rrhelper.vim
-/usr/share/vim/vim82/plugin/spellfile.vim
-/usr/share/vim/vim82/plugin/tarPlugin.vim
-/usr/share/vim/vim82/plugin/tohtml.vim
-/usr/share/vim/vim82/plugin/vimballPlugin.vim
-/usr/share/vim/vim82/plugin/zipPlugin.vim
-/usr/share/vim/vim82/print/ascii.ps
-/usr/share/vim/vim82/print/cidfont.ps
-/usr/share/vim/vim82/print/cns_roman.ps
-/usr/share/vim/vim82/print/cp1250.ps
-/usr/share/vim/vim82/print/cp1251.ps
-/usr/share/vim/vim82/print/cp1252.ps
-/usr/share/vim/vim82/print/cp1253.ps
-/usr/share/vim/vim82/print/cp1254.ps
-/usr/share/vim/vim82/print/cp1255.ps
-/usr/share/vim/vim82/print/cp1257.ps
-/usr/share/vim/vim82/print/dec-mcs.ps
-/usr/share/vim/vim82/print/ebcdic-uk.ps
-/usr/share/vim/vim82/print/gb_roman.ps
-/usr/share/vim/vim82/print/hp-roman8.ps
-/usr/share/vim/vim82/print/iso-8859-10.ps
-/usr/share/vim/vim82/print/iso-8859-11.ps
-/usr/share/vim/vim82/print/iso-8859-13.ps
-/usr/share/vim/vim82/print/iso-8859-14.ps
-/usr/share/vim/vim82/print/iso-8859-15.ps
-/usr/share/vim/vim82/print/iso-8859-2.ps
-/usr/share/vim/vim82/print/iso-8859-3.ps
-/usr/share/vim/vim82/print/iso-8859-4.ps
-/usr/share/vim/vim82/print/iso-8859-5.ps
-/usr/share/vim/vim82/print/iso-8859-7.ps
-/usr/share/vim/vim82/print/iso-8859-8.ps
-/usr/share/vim/vim82/print/iso-8859-9.ps
-/usr/share/vim/vim82/print/jis_roman.ps
-/usr/share/vim/vim82/print/koi8-r.ps
-/usr/share/vim/vim82/print/koi8-u.ps
-/usr/share/vim/vim82/print/ks_roman.ps
-/usr/share/vim/vim82/print/latin1.ps
-/usr/share/vim/vim82/print/mac-roman.ps
-/usr/share/vim/vim82/print/prolog.ps
-/usr/share/vim/vim82/rgb.txt
-/usr/share/vim/vim82/scripts.vim
-/usr/share/vim/vim82/spell/check_locales.vim
-/usr/share/vim/vim82/spell/cleanadd.vim
-/usr/share/vim/vim82/spell/en.ascii.spl
-/usr/share/vim/vim82/spell/en.ascii.sug
-/usr/share/vim/vim82/spell/en.latin1.spl
-/usr/share/vim/vim82/spell/en.latin1.sug
-/usr/share/vim/vim82/spell/en.utf-8.spl
-/usr/share/vim/vim82/spell/en.utf-8.sug
-/usr/share/vim/vim82/spell/fixdup.vim
-/usr/share/vim/vim82/spell/he.vim
-/usr/share/vim/vim82/spell/spell.vim
-/usr/share/vim/vim82/spell/yi.vim
-/usr/share/vim/vim82/synmenu.vim
-/usr/share/vim/vim82/syntax/2html.vim
 /usr/share/vim/vim82/syntax/8th.vim
-/usr/share/vim/vim82/syntax/README.txt
-/usr/share/vim/vim82/syntax/a2ps.vim
-/usr/share/vim/vim82/syntax/a65.vim
-/usr/share/vim/vim82/syntax/aap.vim
-/usr/share/vim/vim82/syntax/abap.vim
-/usr/share/vim/vim82/syntax/abaqus.vim
-/usr/share/vim/vim82/syntax/abc.vim
-/usr/share/vim/vim82/syntax/abel.vim
-/usr/share/vim/vim82/syntax/acedb.vim
-/usr/share/vim/vim82/syntax/ada.vim
-/usr/share/vim/vim82/syntax/aflex.vim
-/usr/share/vim/vim82/syntax/ahdl.vim
-/usr/share/vim/vim82/syntax/alsaconf.vim
-/usr/share/vim/vim82/syntax/amiga.vim
-/usr/share/vim/vim82/syntax/aml.vim
-/usr/share/vim/vim82/syntax/ampl.vim
-/usr/share/vim/vim82/syntax/ant.vim
-/usr/share/vim/vim82/syntax/antlr.vim
-/usr/share/vim/vim82/syntax/apache.vim
-/usr/share/vim/vim82/syntax/apachestyle.vim
-/usr/share/vim/vim82/syntax/aptconf.vim
-/usr/share/vim/vim82/syntax/arch.vim
-/usr/share/vim/vim82/syntax/arduino.vim
-/usr/share/vim/vim82/syntax/art.vim
-/usr/share/vim/vim82/syntax/asciidoc.vim
-/usr/share/vim/vim82/syntax/asm.vim
-/usr/share/vim/vim82/syntax/asm68k.vim
-/usr/share/vim/vim82/syntax/asmh8300.vim
-/usr/share/vim/vim82/syntax/asn.vim
-/usr/share/vim/vim82/syntax/aspperl.vim
-/usr/share/vim/vim82/syntax/aspvbs.vim
-/usr/share/vim/vim82/syntax/asterisk.vim
-/usr/share/vim/vim82/syntax/asteriskvm.vim
-/usr/share/vim/vim82/syntax/atlas.vim
-/usr/share/vim/vim82/syntax/autodoc.vim
-/usr/share/vim/vim82/syntax/autohotkey.vim
-/usr/share/vim/vim82/syntax/autoit.vim
-/usr/share/vim/vim82/syntax/automake.vim
-/usr/share/vim/vim82/syntax/ave.vim
-/usr/share/vim/vim82/syntax/avra.vim
-/usr/share/vim/vim82/syntax/awk.vim
-/usr/share/vim/vim82/syntax/ayacc.vim
-/usr/share/vim/vim82/syntax/b.vim
-/usr/share/vim/vim82/syntax/baan.vim
 /usr/share/vim/vim82/syntax/bash.vim
-/usr/share/vim/vim82/syntax/basic.vim
-/usr/share/vim/vim82/syntax/bc.vim
-/usr/share/vim/vim82/syntax/bdf.vim
-/usr/share/vim/vim82/syntax/bib.vim
-/usr/share/vim/vim82/syntax/bindzone.vim
-/usr/share/vim/vim82/syntax/blank.vim
-/usr/share/vim/vim82/syntax/bst.vim
-/usr/share/vim/vim82/syntax/btm.vim
-/usr/share/vim/vim82/syntax/bzl.vim
-/usr/share/vim/vim82/syntax/bzr.vim
-/usr/share/vim/vim82/syntax/c.vim
-/usr/share/vim/vim82/syntax/cabal.vim
-/usr/share/vim/vim82/syntax/calendar.vim
-/usr/share/vim/vim82/syntax/catalog.vim
-/usr/share/vim/vim82/syntax/cdl.vim
-/usr/share/vim/vim82/syntax/cdrdaoconf.vim
-/usr/share/vim/vim82/syntax/cdrtoc.vim
-/usr/share/vim/vim82/syntax/cf.vim
-/usr/share/vim/vim82/syntax/cfg.vim
-/usr/share/vim/vim82/syntax/ch.vim
-/usr/share/vim/vim82/syntax/chaiscript.vim
-/usr/share/vim/vim82/syntax/change.vim
-/usr/share/vim/vim82/syntax/changelog.vim
-/usr/share/vim/vim82/syntax/chaskell.vim
-/usr/share/vim/vim82/syntax/cheetah.vim
-/usr/share/vim/vim82/syntax/chicken.vim
-/usr/share/vim/vim82/syntax/chill.vim
-/usr/share/vim/vim82/syntax/chordpro.vim
-/usr/share/vim/vim82/syntax/cl.vim
-/usr/share/vim/vim82/syntax/clean.vim
-/usr/share/vim/vim82/syntax/clipper.vim
-/usr/share/vim/vim82/syntax/clojure.vim
-/usr/share/vim/vim82/syntax/cmake.vim
-/usr/share/vim/vim82/syntax/cmod.vim
-/usr/share/vim/vim82/syntax/cmusrc.vim
-/usr/share/vim/vim82/syntax/cobol.vim
-/usr/share/vim/vim82/syntax/coco.vim
-/usr/share/vim/vim82/syntax/colortest.vim
-/usr/share/vim/vim82/syntax/conaryrecipe.vim
-/usr/share/vim/vim82/syntax/conf.vim
-/usr/share/vim/vim82/syntax/config.vim
-/usr/share/vim/vim82/syntax/context.vim
-/usr/share/vim/vim82/syntax/cpp.vim
-/usr/share/vim/vim82/syntax/crm.vim
-/usr/share/vim/vim82/syntax/crontab.vim
-/usr/share/vim/vim82/syntax/cs.vim
-/usr/share/vim/vim82/syntax/csc.vim
-/usr/share/vim/vim82/syntax/csdl.vim
-/usr/share/vim/vim82/syntax/csh.vim
-/usr/share/vim/vim82/syntax/csp.vim
-/usr/share/vim/vim82/syntax/css.vim
-/usr/share/vim/vim82/syntax/cterm.vim
-/usr/share/vim/vim82/syntax/ctrlh.vim
-/usr/share/vim/vim82/syntax/cucumber.vim
-/usr/share/vim/vim82/syntax/cuda.vim
-/usr/share/vim/vim82/syntax/cupl.vim
-/usr/share/vim/vim82/syntax/cuplsim.vim
-/usr/share/vim/vim82/syntax/cvs.vim
-/usr/share/vim/vim82/syntax/cvsrc.vim
-/usr/share/vim/vim82/syntax/cweb.vim
-/usr/share/vim/vim82/syntax/cynlib.vim
-/usr/share/vim/vim82/syntax/cynpp.vim
-/usr/share/vim/vim82/syntax/d.vim
 /usr/share/vim/vim82/syntax/dart.vim
-/usr/share/vim/vim82/syntax/datascript.vim
-/usr/share/vim/vim82/syntax/dcd.vim
-/usr/share/vim/vim82/syntax/dcl.vim
-/usr/share/vim/vim82/syntax/debchangelog.vim
-/usr/share/vim/vim82/syntax/debcontrol.vim
-/usr/share/vim/vim82/syntax/debcopyright.vim
-/usr/share/vim/vim82/syntax/debsources.vim
-/usr/share/vim/vim82/syntax/def.vim
-/usr/share/vim/vim82/syntax/denyhosts.vim
-/usr/share/vim/vim82/syntax/desc.vim
-/usr/share/vim/vim82/syntax/desktop.vim
-/usr/share/vim/vim82/syntax/dictconf.vim
-/usr/share/vim/vim82/syntax/dictdconf.vim
-/usr/share/vim/vim82/syntax/diff.vim
-/usr/share/vim/vim82/syntax/dircolors.vim
-/usr/share/vim/vim82/syntax/dirpager.vim
-/usr/share/vim/vim82/syntax/diva.vim
-/usr/share/vim/vim82/syntax/django.vim
-/usr/share/vim/vim82/syntax/dns.vim
-/usr/share/vim/vim82/syntax/dnsmasq.vim
-/usr/share/vim/vim82/syntax/docbk.vim
-/usr/share/vim/vim82/syntax/docbksgml.vim
-/usr/share/vim/vim82/syntax/docbkxml.vim
-/usr/share/vim/vim82/syntax/dockerfile.vim
-/usr/share/vim/vim82/syntax/dosbatch.vim
-/usr/share/vim/vim82/syntax/dosini.vim
-/usr/share/vim/vim82/syntax/dot.vim
-/usr/share/vim/vim82/syntax/doxygen.vim
-/usr/share/vim/vim82/syntax/dracula.vim
-/usr/share/vim/vim82/syntax/dsl.vim
-/usr/share/vim/vim82/syntax/dtd.vim
-/usr/share/vim/vim82/syntax/dtml.vim
-/usr/share/vim/vim82/syntax/dtrace.vim
-/usr/share/vim/vim82/syntax/dts.vim
 /usr/share/vim/vim82/syntax/dune.vim
-/usr/share/vim/vim82/syntax/dylan.vim
-/usr/share/vim/vim82/syntax/dylanintr.vim
-/usr/share/vim/vim82/syntax/dylanlid.vim
-/usr/share/vim/vim82/syntax/ecd.vim
-/usr/share/vim/vim82/syntax/edif.vim
-/usr/share/vim/vim82/syntax/eiffel.vim
-/usr/share/vim/vim82/syntax/elf.vim
-/usr/share/vim/vim82/syntax/elinks.vim
-/usr/share/vim/vim82/syntax/elmfilt.vim
-/usr/share/vim/vim82/syntax/erlang.vim
-/usr/share/vim/vim82/syntax/eruby.vim
-/usr/share/vim/vim82/syntax/esmtprc.vim
-/usr/share/vim/vim82/syntax/esqlc.vim
-/usr/share/vim/vim82/syntax/esterel.vim
-/usr/share/vim/vim82/syntax/eterm.vim
-/usr/share/vim/vim82/syntax/euphoria3.vim
-/usr/share/vim/vim82/syntax/euphoria4.vim
-/usr/share/vim/vim82/syntax/eviews.vim
-/usr/share/vim/vim82/syntax/exim.vim
-/usr/share/vim/vim82/syntax/expect.vim
-/usr/share/vim/vim82/syntax/exports.vim
-/usr/share/vim/vim82/syntax/falcon.vim
-/usr/share/vim/vim82/syntax/fan.vim
-/usr/share/vim/vim82/syntax/fasm.vim
-/usr/share/vim/vim82/syntax/fdcc.vim
-/usr/share/vim/vim82/syntax/fetchmail.vim
-/usr/share/vim/vim82/syntax/fgl.vim
-/usr/share/vim/vim82/syntax/flexwiki.vim
-/usr/share/vim/vim82/syntax/focexec.vim
-/usr/share/vim/vim82/syntax/form.vim
-/usr/share/vim/vim82/syntax/forth.vim
-/usr/share/vim/vim82/syntax/fortran.vim
-/usr/share/vim/vim82/syntax/foxpro.vim
-/usr/share/vim/vim82/syntax/framescript.vim
-/usr/share/vim/vim82/syntax/freebasic.vim
-/usr/share/vim/vim82/syntax/fstab.vim
-/usr/share/vim/vim82/syntax/fvwm.vim
-/usr/share/vim/vim82/syntax/fvwm2m4.vim
-/usr/share/vim/vim82/syntax/gdb.vim
-/usr/share/vim/vim82/syntax/gdmo.vim
-/usr/share/vim/vim82/syntax/gedcom.vim
-/usr/share/vim/vim82/syntax/git.vim
-/usr/share/vim/vim82/syntax/gitcommit.vim
-/usr/share/vim/vim82/syntax/gitconfig.vim
-/usr/share/vim/vim82/syntax/gitolite.vim
-/usr/share/vim/vim82/syntax/gitrebase.vim
-/usr/share/vim/vim82/syntax/gitsendemail.vim
-/usr/share/vim/vim82/syntax/gkrellmrc.vim
-/usr/share/vim/vim82/syntax/gnash.vim
-/usr/share/vim/vim82/syntax/gnuplot.vim
-/usr/share/vim/vim82/syntax/go.vim
-/usr/share/vim/vim82/syntax/godoc.vim
-/usr/share/vim/vim82/syntax/gp.vim
-/usr/share/vim/vim82/syntax/gpg.vim
-/usr/share/vim/vim82/syntax/gprof.vim
-/usr/share/vim/vim82/syntax/grads.vim
-/usr/share/vim/vim82/syntax/gretl.vim
-/usr/share/vim/vim82/syntax/groff.vim
-/usr/share/vim/vim82/syntax/groovy.vim
-/usr/share/vim/vim82/syntax/group.vim
-/usr/share/vim/vim82/syntax/grub.vim
-/usr/share/vim/vim82/syntax/gsp.vim
-/usr/share/vim/vim82/syntax/gtkrc.vim
-/usr/share/vim/vim82/syntax/haml.vim
-/usr/share/vim/vim82/syntax/hamster.vim
-/usr/share/vim/vim82/syntax/haskell.vim
-/usr/share/vim/vim82/syntax/haste.vim
-/usr/share/vim/vim82/syntax/hastepreproc.vim
-/usr/share/vim/vim82/syntax/hb.vim
-/usr/share/vim/vim82/syntax/help.vim
-/usr/share/vim/vim82/syntax/hercules.vim
-/usr/share/vim/vim82/syntax/hex.vim
-/usr/share/vim/vim82/syntax/hgcommit.vim
-/usr/share/vim/vim82/syntax/hitest.vim
-/usr/share/vim/vim82/syntax/hog.vim
 /usr/share/vim/vim82/syntax/hollywood.vim
-/usr/share/vim/vim82/syntax/hostconf.vim
-/usr/share/vim/vim82/syntax/hostsaccess.vim
-/usr/share/vim/vim82/syntax/html.vim
-/usr/share/vim/vim82/syntax/htmlcheetah.vim
-/usr/share/vim/vim82/syntax/htmldjango.vim
-/usr/share/vim/vim82/syntax/htmlm4.vim
-/usr/share/vim/vim82/syntax/htmlos.vim
-/usr/share/vim/vim82/syntax/ia64.vim
-/usr/share/vim/vim82/syntax/ibasic.vim
-/usr/share/vim/vim82/syntax/icemenu.vim
-/usr/share/vim/vim82/syntax/icon.vim
-/usr/share/vim/vim82/syntax/idl.vim
-/usr/share/vim/vim82/syntax/idlang.vim
-/usr/share/vim/vim82/syntax/indent.vim
-/usr/share/vim/vim82/syntax/inform.vim
-/usr/share/vim/vim82/syntax/initex.vim
-/usr/share/vim/vim82/syntax/initng.vim
-/usr/share/vim/vim82/syntax/inittab.vim
-/usr/share/vim/vim82/syntax/ipfilter.vim
-/usr/share/vim/vim82/syntax/ishd.vim
-/usr/share/vim/vim82/syntax/iss.vim
-/usr/share/vim/vim82/syntax/ist.vim
-/usr/share/vim/vim82/syntax/j.vim
-/usr/share/vim/vim82/syntax/jal.vim
-/usr/share/vim/vim82/syntax/jam.vim
-/usr/share/vim/vim82/syntax/jargon.vim
-/usr/share/vim/vim82/syntax/java.vim
-/usr/share/vim/vim82/syntax/javacc.vim
-/usr/share/vim/vim82/syntax/javascript.vim
 /usr/share/vim/vim82/syntax/javascriptreact.vim
-/usr/share/vim/vim82/syntax/jess.vim
-/usr/share/vim/vim82/syntax/jgraph.vim
-/usr/share/vim/vim82/syntax/jovial.vim
-/usr/share/vim/vim82/syntax/jproperties.vim
-/usr/share/vim/vim82/syntax/json.vim
-/usr/share/vim/vim82/syntax/jsp.vim
-/usr/share/vim/vim82/syntax/kconfig.vim
-/usr/share/vim/vim82/syntax/kivy.vim
-/usr/share/vim/vim82/syntax/kix.vim
-/usr/share/vim/vim82/syntax/kscript.vim
-/usr/share/vim/vim82/syntax/kwt.vim
-/usr/share/vim/vim82/syntax/lace.vim
-/usr/share/vim/vim82/syntax/latte.vim
-/usr/share/vim/vim82/syntax/ld.vim
-/usr/share/vim/vim82/syntax/ldapconf.vim
-/usr/share/vim/vim82/syntax/ldif.vim
-/usr/share/vim/vim82/syntax/less.vim
-/usr/share/vim/vim82/syntax/lex.vim
-/usr/share/vim/vim82/syntax/lftp.vim
-/usr/share/vim/vim82/syntax/lhaskell.vim
-/usr/share/vim/vim82/syntax/libao.vim
-/usr/share/vim/vim82/syntax/lifelines.vim
-/usr/share/vim/vim82/syntax/lilo.vim
-/usr/share/vim/vim82/syntax/limits.vim
-/usr/share/vim/vim82/syntax/liquid.vim
-/usr/share/vim/vim82/syntax/lisp.vim
-/usr/share/vim/vim82/syntax/lite.vim
-/usr/share/vim/vim82/syntax/litestep.vim
-/usr/share/vim/vim82/syntax/loginaccess.vim
-/usr/share/vim/vim82/syntax/logindefs.vim
-/usr/share/vim/vim82/syntax/logtalk.vim
-/usr/share/vim/vim82/syntax/lotos.vim
-/usr/share/vim/vim82/syntax/lout.vim
-/usr/share/vim/vim82/syntax/lpc.vim
-/usr/share/vim/vim82/syntax/lprolog.vim
-/usr/share/vim/vim82/syntax/lscript.vim
-/usr/share/vim/vim82/syntax/lsl.vim
-/usr/share/vim/vim82/syntax/lss.vim
-/usr/share/vim/vim82/syntax/lua.vim
-/usr/share/vim/vim82/syntax/lynx.vim
-/usr/share/vim/vim82/syntax/m4.vim
-/usr/share/vim/vim82/syntax/mail.vim
-/usr/share/vim/vim82/syntax/mailaliases.vim
-/usr/share/vim/vim82/syntax/mailcap.vim
-/usr/share/vim/vim82/syntax/make.vim
-/usr/share/vim/vim82/syntax/mallard.vim
-/usr/share/vim/vim82/syntax/man.vim
-/usr/share/vim/vim82/syntax/manconf.vim
-/usr/share/vim/vim82/syntax/manual.vim
-/usr/share/vim/vim82/syntax/maple.vim
-/usr/share/vim/vim82/syntax/markdown.vim
-/usr/share/vim/vim82/syntax/masm.vim
-/usr/share/vim/vim82/syntax/mason.vim
-/usr/share/vim/vim82/syntax/master.vim
-/usr/share/vim/vim82/syntax/matlab.vim
-/usr/share/vim/vim82/syntax/maxima.vim
-/usr/share/vim/vim82/syntax/mel.vim
-/usr/share/vim/vim82/syntax/meson.vim
-/usr/share/vim/vim82/syntax/messages.vim
-/usr/share/vim/vim82/syntax/mf.vim
-/usr/share/vim/vim82/syntax/mgl.vim
-/usr/share/vim/vim82/syntax/mgp.vim
-/usr/share/vim/vim82/syntax/mib.vim
-/usr/share/vim/vim82/syntax/mix.vim
-/usr/share/vim/vim82/syntax/mma.vim
-/usr/share/vim/vim82/syntax/mmix.vim
-/usr/share/vim/vim82/syntax/mmp.vim
-/usr/share/vim/vim82/syntax/modconf.vim
-/usr/share/vim/vim82/syntax/model.vim
-/usr/share/vim/vim82/syntax/modsim3.vim
-/usr/share/vim/vim82/syntax/modula2.vim
-/usr/share/vim/vim82/syntax/modula3.vim
-/usr/share/vim/vim82/syntax/monk.vim
-/usr/share/vim/vim82/syntax/moo.vim
-/usr/share/vim/vim82/syntax/mp.vim
-/usr/share/vim/vim82/syntax/mplayerconf.vim
-/usr/share/vim/vim82/syntax/mrxvtrc.vim
-/usr/share/vim/vim82/syntax/msidl.vim
-/usr/share/vim/vim82/syntax/msmessages.vim
-/usr/share/vim/vim82/syntax/msql.vim
-/usr/share/vim/vim82/syntax/mupad.vim
-/usr/share/vim/vim82/syntax/murphi.vim
-/usr/share/vim/vim82/syntax/mush.vim
-/usr/share/vim/vim82/syntax/muttrc.vim
-/usr/share/vim/vim82/syntax/mysql.vim
-/usr/share/vim/vim82/syntax/n1ql.vim
-/usr/share/vim/vim82/syntax/named.vim
-/usr/share/vim/vim82/syntax/nanorc.vim
-/usr/share/vim/vim82/syntax/nasm.vim
-/usr/share/vim/vim82/syntax/nastran.vim
-/usr/share/vim/vim82/syntax/natural.vim
-/usr/share/vim/vim82/syntax/ncf.vim
-/usr/share/vim/vim82/syntax/neomuttrc.vim
-/usr/share/vim/vim82/syntax/netrc.vim
-/usr/share/vim/vim82/syntax/netrw.vim
-/usr/share/vim/vim82/syntax/ninja.vim
-/usr/share/vim/vim82/syntax/nosyntax.vim
-/usr/share/vim/vim82/syntax/nqc.vim
-/usr/share/vim/vim82/syntax/nroff.vim
-/usr/share/vim/vim82/syntax/nsis.vim
-/usr/share/vim/vim82/syntax/obj.vim
-/usr/share/vim/vim82/syntax/objc.vim
-/usr/share/vim/vim82/syntax/objcpp.vim
-/usr/share/vim/vim82/syntax/ocaml.vim
-/usr/share/vim/vim82/syntax/occam.vim
-/usr/share/vim/vim82/syntax/omnimark.vim
-/usr/share/vim/vim82/syntax/openroad.vim
-/usr/share/vim/vim82/syntax/opl.vim
-/usr/share/vim/vim82/syntax/ora.vim
-/usr/share/vim/vim82/syntax/pamconf.vim
-/usr/share/vim/vim82/syntax/papp.vim
-/usr/share/vim/vim82/syntax/pascal.vim
-/usr/share/vim/vim82/syntax/passwd.vim
-/usr/share/vim/vim82/syntax/pcap.vim
-/usr/share/vim/vim82/syntax/pccts.vim
-/usr/share/vim/vim82/syntax/pdf.vim
-/usr/share/vim/vim82/syntax/perl.vim
-/usr/share/vim/vim82/syntax/perl6.vim
-/usr/share/vim/vim82/syntax/pf.vim
-/usr/share/vim/vim82/syntax/pfmain.vim
-/usr/share/vim/vim82/syntax/php.vim
-/usr/share/vim/vim82/syntax/phtml.vim
-/usr/share/vim/vim82/syntax/pic.vim
-/usr/share/vim/vim82/syntax/pike.vim
-/usr/share/vim/vim82/syntax/pilrc.vim
-/usr/share/vim/vim82/syntax/pine.vim
-/usr/share/vim/vim82/syntax/pinfo.vim
-/usr/share/vim/vim82/syntax/plaintex.vim
-/usr/share/vim/vim82/syntax/pli.vim
-/usr/share/vim/vim82/syntax/plm.vim
-/usr/share/vim/vim82/syntax/plp.vim
-/usr/share/vim/vim82/syntax/plsql.vim
-/usr/share/vim/vim82/syntax/po.vim
-/usr/share/vim/vim82/syntax/pod.vim
-/usr/share/vim/vim82/syntax/postscr.vim
-/usr/share/vim/vim82/syntax/pov.vim
-/usr/share/vim/vim82/syntax/povini.vim
-/usr/share/vim/vim82/syntax/ppd.vim
-/usr/share/vim/vim82/syntax/ppwiz.vim
-/usr/share/vim/vim82/syntax/prescribe.vim
-/usr/share/vim/vim82/syntax/privoxy.vim
-/usr/share/vim/vim82/syntax/procmail.vim
-/usr/share/vim/vim82/syntax/progress.vim
-/usr/share/vim/vim82/syntax/prolog.vim
-/usr/share/vim/vim82/syntax/promela.vim
-/usr/share/vim/vim82/syntax/proto.vim
-/usr/share/vim/vim82/syntax/protocols.vim
-/usr/share/vim/vim82/syntax/psf.vim
-/usr/share/vim/vim82/syntax/ptcap.vim
-/usr/share/vim/vim82/syntax/purifylog.vim
-/usr/share/vim/vim82/syntax/pyrex.vim
-/usr/share/vim/vim82/syntax/python.vim
-/usr/share/vim/vim82/syntax/qf.vim
-/usr/share/vim/vim82/syntax/quake.vim
-/usr/share/vim/vim82/syntax/r.vim
-/usr/share/vim/vim82/syntax/racc.vim
-/usr/share/vim/vim82/syntax/radiance.vim
-/usr/share/vim/vim82/syntax/raml.vim
-/usr/share/vim/vim82/syntax/ratpoison.vim
-/usr/share/vim/vim82/syntax/rc.vim
-/usr/share/vim/vim82/syntax/rcs.vim
-/usr/share/vim/vim82/syntax/rcslog.vim
-/usr/share/vim/vim82/syntax/readline.vim
-/usr/share/vim/vim82/syntax/rebol.vim
-/usr/share/vim/vim82/syntax/redif.vim
-/usr/share/vim/vim82/syntax/registry.vim
-/usr/share/vim/vim82/syntax/remind.vim
-/usr/share/vim/vim82/syntax/resolv.vim
-/usr/share/vim/vim82/syntax/reva.vim
-/usr/share/vim/vim82/syntax/rexx.vim
-/usr/share/vim/vim82/syntax/rhelp.vim
-/usr/share/vim/vim82/syntax/rib.vim
-/usr/share/vim/vim82/syntax/rmd.vim
-/usr/share/vim/vim82/syntax/rnc.vim
-/usr/share/vim/vim82/syntax/rng.vim
-/usr/share/vim/vim82/syntax/rnoweb.vim
-/usr/share/vim/vim82/syntax/robots.vim
-/usr/share/vim/vim82/syntax/rpcgen.vim
-/usr/share/vim/vim82/syntax/rpl.vim
-/usr/share/vim/vim82/syntax/rrst.vim
-/usr/share/vim/vim82/syntax/rst.vim
-/usr/share/vim/vim82/syntax/rtf.vim
-/usr/share/vim/vim82/syntax/ruby.vim
-/usr/share/vim/vim82/syntax/rust.vim
-/usr/share/vim/vim82/syntax/samba.vim
-/usr/share/vim/vim82/syntax/sas.vim
-/usr/share/vim/vim82/syntax/sass.vim
-/usr/share/vim/vim82/syntax/sather.vim
-/usr/share/vim/vim82/syntax/sbt.vim
-/usr/share/vim/vim82/syntax/scala.vim
-/usr/share/vim/vim82/syntax/scheme.vim
-/usr/share/vim/vim82/syntax/scilab.vim
-/usr/share/vim/vim82/syntax/screen.vim
-/usr/share/vim/vim82/syntax/scss.vim
-/usr/share/vim/vim82/syntax/sd.vim
-/usr/share/vim/vim82/syntax/sdc.vim
-/usr/share/vim/vim82/syntax/sdl.vim
-/usr/share/vim/vim82/syntax/sed.vim
-/usr/share/vim/vim82/syntax/sendpr.vim
-/usr/share/vim/vim82/syntax/sensors.vim
-/usr/share/vim/vim82/syntax/services.vim
-/usr/share/vim/vim82/syntax/setserial.vim
-/usr/share/vim/vim82/syntax/sgml.vim
-/usr/share/vim/vim82/syntax/sgmldecl.vim
-/usr/share/vim/vim82/syntax/sgmllnx.vim
-/usr/share/vim/vim82/syntax/sh.vim
-/usr/share/vim/vim82/syntax/sicad.vim
-/usr/share/vim/vim82/syntax/sieve.vim
-/usr/share/vim/vim82/syntax/simula.vim
-/usr/share/vim/vim82/syntax/sinda.vim
-/usr/share/vim/vim82/syntax/sindacmp.vim
-/usr/share/vim/vim82/syntax/sindaout.vim
-/usr/share/vim/vim82/syntax/sisu.vim
-/usr/share/vim/vim82/syntax/skill.vim
-/usr/share/vim/vim82/syntax/sl.vim
-/usr/share/vim/vim82/syntax/slang.vim
-/usr/share/vim/vim82/syntax/slice.vim
-/usr/share/vim/vim82/syntax/slpconf.vim
-/usr/share/vim/vim82/syntax/slpreg.vim
-/usr/share/vim/vim82/syntax/slpspi.vim
-/usr/share/vim/vim82/syntax/slrnrc.vim
-/usr/share/vim/vim82/syntax/slrnsc.vim
-/usr/share/vim/vim82/syntax/sm.vim
-/usr/share/vim/vim82/syntax/smarty.vim
-/usr/share/vim/vim82/syntax/smcl.vim
-/usr/share/vim/vim82/syntax/smil.vim
-/usr/share/vim/vim82/syntax/smith.vim
-/usr/share/vim/vim82/syntax/sml.vim
-/usr/share/vim/vim82/syntax/snnsnet.vim
-/usr/share/vim/vim82/syntax/snnspat.vim
-/usr/share/vim/vim82/syntax/snnsres.vim
-/usr/share/vim/vim82/syntax/snobol4.vim
-/usr/share/vim/vim82/syntax/spec.vim
-/usr/share/vim/vim82/syntax/specman.vim
-/usr/share/vim/vim82/syntax/spice.vim
-/usr/share/vim/vim82/syntax/splint.vim
-/usr/share/vim/vim82/syntax/spup.vim
-/usr/share/vim/vim82/syntax/spyce.vim
-/usr/share/vim/vim82/syntax/sql.vim
-/usr/share/vim/vim82/syntax/sqlanywhere.vim
-/usr/share/vim/vim82/syntax/sqlforms.vim
-/usr/share/vim/vim82/syntax/sqlhana.vim
-/usr/share/vim/vim82/syntax/sqlinformix.vim
-/usr/share/vim/vim82/syntax/sqlj.vim
-/usr/share/vim/vim82/syntax/sqloracle.vim
-/usr/share/vim/vim82/syntax/sqr.vim
-/usr/share/vim/vim82/syntax/squid.vim
-/usr/share/vim/vim82/syntax/srec.vim
-/usr/share/vim/vim82/syntax/sshconfig.vim
-/usr/share/vim/vim82/syntax/sshdconfig.vim
-/usr/share/vim/vim82/syntax/st.vim
-/usr/share/vim/vim82/syntax/stata.vim
-/usr/share/vim/vim82/syntax/stp.vim
-/usr/share/vim/vim82/syntax/strace.vim
-/usr/share/vim/vim82/syntax/sudoers.vim
-/usr/share/vim/vim82/syntax/svg.vim
-/usr/share/vim/vim82/syntax/svn.vim
-/usr/share/vim/vim82/syntax/syncolor.vim
-/usr/share/vim/vim82/syntax/synload.vim
-/usr/share/vim/vim82/syntax/syntax.vim
-/usr/share/vim/vim82/syntax/sysctl.vim
-/usr/share/vim/vim82/syntax/systemd.vim
-/usr/share/vim/vim82/syntax/systemverilog.vim
-/usr/share/vim/vim82/syntax/tads.vim
-/usr/share/vim/vim82/syntax/tags.vim
-/usr/share/vim/vim82/syntax/tak.vim
-/usr/share/vim/vim82/syntax/takcmp.vim
-/usr/share/vim/vim82/syntax/takout.vim
-/usr/share/vim/vim82/syntax/tap.vim
-/usr/share/vim/vim82/syntax/tar.vim
-/usr/share/vim/vim82/syntax/taskdata.vim
-/usr/share/vim/vim82/syntax/taskedit.vim
-/usr/share/vim/vim82/syntax/tasm.vim
-/usr/share/vim/vim82/syntax/tcl.vim
-/usr/share/vim/vim82/syntax/tcsh.vim
 /usr/share/vim/vim82/syntax/template.vim
-/usr/share/vim/vim82/syntax/teraterm.vim
-/usr/share/vim/vim82/syntax/terminfo.vim
-/usr/share/vim/vim82/syntax/tex.vim
-/usr/share/vim/vim82/syntax/texinfo.vim
-/usr/share/vim/vim82/syntax/texmf.vim
-/usr/share/vim/vim82/syntax/tf.vim
-/usr/share/vim/vim82/syntax/tidy.vim
-/usr/share/vim/vim82/syntax/tilde.vim
-/usr/share/vim/vim82/syntax/tli.vim
-/usr/share/vim/vim82/syntax/tmux.vim
-/usr/share/vim/vim82/syntax/tpp.vim
-/usr/share/vim/vim82/syntax/trasys.vim
-/usr/share/vim/vim82/syntax/treetop.vim
-/usr/share/vim/vim82/syntax/trustees.vim
-/usr/share/vim/vim82/syntax/tsalt.vim
-/usr/share/vim/vim82/syntax/tsscl.vim
-/usr/share/vim/vim82/syntax/tssgm.vim
-/usr/share/vim/vim82/syntax/tssop.vim
-/usr/share/vim/vim82/syntax/tt2.vim
-/usr/share/vim/vim82/syntax/tt2html.vim
-/usr/share/vim/vim82/syntax/tt2js.vim
 /usr/share/vim/vim82/syntax/typescript.vim
 /usr/share/vim/vim82/syntax/typescriptcommon.vim
 /usr/share/vim/vim82/syntax/typescriptreact.vim
-/usr/share/vim/vim82/syntax/uc.vim
-/usr/share/vim/vim82/syntax/udevconf.vim
-/usr/share/vim/vim82/syntax/udevperm.vim
-/usr/share/vim/vim82/syntax/udevrules.vim
-/usr/share/vim/vim82/syntax/uil.vim
-/usr/share/vim/vim82/syntax/updatedb.vim
-/usr/share/vim/vim82/syntax/upstart.vim
-/usr/share/vim/vim82/syntax/upstreamdat.vim
-/usr/share/vim/vim82/syntax/upstreaminstalllog.vim
-/usr/share/vim/vim82/syntax/upstreamlog.vim
-/usr/share/vim/vim82/syntax/upstreamrpt.vim
-/usr/share/vim/vim82/syntax/usserverlog.vim
-/usr/share/vim/vim82/syntax/usw2kagtlog.vim
-/usr/share/vim/vim82/syntax/valgrind.vim
-/usr/share/vim/vim82/syntax/vb.vim
-/usr/share/vim/vim82/syntax/vera.vim
-/usr/share/vim/vim82/syntax/verilog.vim
-/usr/share/vim/vim82/syntax/verilogams.vim
-/usr/share/vim/vim82/syntax/vgrindefs.vim
-/usr/share/vim/vim82/syntax/vhdl.vim
-/usr/share/vim/vim82/syntax/vim.vim
-/usr/share/vim/vim82/syntax/viminfo.vim
-/usr/share/vim/vim82/syntax/virata.vim
-/usr/share/vim/vim82/syntax/vmasm.vim
-/usr/share/vim/vim82/syntax/voscm.vim
-/usr/share/vim/vim82/syntax/vrml.vim
-/usr/share/vim/vim82/syntax/vroom.vim
-/usr/share/vim/vim82/syntax/vsejcl.vim
 /usr/share/vim/vim82/syntax/vue.vim
-/usr/share/vim/vim82/syntax/wast.vim
-/usr/share/vim/vim82/syntax/wdiff.vim
-/usr/share/vim/vim82/syntax/web.vim
-/usr/share/vim/vim82/syntax/webmacro.vim
-/usr/share/vim/vim82/syntax/wget.vim
-/usr/share/vim/vim82/syntax/whitespace.vim
-/usr/share/vim/vim82/syntax/winbatch.vim
-/usr/share/vim/vim82/syntax/wml.vim
-/usr/share/vim/vim82/syntax/wsh.vim
-/usr/share/vim/vim82/syntax/wsml.vim
-/usr/share/vim/vim82/syntax/wvdial.vim
-/usr/share/vim/vim82/syntax/xbl.vim
-/usr/share/vim/vim82/syntax/xdefaults.vim
-/usr/share/vim/vim82/syntax/xf86conf.vim
-/usr/share/vim/vim82/syntax/xhtml.vim
-/usr/share/vim/vim82/syntax/xinetd.vim
-/usr/share/vim/vim82/syntax/xkb.vim
-/usr/share/vim/vim82/syntax/xmath.vim
-/usr/share/vim/vim82/syntax/xml.vim
-/usr/share/vim/vim82/syntax/xmodmap.vim
-/usr/share/vim/vim82/syntax/xpm.vim
-/usr/share/vim/vim82/syntax/xpm2.vim
-/usr/share/vim/vim82/syntax/xquery.vim
-/usr/share/vim/vim82/syntax/xs.vim
-/usr/share/vim/vim82/syntax/xsd.vim
-/usr/share/vim/vim82/syntax/xslt.vim
-/usr/share/vim/vim82/syntax/xxd.vim
-/usr/share/vim/vim82/syntax/yacc.vim
-/usr/share/vim/vim82/syntax/yaml.vim
-/usr/share/vim/vim82/syntax/z8a.vim
-/usr/share/vim/vim82/syntax/zimbu.vim
-/usr/share/vim/vim82/syntax/zsh.vim
-/usr/share/vim/vim82/tools/README.txt
-/usr/share/vim/vim82/tools/blink.c
-/usr/share/vim/vim82/tools/ccfilter.1
-/usr/share/vim/vim82/tools/ccfilter.c
-/usr/share/vim/vim82/tools/ccfilter_README.txt
-/usr/share/vim/vim82/tools/demoserver.py
-/usr/share/vim/vim82/tools/efm_filter.pl
-/usr/share/vim/vim82/tools/efm_filter.txt
-/usr/share/vim/vim82/tools/efm_perl.pl
-/usr/share/vim/vim82/tools/mve.awk
-/usr/share/vim/vim82/tools/mve.txt
-/usr/share/vim/vim82/tools/pltags.pl
-/usr/share/vim/vim82/tools/ref
-/usr/share/vim/vim82/tools/shtags.1
-/usr/share/vim/vim82/tools/shtags.pl
-/usr/share/vim/vim82/tools/unicode.vim
-/usr/share/vim/vim82/tools/vim132
-/usr/share/vim/vim82/tools/vim_vs_net.cmd
-/usr/share/vim/vim82/tools/vimm
-/usr/share/vim/vim82/tools/vimspell.sh
-/usr/share/vim/vim82/tools/vimspell.txt
-/usr/share/vim/vim82/tools/xcmdsrv_client.c
-/usr/share/vim/vim82/tutor/README.el.cp737.txt
-/usr/share/vim/vim82/tutor/README.el.txt
-/usr/share/vim/vim82/tutor/README.txt
-/usr/share/vim/vim82/tutor/tutor
-/usr/share/vim/vim82/tutor/tutor.bar
-/usr/share/vim/vim82/tutor/tutor.bar.utf-8
-/usr/share/vim/vim82/tutor/tutor.bg.utf-8
-/usr/share/vim/vim82/tutor/tutor.ca
-/usr/share/vim/vim82/tutor/tutor.ca.utf-8
-/usr/share/vim/vim82/tutor/tutor.cs
-/usr/share/vim/vim82/tutor/tutor.cs.cp1250
-/usr/share/vim/vim82/tutor/tutor.cs.utf-8
-/usr/share/vim/vim82/tutor/tutor.da
-/usr/share/vim/vim82/tutor/tutor.da.utf-8
-/usr/share/vim/vim82/tutor/tutor.de
-/usr/share/vim/vim82/tutor/tutor.de.utf-8
-/usr/share/vim/vim82/tutor/tutor.el
-/usr/share/vim/vim82/tutor/tutor.el.cp737
-/usr/share/vim/vim82/tutor/tutor.el.utf-8
-/usr/share/vim/vim82/tutor/tutor.eo
-/usr/share/vim/vim82/tutor/tutor.eo.utf-8
-/usr/share/vim/vim82/tutor/tutor.es
-/usr/share/vim/vim82/tutor/tutor.es.utf-8
-/usr/share/vim/vim82/tutor/tutor.fr
-/usr/share/vim/vim82/tutor/tutor.fr.utf-8
-/usr/share/vim/vim82/tutor/tutor.hr
-/usr/share/vim/vim82/tutor/tutor.hr.cp1250
-/usr/share/vim/vim82/tutor/tutor.hr.utf-8
-/usr/share/vim/vim82/tutor/tutor.hu
-/usr/share/vim/vim82/tutor/tutor.hu.cp1250
-/usr/share/vim/vim82/tutor/tutor.hu.utf-8
-/usr/share/vim/vim82/tutor/tutor.it
-/usr/share/vim/vim82/tutor/tutor.it.utf-8
-/usr/share/vim/vim82/tutor/tutor.ja.euc
-/usr/share/vim/vim82/tutor/tutor.ja.sjis
-/usr/share/vim/vim82/tutor/tutor.ja.utf-8
 /usr/share/vim/vim82/tutor/tutor.ko
-/usr/share/vim/vim82/tutor/tutor.ko.euc
-/usr/share/vim/vim82/tutor/tutor.ko.utf-8
-/usr/share/vim/vim82/tutor/tutor.lv.utf-8
-/usr/share/vim/vim82/tutor/tutor.nb
-/usr/share/vim/vim82/tutor/tutor.nb.utf-8
-/usr/share/vim/vim82/tutor/tutor.nl
-/usr/share/vim/vim82/tutor/tutor.nl.utf-8
-/usr/share/vim/vim82/tutor/tutor.no
-/usr/share/vim/vim82/tutor/tutor.no.utf-8
-/usr/share/vim/vim82/tutor/tutor.pl
-/usr/share/vim/vim82/tutor/tutor.pl.cp1250
-/usr/share/vim/vim82/tutor/tutor.pl.utf-8
-/usr/share/vim/vim82/tutor/tutor.pt
-/usr/share/vim/vim82/tutor/tutor.pt.utf-8
-/usr/share/vim/vim82/tutor/tutor.ru
-/usr/share/vim/vim82/tutor/tutor.ru.cp1251
-/usr/share/vim/vim82/tutor/tutor.ru.utf-8
-/usr/share/vim/vim82/tutor/tutor.sk
-/usr/share/vim/vim82/tutor/tutor.sk.cp1250
-/usr/share/vim/vim82/tutor/tutor.sk.utf-8
-/usr/share/vim/vim82/tutor/tutor.sr.cp1250
-/usr/share/vim/vim82/tutor/tutor.sr.utf-8
-/usr/share/vim/vim82/tutor/tutor.sv
-/usr/share/vim/vim82/tutor/tutor.sv.utf-8
-/usr/share/vim/vim82/tutor/tutor.tr.iso9
-/usr/share/vim/vim82/tutor/tutor.tr.utf-8
-/usr/share/vim/vim82/tutor/tutor.uk.utf-8
-/usr/share/vim/vim82/tutor/tutor.utf-8
-/usr/share/vim/vim82/tutor/tutor.vi.utf-8
-/usr/share/vim/vim82/tutor/tutor.vim
-/usr/share/vim/vim82/tutor/tutor.zh.big5
-/usr/share/vim/vim82/tutor/tutor.zh.euc
-/usr/share/vim/vim82/tutor/tutor.zh.utf-8
-/usr/share/vim/vim82/tutor/tutor.zh_cn.utf-8
-/usr/share/vim/vim82/tutor/tutor.zh_tw.utf-8
-/usr/share/vim/vim82/vimrc_example.vim
 
 %files license
 %defattr(0644,root,root,0755)
