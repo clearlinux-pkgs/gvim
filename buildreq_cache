@@ -1,8 +1,0 @@
-8.2.0034
-desktop-file-utils
-elfutils-dev
-gpm-dev
-libXpm-dev
-lua-dev
-pkgconfig(xpm)
-ruby
