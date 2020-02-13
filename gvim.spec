@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.0251
-Release  : 1106
+Release  : 1107
 URL      : https://github.com/vim/vim/archive/v8.2.0251/vim-8.2.0251.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.0251/vim-8.2.0251.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -77,7 +77,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1581559290
+export SOURCE_DATE_EPOCH=1581559986
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
@@ -101,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1581559290
+export SOURCE_DATE_EPOCH=1581559986
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.0251/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
