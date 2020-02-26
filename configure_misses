@@ -1,5 +1,6 @@
 Configure miss: --enable-fail-if-missing argument
 Configure miss: BeOS
+Configure miss: Haiku
 Configure miss: QNX
 Configure miss: Darwin (Mac OS X)
 Configure miss: AvailabilityMacros.h usability
