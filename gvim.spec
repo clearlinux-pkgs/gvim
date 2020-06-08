@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.0931
-Release  : 1255
+Release  : 1256
 URL      : https://github.com/vim/vim/archive/v8.2.0931/vim-8.2.0931.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.0931/vim-8.2.0931.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -78,7 +78,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1591632734
+export SOURCE_DATE_EPOCH=1591633477
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -101,7 +101,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1591632734
+export SOURCE_DATE_EPOCH=1591633477
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.0931/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
@@ -155,6 +155,7 @@ rm -f %{buildroot}/usr/share/man/*/man1/vim.1
 rm -f %{buildroot}/usr/share/man/*/man1/vimdiff.1
 rm -f %{buildroot}/usr/share/man/*/man1/vimtutor.1
 rm -f %{buildroot}/usr/share/man/*/man1/xxd.1
+rm -f %{buildroot}/usr/share/vim/vim82/ftplugin/asm.vim
 ## install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 rm -rf %{buildroot}/usr/share/vim/vim8*
