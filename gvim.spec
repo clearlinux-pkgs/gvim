@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.1419
-Release  : 1329
+Release  : 1330
 URL      : https://github.com/vim/vim/archive/v8.2.1419/vim-8.2.1419.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.1419/vim-8.2.1419.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -17,6 +17,7 @@ Requires: gvim-license = %{version}-%{release}
 Requires: vim = %{version}
 BuildRequires : acl-dev
 BuildRequires : attr-dev
+BuildRequires : buildreq-gnome
 BuildRequires : desktop-file-utils
 BuildRequires : elfutils-dev
 BuildRequires : gpm-dev
@@ -78,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1597156137
+export SOURCE_DATE_EPOCH=1597191273
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -101,7 +102,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1597156137
+export SOURCE_DATE_EPOCH=1597191273
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.1419/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
