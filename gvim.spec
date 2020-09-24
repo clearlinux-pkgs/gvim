@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.1736
-Release  : 1383
+Release  : 1384
 URL      : https://github.com/vim/vim/archive/v8.2.1736/vim-8.2.1736.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.1736/vim-8.2.1736.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
