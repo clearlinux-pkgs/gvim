@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.2582
-Release  : 1558
+Release  : 1559
 URL      : https://github.com/vim/vim/archive/v8.2.2582/vim-8.2.2582.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.2582/vim-8.2.2582.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1615388447
+export SOURCE_DATE_EPOCH=1615417020
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,7 +102,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1615388447
+export SOURCE_DATE_EPOCH=1615417020
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-8.2.2582/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
