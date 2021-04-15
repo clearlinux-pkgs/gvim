@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.2.2763
-Release  : 1592
-URL      : https://github.com/vim/vim/archive/v8.2.2763/vim-8.2.2763.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.2.2763/vim-8.2.2763.tar.gz
+Version  : 8.2.2767
+Release  : 1593
+URL      : https://github.com/vim/vim/archive/v8.2.2767/vim-8.2.2767.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.2.2767/vim-8.2.2767.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT Vim
@@ -70,8 +70,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.2.2763
-cd %{_builddir}/vim-8.2.2763
+%setup -q -n vim-8.2.2767
+cd %{_builddir}/vim-8.2.2767
 %patch1 -p1
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1618409338
+export SOURCE_DATE_EPOCH=1618446723
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,13 +102,13 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=4 "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1618409338
+export SOURCE_DATE_EPOCH=1618446723
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
-cp %{_builddir}/vim-8.2.2763/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
-cp %{_builddir}/vim-8.2.2763/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
-cp %{_builddir}/vim-8.2.2763/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
-cp %{_builddir}/vim-8.2.2763/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
+cp %{_builddir}/vim-8.2.2767/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
+cp %{_builddir}/vim-8.2.2767/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
+cp %{_builddir}/vim-8.2.2767/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
+cp %{_builddir}/vim-8.2.2767/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}/usr/bin/eview
