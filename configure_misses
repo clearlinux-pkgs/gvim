@@ -37,14 +37,12 @@ Configure miss: LUA_PREFIX environment var
 Configure miss: QNX
 Configure miss: Ruby header files
 Configure miss: Solaris ACL support
-Configure miss: _SC_SIGSTKSZ via sysconf()
 Configure miss: _xpg4_setrunelocale in -lxpg4
 Configure miss: acl_get in -lsec
 Configure miss: acl_get_file in -lposix1e
 Configure miss: attr/xattr.h
 Configure miss: attr/xattr.h presence
 Configure miss: attr/xattr.h usability
-Configure miss: dlopen()
 Configure miss: frame.h
 Configure miss: frame.h presence
 Configure miss: frame.h usability
