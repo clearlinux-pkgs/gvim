@@ -53,7 +53,6 @@ Configure miss: if character set is EBCDIC
 Configure miss: libc.h
 Configure miss: libc.h presence
 Configure miss: libc.h usability
-Configure miss: libcanberra
 Configure miss: libsodium
 Configure miss: pthread_np.h
 Configure miss: python2
