@@ -4,10 +4,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 8.2.3501
-Release  : 1762
-URL      : https://github.com/vim/vim/archive/v8.2.3501/vim-8.2.3501.tar.gz
-Source0  : https://github.com/vim/vim/archive/v8.2.3501/vim-8.2.3501.tar.gz
+Version  : 8.2.3502
+Release  : 1763
+URL      : https://github.com/vim/vim/archive/v8.2.3502/vim-8.2.3502.tar.gz
+Source0  : https://github.com/vim/vim/archive/v8.2.3502/vim-8.2.3502.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT Vim
@@ -70,8 +70,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-8.2.3501
-cd %{_builddir}/vim-8.2.3501
+%setup -q -n vim-8.2.3502
+cd %{_builddir}/vim-8.2.3502
 %patch1 -p1
 
 %build
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1634048030
+export SOURCE_DATE_EPOCH=1634130706
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,60 +102,60 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1634048030
+export SOURCE_DATE_EPOCH=1634130706
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
-cp %{_builddir}/vim-8.2.3501/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
-cp %{_builddir}/vim-8.2.3501/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
-cp %{_builddir}/vim-8.2.3501/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
-cp %{_builddir}/vim-8.2.3501/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
+cp %{_builddir}/vim-8.2.3502/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
+cp %{_builddir}/vim-8.2.3502/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
+cp %{_builddir}/vim-8.2.3502/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
+cp %{_builddir}/vim-8.2.3502/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
 %make_install
 ## Remove excluded files
-rm -f %{buildroot}/usr/bin/eview
-rm -f %{buildroot}/usr/bin/evim
-rm -f %{buildroot}/usr/bin/ex
-rm -f %{buildroot}/usr/bin/rgview
-rm -f %{buildroot}/usr/bin/rgvim
-rm -f %{buildroot}/usr/bin/rview
-rm -f %{buildroot}/usr/bin/rvim
-rm -f %{buildroot}/usr/bin/view
-rm -f %{buildroot}/usr/bin/vimdiff
-rm -f %{buildroot}/usr/bin/vimtutor
-rm -f %{buildroot}/usr/bin/xxd
-rm -f %{buildroot}/usr/share/applications/vim.desktop
-rm -f %{buildroot}/usr/share/icons/hicolor/48x48/apps/gvim.png
-rm -f %{buildroot}/usr/share/icons/locolor/16x16/apps/gvim.png
-rm -f %{buildroot}/usr/share/icons/locolor/32x32/apps/gvim.png
-rm -f %{buildroot}/usr/share/man/man1/eview.1
-rm -f %{buildroot}/usr/share/man/man1/evim.1
-rm -f %{buildroot}/usr/share/man/man1/ex.1
-rm -f %{buildroot}/usr/share/man/man1/gview.1
-rm -f %{buildroot}/usr/share/man/man1/gvim.1
-rm -f %{buildroot}/usr/share/man/man1/gvimdiff.1
-rm -f %{buildroot}/usr/share/man/man1/rgview.1
-rm -f %{buildroot}/usr/share/man/man1/rgvim.1
-rm -f %{buildroot}/usr/share/man/man1/rview.1
-rm -f %{buildroot}/usr/share/man/man1/rvim.1
-rm -f %{buildroot}/usr/share/man/man1/view.1
-rm -f %{buildroot}/usr/share/man/man1/vim.1
-rm -f %{buildroot}/usr/share/man/man1/vimdiff.1
-rm -f %{buildroot}/usr/share/man/man1/vimtutor.1
-rm -f %{buildroot}/usr/share/man/man1/xxd.1
-rm -f %{buildroot}/usr/share/man/*/man1/eview.1
-rm -f %{buildroot}/usr/share/man/*/man1/evim.1
-rm -f %{buildroot}/usr/share/man/*/man1/ex.1
-rm -f %{buildroot}/usr/share/man/*/man1/gview.1
-rm -f %{buildroot}/usr/share/man/*/man1/gvim.1
-rm -f %{buildroot}/usr/share/man/*/man1/gvimdiff.1
-rm -f %{buildroot}/usr/share/man/*/man1/rgview.1
-rm -f %{buildroot}/usr/share/man/*/man1/rgvim.1
-rm -f %{buildroot}/usr/share/man/*/man1/rview.1
-rm -f %{buildroot}/usr/share/man/*/man1/rvim.1
-rm -f %{buildroot}/usr/share/man/*/man1/view.1
-rm -f %{buildroot}/usr/share/man/*/man1/vim.1
-rm -f %{buildroot}/usr/share/man/*/man1/vimdiff.1
-rm -f %{buildroot}/usr/share/man/*/man1/vimtutor.1
-rm -f %{buildroot}/usr/share/man/*/man1/xxd.1
+rm -f %{buildroot}*/usr/bin/eview
+rm -f %{buildroot}*/usr/bin/evim
+rm -f %{buildroot}*/usr/bin/ex
+rm -f %{buildroot}*/usr/bin/rgview
+rm -f %{buildroot}*/usr/bin/rgvim
+rm -f %{buildroot}*/usr/bin/rview
+rm -f %{buildroot}*/usr/bin/rvim
+rm -f %{buildroot}*/usr/bin/view
+rm -f %{buildroot}*/usr/bin/vimdiff
+rm -f %{buildroot}*/usr/bin/vimtutor
+rm -f %{buildroot}*/usr/bin/xxd
+rm -f %{buildroot}*/usr/share/applications/vim.desktop
+rm -f %{buildroot}*/usr/share/icons/hicolor/48x48/apps/gvim.png
+rm -f %{buildroot}*/usr/share/icons/locolor/16x16/apps/gvim.png
+rm -f %{buildroot}*/usr/share/icons/locolor/32x32/apps/gvim.png
+rm -f %{buildroot}*/usr/share/man/man1/eview.1
+rm -f %{buildroot}*/usr/share/man/man1/evim.1
+rm -f %{buildroot}*/usr/share/man/man1/ex.1
+rm -f %{buildroot}*/usr/share/man/man1/gview.1
+rm -f %{buildroot}*/usr/share/man/man1/gvim.1
+rm -f %{buildroot}*/usr/share/man/man1/gvimdiff.1
+rm -f %{buildroot}*/usr/share/man/man1/rgview.1
+rm -f %{buildroot}*/usr/share/man/man1/rgvim.1
+rm -f %{buildroot}*/usr/share/man/man1/rview.1
+rm -f %{buildroot}*/usr/share/man/man1/rvim.1
+rm -f %{buildroot}*/usr/share/man/man1/view.1
+rm -f %{buildroot}*/usr/share/man/man1/vim.1
+rm -f %{buildroot}*/usr/share/man/man1/vimdiff.1
+rm -f %{buildroot}*/usr/share/man/man1/vimtutor.1
+rm -f %{buildroot}*/usr/share/man/man1/xxd.1
+rm -f %{buildroot}*/usr/share/man/*/man1/eview.1
+rm -f %{buildroot}*/usr/share/man/*/man1/evim.1
+rm -f %{buildroot}*/usr/share/man/*/man1/ex.1
+rm -f %{buildroot}*/usr/share/man/*/man1/gview.1
+rm -f %{buildroot}*/usr/share/man/*/man1/gvim.1
+rm -f %{buildroot}*/usr/share/man/*/man1/gvimdiff.1
+rm -f %{buildroot}*/usr/share/man/*/man1/rgview.1
+rm -f %{buildroot}*/usr/share/man/*/man1/rgvim.1
+rm -f %{buildroot}*/usr/share/man/*/man1/rview.1
+rm -f %{buildroot}*/usr/share/man/*/man1/rvim.1
+rm -f %{buildroot}*/usr/share/man/*/man1/view.1
+rm -f %{buildroot}*/usr/share/man/*/man1/vim.1
+rm -f %{buildroot}*/usr/share/man/*/man1/vimdiff.1
+rm -f %{buildroot}*/usr/share/man/*/man1/vimtutor.1
+rm -f %{buildroot}*/usr/share/man/*/man1/xxd.1
 ## install_append content
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 rm -rf %{buildroot}/usr/share/vim/vim8*
