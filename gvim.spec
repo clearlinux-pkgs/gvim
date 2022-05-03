@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 8.2.4860
-Release  : 2478
+Release  : 2479
 URL      : https://github.com/vim/vim/archive/v8.2.4860/vim-8.2.4860.tar.gz
 Source0  : https://github.com/vim/vim/archive/v8.2.4860/vim-8.2.4860.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
