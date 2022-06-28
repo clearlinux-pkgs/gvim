@@ -1,3 +1,4 @@
 mv %{buildroot}/usr/bin/vim %{buildroot}/usr/bin/gvim
 rm -rf %{buildroot}/usr/share/vim/vim8*
+rm -rf %{buildroot}/usr/share/vim/vim9*
 rm -rf %{buildroot}/usr/share/man
