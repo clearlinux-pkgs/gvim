@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 9.0.0174
-Release  : 2766
+Release  : 2767
 URL      : https://github.com/vim/vim/archive/v9.0.0174/vim-9.0.0174.tar.gz
 Source0  : https://github.com/vim/vim/archive/v9.0.0174/vim-9.0.0174.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
