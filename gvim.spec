@@ -5,7 +5,7 @@
 %define keepstatic 1
 Name     : gvim
 Version  : 9.0.0676
-Release  : 3021
+Release  : 3022
 URL      : https://github.com/vim/vim/archive/v9.0.0676/vim-9.0.0676.tar.gz
 Source0  : https://github.com/vim/vim/archive/v9.0.0676/vim-9.0.0676.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
@@ -79,7 +79,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1665072527
+export SOURCE_DATE_EPOCH=1665073240
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -102,13 +102,13 @@ export CXXFLAGS="$CXXFLAGS -O3 -ffat-lto-objects -flto=auto "
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1665072527
+export SOURCE_DATE_EPOCH=1665073240
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
-cp %{_builddir}/vim-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518 || :
-cp %{_builddir}/vim-%{version}/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6 || :
-cp %{_builddir}/vim-%{version}/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5 || :
-cp %{_builddir}/vim-%{version}/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d || :
+cp %{_builddir}/vim-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518
+cp %{_builddir}/vim-%{version}/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
+cp %{_builddir}/vim-%{version}/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
+cp %{_builddir}/vim-%{version}/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
 %make_install
 ## Remove excluded files
 rm -f %{buildroot}*/usr/bin/eview
