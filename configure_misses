@@ -42,6 +42,9 @@ Configure miss: acl_get_file in -lposix1e
 Configure miss: attr/xattr.h
 Configure miss: attr/xattr.h presence
 Configure miss: attr/xattr.h usability
+Configure miss: dispatch/dispatch.h
+Configure miss: dispatch/dispatch.h presence
+Configure miss: dispatch/dispatch.h usability
 Configure miss: frame.h
 Configure miss: frame.h presence
 Configure miss: frame.h usability
