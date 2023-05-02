@@ -5,10 +5,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 9.0.1484
-Release  : 3548
-URL      : https://github.com/vim/vim/archive/v9.0.1484/vim-9.0.1484.tar.gz
-Source0  : https://github.com/vim/vim/archive/v9.0.1484/vim-9.0.1484.tar.gz
+Version  : 9.0.1505
+Release  : 3549
+URL      : https://github.com/vim/vim/archive/v9.0.1505/vim-9.0.1505.tar.gz
+Source0  : https://github.com/vim/vim/archive/v9.0.1505/vim-9.0.1505.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT Vim
@@ -75,8 +75,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-9.0.1484
-cd %{_builddir}/vim-9.0.1484
+%setup -q -n vim-9.0.1505
+cd %{_builddir}/vim-9.0.1505
 %patch1 -p1
 
 %build
@@ -84,15 +84,15 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1682365931
+export SOURCE_DATE_EPOCH=1683046277
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
 export NM=gcc-nm
-export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
-export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz "
+export CFLAGS="$CFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FCFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export FFLAGS="$FFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
+export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonly -ffat-lto-objects -flto=auto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 %configure  --with-features=huge \
 --with-tlib=ncurses \
 --enable-gtk3-check \
@@ -107,7 +107,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonl
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1682365931
+export SOURCE_DATE_EPOCH=1683046277
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518 || :

@@ -7,28 +7,23 @@ Subject: [PATCH] fix symlink from gvimdiff and gview
  src/Makefile | 4 ++--
  1 file changed, 2 insertions(+), 2 deletions(-)
 
-diff --git a/src/Makefile b/src/Makefile
-index 7a65677..a30f940 100644
---- a/src/Makefile
-+++ b/src/Makefile
-@@ -2554,7 +2554,7 @@ $(DEST_BIN)/$(GVIMTARGET):
- 	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIMTARGET)
+--- vim-9.0.1505/src/Makefile~	2023-05-02 15:25:47.000000000 +0000
++++ vim-9.0.1505/src/Makefile	2023-05-02 16:48:36.001082268 +0000
+@@ -2688,7 +2688,7 @@
+ 	cd $(DEST_BIN); ln -s $(VIMTARGET) $(VIEWTARGET)
  
- $(DEST_BIN)/$(GVIEWTARGET):
--	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIEWTARGET)
-+	cd $(DEST_BIN); ln -s g$(VIMTARGET) $(GVIEWTARGET)
+ $(DEST_BIN)/$(GVIMTARGET): $(DEST_BIN)
+-	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIMTARGET)
++	cd $(DEST_BIN); ln -s g$(VIMTARGET) $(GVIMTARGET)
  
- $(DEST_BIN)/$(RVIMTARGET):
- 	cd $(DEST_BIN); ln -s $(VIMTARGET) $(RVIMTARGET)
-@@ -2572,7 +2572,7 @@ $(DEST_BIN)/$(VIMDIFFTARGET):
+ $(DEST_BIN)/$(GVIEWTARGET): $(DEST_BIN)
+ 	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIEWTARGET)
+@@ -2709,7 +2709,7 @@
  	cd $(DEST_BIN); ln -s $(VIMTARGET) $(VIMDIFFTARGET)
  
- $(DEST_BIN)/$(GVIMDIFFTARGET):
+ $(DEST_BIN)/$(GVIMDIFFTARGET): $(DEST_BIN)
 -	cd $(DEST_BIN); ln -s $(VIMTARGET) $(GVIMDIFFTARGET)
 +	cd $(DEST_BIN); ln -s g$(VIMTARGET) $(GVIMDIFFTARGET)
  
- $(DEST_BIN)/$(EVIMTARGET):
+ $(DEST_BIN)/$(EVIMTARGET): $(DEST_BIN)
  	cd $(DEST_BIN); ln -s $(VIMTARGET) $(EVIMTARGET)
--- 
-2.11.0
-
