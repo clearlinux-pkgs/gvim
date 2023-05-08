@@ -5,10 +5,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 9.0.1523
-Release  : 3559
-URL      : https://github.com/vim/vim/archive/v9.0.1523/vim-9.0.1523.tar.gz
-Source0  : https://github.com/vim/vim/archive/v9.0.1523/vim-9.0.1523.tar.gz
+Version  : 9.0.1526
+Release  : 3560
+URL      : https://github.com/vim/vim/archive/v9.0.1526/vim-9.0.1526.tar.gz
+Source0  : https://github.com/vim/vim/archive/v9.0.1526/vim-9.0.1526.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT Vim
@@ -29,6 +29,7 @@ BuildRequires : libXpm-dev
 BuildRequires : libXt-dev
 BuildRequires : lua-dev
 BuildRequires : ncurses-dev
+BuildRequires : pkg-config
 BuildRequires : pkgconfig(gtk+-3.0)
 BuildRequires : pkgconfig(ice)
 BuildRequires : pkgconfig(sm)
@@ -75,8 +76,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-9.0.1523
-cd %{_builddir}/vim-9.0.1523
+%setup -q -n vim-9.0.1526
+cd %{_builddir}/vim-9.0.1526
 %patch1 -p1
 
 %build
@@ -84,7 +85,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683499532
+export SOURCE_DATE_EPOCH=1683564806
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +108,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonl
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1683499532
+export SOURCE_DATE_EPOCH=1683564806
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518 || :
@@ -173,10 +174,7 @@ rm -rf %{buildroot}/usr/share/man
 
 %files bin
 %defattr(-,root,root,-)
-/usr/bin/gview
 /usr/bin/gvim
-/usr/bin/gvimdiff
-/usr/bin/gvimtutor
 
 %files data
 %defattr(-,root,root,-)

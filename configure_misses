@@ -1,8 +1,6 @@
 Configure miss: --disable-acl argument
 Configure miss: --disable-arabic argument
 Configure miss: --disable-channel argument
-Configure miss: --disable-desktop-database-update argument
-Configure miss: --disable-icon-cache-update argument
 Configure miss: --disable-netbeans argument
 Configure miss: --disable-nls argument
 Configure miss: --disable-rightleft argument
@@ -57,6 +55,7 @@ Configure miss: libc.h presence
 Configure miss: libc.h usability
 Configure miss: libcanberra
 Configure miss: libsodium
+Configure miss: pkg-config
 Configure miss: pthread_np.h
 Configure miss: python2
 Configure miss: sigsetjmp
@@ -90,3 +89,4 @@ Configure miss: whether stat() ignores a trailing slash
 Configure miss: whether toupper is broken
 Configure miss: whether tputs() uses outfuntype
 Configure miss: whether we need to force -D_FILE_OFFSET_BITS=64
+Configure miss: x86_64-generic-linux-gnu-pkg-config
