@@ -5,10 +5,10 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 9.0.1578
-Release  : 3590
-URL      : https://github.com/vim/vim/archive/v9.0.1578/vim-9.0.1578.tar.gz
-Source0  : https://github.com/vim/vim/archive/v9.0.1578/vim-9.0.1578.tar.gz
+Version  : 9.0.1579
+Release  : 3591
+URL      : https://github.com/vim/vim/archive/v9.0.1579/vim-9.0.1579.tar.gz
+Source0  : https://github.com/vim/vim/archive/v9.0.1579/vim-9.0.1579.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
 License  : LGPL-2.1 MIT Vim
@@ -75,8 +75,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-9.0.1578
-cd %{_builddir}/vim-9.0.1578
+%setup -q -n vim-9.0.1579
+cd %{_builddir}/vim-9.0.1579
 %patch1 -p1
 
 %build
@@ -84,7 +84,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685033154
+export SOURCE_DATE_EPOCH=1685043956
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -107,7 +107,7 @@ export CXXFLAGS="$CXXFLAGS -O3 -fdebug-types-section -femit-struct-debug-baseonl
 make  %{?_smp_mflags}
 
 %install
-export SOURCE_DATE_EPOCH=1685033154
+export SOURCE_DATE_EPOCH=1685043956
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
 cp %{_builddir}/vim-%{version}/LICENSE %{buildroot}/usr/share/package-licenses/gvim/100dd019c7d2912226c94666cac0f93eeb82a518 || :
