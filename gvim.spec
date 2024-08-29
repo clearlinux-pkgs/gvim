@@ -7,13 +7,13 @@
 #
 %define keepstatic 1
 Name     : gvim
-Version  : 9.1.0702
-Release  : 4105
-URL      : https://github.com/vim/vim/archive/v9.1.0702/vim-9.1.0702.tar.gz
-Source0  : https://github.com/vim/vim/archive/v9.1.0702/vim-9.1.0702.tar.gz
+Version  : 9.1.0703
+Release  : 4106
+URL      : https://github.com/vim/vim/archive/v9.1.0703/vim-9.1.0703.tar.gz
+Source0  : https://github.com/vim/vim/archive/v9.1.0703/vim-9.1.0703.tar.gz
 Summary  : A highly configurable, improved version of the vi text editor (Graphical VIM)
 Group    : Development/Tools
-License  : LGPL-2.1 MIT
+License  : LGPL-2.1 MIT Python-2.0
 Requires: gvim-bin = %{version}-%{release}
 Requires: gvim-data = %{version}-%{release}
 Requires: gvim-license = %{version}-%{release}
@@ -77,8 +77,8 @@ license components for the gvim package.
 
 
 %prep
-%setup -q -n vim-9.1.0702
-cd %{_builddir}/vim-9.1.0702
+%setup -q -n vim-9.1.0703
+cd %{_builddir}/vim-9.1.0703
 %patch -P 1 -p1
 
 %build
@@ -86,7 +86,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1724885157
+export SOURCE_DATE_EPOCH=1724972267
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -130,9 +130,10 @@ FFLAGS="$CLEAR_INTERMEDIATE_FFLAGS"
 FCFLAGS="$CLEAR_INTERMEDIATE_FCFLAGS"
 ASFLAGS="$CLEAR_INTERMEDIATE_ASFLAGS"
 LDFLAGS="$CLEAR_INTERMEDIATE_LDFLAGS"
-export SOURCE_DATE_EPOCH=1724885157
+export SOURCE_DATE_EPOCH=1724972267
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/gvim
+cp %{_builddir}/vim-%{version}/runtime/pack/dist/opt/editorconfig/LICENSE.PSF %{buildroot}/usr/share/package-licenses/gvim/7c0b791b76ecfa9bbe4c5d6ba252aeb5ad175b04 || :
 cp %{_builddir}/vim-%{version}/src/libvterm/LICENSE %{buildroot}/usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6 || :
 cp %{_builddir}/vim-%{version}/src/xdiff/COPYING %{buildroot}/usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5 || :
 cp %{_builddir}/vim-%{version}/src/xpm/COPYRIGHT %{buildroot}/usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d || :
@@ -210,4 +211,5 @@ rm -rf %{buildroot}/usr/share/man
 %defattr(0644,root,root,0755)
 /usr/share/package-licenses/gvim/553dde2683f711f77fe79504be0429256223469d
 /usr/share/package-licenses/gvim/65c71b7ff77a59a32247d83a528728637263c1b5
+/usr/share/package-licenses/gvim/7c0b791b76ecfa9bbe4c5d6ba252aeb5ad175b04
 /usr/share/package-licenses/gvim/9979f112bdecefd99762f24f6af76972c2a3a1a6
