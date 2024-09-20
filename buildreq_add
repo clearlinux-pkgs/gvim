@@ -7,7 +7,6 @@ desktop-file-utils
 elfutils-dev
 gpm-dev
 gtk3-dev
-gvfs-dev
 libXpm-dev
 libXt-dev
 lua-dev
