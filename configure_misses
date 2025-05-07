@@ -35,12 +35,12 @@ Configure miss: LUA_PREFIX environment var
 Configure miss: QNX
 Configure miss: Ruby header files
 Configure miss: Solaris ACL support
-Configure miss: XATTR_NAME_SMACKEXEC in linux/xattr.h
 Configure miss: _xpg4_setrunelocale in -lxpg4
 Configure miss: acl_get in -lsec
 Configure miss: acl_get_file in -lposix1e
 Configure miss: dispatch/dispatch.h
 Configure miss: frame.h
+Configure miss: gcc option to enable large file support
 Configure miss: getcwd implementation is broken
 Configure miss: getpseudotty
 Configure miss: if X11 header files implicitly declare return values
