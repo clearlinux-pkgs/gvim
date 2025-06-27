@@ -17,3 +17,4 @@ libncursesw.so.6
 libpango-1.0.so.0
 libpangocairo-1.0.so.0
 libpython3.13.so.1.0
+libwayland-client.so.0
